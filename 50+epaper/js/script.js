@@ -108,7 +108,7 @@
 // }
 
 const checkEmail = (remail) => {
-  if (remail.search(/^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/) != -1) {
+  if (remail.search(/^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/) = -1) {
     $("#footer-newsletter-form").submit();
   } else {
     alert("請輸入正確的Email！");

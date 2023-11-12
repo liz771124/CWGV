@@ -13888,6 +13888,7 @@ a:hover {
   background: #000;
   color: rgba(255, 255, 255, 0.8);
   padding: 50px 0px 40px 0;
+  line-height: 1.1;
 }
 .footer a {
   color: rgba(255, 255, 255, 0.8);
@@ -13906,11 +13907,10 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   place-items: center;
-  text-align: center;
   border-radius: 10px;
 }
 .footer__social-item i {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin: auto;
 }
 

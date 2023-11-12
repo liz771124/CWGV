@@ -53,7 +53,7 @@ window.addEventListener("scroll", () => {
   // });
 });
 
-const anchors = document.querySelectorAll('.header__menu a[href^="#"]');
+const anchors = document.querySelectorAll('a[href^="#"]');
 anchors.forEach((anchor) => {
   anchor.addEventListener("click", (e) => {
     e.preventDefault();
@@ -63,7 +63,7 @@ anchors.forEach((anchor) => {
     let targetOffset =
       targetElement.offsetTop -
       document.querySelector(".header__navbar").offsetHeight -
-      document.querySelector(".chapter").offsetHeight;
+      document.querySelector(".chapter__slider").offsetHeight;
     window.scrollTo({ top: targetOffset, behavior: "smooth" });
   });
 });

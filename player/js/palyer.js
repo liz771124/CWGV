@@ -1,352 +1,235 @@
-// Mythium Archive: https://archive.org/details/mythium/
+let playList = [
+  {
+    title: "rockstar",
+    cover:
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/rockstar-album-cover.jpg",
+    audioSource:
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/Post%20Malone%20-%20rockstar%20ft.%2021%20Savage%20(1).mp3",
+  },
+  {
+    title: "Let You Down",
+    cover:
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/perception-album-cover.png",
+    audioSource:
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/NF%20-%20Let%20You%20Down.mp3",
+  },
+  {
+    title: "Silence",
+    cover:
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/silence-album-cover.jpg",
+    audioSource:
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/Marshmello%20-%20Silence%20ft.%20Khalid.mp3",
+  },
+  {
+    title: "I Fall Apart",
+    cover:
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/stoney-cover-album.jpg",
+    audioSource:
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/Post%20Malone%20-%20I%20Fall%20Apart.mp3",
+  },
+  {
+    title: "Fireproof",
+    cover:
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/fireproof-album-cover.jpeg",
+    audioSource:
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/VAX%20-%20Fireproof%20Feat%20Teddy%20Sky.mp3",
+  },
+];
 
-jQuery(function ($) {
-  "use strict";
-  var supportsAudio = !!document.createElement("audio").canPlayType;
-  if (supportsAudio) {
-    // initialize plyr
-    var player = new Plyr("#audio1", {
-      controls: [
-        "restart",
-        "play",
-        "progress",
-        "current-time",
-        "duration",
-        "mute",
-        "volume",
-        "download",
-      ],
-    });
-    // initialize playlist and controls
-    var index = 0,
-      playing = false,
-      mediaPath = "https://archive.org/download/mythium/",
-      extension = "",
-      tracks = [
-        {
-          track: 1,
-          name: "All This Is - Joe L.'s Studio",
-          duration: "2:46",
-          file: "JLS_ATI",
-        },
-        {
-          track: 2,
-          name: "The Forsaken - Broadwing Studio (Final Mix)",
-          duration: "8:30",
-          file: "BS_TF",
-        },
-        {
-          track: 3,
-          name: "All The King's Men - Broadwing Studio (Final Mix)",
-          duration: "5:01",
-          file: "BS_ATKM",
-        },
-        {
-          track: 4,
-          name: "The Forsaken - Broadwing Studio (First Mix)",
-          duration: "8:31",
-          file: "BSFM_TF",
-        },
-        {
-          track: 5,
-          name: "All The King's Men - Broadwing Studio (First Mix)",
-          duration: "5:05",
-          file: "BSFM_ATKM",
-        },
-        {
-          track: 6,
-          name: "All This Is - Alternate Cuts",
-          duration: "2:48",
-          file: "AC_ATI",
-        },
-        {
-          track: 7,
-          name: "All The King's Men (Take 1) - Alternate Cuts",
-          duration: "5:44",
-          file: "AC_ATKMTake_1",
-        },
-        {
-          track: 8,
-          name: "All The King's Men (Take 2) - Alternate Cuts",
-          duration: "5:26",
-          file: "AC_ATKMTake_2",
-        },
-        {
-          track: 9,
-          name: "Magus - Alternate Cuts",
-          duration: "5:46",
-          file: "AC_M",
-        },
-        {
-          track: 10,
-          name: "The State Of Wearing Address (fucked up) - Alternate Cuts",
-          duration: "5:25",
-          file: "AC_TSOWAfucked_up",
-        },
-        {
-          track: 11,
-          name: "Magus - Popeye's (New Years '04 - '05)",
-          duration: "5:53",
-          file: "PNY04-05_M",
-        },
-        {
-          track: 12,
-          name: "On The Waterfront - Popeye's (New Years '04 - '05)",
-          duration: "4:40",
-          file: "PNY04-05_OTW",
-        },
-        {
-          track: 13,
-          name: "Trance - Popeye's (New Years '04 - '05)",
-          duration: "13:15",
-          file: "PNY04-05_T",
-        },
-        {
-          track: 14,
-          name: "The Forsaken - Popeye's (New Years '04 - '05)",
-          duration: "8:12",
-          file: "PNY04-05_TF",
-        },
-        {
-          track: 15,
-          name: "The State Of Wearing Address - Popeye's (New Years '04 - '05)",
-          duration: "7:02",
-          file: "PNY04-05_TSOWA",
-        },
-        {
-          track: 16,
-          name: "Magus - Popeye's (Valentine's Day '05)",
-          duration: "5:43",
-          file: "PVD_M",
-        },
-        {
-          track: 17,
-          name: "Trance - Popeye's (Valentine's Day '05)",
-          duration: "10:45",
-          file: "PVD_T",
-        },
-        {
-          track: 18,
-          name: "The State Of Wearing Address - Popeye's (Valentine's Day '05)",
-          duration: "5:36",
-          file: "PVD_TSOWA",
-        },
-        {
-          track: 19,
-          name: "All This Is - Smith St. Basement (01/08/04)",
-          duration: "2:48",
-          file: "SSB01_08_04_ATI",
-        },
-        {
-          track: 20,
-          name: "Magus - Smith St. Basement (01/08/04)",
-          duration: "5:46",
-          file: "SSB01_08_04_M",
-        },
-        {
-          track: 21,
-          name: "Beneath The Painted Eye - Smith St. Basement (06/06/03)",
-          duration: "13:07",
-          file: "SSB06_06_03_BTPE",
-        },
-        {
-          track: 22,
-          name: "Innocence - Smith St. Basement (06/06/03)",
-          duration: "5:16",
-          file: "SSB06_06_03_I",
-        },
-        {
-          track: 23,
-          name: "Magus - Smith St. Basement (06/06/03)",
-          duration: "5:46",
-          file: "SSB06_06_03_M",
-        },
-        {
-          track: 24,
-          name: "Madness Explored - Smith St. Basement (06/06/03)",
-          duration: "4:51",
-          file: "SSB06_06_03_ME",
-        },
-        {
-          track: 25,
-          name: "The Forsaken - Smith St. Basement (06/06/03)",
-          duration: "8:43",
-          file: "SSB06_06_03_TF",
-        },
-        {
-          track: 26,
-          name: "All This Is - Smith St. Basement (12/28/03)",
-          duration: "3:00",
-          file: "SSB12_28_03_ATI",
-        },
-        {
-          track: 27,
-          name: "Magus - Smith St. Basement (12/28/03)",
-          duration: "6:09",
-          file: "SSB12_28_03_M",
-        },
-        {
-          track: 28,
-          name: "Madness Explored - Smith St. Basement (12/28/03)",
-          duration: "5:05",
-          file: "SSB12_28_03_ME",
-        },
-        {
-          track: 29,
-          name: "Trance - Smith St. Basement (12/28/03)",
-          duration: "12:32",
-          file: "SSB12_28_03_T",
-        },
-        {
-          track: 30,
-          name: "The Forsaken - Smith St. Basement (12/28/03)",
-          duration: "8:56",
-          file: "SSB12_28_03_TF",
-        },
-        {
-          track: 31,
-          name: "All This Is (Take 1) - Smith St. Basement (Nov. '03)",
-          duration: "4:55",
-          file: "SSB___11_03_ATITake_1",
-        },
-        {
-          track: 32,
-          name: "All This Is (Take 2) - Smith St. Basement (Nov. '03)",
-          duration: "5:45",
-          file: "SSB___11_03_ATITake_2",
-        },
-        {
-          track: 33,
-          name: "Beneath The Painted Eye (Take 1) - Smith St. Basement (Nov. '03)",
-          duration: "14:05",
-          file: "SSB___11_03_BTPETake_1",
-        },
-        {
-          track: 34,
-          name: "Beneath The Painted Eye (Take 2) - Smith St. Basement (Nov. '03)",
-          duration: "13:25",
-          file: "SSB___11_03_BTPETake_2",
-        },
-        {
-          track: 35,
-          name: "The Forsaken (Take 1) - Smith St. Basement (Nov. '03)",
-          duration: "8:37",
-          file: "SSB___11_03_TFTake_1",
-        },
-        {
-          track: 36,
-          name: "The Forsaken (Take 2) - Smith St. Basement (Nov. '03)",
-          duration: "8:36",
-          file: "SSB___11_03_TFTake_2",
-        },
-      ],
-      buildPlaylist = $.each(tracks, function (key, value) {
-        var trackNumber = value.track,
-          trackName = value.name,
-          trackDuration = value.duration;
-        if (trackNumber.toString().length === 1) {
-          trackNumber = "0" + trackNumber;
-        }
-        $("#plList").append(
-          '<li> \
-                  <div class="plItem"> \
-                      <span class="plNum">' +
-            trackNumber +
-            '.</span> \
-                      <span class="plTitle">' +
-            trackName +
-            '</span> \
-                      <span class="plLength">' +
-            trackDuration +
-            "</span> \
-                  </div> \
-              </li>"
-        );
-      }),
-      trackCount = tracks.length,
-      npAction = $("#npAction"),
-      npTitle = $("#npTitle"),
-      audio = $("#audio1")
-        .on("play", function () {
-          playing = true;
-          npAction.text("Now Playing...");
-        })
-        .on("pause", function () {
-          playing = false;
-          npAction.text("Paused...");
-        })
-        .on("ended", function () {
-          npAction.text("Paused...");
-          if (index + 1 < trackCount) {
-            index++;
-            loadTrack(index);
-            audio.play();
-          } else {
-            audio.pause();
-            index = 0;
-            loadTrack(index);
-          }
-        })
-        .get(0),
-      btnPrev = $("#btnPrev").on("click", function () {
-        if (index - 1 > -1) {
-          index--;
-          loadTrack(index);
-          if (playing) {
-            audio.play();
-          }
-        } else {
-          audio.pause();
-          index = 0;
-          loadTrack(index);
-        }
-      }),
-      btnNext = $("#btnNext").on("click", function () {
-        if (index + 1 < trackCount) {
-          index++;
-          loadTrack(index);
-          if (playing) {
-            audio.play();
-          }
-        } else {
-          audio.pause();
-          index = 0;
-          loadTrack(index);
-        }
-      }),
-      li = $("#plList li").on("click", function () {
-        var id = parseInt($(this).index());
-        if (id !== index) {
-          playTrack(id);
-        }
-      }),
-      loadTrack = function (id) {
-        $(".plSel").removeClass("plSel");
-        $("#plList li:eq(" + id + ")").addClass("plSel");
-        npTitle.text(tracks[id].name);
-        index = id;
-        audio.src = mediaPath + tracks[id].file + extension;
-        updateDownload(id, audio.src);
-      },
-      updateDownload = function (id, source) {
-        player.on("loadedmetadata", function () {
-          $('a[data-plyr="download"]').attr("href", source);
-        });
-      },
-      playTrack = function (id) {
-        loadTrack(id);
-        audio.play();
-      };
-    extension = audio.canPlayType("audio/mpeg")
-      ? ".mp3"
-      : audio.canPlayType("audio/ogg")
-      ? ".ogg"
-      : "";
-    loadTrack(index);
-  } else {
-    // no audio support
-    $(".column").addClass("hidden");
-    var noSupport = $("#audio1").text();
-    $(".container").append('<p class="no-support">' + noSupport + "</p>");
-  }
+let audioPlayer = document.querySelector(".green-audio-player");
+let playPause = audioPlayer.querySelector("#playPause");
+let playPauseBtn = audioPlayer.querySelector(".play-pause-btn");
+let loading = audioPlayer.querySelector(".loading");
+let progress = audioPlayer.querySelector(".progress");
+let sliders = audioPlayer.querySelectorAll(".slider");
+let volumeBtn = audioPlayer.querySelector(".volume-btn");
+let volumeControls = audioPlayer.querySelector(".volume-controls");
+let volumeProgress = volumeControls.querySelector(".slider .progress");
+let player = audioPlayer.querySelector("audio");
+let source = player.querySelector("source");
+let currentTime = audioPlayer.querySelector(".current-time");
+let totalTime = audioPlayer.querySelector(".total-time");
+let speaker = audioPlayer.querySelector("#speaker");
+let prevAudio = audioPlayer.querySelector(".prev-audio");
+let nextAudio = audioPlayer.querySelector(".next-audio");
+
+let draggableClasses = ["pin"];
+let currentlyDragged = null;
+let playListIndex = 0;
+
+window.addEventListener("mousedown", function (event) {
+  if (!isDraggable(event.target)) return false;
+
+  currentlyDragged = event.target;
+  let handleMethod = currentlyDragged.dataset.method;
+
+  this.addEventListener("mousemove", window[handleMethod], false);
+
+  window.addEventListener(
+    "mouseup",
+    () => {
+      currentlyDragged = false;
+      window.removeEventListener("mousemove", window[handleMethod], false);
+    },
+    false
+  );
 });
+
+playPauseBtn.addEventListener("click", togglePlay);
+player.addEventListener("timeupdate", updateProgress);
+player.addEventListener("volumechange", updateVolume);
+player.addEventListener("loadedmetadata", () => {
+  totalTime.textContent = formatTime(player.duration);
+});
+player.addEventListener("canplay", makePlay);
+player.addEventListener("ended", function () {
+  playPause.attributes.d.value = "M18 12L0 24V0";
+  player.currentTime = 0;
+});
+
+volumeBtn.addEventListener("click", () => {
+  volumeBtn.classList.toggle("open");
+  volumeControls.classList.toggle("hidden");
+});
+
+window.addEventListener("resize", directionAware);
+
+sliders.forEach((slider) => {
+  let pin = slider.querySelector(".pin");
+  slider.addEventListener("click", window[pin.dataset.method]);
+});
+
+const changeList = (status) => {
+  if (status === "prev" && !playListIndex) return console.log("已經是第一首");
+  if (status === "next" && playListIndex === playList.length)
+    return console.log("已經是最後一首");
+  status === "next" ? playListIndex++ : playListIndex--;
+  source.src = playList[playListIndex].audioSource;
+  console.log(playListIndex, source.src);
+  player.play();
+};
+
+prevAudio.addEventListener("click", () => changeList("prev"));
+nextAudio.addEventListener("click", () => changeList("next"));
+
+directionAware();
+
+function isDraggable(el) {
+  let canDrag = false;
+  let classes = Array.from(el.classList);
+  draggableClasses.forEach((draggable) => {
+    if (classes.indexOf(draggable) !== -1) canDrag = true;
+  });
+  return canDrag;
+}
+
+function inRange(event) {
+  let rangeBox = getRangeBox(event);
+  let rect = rangeBox.getBoundingClientRect();
+  let direction = rangeBox.dataset.direction;
+  if (direction == "horizontal") {
+    let min = rangeBox.offsetLeft;
+    let max = min + rangeBox.offsetWidth;
+    if (event.clientX < min || event.clientX > max) return false;
+  } else {
+    let min = rect.top;
+    let max = min + rangeBox.offsetHeight;
+    if (event.clientY < min || event.clientY > max) return false;
+  }
+  return true;
+}
+
+function updateProgress() {
+  let current = player.currentTime;
+  let percent = (current / player.duration) * 100;
+  progress.style.width = percent + "%";
+
+  currentTime.textContent = formatTime(current);
+}
+
+function updateVolume() {
+  volumeProgress.style.height = player.volume * 100 + "%";
+  if (player.volume >= 0.5) {
+    speaker.attributes.d.value =
+      "M14.667 0v2.747c3.853 1.146 6.666 4.72 6.666 8.946 0 4.227-2.813 7.787-6.666 8.934v2.76C20 22.173 24 17.4 24 11.693 24 5.987 20 1.213 14.667 0zM18 11.693c0-2.36-1.333-4.386-3.333-5.373v10.707c2-.947 3.333-2.987 3.333-5.334zm-18-4v8h5.333L12 22.36V1.027L5.333 7.693H0z";
+  } else if (player.volume < 0.5 && player.volume > 0.05) {
+    speaker.attributes.d.value =
+      "M0 7.667v8h5.333L12 22.333V1L5.333 7.667M17.333 11.373C17.333 9.013 16 6.987 14 6v10.707c2-.947 3.333-2.987 3.333-5.334z";
+  } else if (player.volume <= 0.05) {
+    speaker.attributes.d.value = "M0 7.667v8h5.333L12 22.333V1L5.333 7.667";
+  }
+}
+
+function getRangeBox(event) {
+  let rangeBox = event.target;
+  let el = currentlyDragged;
+  if (event.type == "click" && isDraggable(event.target)) {
+    rangeBox = event.target.parentElement.parentElement;
+  }
+  if (event.type == "mousemove") {
+    rangeBox = el.parentElement.parentElement;
+  }
+  return rangeBox;
+}
+
+function getCoefficient(event) {
+  let slider = getRangeBox(event);
+  let rect = slider.getBoundingClientRect();
+  let K = 0;
+  if (slider.dataset.direction == "horizontal") {
+    let offsetX = event.clientX - slider.offsetLeft;
+    let width = slider.clientWidth;
+    K = offsetX / width;
+  } else if (slider.dataset.direction == "vertical") {
+    let height = slider.clientHeight;
+    let offsetY = event.clientY - rect.top;
+    K = 1 - offsetY / height;
+  }
+  return K;
+}
+
+function rewind(event) {
+  if (inRange(event)) {
+    player.currentTime = player.duration * getCoefficient(event);
+  }
+}
+
+function changeVolume(event) {
+  if (inRange(event)) {
+    player.volume = getCoefficient(event);
+  }
+}
+
+function formatTime(time) {
+  let min = Math.floor(time / 60);
+  let sec = Math.floor(time % 60);
+  return min + ":" + (sec < 10 ? "0" + sec : sec);
+}
+
+function togglePlay() {
+  if (player.paused) {
+    playPause.attributes.d.value = "M0 0h6v24H0zM12 0h6v24h-6z";
+    player.play();
+  } else {
+    playPause.attributes.d.value = "M18 12L0 24V0";
+    player.pause();
+  }
+}
+
+function makePlay() {
+  playPauseBtn.style.display = "block";
+  loading.style.display = "none";
+}
+
+function directionAware() {
+  if (window.innerHeight < 250) {
+    volumeControls.style.bottom = "-54px";
+    volumeControls.style.left = "54px";
+  } else if (audioPlayer.offsetTop < 154) {
+    volumeControls.style.bottom = "-164px";
+    volumeControls.style.left = "-3px";
+  } else {
+    volumeControls.style.bottom = "52px";
+    volumeControls.style.left = "-3px";
+  }
+}

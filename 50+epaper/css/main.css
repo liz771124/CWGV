@@ -13770,7 +13770,7 @@ a:hover {
 @media (min-width: 768px) {
   .sidebar {
     position: sticky;
-    top: 160px;
+    top: 140px;
     padding: 1rem;
     margin-bottom: 3rem;
   }
@@ -13783,12 +13783,12 @@ a:hover {
 .sidebar__title {
   color: #3f3f3f;
   font-size: 1.2em;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   border-bottom: 5px solid #f0ea3c;
 }
 @media (max-width: 767.98px) {
   .sidebar__title {
-    font-size: 1em;
+    font-size: 1rem;
     margin-bottom: 1rem;
   }
 }
@@ -13799,7 +13799,7 @@ a:hover {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -10px;
+  bottom: -9px;
   width: 100%;
   height: 5px;
   background: rgb(36, 36, 36);
@@ -13834,6 +13834,7 @@ a:hover {
   font-size: 1rem;
   font-weight: 500;
   display: block;
+  width: 100%;
 }
 .sidebar__content-item-vol {
   font-size: 0.8rem;
@@ -13849,11 +13850,10 @@ a:hover {
   height: 50px;
 }
 .sidebar__banner {
-  margin-top: 1rem;
+  margin-top: 2rem;
   text-align: center;
 }
 .sidebar__banner img {
-  width: 100%;
   max-width: 100%;
   margin: auto;
 }

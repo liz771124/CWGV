@@ -384,7 +384,7 @@ a {
 .sidebar {
   @include media-breakpoint-up(md) {
     position: sticky;
-    top: 160px;
+    top: 140px;
     padding: 1rem;
     margin-bottom: 3rem;
   }
@@ -394,10 +394,10 @@ a {
   &__title {
     color: #3f3f3f;
     font-size: 1.2em;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     border-bottom: 5px solid $color-primary-main;
     @include media-breakpoint-down(md) {
-      font-size: 1em;
+      font-size: 1rem;
       margin-bottom: 1rem;
     }
     span {
@@ -406,7 +406,7 @@ a {
         content: "";
         position: absolute;
         left: 0;
-        bottom: -10px;
+        bottom: -9px;
         width: 100%;
         height: 5px;
         background: rgb(36, 36, 36);
@@ -430,6 +430,7 @@ a {
         font-size: 1rem;
         font-weight: 500;
         display: block;
+        width: 100%;
       }
       &-vol {
         font-size: 0.8rem;
@@ -462,10 +463,9 @@ a {
     }
   }
   &__banner {
-    margin-top: 1rem;
+    margin-top: 2rem;
     text-align: center;
     img {
-      width: 100%;
       max-width: 100%;
       margin: auto;
     }

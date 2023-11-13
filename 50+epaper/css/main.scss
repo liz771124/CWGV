@@ -30,7 +30,7 @@ a {
 
 .header {
   background-color: $color-primary-main;
-  padding: 1rem 0 5rem;
+  padding: 1rem 2rem 5rem;
   overflow: hidden;
   position: relative;
   @include media-breakpoint-down(md) {
@@ -166,8 +166,11 @@ a {
         border: 1px solid $white;
       }
     }
+    @include media-breakpoint-down(md) {
+      right: -1rem;
+    }
     &-date {
-      font-size: 1.1rem;
+      font-size: 1rem;
       text-align: right;
     }
     &-title {
@@ -175,36 +178,39 @@ a {
       font-weight: 800;
       letter-spacing: 1px;
       position: relative;
+      @include media-breakpoint-up(lg) {
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          height: 5px;
+          z-index: 11;
+        }
+        &:before {
+          left: -4rem;
+          top: -0.8rem;
+          width: 90%;
+          background-color: $color-primary-main;
+          @include media-breakpoint-down(md) {
+            top: 5.5rem;
+          }
+        }
+        &:after {
+          left: -4rem;
+          top: -0.8rem;
+          width: 30%;
+          background-color: rgb(213, 174, 0);
+          @include media-breakpoint-down(md) {
+            top: 5.5rem;
+          }
+        }
+      }
       @include media-breakpoint-down(lg) {
         font-size: 2rem;
       }
       @include media-breakpoint-down(md) {
         font-size: 1.5rem;
-      }
-      &:before,
-      &:after {
-        content: "";
-        position: absolute;
-        height: 5px;
-        z-index: 11;
-      }
-      &:before {
-        left: -4rem;
-        top: -0.8rem;
-        width: 90%;
-        background-color: $color-primary-main;
-        @include media-breakpoint-down(md) {
-          top: 5.5rem;
-        }
-      }
-      &:after {
-        left: -4rem;
-        top: -0.8rem;
-        width: 50%;
-        background-color: $black;
-        @include media-breakpoint-down(md) {
-          top: 5.5rem;
-        }
+        border-bottom: 3px solid $color-primary-main;
       }
     }
     &-vol {
@@ -212,6 +218,7 @@ a {
       font-style: italic;
       font-weight: 500;
       letter-spacing: 2px;
+      color: $color-primary-main;
       @include media-breakpoint-down(lg) {
         font-size: 1.5rem;
       }
@@ -220,13 +227,24 @@ a {
   &__banner {
     position: relative;
     width: 700px;
+
     @include media-breakpoint-up(md) {
       margin-top: 1rem;
       bottom: -40px;
       box-shadow: rgb(249, 212, 49) 20px -18px;
     }
     @include media-breakpoint-down(md) {
-      top: -1rem;
+      box-shadow: rgb(249, 212, 49) -50px 18px;
+      left: -1rem;
+      &:after {
+        content: "";
+        position: absolute;
+        left: -20px;
+        top: -10px;
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgba(255, 255, 255, 1);
+      }
     }
     img {
       position: relative;
@@ -349,6 +367,10 @@ a {
   &__share {
     display: flex;
     gap: 1rem;
+    &-item {
+      display: flex;
+      place-items: center;
+    }
   }
 
   &__content {

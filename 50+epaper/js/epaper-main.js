@@ -1,3 +1,11 @@
+let currentSection = 1,
+  currentSectionIndex = 1,
+  sections = document.querySelectorAll("section[id^='section']"),
+  navbar = document.querySelector(".header__navbar"),
+  chapter = document.querySelector(".chapter"),
+  gotop = document.querySelector(".gotop"),
+  headerHeight = document.querySelector(".header").offsetHeight;
+
 const swiper = new Swiper(".chapter__slider", {
   loop: true,
   allowTouchMove: false,
@@ -17,13 +25,6 @@ const swiper = new Swiper(".chapter__slider", {
   },
 });
 
-let currentSection = 1,
-  currentSectionIndex = 1,
-  sections = document.querySelectorAll("section"),
-  navbar = document.querySelector(".header__navbar"),
-  gotop = document.querySelector(".gotop"),
-  headerHeight = document.querySelector(".header").offsetHeight / 2;
-
 window.addEventListener("scroll", () => {
   let scrollTop = document.documentElement.scrollTop;
   scrollTop > 0
@@ -33,7 +34,7 @@ window.addEventListener("scroll", () => {
     ? gotop.classList.add("gotopFixed")
     : gotop.classList.remove("gotopFixed");
   sections.forEach((section, index) => {
-    let rect = section.getBoundingClientRect();
+    const rect = section.getBoundingClientRect();
     if (
       rect.top <= window.innerHeight / 2 &&
       rect.bottom >= window.innerHeight / 2
@@ -42,29 +43,20 @@ window.addEventListener("scroll", () => {
       currentSectionIndex = index;
     }
   });
-
   swiper.slideToLoop(currentSectionIndex, 300, true);
-
-  // const swiperSlide = document.querySelectorAll(".swiper-slide");
-  // swiperSlide.forEach((slide, index) => {
-  //   index === currentSectionIndex
-  //     ? slide.classList.add("swiper-slide-active")
-  //     : slide.classList.remove("swiper-slide-active");
-  // });
 });
 
-const anchors = document.querySelectorAll('a[href^="#"]');
+const anchors = document.querySelectorAll("a[href^='#section']");
 anchors.forEach((anchor) => {
   anchor.addEventListener("click", (e) => {
     e.preventDefault();
     let targetId = anchor.getAttribute("href").substring(1);
     let targetElement = document.getElementById(targetId);
     if (!targetElement) return;
+    // targetElement.scrollIntoView();
     let targetOffset =
-      targetElement.offsetTop -
-      document.querySelector(".header__navbar").offsetHeight -
-      document.querySelector(".chapter__slider").offsetHeight;
-    window.scrollTo({ top: targetOffset, behavior: "smooth" });
+      targetElement.offsetTop - navbar.offsetHeight - chapter.offsetHeight;
+    window.scrollTo({ top: targetOffset });
   });
 });
 
@@ -72,5 +64,11 @@ const goTop = () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 };
+gotop.addEventListener("click", goTop);
 
-gotop.addEventListener("click", goTop, false);
+let currentFontSize = 1;
+const zoomText = (e) => {
+  const element = e.target.closest("section");
+  currentFontSize < 1.3 ? (currentFontSize += 0.1) : (currentFontSize = 1);
+  element.style.fontSize = `${currentFontSize}rem`;
+};

@@ -1,36 +1,19 @@
 let playList = [
   {
-    title: "rockstar",
-    cover:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/rockstar-album-cover.jpg",
-    audioSource:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/Post%20Malone%20-%20rockstar%20ft.%2021%20Savage%20(1).mp3",
-  },
-  {
-    title: "Let You Down",
-    cover:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/perception-album-cover.png",
-    audioSource:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/NF%20-%20Let%20You%20Down.mp3",
-  },
-  {
     title: "Silence",
-    cover:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/silence-album-cover.jpg",
+    lesson: "1",
     audioSource:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/Marshmello%20-%20Silence%20ft.%20Khalid.mp3",
+      "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/4.mp3",
   },
   {
     title: "I Fall Apart",
-    cover:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/stoney-cover-album.jpg",
+    lesson: "2",
     audioSource:
       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/Post%20Malone%20-%20I%20Fall%20Apart.mp3",
   },
   {
     title: "Fireproof",
-    cover:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/fireproof-album-cover.jpeg",
+    lesson: "3",
     audioSource:
       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/VAX%20-%20Fireproof%20Feat%20Teddy%20Sky.mp3",
   },
@@ -46,7 +29,6 @@ let volumeBtn = audioPlayer.querySelector(".volume-btn");
 let volumeControls = audioPlayer.querySelector(".volume-controls");
 let volumeProgress = volumeControls.querySelector(".slider .progress");
 let player = audioPlayer.querySelector("audio");
-let source = player.querySelector("source");
 let currentTime = audioPlayer.querySelector(".current-time");
 let totalTime = audioPlayer.querySelector(".total-time");
 let speaker = audioPlayer.querySelector("#speaker");
@@ -99,18 +81,18 @@ sliders.forEach((slider) => {
   slider.addEventListener("click", window[pin.dataset.method]);
 });
 
+prevAudio.addEventListener("click", () => changeList("prev"));
+nextAudio.addEventListener("click", () => changeList("next"));
+player.src = playList[0].audioSource;
+
 const changeList = (status) => {
   if (status === "prev" && !playListIndex) return console.log("已經是第一首");
   if (status === "next" && playListIndex === playList.length)
     return console.log("已經是最後一首");
   status === "next" ? playListIndex++ : playListIndex--;
-  source.src = playList[playListIndex].audioSource;
-  console.log(playListIndex, source.src);
+  player.src = playList[playListIndex].audioSource;
   player.play();
 };
-
-prevAudio.addEventListener("click", () => changeList("prev"));
-nextAudio.addEventListener("click", () => changeList("next"));
 
 directionAware();
 
@@ -145,6 +127,7 @@ function updateProgress() {
   progress.style.width = percent + "%";
 
   currentTime.textContent = formatTime(current);
+  // if (!percent && playListIndex < playList.length) changeList("next");
 }
 
 function updateVolume() {

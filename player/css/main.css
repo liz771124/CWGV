@@ -20,8 +20,7 @@ body {
 *,
 ::before,
 ::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
@@ -191,7 +190,6 @@ audio {
   margin: 0 5px 30px;
   padding: 12px;
   text-decoration: none;
-  -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
 }
 
@@ -254,4 +252,4 @@ a.plyr__controls__item.plyr__control:hover,
     text-align: center;
     width: 100%;
   }
-}
+}/*# sourceMappingURL=main.css.map */

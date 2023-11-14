@@ -10,10 +10,11 @@ html {
 body {
   font-family: "Noto Sans TC", "sans-serif";
   line-height: 1.85;
-  color: #282828;
+  color: #000;
   font-weight: 300;
   font-size: 1.1rem;
   -webkit-font-smoothing: antialiased;
+  background-color: #000;
 }
 
 [class*="title"] {
@@ -28,13 +29,17 @@ a {
   }
 }
 
+main {
+  background-color: #fff;
+}
+
 .header {
   background-color: $color-primary-main;
-  padding: 1rem 2rem 5rem;
+  padding: 6rem 1rem 3rem 1rem;
   overflow: hidden;
   position: relative;
   @include media-breakpoint-down(md) {
-    padding: 1rem 0;
+    padding: 4.3rem 0 1.3rem;
   }
   &__container {
     display: flex;
@@ -63,12 +68,20 @@ a {
     }
   }
   &__logo {
-    width: 120px;
+    width: 100px;
+    @include media-breakpoint-down(md) {
+      position: relative;
+      left: 10px;
+    }
   }
   &__navbar {
-    padding: 15px 0;
-    position: relative;
-    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 0;
+    background-color: $color-primary-main;
+    z-index: 10;
     &:after {
       content: "";
       position: absolute;
@@ -79,16 +92,6 @@ a {
       background-color: $color-primary-main;
       transition: 0.3s height;
       z-index: -1;
-    }
-    &.navbarFixed {
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 100%;
-      transition: 0.3s height;
-      &:after {
-        height: 100%;
-      }
     }
     @include media-breakpoint-down(md) {
       background-color: $color-primary-main;
@@ -125,18 +128,21 @@ a {
   }
   &__menu {
     display: flex;
+    align-items: center;
     gap: 1.2rem;
     @include media-breakpoint-down(lg) {
       display: none;
     }
     @include media-breakpoint-up(lg) {
       a {
+        font-family: no;
         position: relative;
-        font-weight: 800;
-        font-size: 1.2rem;
-        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
         &:hover {
-          height: 100%;
+          background-color: #000;
+          color: $color-primary-main;
         }
       }
     }
@@ -144,13 +150,16 @@ a {
   &__share {
     display: flex;
     gap: 1.2rem;
+    a {
+      display: flex;
+      place-items: center;
+    }
   }
   &__topic {
     position: relative;
     max-width: 500px;
-    background-color: #210e09;
+    background-color: #000;
     color: $white;
-    text-shadow: -1px 3px 7px #210e09;
     font-family: "Noto Serif TC", sans-serif;
     padding: 0.5rem 1rem;
     height: fit-content;
@@ -175,35 +184,33 @@ a {
       text-align: right;
     }
     &-title {
-      font-size: 3rem;
+      font-size: 2.5rem;
       font-weight: 800;
       letter-spacing: 1px;
       position: relative;
-      @include media-breakpoint-up(lg) {
-        &:before,
-        &:after {
-          content: "";
-          position: absolute;
-          height: 5px;
-          z-index: 11;
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        height: 5px;
+        z-index: 1;
+      }
+      &:before {
+        left: -4rem;
+        top: -0.8rem;
+        width: 90%;
+        background-color: $color-primary-main;
+        @include media-breakpoint-down(md) {
+          top: -0.9rem;
         }
-        &:before {
-          left: -4rem;
-          top: -0.8rem;
-          width: 90%;
-          background-color: $color-primary-main;
-          @include media-breakpoint-down(md) {
-            top: 5.5rem;
-          }
-        }
-        &:after {
-          left: -4rem;
-          top: -0.8rem;
-          width: 30%;
-          background-color: rgb(213, 174, 0);
-          @include media-breakpoint-down(md) {
-            top: 5.5rem;
-          }
+      }
+      &:after {
+        left: -4rem;
+        top: -0.8rem;
+        width: 30%;
+        background-color: rgb(213, 174, 0);
+        @include media-breakpoint-down(md) {
+          top: -0.9rem;
         }
       }
       @include media-breakpoint-down(lg) {
@@ -211,7 +218,6 @@ a {
       }
       @include media-breakpoint-down(md) {
         font-size: 1.5rem;
-        border-bottom: 3px solid $color-primary-main;
       }
     }
     &-vol {
@@ -220,7 +226,7 @@ a {
       font-weight: 500;
       letter-spacing: 2px;
       color: $color-primary-main;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
       @include media-breakpoint-down(lg) {
         font-size: 1.5rem;
       }
@@ -229,20 +235,18 @@ a {
   &__banner {
     position: relative;
     width: 700px;
-
     @include media-breakpoint-up(md) {
       margin-top: 1rem;
-      bottom: -40px;
       box-shadow: rgb(249, 212, 49) 20px -18px;
     }
     @include media-breakpoint-down(md) {
-      box-shadow: rgb(249, 212, 49) -50px 18px;
+      // box-shadow: rgb(249, 212, 49) -50px 18px;
       left: -1rem;
       &:after {
         content: "";
         position: absolute;
         left: -20px;
-        top: -10px;
+        bottom: -10px;
         width: 100%;
         height: 100%;
         border: 1px solid rgba(255, 255, 255, 1);
@@ -259,12 +263,12 @@ a {
 
 .chapter {
   position: sticky;
-  top: 67px;
-  z-index: 11;
+  top: 60px;
+  z-index: 1;
   background-color: #f7f7f7;
   &__container {
     position: relative;
-    padding: 0 3rem;
+    padding: 0 2rem;
   }
   &__slider {
     &-item {
@@ -272,13 +276,15 @@ a {
       font-weight: 600;
       color: #a3a3a3;
       padding: 10px 15px;
+      font-size: 0.9rem;
+      overflow: hidden;
+      display: block;
       &-tag {
         font-size: 0.8rem;
+        margin-bottom: 0.3rem;
       }
       &-title {
-        font-size: 1rem;
-        line-height: 1.4;
-        overflow: hidden;
+        line-height: 1.5;
       }
     }
   }
@@ -332,7 +338,6 @@ a {
     }
   }
   &__forward {
-    padding: 0 0.5rem;
     position: relative;
     padding: 0rem 1.5rem 0;
     margin: 2rem 0;
@@ -341,10 +346,9 @@ a {
       position: absolute;
       top: 0;
       left: 0;
-      width: 5px;
+      width: 3px;
       height: 100%;
-      background-color: #212121;
-      z-index: -1;
+      background: #212121;
     }
   }
   &__cover {
@@ -358,7 +362,6 @@ a {
       width: calc(50% + 40px);
       height: calc(50% + 40px);
       background-color: #eee734;
-
       z-index: -1;
     }
   }
@@ -433,7 +436,7 @@ a {
         bottom: -9px;
         width: 100%;
         height: 5px;
-        background: rgb(36, 36, 36);
+        background-color: rgb(36, 36, 36);
         z-index: 1;
       }
     }
@@ -459,7 +462,7 @@ a {
       &-vol {
         font-size: 0.8rem;
         color: $color-primary-main;
-        background-color: #212121;
+        background-color: #000;
         padding: 5px 10px;
         font-weight: bold;
         display: inline-flex;
@@ -468,7 +471,7 @@ a {
   }
   &__subscribe {
     // @include media-breakpoint-down(md) {
-    //   background: rgba($white, 0.5);
+    //   background-color: rgba($white, 0.5);
     //   backdrop-filter: blur(10px);
     //   color: $white;
     //   border-radius: 10px;
@@ -510,12 +513,12 @@ a {
       display: block;
       width: 100px;
       height: 1px;
-      background: #333;
+      background-color: #333;
     }
   }
 }
 .footer {
-  background: #000;
+  background-color: #000;
   color: rgba(255, 255, 255, 0.8);
   padding: 50px 0px 40px 0;
   line-height: 1.1;
@@ -526,7 +529,7 @@ a {
     display: flex;
     gap: 1.5rem;
     &-item {
-      background: #515050;
+      background-color: #515050;
       width: 50px;
       height: 50px;
       display: flex;
@@ -668,4 +671,11 @@ a {
   &-line {
     font-size: 1.5rem;
   }
+  &-share {
+    font-size: 1.45rem;
+  }
+}
+
+.accordion-button {
+  font-size: 1.1rem;
 }

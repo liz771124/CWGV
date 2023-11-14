@@ -13435,7 +13435,7 @@ a:hover {
   }
 }
 .header__logo {
-  width: 200px;
+  width: 120px;
 }
 .header__navbar {
   padding: 15px 0;
@@ -13501,7 +13501,8 @@ a:hover {
 @media (min-width: 992px) {
   .header__menu a {
     position: relative;
-    font-size: 1.1rem;
+    font-weight: 800;
+    font-size: 1.2rem;
     text-decoration: none;
   }
   .header__menu a:hover {
@@ -13605,6 +13606,7 @@ a:hover {
   font-weight: 500;
   letter-spacing: 2px;
   color: #f0ea3c;
+  margin-bottom: 1rem;
 }
 @media (max-width: 991.98px) {
   .header__topic-vol {

@@ -13579,7 +13579,7 @@ main {
 }
 .header__topic-title:before {
   left: -4rem;
-  top: -0.8rem;
+  top: -1rem;
   width: 90%;
   background-color: #f0ea3c;
 }
@@ -13590,7 +13590,7 @@ main {
 }
 .header__topic-title:after {
   left: -4rem;
-  top: -0.8rem;
+  top: -1rem;
   width: 30%;
   background-color: rgb(213, 174, 0);
 }
@@ -13615,7 +13615,7 @@ main {
   font-weight: 500;
   letter-spacing: 2px;
   color: #f0ea3c;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
 }
 @media (max-width: 991.98px) {
   .header__topic-vol {

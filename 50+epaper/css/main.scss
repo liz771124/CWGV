@@ -197,7 +197,7 @@ main {
       }
       &:before {
         left: -4rem;
-        top: -0.8rem;
+        top: -1rem;
         width: 90%;
         background-color: $color-primary-main;
         @include media-breakpoint-down(md) {
@@ -206,7 +206,7 @@ main {
       }
       &:after {
         left: -4rem;
-        top: -0.8rem;
+        top: -1rem;
         width: 30%;
         background-color: rgb(213, 174, 0);
         @include media-breakpoint-down(md) {
@@ -226,7 +226,7 @@ main {
       font-weight: 500;
       letter-spacing: 2px;
       color: $color-primary-main;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.6rem;
       @include media-breakpoint-down(lg) {
         font-size: 1.5rem;
       }

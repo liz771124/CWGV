@@ -150,8 +150,8 @@ main {
   &__share {
     display: flex;
     gap: 1.2rem;
+    place-items: center;
     a {
-      display: flex;
       place-items: center;
     }
   }
@@ -409,17 +409,15 @@ main {
   }
 }
 .sidebar {
-  @include media-breakpoint-up(md) {
-    position: sticky;
-    top: 140px;
-    padding: 1rem;
-    margin-bottom: 3rem;
-  }
+  position: sticky;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  top: 120px;
   @include media-breakpoint-down(md) {
     display: none;
   }
   &__title {
-    color: #3f3f3f;
+    color: #000;
     font-size: 1.2em;
     margin-bottom: 2rem;
     border-bottom: 5px solid $color-primary-main;
@@ -433,7 +431,7 @@ main {
         content: "";
         position: absolute;
         left: 0;
-        bottom: -9px;
+        bottom: -8px;
         width: 100%;
         height: 5px;
         background-color: rgb(36, 36, 36);
@@ -448,24 +446,23 @@ main {
 
     &-item {
       position: relative;
-      display: flex;
-      flex-direction: column;
+      display: inline-flex;
+      gap: 10px;
       align-items: center;
-      gap: 1rem;
+      justify-content: space-between;
+      &-vol {
+        color: $color-primary-main;
+        font-size: 0.8rem;
+        background-color: #000;
+        padding: 0px 5px;
+        display: inline-flex;
+      }
       &-title {
         line-height: 1;
         font-size: 1rem;
         font-weight: 500;
-        display: block;
         width: 100%;
-      }
-      &-vol {
-        font-size: 0.8rem;
-        color: $color-primary-main;
-        background-color: #000;
-        padding: 5px 10px;
-        font-weight: bold;
-        display: inline-flex;
+        flex-grow: 1;
       }
     }
   }
@@ -666,10 +663,11 @@ main {
 
 .icon {
   &-fb {
-    font-size: 1.7rem;
+    font-size: 1.76rem;
   }
   &-line {
     font-size: 1.5rem;
+    line-height: 12px;
   }
   &-share {
     font-size: 1.45rem;

@@ -5,7 +5,9 @@ let currentSection = 1,
   navbar = document.querySelector(".header__navbar"),
   chapter = document.querySelector(".chapter"),
   gotop = document.querySelector(".gotop"),
-  shareBtn = document.querySelector("#share__btn");
+  shareBtn = document.querySelector("#share__btn"),
+  subscribe = document.querySelector(".subscribe"),
+  subscribeClose = document.querySelector(".subscribe-close");
 
 const swiper = new Swiper(".chapter__slider", {
   loop: true,
@@ -28,9 +30,11 @@ const swiper = new Swiper(".chapter__slider", {
 
 window.addEventListener("scroll", () => {
   let scrollTop = document.documentElement.scrollTop;
-  scrollTop > header.offsetHeight
-    ? gotop.classList.add("gotopFixed")
-    : gotop.classList.remove("gotopFixed");
+  if (scrollTop > header.offsetHeight) {
+    gotop.classList.add("gotopFixed"), subscribe.classList.remove("hidden");
+  } else {
+    gotop.classList.remove("gotopFixed"), subscribe.classList.add("hidden");
+  }
   sections.forEach((section, index) => {
     const rect = section.getBoundingClientRect();
     if (
@@ -82,11 +86,14 @@ const shareData = {
   text: document.description,
   url: document.location.href,
 };
-
 shareBtn.addEventListener("click", async () => {
   try {
     await navigator.share(shareData);
   } catch (err) {
     console.log(err);
   }
+});
+
+subscribeClose.addEventListener("click", () => {
+  subscribe.classList.toggle("hidden");
 });

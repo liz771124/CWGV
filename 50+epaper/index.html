@@ -170,7 +170,7 @@
                     <i class="fa-brands fa-line icon-line"></i>
                   </a>
                   <div class="d-flex d-lg-none" id="share__btn">
-                    <i class="fa-solid fa-share-from-square icon-share"></i>
+                    <img width="32" src="img/share.svg" alt="" />
                   </div>
                 </div>
               </div>
@@ -531,12 +531,17 @@
                       alt=""
                     />
                   </div>
-                  <!-- <div class="sidebar__subscribe mt-4">
-                    <div class="sidebar__title">
-                      <span>訂閱50+週報</span>
+                  <div class="subscribe hidden">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <span class="text-primary fs-4">訂閱50+週報</span>
+                      <div class="subscribe-close">
+                        <i class="fa-solid fa-xmark"></i>
+                      </div>
                     </div>
                     <form method="post">
-                      <div class="input-group">
+                      <div class="input-group mt-2">
                         <input
                           type="email"
                           class="form-control"
@@ -553,7 +558,7 @@
                         </button>
                       </div>
                     </form>
-                  </div> -->
+                  </div>
                 </div>
               </div>
             </div>
@@ -563,7 +568,7 @@
         <div class="recommend">
           <div class="container">
             <div class="position-relative mb-4">
-              <h2 class="recommend__title title-line">看更多50+週報</h2>
+              <h2 class="recommend__title title-line">更多50+週報</h2>
             </div>
             <div class="row">
               <div class="col-md-4">
@@ -578,13 +583,39 @@
                         src="https://imgs.cwgv.com.tw/articles/58/28258/preview/thumb/28258.png"
                       />
                     </div>
-                    <div
-                      class="d-flex gap-3 justify-content-between align-items-end"
-                    >
-                      <div class="recommend__item-vol">Vol. 148</div>
-                      <div class="recommend__item-date">2023-11-01</div>
+                    <div>
+                      <div
+                        class="d-flex gap-3 justify-content-between align-items-center"
+                      >
+                        <div class="recommend__item-vol">Vol. 148</div>
+                        <div class="recommend__item-date">2023-11-01</div>
+                      </div>
+                      <div class="recommend__item-title clamp-2">
+                        防失智、癌症、高血壓！醫師：用對方法喝蔬菜湯，可以變年輕
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div>
+                  <a
+                    class="recommend__item"
+                    href="https://www.fiftyplus.com.tw/articles/28258"
+                  >
+                    <div class="recommend__item-img">
+                      <img
+                        class="img-fluid"
+                        src="https://imgs.gvm.com.tw/upload/gallery/20231110/thumbnail_M_154726.jpg"
+                      />
                     </div>
                     <div>
+                      <div
+                        class="d-flex gap-3 justify-content-between align-items-center"
+                      >
+                        <div class="recommend__item-vol">Vol. 148</div>
+                        <div class="recommend__item-date">2023-11-01</div>
+                      </div>
                       <div class="recommend__item-title clamp-2">
                         防失智、癌症、高血壓！醫師：用對方法喝蔬菜湯，可以變年輕
                       </div>
@@ -604,41 +635,15 @@
                         src="https://imgs.cwgv.com.tw/articles/58/29158/preview/thumb/29158.png"
                       />
                     </div>
-                    <div
-                      class="d-flex gap-3 justify-content-between align-items-end"
-                    >
-                      <div class="recommend__item-vol">Vol. 148</div>
-                      <div class="recommend__item-date">2023-11-01</div>
-                    </div>
                     <div>
-                      <div class="recommend__item-title clamp-2">
-                        觀察夫妻說話習慣，可以預測之後離婚的可能性！精神科醫師：2種說話習慣，會讓親近的人受傷
+                      <div
+                        class="d-flex gap-3 justify-content-between align-items-center"
+                      >
+                        <div class="recommend__item-vol">Vol. 148</div>
+                        <div class="recommend__item-date">2023-11-01</div>
                       </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div>
-                  <a
-                    class="recommend__item"
-                    href="https://www.fiftyplus.com.tw/articles/28258"
-                  >
-                    <div class="recommend__item-img">
-                      <img
-                        class="img-fluid"
-                        src="https://imgs.gvm.com.tw/upload/gallery/20231110/thumbnail_M_154726.jpg"
-                      />
-                    </div>
-                    <div
-                      class="d-flex gap-3 justify-content-between align-items-end"
-                    >
-                      <div class="recommend__item-vol">Vol. 148</div>
-                      <div class="recommend__item-date">2023-11-01</div>
-                    </div>
-                    <div>
                       <div class="recommend__item-title clamp-2">
-                        原以為不工作生活很輕鬆，沒想到退休症候群更焦慮！郭艾珊：丟掉名片以後，如何3年實現6目標？
+                        防失智、癌症、高血壓！醫師：用對方法喝蔬菜湯，可以變年輕
                       </div>
                     </div>
                   </a>
@@ -691,8 +696,10 @@
                 </li>
               </ul>
             </div>
-            <div class="col-md-8">
-              <div class="d-flex flex-column mt-3">
+            <div class="col-md-12">
+              <div
+                class="d-flex align-items-center justify-content-between mt-3"
+              >
                 <div class="mb-3">
                   <img
                     width="250"
@@ -701,45 +708,45 @@
                     alt=""
                   />
                 </div>
-                <div class="d-flex flex-wrap gap-3 small">
-                  <a href="#">天下文化</a> | <a href="#">未來親子學習平台</a> |
-                  <a href="#">遠見雜誌</a> | <a href="#">哈佛商業評論</a> |
-                  <a href="#">1號課堂</a>
-                </div>
-                <div class="small mt-4">
-                  Copyright © 2023遠見天下文化出版股份有限公司
+                <div class="d-flex align-items-center mt-4 mt-md-auto">
+                  <div class="footer__social mt-auto">
+                    <a
+                      class="footer__social-item"
+                      href="https://www.facebook.com/50pluscommunity/"
+                      title="Facebook"
+                      ><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                    <a
+                      class="footer__social-item"
+                      href="https://line.me/R/ti/p/%40efu3793r"
+                      title="Line"
+                      ><i class="fa-brands fa-line"></i
+                    ></a>
+                    <a
+                      class="footer__social-item"
+                      href="https://www.instagram.com/50plus_taiwan/"
+                      title="IG"
+                    >
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a
+                      class="footer__social-item"
+                      href="https://www.youtube.com/channel/UC0UTmrf_0LKRIUV60wLsjJw"
+                      title="Youtube"
+                      ><i class="fa-brands fa-youtube"></i
+                    ></a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="d-flex align-items-en mt-4 mt-md-auto">
-                <div class="footer__social mt-auto">
-                  <a
-                    class="footer__social-item"
-                    href="https://www.facebook.com/50pluscommunity/"
-                    title="Facebook"
-                    ><i class="fa-brands fa-facebook-f"></i
-                  ></a>
-                  <a
-                    class="footer__social-item"
-                    href="https://line.me/R/ti/p/%40efu3793r"
-                    title="Line"
-                    ><i class="fa-brands fa-line"></i
-                  ></a>
-                  <a
-                    class="footer__social-item"
-                    href="https://www.instagram.com/50plus_taiwan/"
-                    title="IG"
-                  >
-                    <i class="fa-brands fa-instagram"></i>
-                  </a>
-                  <a
-                    class="footer__social-item"
-                    href="https://www.youtube.com/channel/UC0UTmrf_0LKRIUV60wLsjJw"
-                    title="Youtube"
-                    ><i class="fa-brands fa-youtube"></i
-                  ></a>
-                </div>
+            <div class="col-md-12">
+              <div class="d-flex flex-wrap gap-3 small">
+                <a href="#">天下文化</a> | <a href="#">未來親子學習平台</a> |
+                <a href="#">遠見雜誌</a> | <a href="#">哈佛商業評論</a> |
+                <a href="#">1號課堂</a>
+              </div>
+              <div class="small mt-4">
+                Copyright © 2023遠見天下文化出版股份有限公司
               </div>
             </div>
           </div>
@@ -750,7 +757,6 @@
         <i class="fa-solid fa-chevron-up"></i>
       </div>
 
-      <!-- <script src="js/jquery.min.js"></script> -->
       <script src="js/bootstrap.min.js"></script>
       <script src="js/swiper-bundle.min.js"></script>
       <script src="js/epaper-main.js"></script>

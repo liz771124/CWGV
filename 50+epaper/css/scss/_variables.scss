@@ -1441,17 +1441,17 @@ $accordion-body-padding-x: $accordion-padding-x !default;
 $accordion-button-padding-y: $accordion-padding-y !default;
 $accordion-button-padding-x: $accordion-padding-x !default;
 $accordion-button-color: var(--#{$prefix}body-color) !default;
-$accordion-button-bg: var(--#{$prefix}accordion-bg) !default;
+$accordion-button-bg: #f2f2f2 !default;
 $accordion-transition: $btn-transition, border-radius 0.15s ease !default;
-$accordion-button-active-bg: var(--#{$prefix}primary-bg-subtle) !default;
-$accordion-button-active-color: var(--#{$prefix}primary-text-emphasis) !default;
+$accordion-button-active-bg: #000 !default;
+$accordion-button-active-color: #f0ea3c !default;
 
 $accordion-button-focus-border-color: $input-focus-border-color !default;
-$accordion-button-focus-box-shadow: $btn-focus-box-shadow !default;
+$accordion-button-focus-box-shadow: none !default;
 
 $accordion-icon-width: 1.25rem !default;
 $accordion-icon-color: $body-color !default;
-$accordion-icon-active-color: $primary-text-emphasis !default;
+$accordion-icon-active-color: #f0ea3c !default;
 $accordion-icon-transition: transform 0.2s ease-in-out !default;
 $accordion-icon-transform: rotate(-180deg) !default;
 
@@ -1778,7 +1778,7 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
 // scss-docs-start offcanvas-variables
 $offcanvas-padding-y: $modal-inner-padding !default;
 $offcanvas-padding-x: $modal-inner-padding !default;
-$offcanvas-horizontal-width: 400px !default;
+$offcanvas-horizontal-width: 350px !default;
 $offcanvas-vertical-height: 30vh !default;
 $offcanvas-transition-duration: 0.3s !default;
 $offcanvas-border-color: $modal-content-border-color !default;

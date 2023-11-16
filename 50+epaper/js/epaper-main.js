@@ -4,6 +4,7 @@ let currentSection = 1,
   header = document.querySelector(".header"),
   navbar = document.querySelector(".header__navbar"),
   chapter = document.querySelector(".chapter"),
+  sidebar = document.querySelector(".sidebar"),
   gotop = document.querySelector(".gotop"),
   shareBtn = document.querySelector("#share__btn"),
   subscribe = document.querySelector(".subscribe"),
@@ -31,9 +32,11 @@ const swiper = new Swiper(".chapter__slider", {
 window.addEventListener("scroll", () => {
   let scrollTop = document.documentElement.scrollTop;
   if (scrollTop > header.offsetHeight) {
-    gotop.classList.add("gotopFixed"), subscribe.classList.remove("hidden");
+    gotop.classList.add("gotopFixed");
+    subscribe.style.display = "block";
   } else {
-    gotop.classList.remove("gotopFixed"), subscribe.classList.add("hidden");
+    gotop.classList.remove("gotopFixed");
+    subscribe.style.display = "none";
   }
   sections.forEach((section, index) => {
     const rect = section.getBoundingClientRect();
@@ -97,3 +100,5 @@ shareBtn.addEventListener("click", async () => {
 subscribeClose.addEventListener("click", () => {
   subscribe.classList.toggle("hidden");
 });
+
+sidebar.style.top = `${navbar.offsetHeight + chapter.offsetHeight}px`;

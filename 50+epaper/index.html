@@ -531,34 +531,6 @@
                       alt=""
                     />
                   </div>
-                  <div class="subscribe hidden">
-                    <div
-                      class="d-flex align-items-center justify-content-between"
-                    >
-                      <span class="text-primary fs-4">訂閱50+週報</span>
-                      <div class="subscribe-close">
-                        <i class="fa-solid fa-xmark"></i>
-                      </div>
-                    </div>
-                    <form method="post">
-                      <div class="input-group mt-2">
-                        <input
-                          type="email"
-                          class="form-control"
-                          name="email"
-                          placeholder="請輸入電子郵件"
-                          autocomplete="off"
-                        />
-                        <button
-                          type="button"
-                          class="btn btn-primary px-4"
-                          onclick="checkEmail(document.getElementById('subscribeEmail1').value);"
-                        >
-                          訂閱
-                        </button>
-                      </div>
-                    </form>
-                  </div>
                 </div>
               </div>
             </div>
@@ -652,6 +624,33 @@
             </div>
           </div>
         </div>
+
+        <div class="subscribe">
+          <div class="d-flex align-items-center justify-content-between">
+            <span class="text-primary fs-4">訂閱50+週報</span>
+            <div class="subscribe-close">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+          <form method="post">
+            <div class="input-group mt-2">
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                placeholder="請輸入電子郵件"
+                autocomplete="off"
+              />
+              <button
+                type="button"
+                class="btn btn-primary px-4"
+                onclick="checkEmail(document.getElementById('subscribeEmail1').value);"
+              >
+                訂閱
+              </button>
+            </div>
+          </form>
+        </div>
       </main>
       <footer class="footer">
         <div class="container">
@@ -698,16 +697,14 @@
             </div>
             <div class="col-md-12">
               <div
-                class="d-flex align-items-center justify-content-between mt-3"
+                class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between mt-3"
               >
-                <div class="mb-3">
-                  <img
-                    width="250"
-                    class="img-fluid"
-                    src="img/50+logo_w.svg"
-                    alt=""
-                  />
-                </div>
+                <img
+                  width="250"
+                  class="img-fluid"
+                  src="img/50+logo_w.svg"
+                  alt=""
+                />
                 <div class="d-flex align-items-center mt-4 mt-md-auto">
                   <div class="footer__social mt-auto">
                     <a
@@ -739,7 +736,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-12 mt-3">
               <div class="d-flex flex-wrap gap-3 small">
                 <a href="#">天下文化</a> | <a href="#">未來親子學習平台</a> |
                 <a href="#">遠見雜誌</a> | <a href="#">哈佛商業評論</a> |

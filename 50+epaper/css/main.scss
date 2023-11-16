@@ -512,6 +512,9 @@ main {
     &-img {
       position: relative;
       width: 250px;
+      @include media-breakpoint-down(md) {
+        width: 150px;
+      }
       &:after {
         content: "";
         position: absolute;
@@ -527,9 +530,6 @@ main {
         object-fit: cover;
         width: 100%;
         z-index: 1;
-      }
-      @include media-breakpoint-down(md) {
-        display: none;
       }
     }
     &-vol {
@@ -548,9 +548,9 @@ main {
 
 .subscribe {
   position: fixed;
-  background-color: #81440b;
+  background-color: #212121;
   color: $white;
-  padding: 1.2rem;
+  padding: 1.3rem;
   font-weight: 800;
   right: 20px;
   bottom: 0;
@@ -561,6 +561,7 @@ main {
   border-top-right-radius: 10px;
   transition: 0.3s all;
   z-index: 1000;
+  display: none;
   @include media-breakpoint-down(md) {
     width: 100%;
     right: 0;
@@ -570,6 +571,7 @@ main {
   }
   &-close {
     color: #fff;
+    font-size: 1.2rem;
   }
   input {
     height: 50px;
@@ -578,15 +580,34 @@ main {
 
 .footer {
   background-color: #000;
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
   padding: 50px 0px 40px 0;
   line-height: 1.1;
   a {
     color: rgba(255, 255, 255, 0.8);
   }
+  &__menu {
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+    @include media-breakpoint-down(md) {
+      display: grid;
+      flex-wrap: nowrap;
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 2rem;
+    }
+    &-item {
+      a {
+        font-size: 1.5rem;
+      }
+    }
+  }
   &__social {
     display: flex;
     gap: 1.5rem;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 1rem;
+    }
     &-item {
       background-color: #515050;
       width: 40px;

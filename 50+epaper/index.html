@@ -528,6 +528,36 @@
                     />
                   </div>
                 </div>
+                <div class="d-flex justify-content-center">
+                  <div class="subscribe hidden">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <span class="text-primary fs-4">訂閱50+週報</span>
+                      <div class="subscribe-close">
+                        <i class="fa-solid fa-xmark"></i>
+                      </div>
+                    </div>
+                    <form method="post">
+                      <div class="input-group mt-2">
+                        <input
+                          type="email"
+                          class="form-control"
+                          name="email"
+                          placeholder="請輸入電子郵件"
+                          autocomplete="off"
+                        />
+                        <button
+                          type="button"
+                          class="btn btn-primary px-4"
+                          onclick="checkEmail(document.getElementById('subscribeEmail1').value);"
+                        >
+                          訂閱
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -619,33 +649,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="subscribe">
-          <div class="d-flex align-items-center justify-content-between">
-            <span class="text-primary fs-4">訂閱50+週報</span>
-            <div class="subscribe-close">
-              <i class="fa-solid fa-xmark"></i>
-            </div>
-          </div>
-          <form method="post">
-            <div class="input-group mt-2">
-              <input
-                type="email"
-                class="form-control"
-                name="email"
-                placeholder="請輸入電子郵件"
-                autocomplete="off"
-              />
-              <button
-                type="button"
-                class="btn btn-primary px-4"
-                onclick="checkEmail(document.getElementById('subscribeEmail1').value);"
-              >
-                訂閱
-              </button>
-            </div>
-          </form>
         </div>
       </main>
       <footer class="footer">

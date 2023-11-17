@@ -563,21 +563,23 @@ main {
   color: $white;
   padding: 1.3rem;
   font-weight: 800;
-  right: 20px;
   bottom: 0;
-  width: 350px;
-  max-width: 100%;
   z-index: 3;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   transition: 0.3s all;
-  display: none;
+  max-width: 100%;
+  @include media-breakpoint-up(md) {
+    width: 350px;
+    max-width: 350px;
+  }
   @include media-breakpoint-down(md) {
     width: 100%;
-    right: 0;
+    left: 0;
+    bottom: 0;
   }
   &.hidden {
-    bottom: -400px;
+    bottom: -100%;
   }
   &-close {
     color: #fff;

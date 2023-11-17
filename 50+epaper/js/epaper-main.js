@@ -33,10 +33,10 @@ window.addEventListener("scroll", () => {
   let scrollTop = document.documentElement.scrollTop;
   if (scrollTop > header.offsetHeight) {
     gotop.classList.add("gotopFixed");
-    subscribe.style.display = "block";
+    subscribe.style.bottom = "0";
   } else {
     gotop.classList.remove("gotopFixed");
-    subscribe.style.display = "none";
+    subscribe.style.bottom = "-100%";
   }
   sections.forEach((section, index) => {
     const rect = section.getBoundingClientRect();

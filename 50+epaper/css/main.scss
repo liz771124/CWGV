@@ -276,9 +276,12 @@ main {
 
 .chapter {
   position: sticky;
-  top: 40px;
+  top: 45px;
   z-index: 1;
   background-color: #f7f7f7;
+  @include media-breakpoint-down(md) {
+    top: 40px;
+  }
   &__container {
     position: relative;
     padding: 0 2rem;
@@ -288,7 +291,7 @@ main {
       position: relative;
       font-weight: 600;
       color: #a3a3a3;
-      padding: 8px 15px;
+      padding: 10px 15px;
       font-size: 0.9rem;
       overflow: hidden;
       display: block;
@@ -319,12 +322,16 @@ main {
   @include media-breakpoint-down(md) {
     padding: 2rem 0;
   }
+  [id*="section"]:not(:last-child) {
+    border-bottom: 1px solid #bcbcbc;
+  }
   &__category {
     color: $color-primary-brown;
     padding: 0 10px;
     border: 1px solid $color-primary-brown;
     font-size: 0.9rem;
     display: inline-block;
+    margin-top: 3rem;
     margin-bottom: 0.5rem;
   }
   &__title {
@@ -587,6 +594,9 @@ main {
   color: #fff;
   padding: 50px 0px 40px 0;
   line-height: 1.1;
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
   a {
     color: rgba(255, 255, 255, 0.8);
   }

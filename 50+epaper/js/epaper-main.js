@@ -98,7 +98,9 @@ shareBtn.addEventListener("click", async () => {
 });
 
 subscribeClose.addEventListener("click", () => {
-  subscribe.classList.toggle("hidden");
+  subscribe.style.opacity = 0;
+  subscribe.style.removeProperty("bottom");
+  // subscribe.classList.toggle("hidden");
 });
 
 sidebar.style.top = `${navbar.offsetHeight + chapter.offsetHeight}px`;

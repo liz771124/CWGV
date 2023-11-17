@@ -13423,9 +13423,14 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  margin: auto;
+  gap: 3rem;
 }
 @media (max-width: 767.98px) {
   .header__container {

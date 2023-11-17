@@ -52,7 +52,10 @@ main {
   }
   &__container {
     display: flex;
+    justify-content: space-between;
     align-items: flex-end;
+    margin: auto;
+    gap: 3rem;
     @include media-breakpoint-down(md) {
       flex-wrap: wrap;
     }

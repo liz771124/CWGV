@@ -13949,6 +13949,11 @@ main {
   position: relative;
   max-width: 150px;
 }
+@media (max-width: 767.98px) {
+  .recommend__item-img {
+    max-width: 120px;
+  }
+}
 .recommend__item-img:after {
   content: "";
   position: absolute;

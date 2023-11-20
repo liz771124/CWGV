@@ -13947,12 +13947,12 @@ main {
 }
 .recommend__item-img {
   position: relative;
-  max-width: 150px;
+  width: 150px;
   z-index: 0;
 }
 @media (max-width: 767.98px) {
   .recommend__item-img {
-    max-width: 120px;
+    width: 120px;
   }
 }
 .recommend__item-img:after {

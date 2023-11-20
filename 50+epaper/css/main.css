@@ -13939,6 +13939,17 @@ main {
     border-bottom: 1px solid #bdbdbd;
   }
 }
+.recommend__item-title {
+  font-size: 1rem;
+  line-height: 1.45;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+@media (max-width: 767.98px) {
+  .recommend__item-content {
+    width: calc(100% - 100px);
+  }
+}
 .recommend__item-img {
   position: relative;
   width: 150px;
@@ -13976,11 +13987,6 @@ main {
 .recommend__item-date {
   font-size: 0.9rem;
   color: #646464;
-}
-@media (max-width: 767.98px) {
-  .recommend__item-title {
-    width: calc(100% - 110px);
-  }
 }
 
 .subscribe {

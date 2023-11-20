@@ -13948,6 +13948,7 @@ main {
 .recommend__item-img {
   position: relative;
   max-width: 150px;
+  z-index: 0;
 }
 @media (max-width: 767.98px) {
   .recommend__item-img {

@@ -10,12 +10,13 @@ let currentSection = 1,
   subscribe = document.querySelector(".subscribe"),
   subscribeClose = document.querySelector(".subscribe-close"),
   headerHeight = header.offsetHeight,
-  navbarHeight = navbar.offsetHeight;
-chapterHeight = chapter.offsetHeight;
+  navbarHeight = navbar.offsetHeight,
+  chapterHeight = chapter.offsetHeight;
 
 const swiper = new Swiper(".chapter__slider", {
   loop: true,
   allowTouchMove: false,
+  autoplay: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -37,8 +38,10 @@ window.addEventListener("scroll", () => {
   if (scrollTop > header.offsetHeight) {
     gotop.classList.add("gotopFixed");
     subscribe.style.bottom = "0";
+    chapter.classList.add("show");
   } else {
     gotop.classList.remove("gotopFixed");
+    chapter.classList.remove("show");
     subscribe.style.bottom = "-100%";
   }
   sections.forEach((section, index) => {

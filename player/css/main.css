@@ -1,15 +1,9 @@
 .holder {
   position: fixed;
   bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   background: rgba(0, 0, 0, 0.07);
   width: 100%;
 }
@@ -19,20 +13,13 @@
   width: 500px;
   min-width: 300px;
   height: 56px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding-left: 24px;
   padding-right: 24px;
   border-radius: 4px;
   -moz-user-select: none;
-   -ms-user-select: none;
        user-select: none;
   -webkit-user-select: none;
 }
@@ -46,13 +33,10 @@
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/355309/loading.png);
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-animation: spin 0.4s linear infinite;
-          animation: spin 0.4s linear infinite;
+  animation: spin 0.4s linear infinite;
 }
 .audio.green-audio-player .slider {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   background-color: #d8d8d8;
   cursor: pointer;
   position: relative;
@@ -70,25 +54,16 @@
   background-color: #44bfa3;
   position: absolute;
   pointer-events: all;
-  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32);
-          box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32);
 }
 .audio.green-audio-player .controls {
   font-size: 16px;
   line-height: 18px;
   color: #55606e;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
   margin-left: 24px;
   margin-right: 24px;
 }
@@ -126,15 +101,8 @@
   position: absolute;
   left: -3px;
   bottom: 52px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-direction: column;
+  align-items: center;
   display: flex;
 }
 .audio.green-audio-player .volume-controls.hidden {
@@ -161,33 +129,16 @@ img {
   display: block;
 }
 
-@-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotateZ(0);
-            transform: rotateZ(0);
-  }
-  to {
-    -webkit-transform: rotateZ(1turn);
-            transform: rotateZ(1turn);
-  }
-}
-
 @keyframes spin {
   from {
-    -webkit-transform: rotateZ(0);
-            transform: rotateZ(0);
+    transform: rotateZ(0);
   }
   to {
-    -webkit-transform: rotateZ(1turn);
-            transform: rotateZ(1turn);
+    transform: rotateZ(1turn);
   }
 }
 .player-control {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 0.5rem;
-}
+}/*# sourceMappingURL=main.css.map */

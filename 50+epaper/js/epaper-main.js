@@ -16,7 +16,10 @@ let currentSection = 1,
 const swiper = new Swiper(".chapter__slider", {
   loop: true,
   allowTouchMove: false,
-  autoplay: true,
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -27,8 +30,8 @@ const swiper = new Swiper(".chapter__slider", {
       spaceBetween: 0,
     },
     1024: {
-      slidesPerView: 2.99,
-      spaceBetween: 10,
+      slidesPerView: 3,
+      spaceBetween: 0,
     },
   },
 });
@@ -54,7 +57,7 @@ window.addEventListener("scroll", () => {
       currentSectionIndex = index;
     }
   });
-  swiper.slideToLoop(currentSectionIndex, 300, true);
+  // swiper.slideToLoop(currentSectionIndex, 300, true);
 });
 
 const anchors = document.querySelectorAll("a[href^='#section']");

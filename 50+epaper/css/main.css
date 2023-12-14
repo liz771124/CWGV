@@ -13376,10 +13376,6 @@ body {
   text-align: justify;
 }
 
-[class*=title] {
-  font-family: "Noto Serif TC", sans-serif;
-}
-
 ::-moz-selection {
   background-color: #1f1f1f;
   color: rgb(255, 255, 255);
@@ -13397,10 +13393,10 @@ body {
 
 a {
   text-decoration: none;
-  color: #191919;
+  color: #000;
 }
 a:hover {
-  color: #804d0e;
+  color: #515050;
 }
 
 main {
@@ -13421,55 +13417,53 @@ main {
   overflow: hidden;
   position: relative;
 }
-.header:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 50%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.75)));
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+@media (min-width: 768px) {
+  .header:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.75)));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+  }
 }
 .header__topic {
   background: rgba(0, 0, 0, 0.7);
   max-width: 765px;
   color: #fff;
   z-index: 1;
+  padding: 2rem;
+  line-height: 1.5;
 }
 @media (min-width: 768px) {
   .header__topic {
+    padding: 2.5rem;
     position: absolute;
     left: 0;
     bottom: 0;
   }
 }
 .header__topic-vol {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #f0ea3c;
-  color: #221e1f;
-  padding: 3px 8px;
-  font-size: 16px;
+  font-size: 3rem;
+  font-weight: 300;
+  font-style: oblique;
+  margin-right: 0.5rem;
+  letter-spacing: 0.1rem;
+  color: #f0ea3c;
+  font-family: "Redressed", "Noto Sans", "Noto Sans TC", sans-serif;
 }
-@media (max-width: 991.98px) {
-  .header__topic-vol {
-    font-size: 0.8rem;
-  }
+.header__topic-date {
+  letter-spacing: 0.1rem;
 }
 .header__topic-title {
+  font-family: "Noto Serif TC", sans-serif;
   font-size: 2.8rem;
   font-weight: 700;
-  padding: 3.5rem 2rem 2rem 2rem;
   position: relative;
   letter-spacing: 0.1em;
-}
-@media (max-width: 991.98px) {
-  .header__topic-title {
-    font-size: 2rem;
-  }
 }
 @media (max-width: 767.98px) {
   .header__topic-title {
@@ -13518,6 +13512,19 @@ main {
       -ms-flex-align: center;
           align-items: center;
 }
+@media (min-width: 1200px) {
+  .header__navbar:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 500px;
+    height: 100%;
+    -webkit-transform: skewX(-30deg);
+            transform: skewX(-30deg);
+    background-color: #0b0b0b;
+  }
+}
 .header__navbar:after {
   content: "";
   position: absolute;
@@ -13530,19 +13537,17 @@ main {
   transition: 0.3s height;
   z-index: -1;
 }
+.header__navbar-mb .accordion-button {
+  font-weight: 600;
+}
 .header__navbar-mb ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 1rem;
+  margin-bottom: 0;
+  font-weight: 400;
 }
 .header__navbar-mb ul li {
   border-bottom: #d3d3d3 1px solid;
-  padding: 10px;
+  padding: 0.8rem 1rem;
+  font-size: 1.1rem;
 }
 .header__navbar-mb ul li a {
   line-height: 1.5;
@@ -13554,6 +13559,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Noto Serif TC", sans-serif;
 }
 @media (max-width: 991.98px) {
   .header__menu {
@@ -13563,7 +13569,7 @@ main {
 @media (min-width: 992px) {
   .header__menu a {
     position: relative;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.1rem;
     letter-spacing: 0.5px;
     padding: 1rem 10px;
@@ -13600,6 +13606,7 @@ main {
   transition: 0.3s -webkit-transform;
   transition: 0.3s transform;
   transition: 0.3s transform, 0.3s -webkit-transform;
+  z-index: 2;
 }
 .chapter.show {
   -webkit-transform: translateY(0px);
@@ -13614,8 +13621,19 @@ main {
   position: relative;
   padding: 0 3rem;
 }
+@media (max-width: 991.98px) {
+  .chapter__container {
+    padding: 0 2.5rem;
+  }
+}
 .chapter__slider {
-  padding: 1rem 0;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+@media (max-width: 991.98px) {
+  .chapter__slider {
+    padding: 0.8rem 0;
+  }
 }
 .chapter__slider-item {
   display: -webkit-box;
@@ -13626,15 +13644,21 @@ main {
           align-items: center;
 }
 .chapter__slider-item:nth-child(2n+1) {
-  border-right: 1px solid #bbbbbb;
-  border-left: 1px solid #bbbbbb;
+  border-right: 1px solid #bcbcbc;
+  border-left: 1px solid #bcbcbc;
 }
 .chapter__slider-item-title {
+  height: 60px;
+  line-height: 1.4;
   padding: 0.5rem 1rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: #b1b1b1;
 }
 
 .article {
@@ -13650,11 +13674,9 @@ main {
   margin-bottom: 2rem;
 }
 .article__category {
-  display: inline-block;
   font-size: 1rem;
-  letter-spacing: 0.1em;
-  border-bottom: 2px solid #804d0e;
-  margin-bottom: 0.8rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.5rem;
 }
 .article__title {
   font-family: "Noto Serif TC", sans-serif;
@@ -13685,6 +13707,7 @@ main {
   position: relative;
 }
 .article__forward {
+  font-style: oblique;
   position: relative;
   padding: 0rem 1.5rem 0;
   margin: 2rem 0;
@@ -13749,6 +13772,7 @@ main {
 }
 .article__content img {
   max-width: 100%;
+  height: auto !important;
 }
 .article__content .img-note {
   display: block;
@@ -13772,30 +13796,27 @@ main {
   }
 }
 .sidebar__title {
-  color: #000;
-  font-size: 1.2em;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  border-bottom: 5px solid #f0ea3c;
-}
-@media (max-width: 767.98px) {
-  .sidebar__title {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-}
-.sidebar__title span {
   position: relative;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
-.sidebar__title span:after {
+.sidebar__title:after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -8px;
+  bottom: 0;
   width: 100%;
-  height: 5px;
+  height: 1px;
   background-color: rgb(36, 36, 36);
   z-index: 1;
+}
+.sidebar__title span {
+  background-color: #f0ea3c;
+  padding: 5px 10px;
+  position: relative;
+  color: #000;
+  letter-spacing: 2px;
+  font-weight: 400;
 }
 .sidebar__content {
   display: -webkit-box;
@@ -13865,9 +13886,8 @@ main {
   font-weight: 300;
 }
 .recommend__item-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.45;
-  font-weight: 600;
 }
 @media (max-width: 767.98px) {
   .recommend__item-content {

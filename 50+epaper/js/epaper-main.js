@@ -17,7 +17,7 @@ const swiper = new Swiper(".chapter__slider", {
   loop: true,
   allowTouchMove: false,
   autoplay: {
-    delay: 4500,
+    delay: 6500,
     disableOnInteraction: false,
   },
   navigation: {
@@ -109,4 +109,4 @@ subscribeClose.addEventListener("click", () => {
   subscribe.style.removeProperty("bottom");
 });
 
-sidebar.style.top = `${navbar.offsetHeight + chapter.offsetHeight}px`;
+sidebar.style.top = `${navbar.offsetHeight + chapter.offsetHeight + 20}px`;

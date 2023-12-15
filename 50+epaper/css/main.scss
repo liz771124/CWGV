@@ -270,8 +270,8 @@ main {
 		}
 	}
 	&__slider {
-		padding-top: 0.5rem;
-		padding-bottom: 0.5rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
 		@include media-breakpoint-down(lg) {
 			padding: 0.8rem 0;
 		}
@@ -288,8 +288,9 @@ main {
 				display: -webkit-box;
 				-webkit-line-clamp: 2;
 				-webkit-box-orient: vertical;
+				line-height: 1.5;
+				padding-bottom: 0.18em;
 				overflow: hidden;
-				padding-right: 1em;
 			}
 		}
 	}
@@ -463,7 +464,7 @@ main {
 			gap: 10px;
 			align-items: center;
 			justify-content: space-between;
-      font-weight: 400;
+			font-weight: 400;
 			&-title {
 				line-height: 1;
 				font-size: 1.1rem;

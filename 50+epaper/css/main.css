@@ -12224,8 +12224,8 @@ main {
   }
 }
 .chapter__slider {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 @media (max-width: 991.98px) {
   .chapter__slider {
@@ -12246,8 +12246,9 @@ main {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-height: 1.5;
+  padding-bottom: 0.18em;
   overflow: hidden;
-  padding-right: 1em;
 }
 
 .swiper-button-prev, .swiper-button-next {

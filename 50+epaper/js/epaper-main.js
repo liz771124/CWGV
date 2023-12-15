@@ -15,7 +15,6 @@ let currentSection = 1,
 
 const swiper = new Swiper(".chapter__slider", {
   loop: true,
-  allowTouchMove: false,
   autoplay: {
     delay: 6500,
     disableOnInteraction: false,
@@ -25,6 +24,14 @@ const swiper = new Swiper(".chapter__slider", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+    },
     768: {
       slidesPerView: 1,
       spaceBetween: 0,

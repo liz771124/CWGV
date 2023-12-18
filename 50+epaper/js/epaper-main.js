@@ -32,10 +32,6 @@ const swiper = new Swiper(".chapter__slider", {
       slidesPerView: 2,
       spaceBetween: 0,
     },
-    768: {
-      slidesPerView: 1,
-      spaceBetween: 0,
-    },
     1024: {
       slidesPerView: 3,
       spaceBetween: 0,
@@ -91,10 +87,12 @@ const goTop = () => {
 };
 gotop.addEventListener("click", goTop);
 
-let currentFontSize = 1;
+let currentFontSize = 1.4;
 const zoomText = (e) => {
-  const element = e.target.closest("section");
-  currentFontSize < 1.3 ? (currentFontSize += 0.1) : (currentFontSize = 1);
+  const element = e.target
+    .closest("section")
+    .querySelector(".article__content");
+  currentFontSize < 1.7 ? (currentFontSize += 0.1) : (currentFontSize = 1.3);
   element.style.fontSize = `${currentFontSize}rem`;
 };
 

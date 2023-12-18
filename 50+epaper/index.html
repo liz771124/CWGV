@@ -1,464 +1,824 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta http-equiv="cache-control" content="no-cache" />
-		<meta http-equiv="expires" content="0" />
-		<meta http-equiv="pragma" content="no-cache" />
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
 
-		<title>50+ FiftyPlus 週刊</title>
-		<link rel="icon" href="https://www.fiftyplus.com.tw/public/assets/img/ico/favicon.ico" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-		<meta name="keywords" content="未來Family週刊" />
-		<meta name="title" content="50+ FiftyPlus 週刊" />
-		<meta name="description" content="介紹描述" />
+    <title>50+ FiftyPlus 週刊</title>
+    <link
+      rel="icon"
+      href="https://www.fiftyplus.com.tw/public/assets/img/ico/favicon.ico"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="keywords" content="未來Family週刊" />
+    <meta name="title" content="50+ FiftyPlus 週刊" />
+    <meta name="description" content="介紹描述" />
 
-		<meta property="og:title" content="" />
-		<meta property="og:type" content="article" />
-		<meta property="og:url" content="" />
-		<meta property="og:image" content="" />
-		<meta property="og:site_name" content="50+ FiftyPlus 週刊" />
-		<meta property="og:description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="50+ FiftyPlus 週刊" />
+    <meta property="og:description" content="" />
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,700;0,800;0,900;1,600;1,700;1,800&family=Noto+Sans+TC:wght@300;400;500;600;700;800;900&family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Redressed&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,700;0,800;0,900;1,600;1,700;1,800&family=Noto+Sans+TC:wght@300;400;500;600;700;800;900&family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Redressed&display=swap"
+      rel="stylesheet"
+    />
 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
-		<link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
 
-		<body>
-			<header class="header">
-				<div class="header__navbar">
-					<div class="container">
-						<div class="d-flex gap-md-5 align-items-center justify-content-between">
-							<div class="d-block d-lg-none">
-								<div data-bs-toggle="offcanvas" data-bs-target="#navbarModal">
-									<i class="fa-solid fa-bars fs-3"></i>
-								</div>
-								<div class="offcanvas offcanvas-start" tabindex="-1" id="navbarModal">
-									<div class="offcanvas-header px-2">
-										<button type="button" class="btn-close position-absolute" data-bs-dismiss="offcanvas"></button>
-										<h4 class="mx-auto mb-0">本期目錄</h4>
-									</div>
-									<div class="offcanvas-body px-0 pt-0">
-										<div class="header__navbar-mb">
-											<div class="accordion accordion-flush">
-												<div class="accordion-item">
-													<h2 class="accordion-header">
-														<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#menu-collapse" aria-expanded="true" aria-controls="menu-collapse">封面故事</button>
-													</h2>
-													<div id="menu-collapse" class="accordion-collapse collapse show">
-														<div class="accordion-body p-0">
-															<ul class="list-unstyled">
-																<li data-bs-dismiss="offcanvas">
-																	<a href="#section1">德國教育專家：很多天資出色的孩子，沒有成為棟梁之材；大多是驕傲自滿所致，不要隨意表揚孩子</a>
-																</li>
-																<li data-bs-dismiss="offcanvas">
-																	<a href="#section2">西班牙神秘小鎮！傳承200年工藝，成全球精品秘密生產基地</a>
-																</li>
-																<li data-bs-dismiss="offcanvas">
-																	<a href="#section3">千萬買房還有可能嗎？僅剩這3區，全台中古屋十大熱區出爐 </a>
-																</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-												<div class="accordion-item">
-													<h2 class="accordion-header">
-														<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">教育快報</button>
-													</h2>
-													<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
-														<div class="accordion-body p-0">
-															<ul class="list-unstyled">
-																<li data-bs-dismiss="offcanvas">
-																	<a href="#section3">「2023聖誕傳愛」就到7-ELEVEN！愛心認捐399元助童圓夢，超萌「好鄰居倒數月曆」日日陪伴迎接聖誕！ </a>
-																</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="header__logo mx-auto mx-md-0">
-								<a href="#" class="d-none d-lg-block"><img src="img/50+mag_w.svg" class="img-fluid" alt="logo" /> </a>
-								<a href="#" class="d-lg-none"><img src="img/50+mag_b.svg" class="img-fluid" alt="logo" /> </a>
-							</div>
-							<div class="d-flex align-items-center gap-3">
-								<div class="header__menu">
-									<div><a href="#section1">封面故事</a></div>
-									<div><a href="#section2">教育快報</a></div>
-									<div><a href="#section3">精采人物</a></div>
-									<div><a href="#section4">專題企劃</a></div>
-									<div><a href="#section5">名家專欄</a></div>
-									<div><a href="#section6">熱門精選</a></div>
-								</div>
-								<div class="header__share">
-									<a class="d-none d-lg-flex" href="javascript: void(0)" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://futureparenting.cwgv.com.tw/family/weekly/index/149&#39;,&#39;_blank&#39;,&#39;width = 700, height = 650');">
-										<i class="fa-brands fa-square-facebook icon-fb"></i>
-									</a>
-									<a class="d-none d-lg-flex" href="https://line.naver.jp/R/msg/text/?%E9%81%8B%E5%8B%95%EF%BC%8C%E8%AE%93%E5%AD%B8%E7%BF%92%E5%8A%9B%E5%A4%A7%E8%BA%8D%E9%80%B2%0D%0Ahttps://futureparenting.cwgv.com.tw/family/weekly/index/149">
-										<i class="fa-brands fa-line icon-line"></i>
-									</a>
-									<div class="d-flex d-lg-none" id="share__btn">
-										<img width="25" src="img/share2.svg" alt="" />
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="container px-0 position-relative">
-					<div class="header__banner">
-						<img class="img-fluid" src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2023/12/13/0/28166078.jpg&x=0&y=0&sw=0&sh=0&sl=W&fw=830&exp=3600&w=830" alt="banner" />
-					</div>
-					<div class="header__topic">
-						<div>
-							<span class="header__topic-vol">Vol. 149 </span>
-							<span class="header__topic-date">2023.11.08</span>
-						</div>
-						<h1 class="header__topic-title">別等退休才後悔 不需要等財富自由，愈工作愈自由的幸福</h1>
-					</div>
-				</div>
-			</header>
-			<main class="position-relative">
-				<div class="chapter">
-					<div class="container chapter__container">
-						<div class="swiper chapter__slider">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<div class="chapter__slider-item">
-										<a class="chapter__slider-item-title" href="#section2">【封面故事1】Bravo！50後的不後悔人生Bravo！50後的不後悔人生Bravo！50後的不後悔人生Bravo！50後的不後悔人生Bravo！50後的不後悔人生Bravo！50後的不後悔人生</a>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="chapter__slider-item">
-										<a class="chapter__slider-item-title" href="#section2">【封面故事1】Bravo！50後的不後悔人生Bravo！50後的不後悔人生Bravo！50後的不後悔人生Bravo！50後的不後悔人生Bravo！50後的不後悔人生Bravo！50後的不後悔人生</a>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="chapter__slider-item">
-										<a class="chapter__slider-item-title" href="#section2">【封面故事1】Bravo！50後的不後悔人生Bravo！50後的不後悔人生Bravo！50後的不後悔人生Bravo！50後的不後悔人生Bravo！50後的不後悔人生Bravo！50後的不後悔人生</a>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="chapter__slider-item">
-										<a class="chapter__slider-item-title" href="#section2">【封面故事1】Bravo！50後的不後悔人生Bravo！50後的不後悔人生Bravo！50後的不後悔人生Bravo！50後的不後悔人生Bravo！50後的不後悔人生Bravo！50後的不後悔人生</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-button-next"></div>
-						<div class="swiper-button-prev"></div>
-					</div>
-				</div>
+    <body>
+      <header class="header">
+        <div class="header__navbar">
+          <div class="container">
+            <div
+              class="d-flex gap-md-5 align-items-center justify-content-between"
+            >
+              <div class="d-block d-lg-none">
+                <div data-bs-toggle="offcanvas" data-bs-target="#navbarModal">
+                  <i class="fa-solid fa-bars fs-3"></i>
+                </div>
+                <div
+                  class="offcanvas offcanvas-start"
+                  tabindex="-1"
+                  id="navbarModal"
+                >
+                  <div class="offcanvas-header px-2">
+                    <button
+                      type="button"
+                      class="btn-close position-absolute"
+                      data-bs-dismiss="offcanvas"
+                    ></button>
+                    <h3 class="mx-auto mb-0">本期目錄</h3>
+                  </div>
+                  <div class="offcanvas-body px-0 pt-0">
+                    <div class="header__navbar-mb">
+                      <div class="accordion accordion-flush">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#menu-collapse"
+                              aria-expanded="true"
+                              aria-controls="menu-collapse"
+                            >
+                              封面故事
+                            </button>
+                          </h2>
+                          <div
+                            id="menu-collapse"
+                            class="accordion-collapse collapse show"
+                          >
+                            <div class="accordion-body p-0">
+                              <ul class="list-unstyled">
+                                <li data-bs-dismiss="offcanvas">
+                                  <a href="#section1"
+                                    >德國教育專家：很多天資出色的孩子，沒有成為棟梁之材；大多是驕傲自滿所致，不要隨意表揚孩子</a
+                                  >
+                                </li>
+                                <li data-bs-dismiss="offcanvas">
+                                  <a href="#section2"
+                                    >西班牙神秘小鎮！傳承200年工藝，成全球精品秘密生產基地</a
+                                  >
+                                </li>
+                                <li data-bs-dismiss="offcanvas">
+                                  <a href="#section3"
+                                    >千萬買房還有可能嗎？僅剩這3區，全台中古屋十大熱區出爐
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#panelsStayOpen-collapseTwo"
+                              aria-expanded="true"
+                              aria-controls="panelsStayOpen-collapseTwo"
+                            >
+                              教育快報
+                            </button>
+                          </h2>
+                          <div
+                            id="panelsStayOpen-collapseTwo"
+                            class="accordion-collapse collapse show"
+                          >
+                            <div class="accordion-body p-0">
+                              <ul class="list-unstyled">
+                                <li data-bs-dismiss="offcanvas">
+                                  <a href="#section3"
+                                    >「2023聖誕傳愛」就到7-ELEVEN！愛心認捐399元助童圓夢，超萌「好鄰居倒數月曆」日日陪伴迎接聖誕！
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__logo mx-auto mx-md-0">
+                <a href="#" class="d-none d-lg-block"
+                  ><img src="img/50+mag_w.svg" class="img-fluid" alt="logo" />
+                </a>
+                <a href="#" class="d-lg-none"
+                  ><img src="img/50+mag_b.svg" class="img-fluid" alt="logo" />
+                </a>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <div class="header__menu">
+                  <div><a href="#section1">封面故事</a></div>
+                  <div><a href="#section2">教育快報</a></div>
+                  <div><a href="#section3">精采人物</a></div>
+                  <div><a href="#section4">專題企劃</a></div>
+                  <div><a href="#section5">名家專欄</a></div>
+                  <div><a href="#section6">熱門精選</a></div>
+                </div>
+                <div class="header__share">
+                  <a
+                    class="d-none d-lg-flex"
+                    href="javascript: void(0)"
+                    onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://futureparenting.cwgv.com.tw/family/weekly/index/149&#39;,&#39;_blank&#39;,&#39;width = 700, height = 650');"
+                  >
+                    <i class="fa-brands fa-square-facebook icon-fb"></i>
+                  </a>
+                  <a
+                    class="d-none d-lg-flex"
+                    href="https://line.naver.jp/R/msg/text/?%E9%81%8B%E5%8B%95%EF%BC%8C%E8%AE%93%E5%AD%B8%E7%BF%92%E5%8A%9B%E5%A4%A7%E8%BA%8D%E9%80%B2%0D%0Ahttps://futureparenting.cwgv.com.tw/family/weekly/index/149"
+                  >
+                    <i class="fa-brands fa-line icon-line"></i>
+                  </a>
+                  <div class="d-flex d-lg-none" id="share__btn">
+                    <img width="25" src="img/share2.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container px-0 position-relative">
+          <div class="header__banner">
+            <img
+              class="img-fluid"
+              src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2023/12/13/0/28166078.jpg&x=0&y=0&sw=0&sh=0&sl=W&fw=830&exp=3600&w=830"
+              alt="banner"
+            />
+          </div>
+          <div class="header__topic">
+            <div>
+              <span class="header__topic-vol">Vol. 149 </span>
+              <span class="header__topic-date">2023.11.08</span>
+            </div>
+            <h1 class="header__topic-title">
+              別等退休才後悔 不需要等財富自由，愈工作愈自由的幸福
+            </h1>
+          </div>
+        </div>
+      </header>
+      <main class="position-relative">
+        <div class="chapter">
+          <div class="container chapter__container">
+            <div class="swiper chapter__slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="chapter__slider-item">
+                    <a class="chapter__slider-item-title" href="#section2"
+                      >【封面故事1】Brav生Br悔人生</a
+                    >
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="chapter__slider-item">
+                    <a class="chapter__slider-item-title" href="#section2"
+                      >【封面故事1】Bravo！50後ravo！50後ravo！50後ravo！50後</a
+                    >
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="chapter__slider-item">
+                    <a class="chapter__slider-item-title" href="#section2"
+                      >【封面故事1】Bravo！50後ravo！50後ravo！50後ravo！50後</a
+                    >
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="chapter__slider-item">
+                    <a class="chapter__slider-item-title" href="#section2"
+                      >【封面故事1】Bravo！50後ravo！50後ravo！50後ravo！50後</a
+                    >
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="chapter__slider-item">
+                    <a class="chapter__slider-item-title" href="#section2"
+                      >【封面故事1】Bravo！50後ravo！50後ravo！50後ravo！50後</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
 
-				<div class="article">
-					<div class="container">
-						<div class="row align-content-stretch">
-							<div class="col-md-8">
-								<section id="section1">
-									<div>
-										<div class="article__category">封面故事1</div>
-										<div class="article__title">
-											<span> 體適能表現前25%，考試成績也較優》師大教授：做對運動，活化孩子大腦記憶、提升學業成績！ </span>
-										</div>
-										<div class="article__forward">改變微小習慣，也能積少成多。</div>
-									</div>
-									<div class="article__cover">
-										<span>
-											<img src="https://imgs.cwgv.com.tw/articles/81/29081/preview/29081.png" class="img-fluid" alt="" />
-										</span>
-									</div>
-									<div class="d-flex justify-content-between align-items-center">
-										<div class="article__author">文／曾玉玲 圖／Shutterstock</div>
-										<div class="article__share">
-											<a class="article__share-item" href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=https://www.fiftyplus.com.tw/articles/29098')">
-												<i class="fa-brands fa-square-facebook icon-fb"></i>
-											</a>
-											<a class="article__share-item" href="javascript:window.open('https://lineit.line.me/share/ui?url=https://www.fiftyplus.com.tw/articles/29098')">
-												<i class="fa-brands fa-line icon-line"></i>
-											</a>
-											<a class="article__share-item" href="javascript:void(0)" onclick="zoomText(event)">
-												<img width="20" src="https://cdn-icons-png.flaticon.com/512/8112/8112975.png" />
-											</a>
-										</div>
-									</div>
-									<div class="article__content">
-										<p class="compilation">
-											編按：工作不開心，想離職？50歲前後的工作者，在職場上有大大小小的中年危機：工作太久、內容很熟悉，卻覺得缺乏變化；環境變動、和年輕的新主管不對盤、因為年資和薪水高而被盯上。想乾脆提前退休，卻又發現存款還不夠下半輩子生活。《50+》採訪104人力銀行資深副總經理暨人資長鍾文雄，探討中年危機、培養職場韌性的解方。
-										</p>
-										<p>
-											<img
-												alt="和先生「蘿蔔頭」一起從美國回到台灣，范琪斐笑說，先生完全沒有適應問題，還交到很多台灣朋友。"
-												src="https://imgs.cwgv.com.tw/pic/2023-12-06-1701853118.jpg"
-												style="width: 600px; height: 400px; margin: 2rem auto; display: block"
-												class="lazy img-responsive"
-												data-original="https://imgs.cwgv.com.tw/pic/2023-12-06-1701853118.jpg"
-											/><span class="img-note" style="margin: 0px auto">和先生「蘿蔔頭」一起從美國回到台灣，范琪斐笑說，先生完全沒有適應問題，還交到很多台灣朋友。</span>
-										</p>
-										<h2>請避免！容易累的上山走法：跨大步、上身挺直</h2>
-										<p><strong>╳上半身過於直挺：</strong>此時重心後傾，膝蓋就會跟著打直。</p>
-										<p><strong>╳步距太寬：</strong>為了讓身體能往上移動，就會過度使用股四頭肌。</p>
-										<p>
-											<img
-												alt="喜歡爬山，但怎麼避免下山膝蓋痛？50後必知4方法，路才能走更遠_img_1"
-												src="https://imgs.cwgv.com.tw/pic/2023-12-12-1702373763.jpg"
-												style="width: 550px; height: 582px; margin: 2rem auto; display: block"
-												class="lazy img-responsive"
-												data-original="https://imgs.cwgv.com.tw/pic/2023-12-12-1702373763.jpg"
-											/><span class="img-note" style="margin: 0px auto"></span>
-										</p>
-										<p><strong>當中年後的工作，變得像此階段的婚姻——遇到瓶頸、缺乏變化，卻又不敢隨便離開，該怎麼辦？</strong>《50+》採訪職涯專家，探討如何面對職場上的中年危機，並增加韌性。即使年過50歲，也不會被公司困住！</p>
-										<h2>跨世代共事是中年危機最常見原因 &nbsp;主管比自己年輕，如何調適心態？</h2>
-										<p>104人力銀行資深副總經理暨人資長鍾文雄指出，<strong>職場上最常見的中年危機</strong><strong>，就是跨世代的相處壓力。</strong>尤其50+在企業中多半已是主管或資深老鳥，若本身不是高階主管，很容易變成三明治夾在中間，上有高層、下有部屬，箇中壓力可想而知。</p>
-										<p><strong>尤其不少人會遇上比自己還年輕的主管，要接受對方的領導，心態上容易出現不平衡，「憑什麼是他來管我！而不是我晉升？」</strong>只要雙方意見不合，就會產生摩擦、也會因此失去工作動能，每天上班都忿忿不平或鬱鬱寡歡。</p>
-										<p>對此，鍾文雄表示，面對比自己年輕的主管，不妨先想想，為何晉升的不是自己？是工作能力、人脈、還是領導力的問題？進一步了解原因，便能知道自己是什麼地方不足，即使對方是靠關係晉升，那也意味著自己的人脈經營仍需要提升。</p>
-										<p>例如總是賺多少花多少的郝譽翔，終於有勇氣向母親爭取財務獨立，拿回存摺後，還跟著理財書學習投資ETF。<strong>因為有了女兒小虎作為緩衝中介，郝譽翔與媽媽各自轉換成母親與外婆的角色，原本一觸及發的張力也因此和緩許多。</strong></p>
-										<p>
-											更重要的是，郝譽翔從陪伴女兒成長的過程中，彷彿也重新度過一次童年。不論是每天花上2小時陪女兒做功課，或是帶著女兒坐上她過往不屑一顧的郵輪旅行，她才體會，有了孩子之後的生活，雖然不像過往一樣自由自在，但是卻更加豐富喜悅。（相關閱讀：<a
-												href="https://www.fiftyplus.com.tw/articles/27706"
-												target="_blank"
-												><span style="color: #0000ff">母女如何相愛不相傷，並肩體驗世界？部落客「食癮，拾影」Demi＆Cherry：讓孩子感到被深深地理解和支持</span></a
-											>）
-										</p>
-									</div>
-								</section>
-								<section id="section2">
-									<div>
-										<div class="article__category">封面故事 1</div>
-										<div class="article__title">
-											<span> 體適能表現前25%，考試成績也較優》師大教授：做對運動，活化孩子大腦記憶、提升學業成績！ </span>
-										</div>
-										<div class="article__forward">改變微小習慣，也能積少成多。</div>
-									</div>
-									<div class="article__cover">
-										<span>
-											<img src="https://imgs.cwgv.com.tw/pic/2023-11-07-1699340657.jpg" class="img-fluid" alt="" />
-										</span>
-									</div>
-									<div class="d-flex justify-content-between align-items-center">
-										<div class="article__author">文／曾玉玲 圖／Shutterstock</div>
-										<div class="article__share">
-											<a class="article__share-item" href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=https://www.fiftyplus.com.tw/articles/29098')">
-												<i class="fa-brands fa-square-facebook icon-fb"></i>
-											</a>
-											<a class="article__share-item" href="javascript:window.open('https://lineit.line.me/share/ui?url=https://www.fiftyplus.com.tw/articles/29098')">
-												<i class="fa-brands fa-line icon-line"></i>
-											</a>
-											<a class="article__share-item" href="javascript:void(0)" onclick="zoomText(event)">
-												<img width="20" src="https://cdn-icons-png.flaticon.com/512/8112/8112975.png" />
-											</a>
-										</div>
-									</div>
-									<div class="article__content">
-										<p class="compilation">
-											編按：工作不開心，想離職？50歲前後的工作者，在職場上有大大小小的中年危機：工作太久、內容很熟悉，卻覺得缺乏變化；環境變動、和年輕的新主管不對盤、因為年資和薪水高而被盯上。想乾脆提前退休，卻又發現存款還不夠下半輩子生活。《50+》採訪104人力銀行資深副總經理暨人資長鍾文雄，探討中年危機、培養職場韌性的解方。
-										</p>
-										<p>在職場上打拚了大半輩子，但隨著年紀增長，不少50+卻覺得上班的日子越來越難熬。可能是與新來的年輕主管不對盤，也可能是大環境導致不景氣、被迫降職減薪。但算算自己的存款還不夠退休，若離開公司另謀他職，又怕拿不到相同等級的待遇。</p>
-										<p><strong>當中年後的工作，變得像此階段的婚姻——遇到瓶頸、缺乏變化，卻又不敢隨便離開，該怎麼辦？</strong>《50+》採訪職涯專家，探討如何面對職場上的中年危機，並增加韌性。即使年過50歲，也不會被公司困住！</p>
-										<h2>跨世代共事是中年危機最常見原因 &nbsp;主管比自己年輕，如何調適心態？</h2>
-										<p>104人力銀行資深副總經理暨人資長鍾文雄指出，<strong>職場上最常見的中年危機</strong><strong>，就是跨世代的相處壓力。</strong>尤其50+在企業中多半已是主管或資深老鳥，若本身不是高階主管，很容易變成三明治夾在中間，上有高層、下有部屬，箇中壓力可想而知。</p>
-										<p><strong>尤其不少人會遇上比自己還年輕的主管，要接受對方的領導，心態上容易出現不平衡，「憑什麼是他來管我！而不是我晉升？」</strong>只要雙方意見不合，就會產生摩擦、也會因此失去工作動能，每天上班都忿忿不平或鬱鬱寡歡。</p>
-										<p>對此，鍾文雄表示，面對比自己年輕的主管，不妨先想想，為何晉升的不是自己？是工作能力、人脈、還是領導力的問題？進一步了解原因，便能知道自己是什麼地方不足，即使對方是靠關係晉升，那也意味著自己的人脈經營仍需要提升。</p>
-										<p>他舉例，104人力銀行曾經從外頭找來一位設計長，負責公司的系統平台與網頁設計。起初，當這位設計長空降時，引發許多內部同仁不滿，紛紛反映自己在公司做10多年了，為何不能勝任這個職務？</p>
-										<p>但是，當這位設計長到職後，包括他的設計概念、系統平台使用的美感跟流暢度、甚至與國際接軌的觀點，都讓人十分驚豔。因此，底下的資深同仁便漸漸服氣，「不是你的資歷不足，而是你的競爭力不夠，所以這個位子才不是你的。」</p>
-									</div>
-								</section>
-								<section id="section3">
-									<div>
-										<div class="article__category">封面故事 1</div>
-										<div class="article__title">
-											<span> 體適能表現前25%，考試成績也較優》師大教授：做對運動，活化孩子大腦記憶、提升學業成績！ </span>
-										</div>
-										<div class="article__forward">改變微小習慣，也能積少成多。</div>
-									</div>
-									<div class="article__cover">
-										<span>
-											<img src="https://imgs.cwgv.com.tw/articles/81/29081/preview/29081.png" class="img-fluid" alt="" />
-										</span>
-									</div>
-									<div class="d-flex justify-content-between align-items-center">
-										<div class="article__author">文／曾玉玲 圖／Shutterstock</div>
-										<div class="article__share">
-											<a class="article__share-item" href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=https://www.fiftyplus.com.tw/articles/29098')">
-												<i class="fa-brands fa-square-facebook icon-fb"></i>
-											</a>
-											<a class="article__share-item" href="javascript:window.open('https://lineit.line.me/share/ui?url=https://www.fiftyplus.com.tw/articles/29098')">
-												<i class="fa-brands fa-line icon-line"></i>
-											</a>
-											<a class="article__share-item" href="javascript:void(0)" onclick="zoomText(event)">
-												<img width="20" src="https://cdn-icons-png.flaticon.com/512/8112/8112975.png" />
-											</a>
-										</div>
-									</div>
-									<div class="article__content">
-										<p class="compilation">
-											編按：工作不開心，想離職？50歲前後的工作者，在職場上有大大小小的中年危機：工作太久、內容很熟悉，卻覺得缺乏變化；環境變動、和年輕的新主管不對盤、因為年資和薪水高而被盯上。想乾脆提前退休，卻又發現存款還不夠下半輩子生活。《50+》採訪104人力銀行資深副總經理暨人資長鍾文雄，探討中年危機、培養職場韌性的解方。
-										</p>
-										<p>在職場上打拚了大半輩子，但隨著年紀增長，不少50+卻覺得上班的日子越來越難熬。可能是與新來的年輕主管不對盤，也可能是大環境導致不景氣、被迫降職減薪。但算算自己的存款還不夠退休，若離開公司另謀他職，又怕拿不到相同等級的待遇。</p>
-										<p><strong>當中年後的工作，變得像此階段的婚姻——遇到瓶頸、缺乏變化，卻又不敢隨便離開，該怎麼辦？</strong>《50+》採訪職涯專家，探討如何面對職場上的中年危機，並增加韌性。即使年過50歲，也不會被公司困住！</p>
-										<h2>跨世代共事是中年危機最常見原因 &nbsp;主管比自己年輕，如何調適心態？</h2>
-										<p>104人力銀行資深副總經理暨人資長鍾文雄指出，<strong>職場上最常見的中年危機</strong><strong>，就是跨世代的相處壓力。</strong>尤其50+在企業中多半已是主管或資深老鳥，若本身不是高階主管，很容易變成三明治夾在中間，上有高層、下有部屬，箇中壓力可想而知。</p>
-										<p><strong>尤其不少人會遇上比自己還年輕的主管，要接受對方的領導，心態上容易出現不平衡，「憑什麼是他來管我！而不是我晉升？」</strong>只要雙方意見不合，就會產生摩擦、也會因此失去工作動能，每天上班都忿忿不平或鬱鬱寡歡。</p>
-										<p>對此，鍾文雄表示，面對比自己年輕的主管，不妨先想想，為何晉升的不是自己？是工作能力、人脈、還是領導力的問題？進一步了解原因，便能知道自己是什麼地方不足，即使對方是靠關係晉升，那也意味著自己的人脈經營仍需要提升。</p>
-										<p>他舉例，104人力銀行曾經從外頭找來一位設計長，負責公司的系統平台與網頁設計。起初，當這位設計長空降時，引發許多內部同仁不滿，紛紛反映自己在公司做10多年了，為何不能勝任這個職務？</p>
-										<p>但是，當這位設計長到職後，包括他的設計概念、系統平台使用的美感跟流暢度、甚至與國際接軌的觀點，都讓人十分驚豔。因此，底下的資深同仁便漸漸服氣，「不是你的資歷不足，而是你的競爭力不夠，所以這個位子才不是你的。」</p>
-									</div>
-								</section>
-							</div>
-							<div class="col-md-4 px-md-4">
-								<div class="sidebar">
-									<div class="sidebar__title">
-										<span>近期週刊</span>
-									</div>
-									<div class="sidebar__content">
-										<a class="sidebar__content-item" href="#">
-											<div class="sidebar__content-item-title clamp-1">Vol.149 | 屏東‧佇足 我的慢旅行</div>
-										</a>
-										<a class="sidebar__content-item" href="#">
-											<div class="sidebar__content-item-title clamp-1">Vol.149 | 運動，讓學習力大躍進 運動，讓學習力大躍進</div>
-										</a>
-									</div>
-									<div class="sidebar__banner">
-										<img src="https://imgs.gvm.com.tw/upload/market_advertis/20230725/4e77c89a5eefce555bb58258eedd0a53.jpg" alt="" />
-									</div>
-								</div>
-								<div class="d-flex justify-content-center">
-									<div class="subscribe hidden">
-										<div class="d-flex align-items-center justify-content-between">
-											<span class="text-primary fs-4">訂閱50+週刊</span>
-											<div class="subscribe-close">
-												<i class="fa-solid fa-xmark"></i>
-											</div>
-										</div>
-										<form method="post">
-											<div class="input-group mt-2">
-												<input type="email" class="form-control" name="email" placeholder="請輸入電子郵件" autocomplete="off" />
-												<button type="button" class="btn btn-primary px-4">訂閱</button>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+        <div class="article">
+          <div class="container">
+            <div class="row align-content-stretch">
+              <div class="col-md-8">
+                <section id="section1">
+                  <div>
+                    <div class="article__category">封面故事1</div>
+                    <div class="article__title">
+                      <span>
+                        體適能表現前25%，考試成績也較優》師大教授：做對運動，活化孩子大腦記憶、提升學業成績！
+                      </span>
+                    </div>
+                  </div>
+                  <div class="article__cover">
+                    <span>
+                      <img
+                        src="https://imgs.cwgv.com.tw/articles/81/29081/preview/29081.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </span>
+                  </div>
+                  <div
+                    class="d-flex flex-wrap gap-3 justify-content-between align-items-center mb-3"
+                  >
+                    <div class="article__author">
+                      文／曾玉玲
+                      圖／如果名稱很長如果名稱很長如果名稱很長如果名稱很長
+                    </div>
+                    <div class="article__share">
+                      <a
+                        class="article__share-item"
+                        href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=https://www.fiftyplus.com.tw/articles/29098')"
+                      >
+                        <i class="fa-brands fa-square-facebook icon-fb"></i>
+                      </a>
+                      <a
+                        class="article__share-item"
+                        href="javascript:window.open('https://lineit.line.me/share/ui?url=https://www.fiftyplus.com.tw/articles/29098')"
+                      >
+                        <i class="fa-brands fa-line icon-line"></i>
+                      </a>
+                      <a
+                        class="article__share-item"
+                        href="javascript:void(0)"
+                        onclick="zoomText(event)"
+                      >
+                        <img
+                          width="20"
+                          src="https://cdn-icons-png.flaticon.com/512/8112/8112975.png"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="article__content">
+                    <p class="compilation">
+                      編按：工作不開心，想離職？50歲前後的工作者，在職場上有大大小小的中年危機：工作太久、內容很熟悉，卻覺得缺乏變化；環境變動、和年輕的新主管不對盤、因為年資和薪水高而被盯上。想乾脆提前退休，卻又發現存款還不夠下半輩子生活。《50+》採訪104人力銀行資深副總經理暨人資長鍾文雄，探討中年危機、培養職場韌性的解方。
+                    </p>
+                    <p>
+                      <img
+                        alt="和先生「蘿蔔頭」一起從美國回到台灣，范琪斐笑說，先生完全沒有適應問題，還交到很多台灣朋友。"
+                        src="https://imgs.cwgv.com.tw/pic/2023-12-06-1701853118.jpg"
+                        style="
+                          width: 600px;
+                          height: 400px;
+                          margin: 2rem auto;
+                          display: block;
+                        "
+                        class="lazy img-responsive"
+                        data-original="https://imgs.cwgv.com.tw/pic/2023-12-06-1701853118.jpg"
+                      /><span class="img-note" style="margin: 0px auto"
+                        >和先生「蘿蔔頭」一起從美國回到台灣，范琪斐笑說，先生完全沒有適應問題，還交到很多台灣朋友。</span
+                      >
+                    </p>
+                    <h2>請避免！容易累的上山走法：跨大步、上身挺直</h2>
+                    <p>
+                      <strong>╳上半身過於直挺：</strong
+                      >此時重心後傾，膝蓋就會跟著打直。
+                    </p>
+                    <p>
+                      <strong>╳步距太寬：</strong
+                      >為了讓身體能往上移動，就會過度使用股四頭肌。
+                    </p>
+                    <p>
+                      <img
+                        alt="喜歡爬山，但怎麼避免下山膝蓋痛？50後必知4方法，路才能走更遠_img_1"
+                        src="https://imgs.cwgv.com.tw/pic/2023-12-12-1702373763.jpg"
+                        style="
+                          width: 550px;
+                          height: 582px;
+                          margin: 2rem auto;
+                          display: block;
+                        "
+                        class="lazy img-responsive"
+                        data-original="https://imgs.cwgv.com.tw/pic/2023-12-12-1702373763.jpg"
+                      /><span class="img-note" style="margin: 0px auto"></span>
+                    </p>
+                    <p>
+                      <strong
+                        >當中年後的工作，變得像此階段的婚姻——遇到瓶頸、缺乏變化，卻又不敢隨便離開，該怎麼辦？</strong
+                      >《50+》採訪職涯專家，探討如何面對職場上的中年危機，並增加韌性。即使年過50歲，也不會被公司困住！
+                    </p>
+                    <h2>
+                      跨世代共事是中年危機最常見原因
+                      &nbsp;主管比自己年輕，如何調適心態？
+                    </h2>
+                    <p>
+                      104人力銀行資深副總經理暨人資長鍾文雄指出，<strong
+                        >職場上最常見的中年危機</strong
+                      ><strong>，就是跨世代的相處壓力。</strong
+                      >尤其50+在企業中多半已是主管或資深老鳥，若本身不是高階主管，很容易變成三明治夾在中間，上有高層、下有部屬，箇中壓力可想而知。
+                    </p>
+                    <p>
+                      <strong
+                        >尤其不少人會遇上比自己還年輕的主管，要接受對方的領導，心態上容易出現不平衡，「憑什麼是他來管我！而不是我晉升？」</strong
+                      >只要雙方意見不合，就會產生摩擦、也會因此失去工作動能，每天上班都忿忿不平或鬱鬱寡歡。
+                    </p>
+                    <p>
+                      對此，鍾文雄表示，面對比自己年輕的主管，不妨先想想，為何晉升的不是自己？是工作能力、人脈、還是領導力的問題？進一步了解原因，便能知道自己是什麼地方不足，即使對方是靠關係晉升，那也意味著自己的人脈經營仍需要提升。
+                    </p>
+                    <p>
+                      例如總是賺多少花多少的郝譽翔，終於有勇氣向母親爭取財務獨立，拿回存摺後，還跟著理財書學習投資ETF。<strong
+                        >因為有了女兒小虎作為緩衝中介，郝譽翔與媽媽各自轉換成母親與外婆的角色，原本一觸及發的張力也因此和緩許多。</strong
+                      >
+                    </p>
+                    <p>
+                      更重要的是，郝譽翔從陪伴女兒成長的過程中，彷彿也重新度過一次童年。不論是每天花上2小時陪女兒做功課，或是帶著女兒坐上她過往不屑一顧的郵輪旅行，她才體會，有了孩子之後的生活，雖然不像過往一樣自由自在，但是卻更加豐富喜悅。（相關閱讀：<a
+                        href="https://www.fiftyplus.com.tw/articles/27706"
+                        target="_blank"
+                        ><span style="color: #0000ff"
+                          >母女如何相愛不相傷，並肩體驗世界？部落客「食癮，拾影」Demi＆Cherry：讓孩子感到被深深地理解和支持</span
+                        ></a
+                      >）
+                    </p>
+                  </div>
+                </section>
+                <section id="section2">
+                  <div>
+                    <div class="article__category">封面故事 1</div>
+                    <div class="article__title">
+                      <span>
+                        體適能表現前25%，考試成績也較優》師大教授：做對運動，活化孩子大腦記憶、提升學業成績！
+                      </span>
+                    </div>
+                  </div>
+                  <div class="article__cover">
+                    <span>
+                      <img
+                        src="https://imgs.cwgv.com.tw/pic/2023-11-07-1699340657.jpg"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="article__author">
+                      文／曾玉玲 圖／Shutterstock
+                    </div>
+                    <div class="article__share">
+                      <a
+                        class="article__share-item"
+                        href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=https://www.fiftyplus.com.tw/articles/29098')"
+                      >
+                        <i class="fa-brands fa-square-facebook icon-fb"></i>
+                      </a>
+                      <a
+                        class="article__share-item"
+                        href="javascript:window.open('https://lineit.line.me/share/ui?url=https://www.fiftyplus.com.tw/articles/29098')"
+                      >
+                        <i class="fa-brands fa-line icon-line"></i>
+                      </a>
+                      <a
+                        class="article__share-item"
+                        href="javascript:void(0)"
+                        onclick="zoomText(event)"
+                      >
+                        <img
+                          width="20"
+                          src="https://cdn-icons-png.flaticon.com/512/8112/8112975.png"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="article__content">
+                    <p class="compilation">
+                      編按：工作不開心，想離職？50歲前後的工作者，在職場上有大大小小的中年危機：工作太久、內容很熟悉，卻覺得缺乏變化；環境變動、和年輕的新主管不對盤、因為年資和薪水高而被盯上。想乾脆提前退休，卻又發現存款還不夠下半輩子生活。《50+》採訪104人力銀行資深副總經理暨人資長鍾文雄，探討中年危機、培養職場韌性的解方。
+                    </p>
+                    <p>
+                      在職場上打拚了大半輩子，但隨著年紀增長，不少50+卻覺得上班的日子越來越難熬。可能是與新來的年輕主管不對盤，也可能是大環境導致不景氣、被迫降職減薪。但算算自己的存款還不夠退休，若離開公司另謀他職，又怕拿不到相同等級的待遇。
+                    </p>
+                    <p>
+                      <strong
+                        >當中年後的工作，變得像此階段的婚姻——遇到瓶頸、缺乏變化，卻又不敢隨便離開，該怎麼辦？</strong
+                      >《50+》採訪職涯專家，探討如何面對職場上的中年危機，並增加韌性。即使年過50歲，也不會被公司困住！
+                    </p>
+                    <h2>
+                      跨世代共事是中年危機最常見原因
+                      &nbsp;主管比自己年輕，如何調適心態？
+                    </h2>
+                    <p>
+                      104人力銀行資深副總經理暨人資長鍾文雄指出，<strong
+                        >職場上最常見的中年危機</strong
+                      ><strong>，就是跨世代的相處壓力。</strong
+                      >尤其50+在企業中多半已是主管或資深老鳥，若本身不是高階主管，很容易變成三明治夾在中間，上有高層、下有部屬，箇中壓力可想而知。
+                    </p>
+                    <p>
+                      <strong
+                        >尤其不少人會遇上比自己還年輕的主管，要接受對方的領導，心態上容易出現不平衡，「憑什麼是他來管我！而不是我晉升？」</strong
+                      >只要雙方意見不合，就會產生摩擦、也會因此失去工作動能，每天上班都忿忿不平或鬱鬱寡歡。
+                    </p>
+                    <p>
+                      對此，鍾文雄表示，面對比自己年輕的主管，不妨先想想，為何晉升的不是自己？是工作能力、人脈、還是領導力的問題？進一步了解原因，便能知道自己是什麼地方不足，即使對方是靠關係晉升，那也意味著自己的人脈經營仍需要提升。
+                    </p>
+                    <p>
+                      他舉例，104人力銀行曾經從外頭找來一位設計長，負責公司的系統平台與網頁設計。起初，當這位設計長空降時，引發許多內部同仁不滿，紛紛反映自己在公司做10多年了，為何不能勝任這個職務？
+                    </p>
+                    <p>
+                      但是，當這位設計長到職後，包括他的設計概念、系統平台使用的美感跟流暢度、甚至與國際接軌的觀點，都讓人十分驚豔。因此，底下的資深同仁便漸漸服氣，「不是你的資歷不足，而是你的競爭力不夠，所以這個位子才不是你的。」
+                    </p>
+                  </div>
+                </section>
+                <section id="section3">
+                  <div>
+                    <div class="article__category">封面故事 1</div>
+                    <div class="article__title">
+                      <span>
+                        體適能表現前25%，考試成績也較優》師大教授：做對運動，活化孩子大腦記憶、提升學業成績！
+                      </span>
+                    </div>
+                  </div>
+                  <div class="article__cover">
+                    <span>
+                      <img
+                        src="https://imgs.cwgv.com.tw/articles/81/29081/preview/29081.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="article__author">
+                      文／曾玉玲 圖／Shutterstock
+                    </div>
+                    <div class="article__share">
+                      <a
+                        class="article__share-item"
+                        href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=https://www.fiftyplus.com.tw/articles/29098')"
+                      >
+                        <i class="fa-brands fa-square-facebook icon-fb"></i>
+                      </a>
+                      <a
+                        class="article__share-item"
+                        href="javascript:window.open('https://lineit.line.me/share/ui?url=https://www.fiftyplus.com.tw/articles/29098')"
+                      >
+                        <i class="fa-brands fa-line icon-line"></i>
+                      </a>
+                      <a
+                        class="article__share-item"
+                        href="javascript:void(0)"
+                        onclick="zoomText(event)"
+                      >
+                        <img
+                          width="20"
+                          src="https://cdn-icons-png.flaticon.com/512/8112/8112975.png"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="article__content">
+                    <p class="compilation">
+                      編按：工作不開心，想離職？50歲前後的工作者，在職場上有大大小小的中年危機：工作太久、內容很熟悉，卻覺得缺乏變化；環境變動、和年輕的新主管不對盤、因為年資和薪水高而被盯上。想乾脆提前退休，卻又發現存款還不夠下半輩子生活。《50+》採訪104人力銀行資深副總經理暨人資長鍾文雄，探討中年危機、培養職場韌性的解方。
+                    </p>
+                    <p>
+                      在職場上打拚了大半輩子，但隨著年紀增長，不少50+卻覺得上班的日子越來越難熬。可能是與新來的年輕主管不對盤，也可能是大環境導致不景氣、被迫降職減薪。但算算自己的存款還不夠退休，若離開公司另謀他職，又怕拿不到相同等級的待遇。
+                    </p>
+                    <p>
+                      <strong
+                        >當中年後的工作，變得像此階段的婚姻——遇到瓶頸、缺乏變化，卻又不敢隨便離開，該怎麼辦？</strong
+                      >《50+》採訪職涯專家，探討如何面對職場上的中年危機，並增加韌性。即使年過50歲，也不會被公司困住！
+                    </p>
+                    <h2>
+                      跨世代共事是中年危機最常見原因
+                      &nbsp;主管比自己年輕，如何調適心態？
+                    </h2>
+                    <p>
+                      104人力銀行資深副總經理暨人資長鍾文雄指出，<strong
+                        >職場上最常見的中年危機</strong
+                      ><strong>，就是跨世代的相處壓力。</strong
+                      >尤其50+在企業中多半已是主管或資深老鳥，若本身不是高階主管，很容易變成三明治夾在中間，上有高層、下有部屬，箇中壓力可想而知。
+                    </p>
+                    <p>
+                      <strong
+                        >尤其不少人會遇上比自己還年輕的主管，要接受對方的領導，心態上容易出現不平衡，「憑什麼是他來管我！而不是我晉升？」</strong
+                      >只要雙方意見不合，就會產生摩擦、也會因此失去工作動能，每天上班都忿忿不平或鬱鬱寡歡。
+                    </p>
+                    <p>
+                      對此，鍾文雄表示，面對比自己年輕的主管，不妨先想想，為何晉升的不是自己？是工作能力、人脈、還是領導力的問題？進一步了解原因，便能知道自己是什麼地方不足，即使對方是靠關係晉升，那也意味著自己的人脈經營仍需要提升。
+                    </p>
+                    <p>
+                      他舉例，104人力銀行曾經從外頭找來一位設計長，負責公司的系統平台與網頁設計。起初，當這位設計長空降時，引發許多內部同仁不滿，紛紛反映自己在公司做10多年了，為何不能勝任這個職務？
+                    </p>
+                    <p>
+                      但是，當這位設計長到職後，包括他的設計概念、系統平台使用的美感跟流暢度、甚至與國際接軌的觀點，都讓人十分驚豔。因此，底下的資深同仁便漸漸服氣，「不是你的資歷不足，而是你的競爭力不夠，所以這個位子才不是你的。」
+                    </p>
+                  </div>
+                </section>
+              </div>
+              <div class="col-md-4 px-md-4">
+                <div class="sidebar">
+                  <div class="sidebar__title">
+                    <span>近期週刊</span>
+                  </div>
+                  <div class="sidebar__content">
+                    <a class="sidebar__content-item" href="#">
+                      <div class="sidebar__content-item-title clamp-1">
+                        Vol.149 | 屏東‧佇足 我的慢旅行
+                      </div>
+                    </a>
+                    <a class="sidebar__content-item" href="#">
+                      <div class="sidebar__content-item-title clamp-1">
+                        Vol.149 | 運動，讓學習力大躍進 運動，讓學習力大躍進
+                      </div>
+                    </a>
+                  </div>
+                  <div class="sidebar__banner">
+                    <img
+                      src="https://imgs.gvm.com.tw/upload/market_advertis/20230725/4e77c89a5eefce555bb58258eedd0a53.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-				<div class="recommend">
-					<div class="container">
-						<div class="position-relative mb-5">
-							<h2 class="recommend__title title-line">更多50+週刊</h2>
-						</div>
-						<div class="row">
-							<div class="col-md-4">
-								<a class="recommend__item" href="https://www.fiftyplus.com.tw/articles/28258" target="_blank">
-									<div class="recommend__item-img">
-										<img class="img-fluid" src="https://imgs.cwgv.com.tw/articles/58/28258/preview/thumb/28258.png" />
-									</div>
-									<div class="recommend__item-content">
-										<div class="d-flex gap-3 justify-content-between align-items-center">
-											<div class="recommend__item-vol">Vol. 148</div>
-										</div>
-										<div class="recommend__item-title clamp-2">防失智、癌症、高血壓！醫師：用對方法</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-4">
-								<a class="recommend__item" href="https://www.fiftyplus.com.tw/articles/28258" target="_blank">
-									<div class="recommend__item-img">
-										<img class="img-fluid" src="https://imgs.gvm.com.tw/upload/gallery/20231110/thumbnail_M_154726.jpg" />
-									</div>
-									<div class="recommend__item-content">
-										<div class="d-flex gap-3 justify-content-between align-items-center">
-											<div class="recommend__item-vol">Vol. 148</div>
-										</div>
-										<div class="recommend__item-title clamp-2">人熊衝突下，共享同一片家園的困境與可能</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-4">
-								<a class="recommend__item" href="https://www.fiftyplus.com.tw/articles/28258" target="_blank">
-									<div class="recommend__item-img">
-										<img class="img-fluid" src="https://imgs.cwgv.com.tw/articles/58/29158/preview/thumb/29158.png" />
-									</div>
-									<div class="recommend__item-content">
-										<div class="d-flex gap-3 justify-content-between align-items-center">
-											<div class="recommend__item-vol">Vol. 148</div>
-										</div>
-										<div class="recommend__item-title clamp-2">防失智、癌症、高血壓！醫師：用對方法喝蔬菜湯，可以變年輕</div>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</main>
-			<footer class="footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="footer__menu">
-								<div class="footer__menu-item">
-									<a href="https://www.fiftyplus.com.tw/about" target="_blank">關於我們</a>
-								</div>
-								<div class="footer__menu-item">
-									<a href="https://www.fiftyplus.com.tw/privacy" target="_blank">隱私權政策</a>
-								</div>
-								<div class="footer__menu-item">
-									<a href="https://www.fiftyplus.com.tw/person_privacy" target="_blank">個資保護聲明</a>
-								</div>
-								<div class="footer__menu-item">
-									<a href="https://www.fiftyplus.com.tw/question" target="_blank">購物 Q&amp;A</a>
-								</div>
-								<div class="footer__menu-item">
-									<a href="mailto:50plus@cwgv.com.tw" target="_blank">聯絡我們</a>
-								</div>
-								<div class="footer__menu-item">
-									<a href="https://www.fiftyplus.com.tw/contact" target="_blank">合作洽談</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12">
-							<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between gap-3 mt-3">
-								<img width="250" class="img-fluid" src="img/50+logo_w.svg" alt="" />
-								<div class="d-flex align-items-center mt-md-auto">
-									<div class="footer__social mt-auto">
-										<a class="footer__social-item" href="https://www.facebook.com/50pluscommunity/" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-										<a class="footer__social-item" href="https://line.me/R/ti/p/%40efu3793r" title="Line"><i class="fa-brands fa-line"></i></a>
-										<a class="footer__social-item" href="https://www.instagram.com/50plus_taiwan/" title="IG">
-											<i class="fa-brands fa-instagram"></i>
-										</a>
-										<a class="footer__social-item" href="https://www.youtube.com/channel/UC0UTmrf_0LKRIUV60wLsjJw" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12 mt-3">
-							<div class="footer__group">
-								<a class="footer__group-item" href="https://bookzone.cwgv.com.tw/" target="_blank">天下文化</a>
-								<a class="footer__group-item" href="https://futureparenting.cwgv.com.tw/" target="_blank">未來親子學習平台</a>
-								<a class="footer__group-item" href="https://www.gvm.com.tw/" target="_blank">遠見雜誌</a>
-								<a class="footer__group-item" href="https://www.hbrtaiwan.com/" target="_blank">哈佛商業評論</a>
-								<a class="footer__group-item" href="https://classone.cwgv.com.tw/" target="_blank">1號課堂</a>
-							</div>
-							<div class="footer__copyright">Copyright © 2023 遠見天下文化出版股份有限公司</div>
-						</div>
-					</div>
-				</div>
-			</footer>
+        <div class="d-flex justify-content-center">
+          <div class="subscribe hidden">
+            <span class="text-primary fs-4">訂閱50+週刊</span>
+            <form method="post">
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  placeholder="請輸入電子郵件"
+                  autocomplete="off"
+                />
+                <button type="button" class="btn btn-primary px-4">訂閱</button>
+              </div>
+            </form>
+            <div class="subscribe-close">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+        </div>
 
-			<div class="gotop">
-				<i class="fa-solid fa-chevron-up"></i>
-			</div>
+        <div class="recommend">
+          <div class="container">
+            <div class="position-relative mb-5">
+              <h2 class="recommend__title title-line">更多50+週刊</h2>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <a
+                  class="recommend__item"
+                  href="https://www.fiftyplus.com.tw/articles/28258"
+                  target="_blank"
+                >
+                  <div class="recommend__item-img">
+                    <img
+                      class="img-fluid"
+                      src="https://imgs.cwgv.com.tw/articles/58/28258/preview/thumb/28258.png"
+                    />
+                  </div>
+                  <div class="recommend__item-content">
+                    <div
+                      class="d-flex gap-3 justify-content-between align-items-center"
+                    >
+                      <div class="recommend__item-vol">Vol. 148</div>
+                    </div>
+                    <div class="recommend__item-title clamp-2">
+                      防失智、癌症、高血壓！醫師：用對方法
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a
+                  class="recommend__item"
+                  href="https://www.fiftyplus.com.tw/articles/28258"
+                  target="_blank"
+                >
+                  <div class="recommend__item-img">
+                    <img
+                      class="img-fluid"
+                      src="https://imgs.gvm.com.tw/upload/gallery/20231110/thumbnail_M_154726.jpg"
+                    />
+                  </div>
+                  <div class="recommend__item-content">
+                    <div
+                      class="d-flex gap-3 justify-content-between align-items-center"
+                    >
+                      <div class="recommend__item-vol">Vol. 148</div>
+                    </div>
+                    <div class="recommend__item-title clamp-2">
+                      人熊衝突下，共享同一片家園的困境與可能
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a
+                  class="recommend__item"
+                  href="https://www.fiftyplus.com.tw/articles/28258"
+                  target="_blank"
+                >
+                  <div class="recommend__item-img">
+                    <img
+                      class="img-fluid"
+                      src="https://imgs.cwgv.com.tw/articles/58/29158/preview/thumb/29158.png"
+                    />
+                  </div>
+                  <div class="recommend__item-content">
+                    <div
+                      class="d-flex gap-3 justify-content-between align-items-center"
+                    >
+                      <div class="recommend__item-vol">Vol. 148</div>
+                    </div>
+                    <div class="recommend__item-title clamp-2">
+                      防失智、癌症、高血壓！醫師：用對方法喝蔬菜湯，可以變年輕
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="footer__menu">
+                <div class="footer__menu-item">
+                  <a href="https://www.fiftyplus.com.tw/about" target="_blank"
+                    >關於我們</a
+                  >
+                </div>
+                <div class="footer__menu-item">
+                  <a href="https://www.fiftyplus.com.tw/privacy" target="_blank"
+                    >隱私權政策</a
+                  >
+                </div>
+                <div class="footer__menu-item">
+                  <a
+                    href="https://www.fiftyplus.com.tw/person_privacy"
+                    target="_blank"
+                    >個資保護聲明</a
+                  >
+                </div>
+                <div class="footer__menu-item">
+                  <a
+                    href="https://www.fiftyplus.com.tw/question"
+                    target="_blank"
+                    >購物 Q&amp;A</a
+                  >
+                </div>
+                <div class="footer__menu-item">
+                  <a href="mailto:50plus@cwgv.com.tw" target="_blank"
+                    >聯絡我們</a
+                  >
+                </div>
+                <div class="footer__menu-item">
+                  <a href="https://www.fiftyplus.com.tw/contact" target="_blank"
+                    >合作洽談</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div
+                class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between gap-3 mt-3"
+              >
+                <img
+                  width="250"
+                  class="img-fluid"
+                  src="img/50+logo_w.svg"
+                  alt=""
+                />
+                <div class="d-flex align-items-center mt-md-auto">
+                  <div class="footer__social mt-auto">
+                    <a
+                      class="footer__social-item"
+                      href="https://www.facebook.com/50pluscommunity/"
+                      title="Facebook"
+                      ><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                    <a
+                      class="footer__social-item"
+                      href="https://line.me/R/ti/p/%40efu3793r"
+                      title="Line"
+                      ><i class="fa-brands fa-line"></i
+                    ></a>
+                    <a
+                      class="footer__social-item"
+                      href="https://www.instagram.com/50plus_taiwan/"
+                      title="IG"
+                    >
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a
+                      class="footer__social-item"
+                      href="https://www.youtube.com/channel/UC0UTmrf_0LKRIUV60wLsjJw"
+                      title="Youtube"
+                      ><i class="fa-brands fa-youtube"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 mt-3">
+              <div class="footer__group">
+                <a
+                  class="footer__group-item"
+                  href="https://bookzone.cwgv.com.tw/"
+                  target="_blank"
+                  >天下文化</a
+                >
+                <a
+                  class="footer__group-item"
+                  href="https://futureparenting.cwgv.com.tw/"
+                  target="_blank"
+                  >未來親子學習平台</a
+                >
+                <a
+                  class="footer__group-item"
+                  href="https://www.gvm.com.tw/"
+                  target="_blank"
+                  >遠見雜誌</a
+                >
+                <a
+                  class="footer__group-item"
+                  href="https://www.hbrtaiwan.com/"
+                  target="_blank"
+                  >哈佛商業評論</a
+                >
+                <a
+                  class="footer__group-item"
+                  href="https://classone.cwgv.com.tw/"
+                  target="_blank"
+                  >1號課堂</a
+                >
+              </div>
+              <div class="footer__copyright">
+                Copyright © 2023 遠見天下文化出版股份有限公司
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 
-			<script src="js/bootstrap.min.js"></script>
-			<script src="js/swiper-bundle.min.js"></script>
-			<script src="js/epaper-main.js"></script>
-		</body>
-	</head>
+      <div class="gotop">
+        <i class="fa-solid fa-chevron-up"></i>
+      </div>
+
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/swiper-bundle.min.js"></script>
+      <script src="js/epaper-main.js"></script>
+    </body>
+  </head>
 </html>

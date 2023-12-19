@@ -38,6 +38,9 @@ a {
 
 main {
   background-color: #fff;
+  @include media-breakpoint-down(md) {
+    top: -3rem;
+  }
 }
 
 .header {
@@ -590,7 +593,7 @@ main {
   max-width: 100%;
   width: 100%;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   @include media-breakpoint-up(md) {
     align-items: center;
     justify-content: center;
@@ -599,13 +602,19 @@ main {
   @include media-breakpoint-down(md) {
     flex-direction: column;
     gap: 0.2rem;
-    padding: 1rem 1rem 3rem;
+    padding: 1rem 1rem 2.8rem;
     width: 100%;
     left: 0;
     bottom: 0;
   }
   &.hidden {
     bottom: -100%;
+  }
+  &-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $primary;
+    margin-right: 1rem;
   }
   &-close {
     position: absolute;

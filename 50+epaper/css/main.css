@@ -13402,6 +13402,11 @@ a:hover {
 main {
   background-color: #fff;
 }
+@media (max-width: 767.98px) {
+  main {
+    top: -3rem;
+  }
+}
 
 .header {
   background-color: #fff;
@@ -13987,7 +13992,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 @media (min-width: 768px) {
   .subscribe {
@@ -14007,7 +14012,7 @@ main {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 0.2rem;
-    padding: 1rem 1rem 3rem;
+    padding: 1rem 1rem 2.8rem;
     width: 100%;
     left: 0;
     bottom: 0;
@@ -14015,6 +14020,12 @@ main {
 }
 .subscribe.hidden {
   bottom: -100%;
+}
+.subscribe-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #f0ea3c;
+  margin-right: 1rem;
 }
 .subscribe-close {
   position: absolute;

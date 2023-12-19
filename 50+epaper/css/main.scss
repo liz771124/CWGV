@@ -49,6 +49,7 @@ main {
 	position: relative;
 	@include media-breakpoint-up(md) {
 		background-image: url(../img/kv-bg.png);
+		background-color: #191919;
 		&:after {
 			content: "";
 			position: absolute;

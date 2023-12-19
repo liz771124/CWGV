@@ -12028,11 +12028,10 @@ main {
   align-items: flex-end;
   overflow: hidden;
   position: relative;
-  background-image: url(../img/kv-bg.png);
 }
 @media (min-width: 768px) {
   .header {
-    background-color: #191919;
+    background-image: url(../img/kv-bg.png);
   }
   .header:after {
     content: "";

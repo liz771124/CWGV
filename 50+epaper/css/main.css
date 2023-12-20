@@ -13821,7 +13821,7 @@ main {
   font-weight: 300;
   font-size: 1.4rem;
   line-height: 1.5;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.084rem;
 }
 @media (max-width: 767.98px) {
   .article__content {

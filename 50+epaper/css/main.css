@@ -12231,7 +12231,7 @@ main {
   top: 49px;
   opacity: 0;
   z-index: 1;
-  background-color: #f7f7f7;
+  background-color: #e4e4e4;
   transform: translateY(-100px);
   transition: 0.3s transform;
   z-index: 2;
@@ -12279,7 +12279,7 @@ main {
 }
 
 .swiper-button-prev, .swiper-button-next {
-  color: #b1b1b1;
+  color: #878787;
 }
 
 .article {

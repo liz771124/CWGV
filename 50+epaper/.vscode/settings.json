@@ -4,5 +4,13 @@
   "liveServer.settings.port": 5501,
   "liveSassCompile.settings.generateMap": false,
   "liveSassCompile.settings.excludeList": ["**/node_modules/**", ".vscode/**"],
-  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"]
+  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/css"
+    }
+  ],
+  "liveSassCompile.settings.includeItems": ["css/main.scss"]
 }

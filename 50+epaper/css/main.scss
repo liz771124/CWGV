@@ -774,3 +774,10 @@ main {
 .accordion-button {
   font-size: 1.1rem;
 }
+
+@include media-breakpoint-down(md) {
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}

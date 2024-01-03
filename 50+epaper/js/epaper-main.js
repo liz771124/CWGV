@@ -13,15 +13,15 @@ let currentSection = 1,
   headerHeight = header.offsetHeight,
   navbarHeight = navbar.offsetHeight,
   chapterHeight = chapter.offsetHeight,
-  isAndroid = navigator.userAgent.indexOf('Android') > -1 ;
+  isAndroid = navigator.userAgent.indexOf("Android") > -1;
 
-sidebar.style.top = `${navbar.offsetHeight + chapter.offsetHeight + 20}px`;
+sidebar.style.top = `${navbar.offsetHeight + chapter.offsetHeight + 40}px`;
 
-if(isAndroid) {
+if (isAndroid) {
   lineBtn.style.display = "flex";
   shareBtn.style.display = "none";
 }
-  
+
 const swiper = new Swiper(".chapter__slider", {
   loop: true,
   autoplay: {
@@ -100,7 +100,7 @@ const zoomText = (e) => {
   const element = e.target
     .closest("section")
     .querySelector(".article__content");
-  currentFontSize < 1.7 ? (currentFontSize += 0.1) : (currentFontSize = 1.3);
+  currentFontSize < 1.7 ? (currentFontSize += 0.1) : (currentFontSize = 1.4);
   element.style.fontSize = `${currentFontSize}rem`;
 };
 

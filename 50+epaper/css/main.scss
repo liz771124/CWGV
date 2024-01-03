@@ -327,9 +327,11 @@ main {
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
-        // line-height: 1.5;
-        // padding-bottom: 0.25em;
+        line-height: 1.5;
+        padding-bottom: 0.25em;
         overflow: hidden;
+        text-align: justify;
+        letter-spacing: 4px;
       }
     }
   }

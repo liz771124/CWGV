@@ -324,12 +324,12 @@ main {
       &-title {
         font-weight: 500;
         padding: 0 1rem;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
+        // display: -webkit-box;
+        // -webkit-line-clamp: 2;
+        // -webkit-box-orient: vertical;
         line-height: 1.5;
-        padding-bottom: 0.25em;
         overflow: hidden;
+        height: 42px;
         text-align: justify;
         letter-spacing: 4px;
       }

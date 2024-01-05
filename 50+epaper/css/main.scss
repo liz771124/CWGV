@@ -331,7 +331,6 @@ main {
         overflow: hidden;
         height: 36px;
         text-align: justify;
-        letter-spacing: 4px;
         @include media-breakpoint-down(md) {
           height: 45px;
         }

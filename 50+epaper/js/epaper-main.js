@@ -53,11 +53,13 @@ window.addEventListener("scroll", () => {
   if (scrollTop > header.offsetHeight) {
     gotop.classList.add("gotopFixed");
     subscribe.style.bottom = "-2px";
+    subscribe.style.zIndex = "";
     chapter.classList.add("show");
   } else {
     gotop.classList.remove("gotopFixed");
     chapter.classList.remove("show");
     subscribe.style.bottom = "-100%";
+    subscribe.style.zIndex = "-1";
   }
   // sections.forEach((section, index) => {
   //   const rect = section.getBoundingClientRect();

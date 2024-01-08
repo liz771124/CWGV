@@ -331,9 +331,9 @@ main {
         overflow: hidden;
         height: 46px;
         text-align: justify;
-        @include media-breakpoint-down(md) {
-          height: 45px;
-        }
+        // @include media-breakpoint-down(md) {
+        //   height: 45px;
+        // }
       }
     }
   }

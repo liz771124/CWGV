@@ -53,7 +53,7 @@ window.addEventListener("scroll", () => {
   if (scrollTop > header.offsetHeight) {
     gotop.classList.add("gotopFixed");
     subscribe.style.bottom = "-2px";
-    subscribe.style.zIndex = "";
+    subscribe.style.zIndex = "1";
     chapter.classList.add("show");
   } else {
     gotop.classList.remove("gotopFixed");

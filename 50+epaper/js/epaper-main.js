@@ -118,7 +118,7 @@ shareBtn.addEventListener("click", async () => {
 });
 
 subscribeClose.addEventListener("click", () => {
-  // subscribe.style.opacity = 0;
   subscribe.style.removeProperty("bottom");
+  subscribe.style.opacity = 0;
   subscribe.style.zIndex = "-1";
 });

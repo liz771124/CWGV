@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Static Site</title>
+
+  <link rel="stylesheet" href="./assets/css/index.css">
+
+  <link href="./css/tw-elements.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/output.css">
+</head>
+<body>
+
+  <iframe class="Flippingbook-box" src="https://www.gvm.com.tw/" height="800" width="100%" frameborder="0" scrolling="no" style="margin:0;" allowfullscreen="allowfullscreen"></iframe>
+
+<section>
+  <div id="PodcastPlayerApp"><audio ref="audio" controls="controls">
+      <source type="audio/mpeg" />
+    </audio>
+    <!-- <div class="title">
+      <h1>李儀婷的薩提爾親子溝通課（音頻課程）：爸媽篇＋孩子篇</h1>
+    </div>
+    <div class="podcast--player">
+      <div class="player">
+        <div class="player--playback">
+          <div class="pic" v-if="isReady"><img :src="img" /></div>
+        </div>
+      </div>
+      <div class="drawer">
+        <div class="scroll--content" data-simplebar="data-simplebar">
+          <div class="list--podcast">
+            <div class="collapse--chapter" v-for="(chapter, index) in meta.data">
+              <div class="bar" v-if="chapter.audio && !chapter.episodes" :id="'collapseTrigger'+chapter.id" @click="playAudio(chapter.id)">
+                <div class="icon">
+                  <div class="icon__check" v-if="chapter.played"></div>
+                </div>
+                <div class="label">{{ chapter.title }}</div>
+              </div>
+              <div class="bar" v-if="chapter.audio && chapter.episodes" data-te-collapse-init="data-te-collapse-init" :data-te-target="'#collapseList'+chapter.id" :id="'collapseTrigger'+chapter.id" @click="playAudio(index)">
+                <div class="icon">
+                  <div class="icon__check" v-if="chapter.played"></div>
+                </div>
+                <div class="label">{{ chapter.title }}</div>
+              </div>
+              <div class="bar" v-if="chapter.episodes" data-te-collapse-init="data-te-collapse-init" :data-te-target="'#collapseList'+chapter.id" :id="'collapseTrigger'+chapter.id">
+                <div class="icon">
+                  <div class="icon__arrow"></div>
+                </div>
+                <div class="label">{{ chapter.title }}</div>
+              </div>
+              <div class="bar" v-if="!chapter.episodes && !chapter.audio" :id="'collapseTrigger'+chapter.id">
+                <div class="icon"></div>
+                <div class="label">{{ chapter.title }}</div>
+              </div>
+              <div class="content !visible" v-if="chapter.episodes" data-te-collapse-item="data-te-collapse-item" data-te-collapse-show="data-te-collapse-show" data-te-toggle="true" :id="'collapseList'+chapter.id">
+                <div class="list--episodes" v-if="CONTROL_EPISODE">
+                  <div v-for="(episode, i) in chapter.episodes">
+                    <div class="item--episode" v-if="!episode.auth" data-te-toggle="modal" data-te-target="#modalAlert">
+                      <div class="icon">
+                        <div class="lock" v-if="!episode.auth"></div>
+                      </div><span>{{ episode.title }}</span><span class="time">
+                        <div class="label">{{ episode.time }}</div>
+                        <div class="icon__free" v-if="episode.demo"></div>
+                      </span>
+                    </div>
+                    <div class="item--episode" v-if="episode.auth" @click="(episode.audio)?playAudio(episode.id):null" :class="{'is-active': CONTROL_EPISODE.id == episode.id}" :id="'episode_'+episode.id">
+                      <div class="icon">
+                        <div class="icon__check" v-if="episode.played"></div>
+                        <div class="lock" v-if="!episode.auth"></div>
+                      </div><span>{{ episode.title }}</span><span class="time">
+                        <div class="label">{{ episode.time }}</div>
+                        <div class="icon__free" v-if="episode.demo"></div>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="player--drawer" v-if="audio" :class="{ 'is-hidden': isUserInput == false }">
+      <div class="container">
+        <div class="player--controller">
+          <ul>
+            <li><a class="item--control" alt="跳前10秒" @click="playlistPrevTenSec()">
+                <div class="icon">
+                  <div class="icon__prev__10sec"></div>
+                </div>
+              </a></li>
+            <li><a class="item--control" alt="跳上一章節" @click="playlistPrev()">
+                <div class="icon">
+                  <div class="icon__prev"></div>
+                </div>
+              </a></li>
+            <li><a class="item--control" alt="播放/暫停" @click="togglePlay()">
+                <div class="icon">
+                  <div class="icon__play" v-if="!CONTROL_PLAYING"></div>
+                  <div class="icon__pause" v-if="CONTROL_PLAYING"></div>
+                </div>
+              </a></li>
+            <li><a class="item--control" alt="跳下一章節" @click="playlistNext()">
+                <div class="icon">
+                  <div class="icon__next"></div>
+                </div>
+              </a></li>
+            <li><a class="item--control" alt="跳下10秒" @click="playlistNextTenSec()">
+                <div class="icon">
+                  <div class="icon__next__10sec"></div>
+                </div>
+              </a></li>
+          </ul>
+        </div>
+        <div class="player--screen">
+          <div class="title" v-if="CONTROL_EPISODE">
+            <h3>{{ CONTROL_EPISODE.title }}</h3>
+          </div>
+          <div class="process--slider" v-if="CONTROL_SEEK">
+            <div class="label">{{ STATUS_SEEK }}</div><vue-slider ref="processbar" @drag-start="processSliderDragStart" @dragging="processSliderDragging" @drag-end="processSliderDragEnd" @click="processSliderClick" v-model="CONTROL_SEEK" :height="8" :dotSize="32" :duration="CONTROL_USER_DURATION" :dragOnClick="true" :tooltip="'none'"></vue-slider>
+            <div class="label">{{ STATUS_DURATION }}</div>
+          </div>
+          <div class="process--slider" v-if="!CONTROL_SEEK">
+            <div class="label">00:00</div><vue-slider :height="8" :dotSize="32" :tooltip="'none'"></vue-slider>
+            <div class="label">00:00</div>
+          </div>
+        </div>
+        <div class="player--controller">
+          <ul>
+            <li v-if="isTablet || isDesktop">
+              <div class="item--control" alt="音量調整" @mouseup="changeVolume()" ref="buttonVolume">
+                <div class="icon">
+                  <div class="icon__volume"><span :class="{'is-active': audio.volume = .1}"></span><span :class="{'is-active': audio.volume = .3}"></span><span :class="{'is-active': audio.volume = .5}"></span><span :class="{'is-active': audio.volume = .75}"></span></div>
+                </div>
+              </div>
+            </li>
+            <li><a class="item--control" ref="buttonSpeed" alt="播放速度調整" @click="(CONTROL_SPEED_OPEN)?CONTROL_SPEED_OPEN=false:CONTROL_SPEED_OPEN=true">
+                <div class="icon">
+                  <div class="icon__more"></div>
+                </div>
+              </a>
+              <div class="player--speed" v-if="CONTROL_SPEED_OPEN">
+                <ul>
+                  <li :class="{'is-active': CONTROL_SPEED==.5}"><a @click="(CONTROL_SPEED = .5)">0.5x</a></li>
+                  <li :class="{'is-active': CONTROL_SPEED==1}"><a @click="(CONTROL_SPEED = 1)">1x</a></li>
+                  <li :class="{'is-active': CONTROL_SPEED==1.25}"><a @click="(CONTROL_SPEED = 1.25)">1.25x</a></li>
+                  <li :class="{'is-active': CONTROL_SPEED==1.5}"><a @click="(CONTROL_SPEED = 1.5)">1.5x</a></li>
+                  <li :class="{'is-active': CONTROL_SPEED==2}"><a @click="(CONTROL_SPEED = 2)">2x</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <div class="relative">
+            <div :class="['absolute end-0 -translate-y-[100%] top-1 bg-black/80 w-[400px] h-[400px] transform p-5 overflow-auto',  AUDIO_LIST ? '' : 'hidden' ]" data-simplebar="data-simplebar">
+              <div v-for="(chapter, index) in meta.data" :key="chapter.id">
+                
+                <div class="py-5 border-b border-whte cursor-pointer" @click="playAudio(chapter.id, chapter.chapterUrl)">{{ chapter.title }}</div>
+              </div>
+            </div>
+            <div role="button" class="text-white/80 flex items-center justify-center pt-3.5" @click="AUDIO_LIST=!AUDIO_LIST">
+              <svg fill="currentColor" height="15" width="15" viewBox="0 0 458.18 458.18" xml:space="preserve">
+                <g>
+                  <g>
+                    <path d="M487.2,69.7c0,12.9-10.5,23.4-23.4,23.4h-322c-12.9,0-23.4-10.5-23.4-23.4s10.5-23.4,23.4-23.4h322.1
+                      C476.8,46.4,487.2,56.8,487.2,69.7z M463.9,162.3H141.8c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1
+                      c12.9,0,23.4-10.5,23.4-23.4C487.2,172.8,476.8,162.3,463.9,162.3z M463.9,278.3H141.8c-12.9,0-23.4,10.5-23.4,23.4
+                      s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,288.8,476.8,278.3,463.9,278.3z M463.9,394.3H141.8
+                      c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,404.8,476.8,394.3,463.9,394.3z
+                        M38.9,30.8C17.4,30.8,0,48.2,0,69.7s17.4,39,38.9,39s38.9-17.5,38.9-39S60.4,30.8,38.9,30.8z M38.9,146.8
+                      C17.4,146.8,0,164.2,0,185.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,146.8,38.9,146.8z M38.9,262.8
+                      C17.4,262.8,0,280.2,0,301.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,262.8,38.9,262.8z M38.9,378.7
+                      C17.4,378.7,0,396.1,0,417.6s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9C77.8,396.2,60.4,378.7,38.9,378.7z"/>
+                  </g>
+                </g>
+             </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <script src="./js/tw-elements.umd.min.js"></script>
+  <script type="module" crossorigin src="./assets/js/main.js"></script>
+  <!-- <script type="module" src="../js/main.js"></script> -->
+</body>
+</html>

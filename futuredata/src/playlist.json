@@ -1,0 +1,16 @@
+[
+  {
+      "id": "1",
+      "chapter": "1",
+      "chapterUrl": "https://www.gvm.com.tw/",
+      "title": "章節一：新聞聊天室111",
+      "audio": "https://d3kus78ndrk7he.cloudfront.net/junior/audio/202406_09.mp3"
+   },
+  {
+      "id": "2",
+      "chapter": "2",
+      "chapterUrl": "https://futuredata.cwgv.com.tw/junior/ereader/index/202404_037",
+      "title": "章節二：新聞聊天室222",
+      "audio": "https://d3kus78ndrk7he.cloudfront.net/junior/audio/202406_03.mp3"
+   }
+  ]

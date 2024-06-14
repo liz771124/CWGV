@@ -131,7 +131,12 @@
             <li v-if="isTablet || isDesktop">
               <div class="item--control" alt="音量調整" @mouseup="changeVolume()" ref="buttonVolume">
                 <div class="icon">
-                  <div class="icon__volume"><span :class="{'is-active': audio.volume = .1}"></span><span :class="{'is-active': audio.volume = .3}"></span><span :class="{'is-active': audio.volume = .5}"></span><span :class="{'is-active': audio.volume = .75}"></span></div>
+                  <div class="icon__volume">
+                    <span :class="{'is-active': audio.volume > .1}"></span>
+                    <span :class="{'is-active': audio.volume > .3}"></span>
+                    <span :class="{'is-active': audio.volume > .5}"></span>
+                    <span :class="{'is-active': audio.volume > .75}"></span>
+                  </div>
                 </div>
               </div>
             </li>

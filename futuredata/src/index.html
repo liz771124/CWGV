@@ -12,10 +12,10 @@
 </head>
 <body>
 
-  <iframe class="Flippingbook-box" src="https://www.gvm.com.tw/" height="800" width="100%" frameborder="0" scrolling="no" style="margin:0;" allowfullscreen="allowfullscreen"></iframe>
+  <iframe class="Flippingbook-box h-screen" src="https://futureparenting.cwgv.com.tw/" height="100%" width="100%" frameborder="0" scrolling="no" style="margin:0;" allowfullscreen="allowfullscreen"></iframe>
 
-<section>
-  <div id="PodcastPlayerApp"><audio ref="audio" controls="controls">
+  <div id="PodcastPlayerApp" class="relative">
+    <audio ref="audio" controls="controls">
       <source type="audio/mpeg" />
     </audio>
     <!-- <div class="title">
@@ -81,7 +81,7 @@
         </div>
       </div>
     </div> -->
-    <div class="player--drawer" v-if="audio" :class="{ 'is-hidden': isUserInput == false }">
+    <div class="player--drawer" v-if="audio">
       <div class="container">
         <div class="player--controller">
           <ul>
@@ -113,29 +113,32 @@
               </a></li>
           </ul>
         </div>
-        <div class="player--screen">
-          <div class="title" v-if="CONTROL_EPISODE">
-            <h3>{{ CONTROL_EPISODE.title }}</h3>
-          </div>
-          <div class="process--slider" v-if="CONTROL_SEEK">
-            <div class="label">{{ STATUS_SEEK }}</div><vue-slider ref="processbar" @drag-start="processSliderDragStart" @dragging="processSliderDragging" @drag-end="processSliderDragEnd" @click="processSliderClick" v-model="CONTROL_SEEK" :height="8" :dotSize="32" :duration="CONTROL_USER_DURATION" :dragOnClick="true" :tooltip="'none'"></vue-slider>
-            <div class="label">{{ STATUS_DURATION }}</div>
-          </div>
-          <div class="process--slider" v-if="!CONTROL_SEEK">
-            <div class="label">00:00</div><vue-slider :height="8" :dotSize="32" :tooltip="'none'"></vue-slider>
-            <div class="label">00:00</div>
-          </div>
+    <div class="player--screen">
+      <div class="title" v-if="CONTROL_EPISODE">
+        <h3>{{ CONTROL_EPISODE.title }}</h3>
+    </div>
+    <div class="process--slider" v-if="CONTROL_SEEK">
+        <div class="label">{{ STATUS_SEEK }}</div>
+        <vue-slider ref="processbar" @drag-start="processSliderDragStart" @dragging="processSliderDragging" @drag-end="processSliderDragEnd" @click="processSliderClick" v-model="CONTROL_SEEK" :height="8" :dotSize="32" :duration="CONTROL_USER_DURATION" :dragOnClick="true"
+            :tooltip="'none'"></vue-slider>
+        <div class="label">{{ STATUS_DURATION }}</div>
+    </div>
+    <div class="process--slider" v-if="!CONTROL_SEEK">
+        <div class="label">00:00</div>
+        <vue-slider :height="8" :dotSize="32" :tooltip="'none'"></vue-slider>
+        <div class="label">00:00</div>
+    </div>
         </div>
         <div class="player--controller">
-          <ul>
-            <li v-if="isTablet || isDesktop">
+         <ul>
+           <li v-if="isTablet || isDesktop">
               <div class="item--control" alt="音量調整" @mouseup="changeVolume()" ref="buttonVolume">
                 <div class="icon">
                   <div class="icon__volume">
-                    <span :class="{'is-active': audio.volume > .1}"></span>
-                    <span :class="{'is-active': audio.volume > .3}"></span>
-                    <span :class="{'is-active': audio.volume > .5}"></span>
-                    <span :class="{'is-active': audio.volume > .75}"></span>
+                    <span :class="{'is-active': CONTROL_VOLUME > .1}"></span>
+                    <span :class="{'is-active': CONTROL_VOLUME > .3}"></span>
+                    <span :class="{'is-active': CONTROL_VOLUME > .5}"></span>
+                    <span :class="{'is-active': CONTROL_VOLUME > .75}"></span>
                   </div>
                 </div>
               </div>
@@ -156,15 +159,15 @@
               </div>
             </li>
           </ul>
-          <div class="relative">
-            <div :class="['absolute end-0 -translate-y-[100%] top-1 bg-black/80 w-[400px] h-[400px] transform p-5 overflow-auto',  AUDIO_LIST ? '' : 'hidden' ]" data-simplebar="data-simplebar">
+          <div>
+            <div :class="['absolute -translate-y-[100%] top-2 end-0 bg-black/80 w-[300px] h-[300px] transform px-5 overflow-auto',  AUDIO_LIST ? '' : 'hidden' ]" data-simplebar="data-simplebar">
               <div v-for="(chapter, index) in meta.data" :key="chapter.id">
                 
                 <div class="py-5 border-b border-whte cursor-pointer" @click="playAudio(chapter.id, chapter.chapterUrl)">{{ chapter.title }}</div>
               </div>
             </div>
-            <div role="button" class="text-white/80 flex items-center justify-center pt-3.5" @click="AUDIO_LIST=!AUDIO_LIST">
-              <svg fill="currentColor" height="15" width="15" viewBox="0 0 458.18 458.18" xml:space="preserve">
+            <div role="button" class="item--control text-white/80" @click="AUDIO_LIST=!AUDIO_LIST">
+              <svg fill="currentColor" height="17" width="17" viewBox="0 0 458.18 458.18" xml:space="preserve">
                 <g>
                   <g>
                     <path d="M487.2,69.7c0,12.9-10.5,23.4-23.4,23.4h-322c-12.9,0-23.4-10.5-23.4-23.4s10.5-23.4,23.4-23.4h322.1
@@ -185,7 +188,6 @@
       </div>
     </div>
   </div>
-</section>
 
   <script src="./js/tw-elements.umd.min.js"></script>
   <script type="module" crossorigin src="./assets/js/main.js"></script>

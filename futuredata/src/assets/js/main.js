@@ -21408,15 +21408,15 @@ var require_main = __commonJS({
         const isTablet = breakpoints.between("md", "lg");
         const isDesktop = breakpoints.greaterOrEqual("lg");
         const isReady = ref(false);
-        const isUserInput = ref(true);
+        const isUserInput = ref(false);
         const CONTROLLING = ref(false);
         const CONTROL_EPISODE = ref(null);
         const CONTROL_SEEK = ref(0);
-        const CONTROL_VOLUME = ref(50);
+        const CONTROL_VOLUME = ref(0.5);
         const CONTROL_SPEED_OPEN = ref(false);
         const CONTROL_SPEED = ref(1);
         const CONTROL_PLAYING = ref(false);
-        const CONTROL_USER_DURATION = ref(0.3);
+        const CONTROL_USER_DURATION = ref(0.17);
         const STATUS_TIMER = ref("00:00/0:00");
         const STATUS_SEEK = ref("00:00");
         const STATUS_DURATION = ref("00:00");
@@ -21462,7 +21462,7 @@ var require_main = __commonJS({
           CONTROL_SEEK.value = audio.value.currentTime / audio.value.duration * 100;
           STATUS_SEEK.value = formatTime(Math.round(CONTROL_SEEK.value / 100 * audio.value.duration));
         };
-        const playlistNextTenSec = () => {
+ const playlistNextTenSec = () => {
           audio.value.currentTime += 10;
           CONTROL_SEEK.value = audio.value.currentTime / audio.value.duration * 100;
           STATUS_SEEK.value = formatTime(Math.round(CONTROL_SEEK.value / 100 * audio.value.duration));
@@ -21483,11 +21483,11 @@ var require_main = __commonJS({
           meta.list.forEach((item, index) => {
             if (item.id == CONTROL_EPISODE.value.id) {
               if (meta.list[index + 1]) {
-                next = meta.list[index + 1];
+                next = meta.list[index + 1].id;
               }
             }
           });
-          next != "" ? playAudio(next.id, next.chapterUrl) : null;
+          next != "" ? playAudio(next) : null;
         };
         const buttonVolume = ref(null);
         const {
@@ -21500,10 +21500,9 @@ var require_main = __commonJS({
         } = useMouseInElement(buttonSpeed);
         const changeVolume = () => {
           let pX = elementX.value / elementWidth.value * 100;
-          console.log(pX);
           pX < 30 ? pX = 30 : null;
           pX > 70 ? pX = 70 : null;
-          CONTROL_VOLUME.value = mapNumber(pX, 30, 70, 0, 100);
+          CONTROL_VOLUME.value = mapNumber(pX, 30, 70, 0, 100) / 100;
         };
         const togglePlay = () => {
           if (audio.value.paused) {
@@ -21529,7 +21528,12 @@ var require_main = __commonJS({
           }
         };
         const processSliderClick = (e) => {
-          audio.value.currentTime = e.offsetX / e.target.clientWidth * audio.value.duration;
+          const mouseX = e.clientX;
+          const railRect = document.querySelector(".vue-slider-rail").getBoundingClientRect();
+          const relativeX = mouseX - railRect.left;
+          const railWidth = document.querySelector(".vue-slider-rail").clientWidth;
+          audio.value.currentTime = relativeX / railWidth * audio.value.duration;
+          CONTROL_SEEK.value = audio.value.currentTime / audio.value.duration * 100;
         };
         const getPlaylist = (data) => {
           let list = [];
@@ -21561,7 +21565,6 @@ var require_main = __commonJS({
           });
           axios$1.get("./playlist.json").then((response) => {
             meta.data = response.data;
-            console.log(meta.data)
             meta.list = getPlaylist(meta.data);
             nextTick(() => {
               CONTROL_EPISODE.value = meta.list[0];
@@ -21574,7 +21577,7 @@ var require_main = __commonJS({
           const step = () => {
             timer++;
             if (!audio.value.paused) {
-              audio.value.volume = CONTROL_VOLUME.value / 100;
+              audio.value.volume = CONTROL_VOLUME.value;
               audio.value.playbackRate = CONTROL_SPEED.value;
               CONTROL_PLAYING.value = true;
               CONTROL_SEEK.value = audio.value.currentTime / audio.value.duration * 100;

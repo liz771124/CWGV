@@ -1,2 +1,2 @@
-// import { Collapse, initTWE } from "tw-elements";
-// initTWE({ Collapse });
+import { Collapse, initTWE } from "tw-elements";
+initTWE({ Collapse });

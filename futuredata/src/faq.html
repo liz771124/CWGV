@@ -32,7 +32,8 @@
       <div class="text-3xl font-bold italic text-primary-500">100分</div>
     </div>
     <main class="mx-auto max-w-[800px] px-4">
-      <h3 class="my-6 font-light">
+      <h3 class="my-6 flex items-center gap-2 font-light">
+        <div class="h-5 w-2 rounded-full bg-primary-400"></div>
         是非題, 下列敘述正確選「是」,不正確選「否」
       </h3>
       <div class="flex max-w-[800px] flex-col gap-5">
@@ -198,7 +199,10 @@
           </div>
         </div>
       </div>
-      <h3 class="my-6 font-light">選擇題，選出最正確的選項</h3>
+      <h3 class="my-6 flex items-center gap-2 font-light">
+        <div class="h-5 w-2 rounded-full bg-primary-400"></div>
+        選擇題，選出最正確的選項
+      </h3>
       <div class="flex max-w-[800px] flex-col gap-5">
         <div class="relative rounded-lg border p-8 shadow">
           <span
@@ -302,7 +306,7 @@
         <div class="relative rounded-lg border p-8 shadow">
           <span
             class="absolute start-0 top-4 z-0 px-5 text-5xl font-bold italic text-primary-100"
-            >Q3</span
+            >Q4</span
           >
           <h3
             class="z-1 relative ms-5 mt-3 font-bold text-gray-700 hover:text-gray-600"
@@ -331,7 +335,7 @@
         <div class="relative rounded-lg border p-8 shadow">
           <span
             class="absolute start-0 top-4 z-0 px-5 text-5xl font-bold italic text-primary-100"
-            >Q3</span
+            >Q5</span
           >
           <h3
             class="z-1 relative ms-5 mt-3 font-bold text-gray-700 hover:text-gray-600"
@@ -358,7 +362,93 @@
           </div>
         </div>
       </div>
-      <div class="mb-5 mt-8 text-center">
+      <h3 class="my-6 flex items-center gap-2 font-light">
+        <div class="h-5 w-2 rounded-full bg-primary-400"></div>
+        以下是題型修正範例
+      </h3>
+      <div class="flex max-w-[800px] flex-col gap-5">
+        <div class="relative rounded-lg border p-8 shadow">
+          <span
+            class="absolute start-0 top-4 z-0 px-5 text-5xl font-bold italic text-primary-100"
+            >Q1</span
+          >
+          <h3
+            class="z-1 relative ms-5 mt-3 font-bold text-gray-700 hover:text-gray-600"
+          >
+            龍的生肖代表的是哪一個時辰？
+          </h3>
+          <div class="mt-2 flex flex-col">
+            <button
+              type="button"
+              class="faq-item mt-2 flex self-start rounded border border-primary-400 bg-primary-50 text-primary-500 line-through"
+            >
+              <div class="px-5 py-1">使用者如果選錯答案會被劃掉</div>
+            </button>
+            <button
+              type="button"
+              data-question="6"
+              data-option="2"
+              class="faq-item mt-2 flex self-start rounded border border-red-500 bg-red-50 text-red-500"
+            >
+              <div class="px-5 py-1">我才是正確答案</div>
+            </button>
+            <button
+              type="button"
+              class="faq-item mt-2 flex self-start rounded border border-gray-300 bg-gray-100 text-gray-300 line-through"
+            >
+              <div class="px-5 py-1">我是你沒選的錯誤答案</div>
+            </button>
+          </div>
+          <div class="absolute bottom-5 end-5 opacity-80">
+            <img
+              width="60"
+              height="60"
+              src="./assets/images/icon__wrong.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="relative rounded-lg border p-8 shadow">
+          <span
+            class="absolute start-0 top-4 z-0 px-5 text-5xl font-bold italic text-primary-100"
+            >Q1</span
+          >
+          <h3
+            class="z-1 relative ms-5 mt-3 font-bold text-gray-700 hover:text-gray-600"
+          >
+            龍的生肖代表的是哪一個時辰？
+          </h3>
+          <div class="mt-2 flex flex-col">
+            <button
+              type="button"
+              class="faq-item mt-2 flex self-start rounded border border-gray-300 bg-gray-100 text-gray-300 line-through"
+            >
+              <div class="px-5 py-1">其他都是錯的</div>
+            </button>
+            <button
+              type="button"
+              class="faq-item mt-2 flex self-start rounded border border-gray-300 bg-gray-100 text-gray-300 line-through"
+            >
+              <div class="px-5 py-1">我是你沒選的錯誤答案</div>
+            </button>
+            <button
+              type="button"
+              class="faq-item mt-2 flex self-start rounded border border-primary-500 bg-primary-50 text-primary-500"
+            >
+              <div class="px-5 py-1">我選對囉</div>
+            </button>
+          </div>
+          <div class="absolute bottom-5 end-5 opacity-80">
+            <img
+              width="60"
+              height="60"
+              src="./assets/images/icon__correct.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="my-8 text-center">
         <button
           type="button"
           class="rounded-full bg-primary-500 px-5 py-1 text-white"

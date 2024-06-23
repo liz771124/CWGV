@@ -6,7 +6,7 @@
 //   document.getElementById("test").click();
 // });
 
-const an = [];
+const answer = [];
 document.querySelectorAll(".faq-item").forEach(function (item) {
   item.addEventListener("click", function () {
     const question = this.getAttribute("data-question");
@@ -22,8 +22,8 @@ document.querySelectorAll(".faq-item").forEach(function (item) {
     questionItems.forEach(function (button) {
       button.classList.remove(...activeClass);
     });
-    an[question - 1] = option;
+    answer[question - 1] = option;
     this.classList.add(...activeClass);
-    console.log(an);
+    console.log(answer);
   });
 });

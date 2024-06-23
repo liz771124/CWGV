@@ -1,10 +1,10 @@
 module.exports = {
   content: [
-    "./src/*.{html,js}",
+    "./src/**/*.{html,js}",
     "./node_modules/tw-elements/js/**/*.js"
   ],
   plugins: [require("tw-elements/plugin.cjs")],
-  darkMode: "class",
+  // darkMode: "class",
   theme: {
     // colors: {
 
@@ -61,11 +61,11 @@ module.exports = {
         //   900: '#1f1f1f'
         // },
 
-        'primary-50': 'rgba(#FDEDEA, 0.05)',
-        'primary-100': '#FDEDEA',
+        'primary-50': 'rgba(#cee3f1, 0.05)',
+        'primary-100': '#cee3f1',
         'primary-300': '#F2917F',
-        'primary-400': '#F2917F',
-        'primary-500': '#E94829',
+        'primary-400': '#00A7DF',
+        'primary-500': '#00A7DF',
         'primary-600': '#E94829',
         'primary-700': '#BA3A21',
         'primary-900': '#8C2B19',

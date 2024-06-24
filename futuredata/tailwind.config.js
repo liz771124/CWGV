@@ -1,8 +1,5 @@
 module.exports = {
-  content: [
-    "./src/**/*.{html,js}",
-    "./node_modules/tw-elements/js/**/*.js"
-  ],
+  content: ["./src/**/*.{html,js}", "./node_modules/tw-elements/js/**/*.js"],
   plugins: [require("tw-elements/plugin.cjs")],
   // darkMode: "class",
   theme: {
@@ -11,31 +8,32 @@ module.exports = {
     // },
     container: {
       center: true,
-      padding: '1rem',
+      padding: "1rem",
       screens: {
-        sm: '600px',
-        md: '768',
-        lg: '984px',
-        xl: '1240px',
-        '2xl': '1496px'
-      }
+        sm: "600px",
+        md: "768",
+        lg: "984px",
+        xl: "1240px",
+        "2xl": "1496px",
+      },
     },
     extend: {
       fontFamily: {
         sans: [
-          'Noto Sans TC',
-          '微軟正黑體',
-          'Inter',
-          'system-ui',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'Segoe UI',
-          'Roboto',
-          'Helvetica Neue',
-          'Arial',
-          'sans-serif',
-          'Apple Color Emoji'
-        ]
+          "Noto Sans TC",
+          "微軟正黑體",
+          "Inter",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+          "Apple Color Emoji",
+        ],
+        serif: ["Times New Roman"],
       },
       colors: {
         // gray: {
@@ -61,14 +59,14 @@ module.exports = {
         //   900: '#1f1f1f'
         // },
 
-        'primary-50': 'rgba(#cee3f1, 0.05)',
-        'primary-100': '#cee3f1',
-        'primary-300': '#F2917F',
-        'primary-400': '#00A7DF',
-        'primary-500': '#00A7DF',
-        'primary-600': '#E94829',
-        'primary-700': '#BA3A21',
-        'primary-900': '#8C2B19',
+        "primary-50": "rgba(#cee3f1, 0.05)",
+        "primary-100": "#cee3f1",
+        "primary-300": "#F2917F",
+        "primary-400": "#00A7DF",
+        "primary-500": "#00A7DF",
+        "primary-600": "#E94829",
+        "primary-700": "#BA3A21",
+        "primary-900": "#8C2B19",
 
         // 'secondary-100': 'var(--Secondary-100)',
         // 'secondary-300': 'var(--Secondary-300)',
@@ -120,12 +118,11 @@ module.exports = {
         // 'event-100': 'var(--Event-100)',
         // 'event-300': 'var(--Event-300)',
         // 'event-500': 'var(--Event-500)'
-
       },
-      backgroundColor: theme => ({
-        ...theme('colors')
-      })
-    }
+      backgroundColor: (theme) => ({
+        ...theme("colors"),
+      }),
+    },
   },
-  plugins: []
+  plugins: [],
 };

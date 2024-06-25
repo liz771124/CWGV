@@ -10,275 +10,143 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <iframe
-      class="Flippingbook-box h-screen"
-      src="https://futuredata.cwgv.com.tw/junior/ereader/index/202404_036"
-      height="100%"
-      width="100%"
-      frameborder="0"
-      scrolling="no"
-      style="margin: 0"
-      allowfullscreen="allowfullscreen"
-    ></iframe>
-
-    <div id="PodcastPlayerApp" class="relative">
-      <audio ref="audio" controls="controls">
-        <source type="audio/mpeg" />
-      </audio>
-      <!-- <div class="title">
-      <h1>李儀婷的薩提爾親子溝通課（音頻課程）：爸媽篇＋孩子篇</h1>
+    <header>
+      <div class="container flex items-center justify-between gap-3 py-4">
+        <div>
+          <div>
+            <a href="#" class="rounded-full bg-gray-800 px-2 py-1 text-white"
+              >地球</a
+            >
+            <a href="#" class="rounded-full bg-gray-800 px-2 py-1 text-white"
+              >植物</a
+            >
+            <a href="#" class="rounded-full bg-gray-800 px-2 py-1 text-white"
+              >很長很長的關鍵字</a
+            >
+            <a href="#" class="rounded-full bg-gray-800 px-2 py-1 text-white"
+              >五個字可以</a
+            >
+          </div>
+          <div class="relative z-0 mt-4 overflow-hidden rounded-full">
+            <form
+              role="form"
+              class="relative flex rounded-full bg-gray-800 p-1"
+            >
+              <input
+                type="text"
+                placeholder="關鍵字全文檢索"
+                class="flex-1 rounded-full px-5 py-2 text-gray-700 focus:outline-none"
+              />
+              <button
+                class="absolute right-0 rounded-full bg-gray-800 px-8 py-2 font-semibold text-white"
+              >
+                <img
+                  width="25"
+                  src="https://static-00.iconduck.com/assets.00/search-icon-2044x2048-psdrpqwp.png"
+                  alt=""
+                />
+              </button>
+            </form>
+          </div>
+        </div>
+        <div>
+          <img
+            class="max-f-full"
+            width="200"
+            src="assets//images/logo.png"
+            alt="logo"
+          />
+        </div>
+      </div>
+    </header>
+    <label class="relative z-40 cursor-pointer px-3 py-6" for="mobile-menu">
+      <input class="peer hidden" type="checkbox" id="mobile-menu" />
+      <div
+        class="relative z-50 block h-[1px] w-7 bg-black bg-transparent content-[''] before:absolute before:top-[-0.35rem] before:z-50 before:block before:h-full before:w-full before:bg-black before:transition-all before:duration-200 before:ease-out before:content-[''] after:absolute after:bottom-[-0.35rem] after:left-0 after:block after:h-full after:w-full after:bg-black after:transition-all after:duration-200 after:ease-out after:content-[''] peer-checked:bg-transparent before:peer-checked:top-0 before:peer-checked:w-full before:peer-checked:rotate-45 before:peer-checked:transform after:peer-checked:bottom-0 after:peer-checked:w-full after:peer-checked:-rotate-45 after:peer-checked:transform"
+      ></div>
+      <div
+        class="fixed inset-0 z-40 hidden h-full w-full bg-primary-500/50 backdrop-blur-sm peer-checked:block"
+      >
+        &nbsp;
+      </div>
+      <div
+        class="fixed left-0 top-0 z-40 h-full w-full translate-x-full overflow-y-auto overscroll-y-none transition duration-500 peer-checked:translate-x-0"
+      >
+        <div class="float-left min-h-full w-full px-6 pt-12 shadow-2xl">
+          <menu>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </menu>
+        </div>
+      </div>
+    </label>
+    <div
+      class="mx-auto grid max-w-[1200px] grid-cols-3 grid-rows-5 gap-3 p-5 text-white"
+    >
+      <div
+        class="relative row-span-2 flex justify-end rounded bg-primary-500 p-5"
+      >
+        <div class="text-xl font-bold tracking-wide">收 聽 音 檔</div>
+        <div class="absolute end-3 top-6 text-5xl font-bold opacity-25">
+          Listening
+        </div>
+      </div>
+      <div
+        class="relative col-start-2 row-span-2 row-start-1 flex justify-end rounded bg-primary-500 p-5"
+      >
+        <div class="text-xl font-bold tracking-wide">所有雜誌</div>
+        <div class="absolute end-3 top-6 text-5xl font-bold opacity-25">
+          Reading
+        </div>
+      </div>
+      <div
+        class="flex-start relative col-start-3 row-span-1 flex rounded bg-primary-500 p-5"
+      >
+        <div class="text-xl font-bold tracking-wide">未來小學堂</div>
+        <div class="absolute end-3 top-6 text-5xl font-bold opacity-25">
+          Video
+        </div>
+      </div>
+      <div
+        class="relative col-span-2 col-start-1 row-span-2 row-start-3 flex justify-end rounded bg-primary-500 p-5"
+      >
+        <div class="text-xl font-bold tracking-wide">我的學習</div>
+        <div class="absolute end-3 top-6 text-5xl font-bold opacity-25">
+          Learning
+        </div>
+      </div>
+      <div class="relative col-start-3 row-span-3 rounded bg-primary-500 p-5">
+        <div class="text-xl font-bold tracking-wide">探索</div>
+        <div class="absolute top-6 text-5xl font-bold opacity-25">Explore</div>
+      </div>
     </div>
-    <div class="podcast--player">
-      <div class="player">
-        <div class="player--playback">
-          <div class="pic" v-if="isReady"><img :src="img" /></div>
-        </div>
+    <div
+      class="grid grid-cols-3 grid-rows-4 gap-3 bg-pink-200 p-20 text-pink-800"
+    >
+      <div class="row-span-2 rounded bg-primary-500 p-5">收聽音檔</div>
+      <div
+        class="col-start-2 row-span-2 row-start-1 flex items-center justify-center rounded bg-primary-500 p-5"
+      >
+        所有雜誌
       </div>
-      <div class="drawer">
-        <div class="scroll--content" data-simplebar="data-simplebar">
-          <div class="list--podcast">
-            <div class="collapse--chapter" v-for="(chapter, index) in meta.data">
-              <div class="bar" v-if="chapter.audio && !chapter.episodes" :id="'collapseTrigger'+chapter.id" @click="playAudio(chapter.id)">
-                <div class="icon">
-                  <div class="icon__check" v-if="chapter.played"></div>
-                </div>
-                <div class="label">{{ chapter.title }}</div>
-              </div>
-              <div class="bar" v-if="chapter.audio && chapter.episodes" data-te-collapse-init="data-te-collapse-init" :data-te-target="'#collapseList'+chapter.id" :id="'collapseTrigger'+chapter.id" @click="playAudio(index)">
-                <div class="icon">
-                  <div class="icon__check" v-if="chapter.played"></div>
-                </div>
-                <div class="label">{{ chapter.title }}</div>
-              </div>
-              <div class="bar" v-if="chapter.episodes" data-te-collapse-init="data-te-collapse-init" :data-te-target="'#collapseList'+chapter.id" :id="'collapseTrigger'+chapter.id">
-                <div class="icon">
-                  <div class="icon__arrow"></div>
-                </div>
-                <div class="label">{{ chapter.title }}</div>
-              </div>
-              <div class="bar" v-if="!chapter.episodes && !chapter.audio" :id="'collapseTrigger'+chapter.id">
-                <div class="icon"></div>
-                <div class="label">{{ chapter.title }}</div>
-              </div>
-              <div class="content !visible" v-if="chapter.episodes" data-te-collapse-item="data-te-collapse-item" data-te-collapse-show="data-te-collapse-show" data-te-toggle="true" :id="'collapseList'+chapter.id">
-                <div class="list--episodes" v-if="CONTROL_EPISODE">
-                  <div v-for="(episode, i) in chapter.episodes">
-                    <div class="item--episode" v-if="!episode.auth" data-te-toggle="modal" data-te-target="#modalAlert">
-                      <div class="icon">
-                        <div class="lock" v-if="!episode.auth"></div>
-                      </div><span>{{ episode.title }}</span><span class="time">
-                        <div class="label">{{ episode.time }}</div>
-                        <div class="icon__free" v-if="episode.demo"></div>
-                      </span>
-                    </div>
-                    <div class="item--episode" v-if="episode.auth" @click="(episode.audio)?playAudio(episode.id):null" :class="{'is-active': CONTROL_EPISODE.id == episode.id}" :id="'episode_'+episode.id">
-                      <div class="icon">
-                        <div class="icon__check" v-if="episode.played"></div>
-                        <div class="lock" v-if="!episode.auth"></div>
-                      </div><span>{{ episode.title }}</span><span class="time">
-                        <div class="label">{{ episode.time }}</div>
-                        <div class="icon__free" v-if="episode.demo"></div>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="col-start-3 row-span-1 rounded bg-primary-500 p-5">
+        我的學習
       </div>
-    </div> -->
-      <div class="player--drawer" v-if="audio">
-        <div class="container">
-          <div class="player--controller">
-            <ul>
-              <li>
-                <a
-                  class="item--control"
-                  alt="跳前10秒"
-                  @click="playlistPrevTenSec()"
-                >
-                  <div class="icon">
-                    <div class="icon__prev__10sec"></div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="item--control"
-                  alt="跳上一章節"
-                  @click="playlistPrev()"
-                >
-                  <div class="icon">
-                    <div class="icon__prev"></div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a class="item--control" alt="播放/暫停" @click="togglePlay()">
-                  <div class="icon">
-                    <div class="icon__play" v-if="!CONTROL_PLAYING"></div>
-                    <div class="icon__pause" v-if="CONTROL_PLAYING"></div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="item--control"
-                  alt="跳下一章節"
-                  @click="playlistNext()"
-                >
-                  <div class="icon">
-                    <div class="icon__next"></div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="item--control"
-                  alt="跳下10秒"
-                  @click="playlistNextTenSec()"
-                >
-                  <div class="icon">
-                    <div class="icon__next__10sec"></div>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="player--screen">
-            <div class="title" v-if="CONTROL_EPISODE">
-              <h3>{{ CONTROL_EPISODE.title }}</h3>
-            </div>
-            <div class="process--slider" v-if="CONTROL_SEEK">
-              <div class="label">{{ STATUS_SEEK }}</div>
-              <vue-slider
-                ref="processbar"
-                @drag-start="processSliderDragStart"
-                @dragging="processSliderDragging"
-                @drag-end="processSliderDragEnd"
-                @click="processSliderClick"
-                v-model="CONTROL_SEEK"
-                :height="8"
-                :dotSize="32"
-                :duration="CONTROL_USER_DURATION"
-                :dragOnClick="true"
-                :tooltip="'none'"
-              ></vue-slider>
-              <div class="label">{{ STATUS_DURATION }}</div>
-            </div>
-            <div class="process--slider" v-if="!CONTROL_SEEK">
-              <div class="label">00:00</div>
-              <vue-slider
-                :height="8"
-                :dotSize="32"
-                :tooltip="'none'"
-              ></vue-slider>
-              <div class="label">00:00</div>
-            </div>
-          </div>
-          <div class="player--controller">
-            <ul>
-              <li v-if="isTablet || isDesktop">
-                <div
-                  class="item--control"
-                  alt="音量調整"
-                  @mouseup="changeVolume()"
-                  ref="buttonVolume"
-                >
-                  <div class="icon">
-                    <div class="icon__volume">
-                      <span :class="{'is-active': CONTROL_VOLUME > .1}"></span>
-                      <span :class="{'is-active': CONTROL_VOLUME > .3}"></span>
-                      <span :class="{'is-active': CONTROL_VOLUME > .5}"></span>
-                      <span :class="{'is-active': CONTROL_VOLUME > .75}"></span>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <a
-                  class="item--control"
-                  ref="buttonSpeed"
-                  alt="播放速度調整"
-                  @click="(CONTROL_SPEED_OPEN)?CONTROL_SPEED_OPEN=false:CONTROL_SPEED_OPEN=true"
-                >
-                  <div class="icon">
-                    <div class="icon__more"></div>
-                  </div>
-                </a>
-                <div class="player--speed" v-if="CONTROL_SPEED_OPEN">
-                  <ul>
-                    <li :class="{'is-active': CONTROL_SPEED==.5}">
-                      <a @click="(CONTROL_SPEED = .5)">0.5x</a>
-                    </li>
-                    <li :class="{'is-active': CONTROL_SPEED==1}">
-                      <a @click="(CONTROL_SPEED = 1)">1x</a>
-                    </li>
-                    <li :class="{'is-active': CONTROL_SPEED==1.25}">
-                      <a @click="(CONTROL_SPEED = 1.25)">1.25x</a>
-                    </li>
-                    <li :class="{'is-active': CONTROL_SPEED==1.5}">
-                      <a @click="(CONTROL_SPEED = 1.5)">1.5x</a>
-                    </li>
-                    <li :class="{'is-active': CONTROL_SPEED==2}">
-                      <a @click="(CONTROL_SPEED = 2)">2x</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-            <div>
-              <div
-                :class="['absolute -translate-y-[100%] top-2 end-0 bg-black/80 w-[300px] h-[300px] transform px-5 overflow-auto',  AUDIO_LIST ? '' : 'hidden' ]"
-                data-simplebar="data-simplebar"
-              >
-                <div v-for="(chapter, index) in meta.data" :key="chapter.id">
-                  <div
-                    class="border-whte cursor-pointer border-b py-5"
-                    @click="playAudio(chapter.id, chapter.chapterUrl)"
-                  >
-                    {{ chapter.title }}
-                  </div>
-                </div>
-              </div>
-              <div
-                role="button"
-                class="item--control text-white/80"
-                @click="AUDIO_LIST=!AUDIO_LIST"
-              >
-                <svg
-                  fill="currentColor"
-                  height="17"
-                  width="17"
-                  viewBox="0 0 458.18 458.18"
-                  xml:space="preserve"
-                >
-                  <g>
-                    <g>
-                      <path
-                        d="M487.2,69.7c0,12.9-10.5,23.4-23.4,23.4h-322c-12.9,0-23.4-10.5-23.4-23.4s10.5-23.4,23.4-23.4h322.1
-                      C476.8,46.4,487.2,56.8,487.2,69.7z M463.9,162.3H141.8c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1
-                      c12.9,0,23.4-10.5,23.4-23.4C487.2,172.8,476.8,162.3,463.9,162.3z M463.9,278.3H141.8c-12.9,0-23.4,10.5-23.4,23.4
-                      s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,288.8,476.8,278.3,463.9,278.3z M463.9,394.3H141.8
-                      c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,404.8,476.8,394.3,463.9,394.3z
-                        M38.9,30.8C17.4,30.8,0,48.2,0,69.7s17.4,39,38.9,39s38.9-17.5,38.9-39S60.4,30.8,38.9,30.8z M38.9,146.8
-                      C17.4,146.8,0,164.2,0,185.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,146.8,38.9,146.8z M38.9,262.8
-                      C17.4,262.8,0,280.2,0,301.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,262.8,38.9,262.8z M38.9,378.7
-                      C17.4,378.7,0,396.1,0,417.6s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9C77.8,396.2,60.4,378.7,38.9,378.7z"
-                      />
-                    </g>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="col-start-1 row-start-3 rounded bg-primary-500 p-5">
+        回首頁
+      </div>
+      <div class="col-start-2 row-start-3 rounded bg-primary-500 p-5">
+        未來少年知識庫
+      </div>
+      <div class="col-start-2 row-start-3 rounded bg-primary-500 p-5">
+        未來少年知識庫
+      </div>
+      <div class="col-start-3 row-span-2 rounded bg-primary-500 p-5">
+        未來小學堂
       </div>
     </div>
 
     <script src="./js/tw-elements.umd.min.js"></script>
-    <script type="module" crossorigin src="./assets/js/main.js"></script>
     <!-- <script type="module" src="../js/main.js"></script> -->
   </body>
 </html>

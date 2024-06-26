@@ -5,15 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>未來親子知識庫</title>
 
-    <link rel="stylesheet" href="./assets/css/index.css" />
-    <link href="./css/tw-elements.min.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <!-- <link
+      rel="icon"
+      href="https://www.fiftyplus.com.tw/public/assets/img/ico/favicon.ico"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="keywords" content="未來Family週刊" />
+    <meta name="title" content="50+ FiftyPlus 週刊" />
+    <meta name="description" content="介紹描述" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="50+ FiftyPlus 週刊" />
+    <meta property="og:description" content="" /> -->
+
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <header>
-      <div class="container flex items-center justify-between gap-3 py-4">
+      <div
+        class="mx-auto flex max-w-[1000px] items-center justify-between gap-3 p-5"
+      >
         <div>
-          <div>
+          <div class="flex flex-nowrap gap-2 text-xs">
             <a href="#" class="rounded-full bg-gray-800 px-2 py-1 text-white"
               >地球</a
             >
@@ -27,7 +51,7 @@
               >五個字可以</a
             >
           </div>
-          <div class="relative z-0 mt-4 overflow-hidden rounded-full">
+          <div class="relative mt-2 rounded-full">
             <form
               role="form"
               class="relative flex rounded-full bg-gray-800 p-1"
@@ -59,32 +83,11 @@
         </div>
       </div>
     </header>
-    <label class="relative z-40 cursor-pointer px-3 py-6" for="mobile-menu">
-      <input class="peer hidden" type="checkbox" id="mobile-menu" />
-      <div
-        class="relative z-50 block h-[1px] w-7 bg-black bg-transparent content-[''] before:absolute before:top-[-0.35rem] before:z-50 before:block before:h-full before:w-full before:bg-black before:transition-all before:duration-200 before:ease-out before:content-[''] after:absolute after:bottom-[-0.35rem] after:left-0 after:block after:h-full after:w-full after:bg-black after:transition-all after:duration-200 after:ease-out after:content-[''] peer-checked:bg-transparent before:peer-checked:top-0 before:peer-checked:w-full before:peer-checked:rotate-45 before:peer-checked:transform after:peer-checked:bottom-0 after:peer-checked:w-full after:peer-checked:-rotate-45 after:peer-checked:transform"
-      ></div>
-      <div
-        class="fixed inset-0 z-40 hidden h-full w-full bg-primary-500/50 backdrop-blur-sm peer-checked:block"
-      >
-        &nbsp;
-      </div>
-      <div
-        class="fixed left-0 top-0 z-40 h-full w-full translate-x-full overflow-y-auto overscroll-y-none transition duration-500 peer-checked:translate-x-0"
-      >
-        <div class="float-left min-h-full w-full px-6 pt-12 shadow-2xl">
-          <menu>
-            <li><a href="/">Home</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </menu>
-        </div>
-      </div>
-    </label>
     <div
-      class="mx-auto grid max-w-[1200px] grid-cols-3 grid-rows-5 gap-3 p-5 text-white"
+      class="mx-auto grid max-w-[800px] grid-cols-4 grid-rows-7 gap-3 p-5 text-white"
     >
       <div
-        class="relative row-span-2 flex justify-end rounded bg-primary-500 p-5"
+        class="relative row-span-2 col-span-3 flex justify-end rounded bg-primary-500 p-5"
       >
         <div class="text-xl font-bold tracking-wide">收 聽 音 檔</div>
         <div class="absolute end-3 top-6 text-5xl font-bold opacity-25">
@@ -92,7 +95,7 @@
         </div>
       </div>
       <div
-        class="relative col-start-2 row-span-2 row-start-1 flex justify-end rounded bg-primary-500 p-5"
+        class="relative col-start-2 row-span-2 col-span-3 row-start-1 flex justify-end rounded bg-primary-500 p-5"
       >
         <div class="text-xl font-bold tracking-wide">所有雜誌</div>
         <div class="absolute end-3 top-6 text-5xl font-bold opacity-25">

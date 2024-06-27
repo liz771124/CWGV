@@ -32,54 +32,107 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <header>
-      <div
-        class="mx-auto flex max-w-[1000px] items-center justify-between gap-3 p-5"
-      >
-        <div>
-          <div class="flex flex-nowrap gap-2 text-xs">
-            <a href="#" class="rounded-full bg-gray-800 px-2 py-1 text-white"
-              >地球</a
-            >
-            <a href="#" class="rounded-full bg-gray-800 px-2 py-1 text-white"
-              >植物</a
-            >
-            <a href="#" class="rounded-full bg-gray-800 px-2 py-1 text-white"
-              >很長很長的關鍵字</a
-            >
-            <a href="#" class="rounded-full bg-gray-800 px-2 py-1 text-white"
-              >五個字可以</a
-            >
-          </div>
-          <div class="relative mt-2 rounded-full">
-            <form
-              role="form"
-              class="relative flex rounded-full bg-gray-800 p-1"
-            >
-              <input
-                type="text"
-                placeholder="關鍵字全文檢索"
-                class="flex-1 rounded-full px-5 py-2 text-gray-700 focus:outline-none"
-              />
-              <button
-                class="absolute right-0 rounded-full bg-gray-800 px-8 py-2 font-semibold text-white"
+    <div class="flex flex-col">
+      <header>
+        <div
+          class="mx-auto flex max-w-[1200px] items-center justify-between gap-3 p-5"
+        >
+          <div>
+            <div class="flex flex-nowrap gap-2 text-xs">
+              <a href="#" class="rounded-full bg-gray-800 px-2 py-1 text-white"
+                >地球</a
               >
-                <img
-                  width="25"
-                  src="https://static-00.iconduck.com/assets.00/search-icon-2044x2048-psdrpqwp.png"
-                  alt=""
+              <a href="#" class="rounded-full bg-gray-800 px-2 py-1 text-white"
+                >植物</a
+              >
+              <a href="#" class="rounded-full bg-gray-800 px-2 py-1 text-white"
+                >很長很長的關鍵字</a
+              >
+              <a href="#" class="rounded-full bg-gray-800 px-2 py-1 text-white"
+                >五個字可以</a
+              >
+            </div>
+            <div class="relative mt-2 rounded-full">
+              <form
+                role="form"
+                class="relative flex rounded-full bg-gray-800 p-1"
+              >
+                <input
+                  type="text"
+                  placeholder="關鍵字全文檢索"
+                  class="flex-1 rounded-full px-5 py-2 text-gray-700 focus:outline-none"
                 />
-              </button>
-            </form>
+                <button
+                  class="absolute right-0 rounded-full bg-gray-800 px-8 py-2 font-semibold text-white"
+                >
+                  <img
+                    width="25"
+                    src="https://static-00.iconduck.com/assets.00/search-icon-2044x2048-psdrpqwp.png"
+                    alt=""
+                  />
+                </button>
+              </form>
+            </div>
+          </div>
+          <h1>
+            <img
+              class="max-f-full"
+              width="200"
+              src="assets/images/logo.png"
+              alt="logo"
+            />
+          </h1>
+        </div>
+      </header>
+      
+      <div class="grid grid-cols-6 grid-rows-8 gap-4">
+        <div class="col-span-2 row-span-6">1</div>
+        <div class="col-span-2 row-span-6 col-start-3">4</div>
+        <div class="col-span-2 row-span-3 col-start-5">5</div>
+        <div class="col-span-2 row-span-5 col-start-5 row-start-4">7</div>
+        <div class="col-span-4 row-span-2 row-start-7">8</div>
+      </div>
+  
+      <div
+        class="mx-auto grid h-svh grid-cols-4 grid-rows-8 gap-3 p-5 text-white"
+      >
+        <div
+          class="relative row-span-4 flex justify-end rounded bg-primary-500 p-5"
+        >
+          <div class="text-xl font-bold tracking-wide">收 聽 音 檔</div>
+          <div class="absolute end-3 top-6 text-5xl font-bold opacity-25">
+            Listening
           </div>
         </div>
-        <div>
-          <img
-            class="max-f-full"
-            width="200"
-            src="assets//images/logo.png"
-            alt="logo"
-          />
+        <div
+          class="relative col-start-2 row-span-4 flex justify-end rounded bg-primary-500 p-5"
+        >
+          <div class="text-xl font-bold tracking-wide">所有雜誌</div>
+          <div class="absolute end-3 top-6 text-5xl font-bold opacity-25">
+            Reading
+          </div>
+        </div>
+        <div
+          class="flex-start relative col-start-3 row-span-3 flex rounded bg-primary-500 p-5"
+        >
+          <div class="text-xl font-bold tracking-wide">未來小學堂</div>
+          <div class="absolute end-3 top-6 text-5xl font-bold opacity-25">
+            Video
+          </div>
+        </div>
+        <div
+          class="relative col-span-4 col-start-1 row-span-4 row-start-5 flex justify-end rounded bg-primary-500 p-5"
+        >
+          <div class="text-xl font-bold tracking-wide">我的學習</div>
+          <div class="absolute end-3 top-6 text-5xl font-bold opacity-25">
+            Learning
+          </div>
+        </div>
+        <div class="relative col-start-5 row-span-5 rounded bg-primary-500 p-5">
+          <div class="text-xl font-bold tracking-wide">探索</div>
+          <div class="absolute top-6 text-5xl font-bold opacity-25">
+            Explore
+          </div>
         </div>
       </div>
     </header>
@@ -188,7 +241,8 @@
         <div class="absolute top-6 text-5xl font-bold opacity-25">Explore</div>
       </div>
     </div>
-    <div
+
+    <!-- <div
       class="grid grid-cols-3 grid-rows-4 gap-3 bg-pink-200 p-20 text-pink-800"
     >
       <div class="row-span-2 rounded bg-primary-500 p-5">收聽音檔</div>
@@ -212,7 +266,7 @@
       <div class="col-start-3 row-span-2 rounded bg-primary-500 p-5">
         未來小學堂
       </div>
-    </div>
+    </div> -->
 
     <script src="./js/tw-elements.umd.min.js"></script>
     <!-- <script type="module" src="../js/main.js"></script> -->

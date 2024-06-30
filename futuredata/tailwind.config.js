@@ -3,18 +3,15 @@ module.exports = {
   plugins: [require("tw-elements/plugin.cjs")],
   // darkMode: "class",
   theme: {
-    // colors: {
-
-    // },
     container: {
       center: true,
       padding: "1rem",
       screens: {
-        sm: "600px",
-        md: "768",
-        lg: "984px",
-        xl: "1240px",
-        "2xl": "1496px",
+        sm: "100%",
+        md: "100%",
+        lg: "768px",
+        xl: "1024px",
+        "2xl": "1200px",
       },
     },
     extend: {
@@ -59,14 +56,16 @@ module.exports = {
         //   900: '#1f1f1f'
         // },
 
-        "primary-50": "rgba(#cee3f1, 0.05)",
+        "primary-50": "rgb(230 245 255)",
         "primary-100": "#cee3f1",
-        "primary-300": "#F2917F",
-        "primary-400": "#00A7DF",
-        "primary-500": "#00A7DF",
-        "primary-600": "#E94829",
-        "primary-700": "#BA3A21",
-        "primary-900": "#8C2B19",
+        "primary-200": "rgb(73 202 245)",
+        "primary-300": "#68C4E3",
+        "primary-400": "rgb(61 183 223)",
+        "primary-500": "#00A7DE",
+        "primary-600": "#24ACD9",
+        "primary-700": "#006D91",
+        "primary-800": "#00546F",
+        "primary-900": "#233034",
 
         // 'secondary-100': 'var(--Secondary-100)',
         // 'secondary-300': 'var(--Secondary-300)',

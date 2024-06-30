@@ -796,6 +796,8 @@ section {
 #PodcastPlayerApp audio {
   pointer-events: none;
   visibility: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
 #PodcastPlayerApp h1 {
@@ -1011,6 +1013,7 @@ section {
   background: rgba(0, 0, 0, 0.75);
   transition: all 0.3s ease;
   transform: translateY(0);
+  backdrop-filter: blur(5px);
 }
 
 .player--drawer.is-hidden {

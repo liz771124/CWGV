@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>未來少年知識庫</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />-->
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://futuredata.cwgv.com.tw/public/assets/css/icomoon/style.css"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://futuredata.cwgv.com.tw/public/assets/css/icheck-bootstrap.min.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://futuredata.cwgv.com.tw/public/assets/css/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://futuredata.cwgv.com.tw/public/assets/css/style_rs.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/audio-player.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body class="bgStyle">
+    <header class="sticky top-0 z-20 bg-primary-500 px-5 py-3 text-white">
+      <div
+        class="container flex items-center justify-center md:justify-between"
+      >
+        <div class="hidden text-lg leading-7 md:block">
+          2024年07月號 | <span class="font-bold">學習測驗</span>
+        </div>
+        <ul
+          class="flex items-center gap-3 rounded-full bg-white py-2 pe-5 ps-3"
+        >
+          <li>
+            <button
+              class="flex items-center gap-2 rounded-full bg-gray-100 px-5 py-2 text-xs text-primary-600"
+            >
+              回上頁
+            </button>
+          </li>
+          <li>
+            <div class="flex items-center text-lg font-light text-black">
+              我的成績
+              <span class="font-bold">100</span>
+              分
+            </div>
+          </li>
+          <li>
+            <button
+              class="flex items-center gap-2 rounded-full bg-primary-500 px-5 py-2 text-xs text-white"
+            >
+              再測一次
+            </button>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class="mx-auto max-w-[800px] px-4 py-6">
+      <h3 class="= my-6 flex items-center gap-2">
+        <div class="bg-primary-400 h-5 w-2 rounded-full"></div>
+        <span class="text-xl font-bold">是非題</span>
+        <span class="font-light">下列敘述正確選「是」,不正確選「否」</span>
+      </h3>
+      <div class="flex max-w-[800px] flex-col gap-5">
+        <div class="relative rounded-lg border bg-white p-8 shadow">
+          <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+            <span class="font-serif text-3xl font-bold italic text-primary-100"
+              >Q1</span
+            >
+            人體骨頭裡最長和最強大的是大腿骨，它和小腿骨負責支撐起身體的重量
+          </h3>
+          <div class="mt-2 flex gap-3">
+            <button
+              type="button"
+              data-question="1"
+              data-option="1"
+              class="faq-item mt-2 flex rounded border border-gray-400 text-gray-500"
+            >
+              <div class="px-5 py-1">是</div>
+              <!-- <svg
+                width="18"
+                height="18"
+                class="me-4 ms-auto text-primary-500"
+                viewBox="0 0 36 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M18 36C20.3638 36 22.7044 35.5344 24.8883 34.6298C27.0722 33.7253 29.0565 32.3994 30.7279 30.7279C32.3994 29.0565 33.7253 27.0722 34.6298 24.8883C35.5344 22.7044 36 20.3638 36 18C36 15.6362 35.5344 13.2956 34.6298 11.1117C33.7253 8.92784 32.3994 6.94353 30.7279 5.27208C29.0565 3.60062 27.0722 2.27475 24.8883 1.37017C22.7044 0.465584 20.3638 -3.52233e-08 18 0C13.2261 7.11366e-08 8.64773 1.89642 5.27208 5.27208C1.89642 8.64773 0 13.2261 0 18C0 22.7739 1.89642 27.3523 5.27208 30.7279C8.64773 34.1036 13.2261 36 18 36ZM17.536 25.28L27.536 13.28L24.464 10.72L15.864 21.038L11.414 16.586L8.586 19.414L14.586 25.414L16.134 26.962L17.536 25.28Z"
+                  fill="currentColor"
+                />
+              </svg> -->
+            </button>
+            <button
+              type="button"
+              data-question="1"
+              data-option="2"
+              class="faq-item mt-2 flex rounded border border-gray-400 text-gray-500"
+            >
+              <div class="px-5 py-1">否</div>
+            </button>
+          </div>
+        </div>
+        <div class="relative rounded-lg border bg-white p-8 shadow">
+          <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+            <span class="font-serif text-3xl font-bold italic text-primary-100"
+              >Q2</span
+            >
+            骨頭在青春期結束之後就結束生長，沒有再生能力，所以要好好維護骨頭健康。
+          </h3>
+          <div class="mt-2 flex gap-3">
+            <button
+              type="button"
+              data-question="2"
+              data-option="1"
+              class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
+            >
+              <div class="px-5 py-1">是</div>
+            </button>
+            <button
+              type="button"
+              data-question="2"
+              data-option="2"
+              class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
+            >
+              <div class="px-5 py-1">否</div>
+            </button>
+          </div>
+        </div>
+        <div class="relative rounded-lg border bg-white p-8 shadow">
+          <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+            <span class="font-serif text-3xl font-bold italic text-primary-100"
+              >Q3</span
+            >
+            血液在骨髓製造，由此可知，骨頭和血管相通，血管會把營養素帶給骨頭組織，讓骨頭長得堅固
+            健康。
+          </h3>
+          <div class="mt-2 flex gap-3">
+            <button
+              type="button"
+              data-question="3"
+              data-option="1"
+              class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
+            >
+              <div class="px-5 py-1">是</div>
+            </button>
+            <button
+              type="button"
+              data-question="3"
+              data-option="2"
+              class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
+            >
+              <div class="px-5 py-1">否</div>
+            </button>
+          </div>
+        </div>
+        <div class="relative rounded-lg border bg-white p-8 shadow">
+          <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+            <span class="font-serif text-3xl font-bold italic text-primary-100"
+              >Q4</span
+            >
+            嬰兒時期和幼童時期的骨頭數量比較多，成年之後就固定為 206 根。
+          </h3>
+          <div class="mt-2 flex gap-3">
+            <button
+              type="button"
+              data-question="4"
+              data-option="1"
+              class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
+            >
+              <div class="px-5 py-1">是</div>
+            </button>
+            <button
+              type="button"
+              data-question="4"
+              data-option="2"
+              class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
+            >
+              <div class="px-5 py-1">否</div>
+            </button>
+          </div>
+        </div>
+        <div class="relative rounded-lg border bg-white p-8 shadow">
+          <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+            <span class="font-serif text-3xl font-bold italic text-primary-100"
+              >Q5</span
+            >
+            啄木鳥啄木的次數，一天超過一萬次，但是不會頭暈，是因為嘴和頭骨之間，有舌頭和軟骨連接，可以緩衝撞擊力量。
+          </h3>
+          <div class="mt-2 flex gap-3">
+            <button
+              type="button"
+              data-question="5"
+              data-option="1"
+              class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
+            >
+              <div class="px-5 py-1">是</div>
+            </button>
+            <button
+              type="button"
+              data-question="5"
+              data-option="2"
+              class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
+            >
+              <div class="px-5 py-1">否</div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <h3 class="= my-6 flex items-center gap-2">
+        <div class="bg-primary-400 h-5 w-2 rounded-full"></div>
+        <span class="text-xl font-bold">選擇題</span>
+        <span class="font-light">選出最正確的選項</span>
+      </h3>
+      <div class="flex max-w-[800px] flex-col gap-5">
+        <div class="relative rounded-lg border bg-white p-8 shadow">
+          <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+            <span class="font-serif text-3xl font-bold italic text-primary-100"
+              >Q1</span
+            >
+            龍的生肖代表的是哪一個時辰？
+          </h3>
+          <div class="mt-2 flex flex-col">
+            <button
+              type="button"
+              data-question="6"
+              data-option="1"
+              class="faq-item mt-2 flex self-start rounded border border-gray-500 text-gray-500"
+            >
+              <div class="px-5 py-1">卯時 5-7 點</div>
+            </button>
+            <button
+              type="button"
+              data-question="6"
+              data-option="2"
+              class="faq-item mt-2 flex self-start rounded border border-gray-500 text-gray-500"
+            >
+              <div class="px-5 py-1">辰時 7-9 點</div>
+            </button>
+          </div>
+        </div>
+        <div class="relative rounded-lg border bg-white p-8 shadow">
+          <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+            <span class="font-serif text-3xl font-bold italic text-primary-100"
+              >Q2</span
+            >
+            龍喜歡水，很早以前，龍的圖案有鱗片，這和哪一個傳說有關?
+          </h3>
+          <div class="mt-2 flex flex-col">
+            <button
+              type="button"
+              data-question="7"
+              data-option="1"
+              class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
+            >
+              <div class="px-5 py-1">魚躍龍門</div>
+            </button>
+            <button
+              type="button"
+              data-question="7"
+              data-option="2"
+              class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
+            >
+              <div class="px-5 py-1">畫蛇添足</div>
+            </button>
+          </div>
+        </div>
+        <div class="relative rounded-lg border bg-white p-8 shadow">
+          <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+            <span class="font-serif text-3xl font-bold italic text-primary-100"
+              >Q3</span
+            >
+            「大水沖倒龍王廟」，這是一句歇後語，表示什麼意思呢?
+          </h3>
+          <div class="mt-2 flex flex-col">
+            <button
+              type="button"
+              data-question="8"
+              data-option="1"
+              class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
+            >
+              <div class="px-5 py-1">自家人不認自家人</div>
+            </button>
+            <button
+              type="button"
+              data-question="8"
+              data-option="2"
+              class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
+            >
+              <div class="px-5 py-1">有其父必有其子</div>
+            </button>
+          </div>
+        </div>
+        <div class="relative rounded-lg border bg-white p-8 shadow">
+          <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+            <span class="font-serif text-3xl font-bold italic text-primary-100"
+              >Q4</span
+            >
+            人們把龍神化，民間十分崇拜龍，哪一個朝代開始將龍變成帝王的象徵?
+          </h3>
+          <div class="mt-2 flex flex-col">
+            <button
+              type="button"
+              data-question="9"
+              data-option="1"
+              class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
+            >
+              <div class="px-5 py-1">唐朝</div>
+            </button>
+            <button
+              type="button"
+              data-question="9"
+              data-option="2"
+              class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
+            >
+              <div class="px-5 py-1">漢朝</div>
+            </button>
+          </div>
+        </div>
+        <div class="relative rounded-lg border bg-white p-8 shadow">
+          <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+            <span class="font-serif text-3xl font-bold italic text-primary-100"
+              >Q5</span
+            >
+            天空中的閃電細細長長又有分支，就像帶爪的龍，傳說閃電是龍的化身，因而衍伸出哪一個語詞?
+          </h3>
+          <div class="mt-2 flex flex-col">
+            <button
+              type="button"
+              data-question="10"
+              data-option="1"
+              class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
+            >
+              <div class="px-5 py-1">飛龍在天</div>
+            </button>
+            <button
+              type="button"
+              data-question="10"
+              data-option="2"
+              class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
+            >
+              <div class="px-5 py-1">蛟龍入海</div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <h3 class="= my-6 flex items-center gap-2">
+        <div class="bg-primary-400 h-5 w-2 rounded-full"></div>
+        <span class="text-xl font-bold">修正範例</span>
+        <span class="font-light">以下是題型修正範例</span>
+      </h3>
+      <div class="flex max-w-[800px] flex-col gap-5">
+        <div class="relative rounded-lg border bg-white p-8 shadow">
+          <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+            <span class="font-serif text-3xl font-bold italic text-primary-100"
+              >Q1</span
+            >
+            龍的生肖代表的是哪一個時辰？
+          </h3>
+          <div class="mt-2 flex flex-col">
+            <div
+              class="border-primary-400 mt-2 flex self-start rounded border bg-primary-50 text-primary-500 line-through"
+            >
+              <div class="px-5 py-1">使用者如果選錯答案會被劃掉</div>
+            </div>
+            <div
+              class="mt-2 flex self-start rounded border border-red-500 bg-red-50 text-red-500"
+            >
+              <div class="px-5 py-1">我才是正確答案</div>
+            </div>
+            <div
+              class="mt-2 flex self-start rounded border border-gray-300 bg-gray-100 text-gray-300 line-through"
+            >
+              <div class="px-5 py-1">我是你沒選的錯誤答案</div>
+            </div>
+          </div>
+          <div class="absolute bottom-5 end-5 opacity-80">
+            <img
+              width="60"
+              height="60"
+              src="../assets/images/icon__wrong.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="relative rounded-lg border bg-white p-8 shadow">
+          <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+            <span class="font-serif text-3xl font-bold italic text-primary-100"
+              >Q1</span
+            >
+            龍的生肖代表的是哪一個時辰？
+          </h3>
+          <div class="mt-2 flex flex-col">
+            <div
+              class="mt-2 flex self-start rounded border border-gray-300 bg-gray-100 text-gray-300 line-through"
+            >
+              <div class="px-5 py-1">其他都是錯的</div>
+            </div>
+            <div
+              class="mt-2 flex self-start rounded border border-gray-300 bg-gray-100 text-gray-300 line-through"
+            >
+              <div class="px-5 py-1">我是你沒選的錯誤答案</div>
+            </div>
+            <div
+              class="mt-2 flex self-start rounded border border-primary-500 bg-primary-50 text-primary-500"
+            >
+              <div class="px-5 py-1">我選對囉</div>
+            </div>
+          </div>
+          <div class="absolute bottom-5 end-5 opacity-80">
+            <img
+              width="60"
+              height="60"
+              src="../assets/images/icon__correct.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="my-8 text-center">
+        <button
+          type="button"
+          class="rounded-full bg-primary-500 px-5 py-1 text-white"
+        >
+          送出測驗
+        </button>
+        <button
+          type="button"
+          class="rounded-full bg-primary-500 px-5 py-1 text-white"
+        >
+          再測一次
+        </button>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footerDownBox">
+        <div class="container">
+          <h2>
+            <a
+              href="https://www.cwgv.com.tw/"
+              title="遠見‧天下文化事業群"
+              target="_blank"
+              >遠見‧天下文化事業群</a
+            >
+          </h2>
+          <ul class="footerDown">
+            <li>
+              <a href="https://www.gvm.com.tw/" title="遠見雜誌" target="_blank"
+                >遠見雜誌</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://bookzone.cwgv.com.tw/"
+                title="天下文化"
+                target="_blank"
+                >天下文化</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://futureparenting.cwgv.com.tw/"
+                title="未來親子學習平台"
+                target="_blank"
+                >未來親子學習平台</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://futureparenting.cwgv.com.tw/kids"
+                title="小天下 / 未來出版"
+                target="_blank"
+                >小天下 / 未來出版</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://futureparenting.cwgv.com.tw/junior"
+                title="未來兒童"
+                target="_blank"
+                >未來兒童
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://futureparenting.cwgv.com.tw/youth"
+                title="未來少年"
+                target="_blank"
+                >未來少年</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://futureparenting.cwgv.com.tw/family"
+                title="未來Family"
+                target="_blank"
+                >未來Family</a
+              >
+            </li>
+            <li>
+              <a
+                href="http://gvsrc.cwgv.com.tw/"
+                title="遠見研究調查"
+                target="_blank"
+                >遠見研究調查</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.hbrtaiwan.com/"
+                title="哈佛商業評論"
+                target="_blank"
+                >哈佛商業評論</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/cafebookzone/"
+                title="人文空間"
+                target="_blank"
+                >人文空間</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.cwgv.com.tw/zh/foundation.html"
+                title="遠見‧天下文化教育基金會"
+                target="_blank"
+                >遠見‧天下文化教育基金會</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://50plus.cwgv.com.tw/"
+                title="50+好好"
+                target="_blank"
+                >50+好好</a
+              >
+            </li>
+            <li>
+              <a href="https://www.wonder.mobi/" title="1號課堂" target="_blank"
+                >1號課堂</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/copyright/index/A"
+                title="著作權聲明"
+                target="_blank"
+                >著作權聲明</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/copyright/index/B"
+                title="隱私權政策"
+                target="_blank"
+                >隱私權政策</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/copyright/index/C"
+                title="個資保護聲明"
+                target="_blank"
+                >個資保護聲明</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/qa"
+                title="QA"
+                target="_blank"
+                >QA</a
+              >
+            </li>
+          </ul>
+
+          <ul class="footerList">
+            <li>
+              聯絡方式：<a href="tel:0226620012" title="">02-2662-0012</a>‧<a
+                href="mailto:gkids@cwgv.com.tw"
+                title=""
+                >gkids@cwgv.com.tw</a
+              >
+            </li>
+            <li>服務時間：週一至週五 9:00~12:30:13:30~17:00</li>
+            <li>
+              Copyright © 未來親子學習平台﹒All rights
+              reserved.版權所有，禁止擅自轉貼節錄
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" crossorigin src="../assets/js/main.js"></script>
+    <script type="module" src="../js/main.js"></script>
+  </body>
+</html>

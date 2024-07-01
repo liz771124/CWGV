@@ -50,7 +50,18 @@
       <div
         class="container flex items-center justify-center md:justify-between"
       >
-        <div class="hidden text-lg leading-7 md:block">
+        <div class="hidden gap-3 text-lg leading-7 md:flex">
+          <img
+            width="15"
+            height="15"
+            class="object-contain"
+            src="https://www.svgrepo.com/show/126206/menu.svg"
+            alt=""
+            style="
+              filter: drop-shadow(0px 100px 0 #ffffff);
+              transform: translateY(-100px);
+            "
+          />
           2024年07月號 | <span class="font-bold">聽骨頭說故事</span>
         </div>
         <ul
@@ -138,7 +149,7 @@
       </div>
     </header>
 
-    <div class="container mx-auto h-[calc(100svh-285px)] md:min-h-[80svh] py-5">
+    <div class="container mx-auto h-[calc(100svh-285px)] py-5 md:min-h-[80svh]">
       <iframe
         src="https://efuturedata.cwgv.com.tw/MY11307/index.html"
         width="100%"
@@ -341,6 +352,175 @@
           </div>
         </div>
       </div>
+
+      <!-- <div
+        data-twe-modal-init
+        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+        id="exampleModalCenter"
+        tabindex="-1"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-modal="true"
+        role="dialog"
+      >
+        <div
+          data-twe-modal-dialog-ref
+          class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]"
+        >
+          <div
+            class="shadow-4 dark:bg-surface-dark pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current outline-none"
+          >
+            <div
+              class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4 dark:border-white/10"
+            >
+              <h5
+                class="text-surface text-xl font-medium leading-normal dark:text-white"
+                id="exampleModalCenterTitle"
+              >
+                十秒後播放下一首
+              </h5>
+
+              <button
+                type="button"
+                class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300"
+                data-twe-modal-dismiss
+                aria-label="Close"
+              >
+                <span class="[&>svg]:h-6 [&>svg]:w-6">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+
+            <div class="relative p-4">
+              <p>想要繼續閱讀畫面嗎</p>
+            </div>
+
+            <div
+              class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 p-4 dark:border-white/10"
+            >
+              <button
+                type="button"
+                class="hover:bg-primary-accent-200 focus:bg-primary-accent-200 active:bg-primary-accent-200 inline-block rounded bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out focus:outline-none focus:ring-0 dark:bg-primary-300 dark:hover:bg-primary-400 dark:focus:bg-primary-400 dark:active:bg-primary-400"
+                data-twe-modal-dismiss
+                data-twe-ripple-init
+                data-twe-ripple-color="light"
+                @click="togglePlay"
+              >
+                停留在本頁
+              </button>
+              <button
+              type="button"
+              class="bg-primary shadow-primary-3 hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 active:shadow-primary-2 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong ms-1 inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0 active:bg-primary-600 dark:shadow-black/30"
+              data-twe-ripple-init
+              data-twe-ripple-color="light"
+            >
+              Save changes
+            </button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <button
+        type="button"
+        class="bg-primary shadow-primary-3 hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 active:shadow-primary-2 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0 active:bg-primary-600 dark:shadow-black/30"
+        data-twe-toggle="modal"
+        data-twe-target="#exampleModalCenteredScrollable"
+        data-twe-ripple-init
+        data-twe-ripple-color="light"
+      >
+        Vertically centered scrollable modal
+      </button>
+
+      <div
+        data-twe-modal-init
+        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+        id="exampleModalCenteredScrollable"
+        tabindex="-1"
+        aria-labelledby="exampleModalCenteredScrollableLabel"
+        aria-modal="true"
+        role="dialog"
+      >
+        <div
+          data-twe-modal-dialog-ref
+          class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]"
+        >
+          <div
+            class="shadow-4 dark:bg-surface-dark pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current outline-none"
+          >
+            <div
+              class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4 dark:border-white/10"
+            >
+              <h5
+                class="text-surface text-xl font-medium leading-normal dark:text-white"
+                id="exampleModalCenteredScrollableLabel"
+              >
+                十秒後播放下一首
+              </h5>
+              <button
+                type="button"
+                class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300"
+                data-twe-modal-dismiss
+                aria-label="Close"
+              >
+                <span class="[&>svg]:h-6 [&>svg]:w-6">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+
+            <div class="relative p-4">
+              <p>想繼續閱讀誌嗎？</p>
+            </div>
+
+            <div
+              class="flex flex-shrink-0 flex-wrap items-center justify-stretch gap-3 rounded-b-md border-t-2 border-neutral-100 p-4 dark:border-white/10"
+            >
+              <button
+                type="button"
+                class="hover:bg-primary-accent-200 focus:bg-primary-accent-200 active:bg-primary-accent-200 inline-block grow rounded bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out focus:outline-none focus:ring-0 dark:bg-primary-300 dark:hover:bg-primary-400 dark:focus:bg-primary-400 dark:active:bg-primary-400"
+                data-twe-modal-dismiss
+                data-twe-ripple-init
+                data-twe-ripple-color="light"
+              >
+                繼續播放
+              </button>
+              <button
+                type="button"
+                class="hover:bg-primary-accent-200 focus:bg-primary-accent-200 active:bg-primary-accent-200 inline-block grow rounded bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out focus:outline-none focus:ring-0 dark:bg-primary-300 dark:hover:bg-primary-400 dark:focus:bg-primary-400 dark:active:bg-primary-400"
+                data-twe-ripple-init
+                data-twe-ripple-color="light"
+              >
+                停在本頁
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer>
@@ -505,8 +685,8 @@
       </div>
     </footer>
 
-    <!-- <script src="../js/tw-elements.umd.min.js"></script> -->
+    <script src="../js/tw-elements.umd.min.js"></script>
     <script type="module" crossorigin src="../assets/js/main.js"></script>
-    <!-- <script type="module" src=".../js/main.js"></script> -->
+    <script type="module" src="../js/mag-detail.js"></script>
   </body>
 </html>

@@ -24219,12 +24219,23 @@ var require_main = __commonJS({
             );
           };
           setInterval(step, 33);
+
+          const { Modal, initTWE } = twe;
+          initTWE({ Modal });
+          const modalElement = document.getElementById(
+            "exampleModalCenteredScrollable",
+          );
+          const modalInstance = new Modal(modalElement);
           audio.value.addEventListener("ended", (event) => {
             console.log("ended");
-            playlistNext();
+            modalInstance.show();
+            setTimeout(() => {
+              modalInstance.hide();
+              playlistNext();
+            }, 10000);
           });
         });
-        onUnmounted(() => {});
+        // onUnmounted(() => {});
         return {
           audio,
           img,

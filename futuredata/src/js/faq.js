@@ -6,6 +6,8 @@
 //   document.getElementById("test").click();
 // });
 
+
+// 題庫
 const answer = [];
 document.querySelectorAll(".faq-item").forEach(function (item) {
   item.addEventListener("click", function () {

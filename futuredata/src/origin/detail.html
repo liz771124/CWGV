@@ -307,18 +307,48 @@
             </ul>
             <div>
               <div
-                :class="['absolute -translate-y-[100%] top-2 end-0 bg-black/80 w-[300px] h-[300px] transform px-5 overflow-auto',  AUDIO_LIST ? '' : 'hidden' ]"
-                data-simplebar="data-simplebar"
+                :class="['absolute -translate-y-[100%] top-2 end-0 bg-gray-100 shadow-xl w-[300px] h-[300px] transform overflow-auto',  AUDIO_LIST ? '' : 'hidden' ]"
               >
-                <div v-for="(chapter, index) in meta.data" :key="chapter.id">
+                <div class="flex flex-col">
                   <div
-                    class="border-whte cursor-pointer border-b py-5"
-                    @click="playAudio(chapter.id, chapter.chapterUrl)"
+                    class="flex items-center justify-between border-b bg-primary-600 px-5 py-3 text-white"
                   >
-                    {{ chapter.title }}
+                    <span class="text-xs font-semibold uppercase"
+                      >播放清單</span
+                    >
+                    <img
+                      class="h-5 w-5 rounded-lg object-cover"
+                      src="https://www.freeiconspng.com/thumbs/close-icon/close-icon-29.png"
+                    />
+                  </div>
+                  <div
+                    class="flex cursor-pointer border-b px-2 py-3 hover:shadow-md"
+                    v-for="(chapter, index) in meta.data"
+                    :key="chapter.id"
+                  >
+                    <!-- <img
+                      class="h-10 w-10 rounded-lg object-cover"
+                      alt="User avatar"
+                      src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=200"
+                    /> -->
+
+                    <div
+                      class="flex w-full flex-col px-2"
+                      @click="playAudio(chapter.id, chapter.chapterUrl)"
+                    >
+                      <span
+                        :class="`pt-1 text-sm font-semibold capitalize text-primary-600`"
+                      >
+                        {{ chapter.title }}
+                      </span>
+                      <span class="text-xs font-medium uppercase text-gray-500 mt-2">
+                        有沒有副標？
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
+
               <div
                 role="button"
                 class="item--control text-white/80"

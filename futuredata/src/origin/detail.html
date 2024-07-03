@@ -82,7 +82,7 @@
               transform: translateY(-100px);
             "
           /> -->
-              回雜誌列頁
+              回上頁
             </button>
           </li>
           <li>
@@ -91,10 +91,40 @@
                 width="20"
                 height="20"
                 class="object-contain"
-                src="https://static-00.iconduck.com/assets.00/heart-outline-icon-2048x1740-y64ofgt4.png"
+                src="https://cdn-icons-png.flaticon.com/512/105/105220.png"
                 alt=""
                 style="
                   filter: drop-shadow(0px 100px 0 #00a7de);
+                  transform: translateY(-100px);
+                "
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                width="20"
+                height="20"
+                class="object-contain"
+                src="https://cdn-icons-png.flaticon.com/512/105/105220.png"
+                alt=""
+                style="
+                  filter: drop-shadow(0px 100px 0 #818181);
+                  transform: translateY(-100px);
+                "
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                width="20"
+                height="20"
+                class="object-contain"
+                src="https://cdn-icons-png.flaticon.com/512/105/105220.png"
+                alt=""
+                style="
+                  filter: drop-shadow(0px 100px 0 #dedede);
                   transform: translateY(-100px);
                 "
               />
@@ -124,7 +154,7 @@
                 src="https://cdn-icons-png.flaticon.com/512/152/152810.png"
                 alt=""
                 style="
-                  filter: drop-shadow(0px 100px 0 #00a7de);
+                  filter: drop-shadow(0px 100px 0 #dedede);
                   transform: translateY(-100px);
                 "
               />
@@ -139,7 +169,7 @@
                 src="https://static-00.iconduck.com/assets.00/edit-pencil-icon-512x512-awl8cu9b.png"
                 alt=""
                 style="
-                  filter: drop-shadow(0px 100px 0 #00a7de);
+                  filter: drop-shadow(0px 100px 0 #dedede);
                   transform: translateY(-100px);
                 "
               />
@@ -225,7 +255,9 @@
           </div>
           <div class="player--screen">
             <div class="title" v-if="CONTROL_EPISODE">
-              <h3>{{ CONTROL_EPISODE.title }}</h3>
+              <h3 class="line-clamp-1 w-full font-bold text-white">
+                {{ CONTROL_EPISODE.title }}
+              </h3>
             </div>
             <div class="process--slider" v-if="CONTROL_SEEK">
               <div class="label">{{ STATUS_SEEK }}</div>
@@ -307,22 +339,36 @@
             </ul>
             <div>
               <div
-                :class="['absolute -translate-y-[100%] top-2 end-0 bg-gray-100 shadow-xl w-[300px] h-[300px] transform overflow-auto',  AUDIO_LIST ? '' : 'hidden' ]"
+                :class="['absolute rounded-t-lg bottom-[82px] end-0 backdrop-blur-sm bg-black/80 shadow-xl w-screen max-w-[300px] h-[200px] transform',  AUDIO_LIST ? '' : 'hidden' ]"
               >
-                <div class="flex flex-col">
+                <div class="flex h-full flex-col overflow-auto">
                   <div
-                    class="flex items-center justify-between border-b bg-primary-600 px-5 py-3 text-white"
+                    class="flex items-center justify-between border-b px-5 py-3 text-white"
                   >
                     <span class="text-xs font-semibold uppercase"
                       >播放清單</span
                     >
-                    <img
-                      class="h-5 w-5 rounded-lg object-cover"
-                      src="https://www.freeiconspng.com/thumbs/close-icon/close-icon-29.png"
-                    />
+                    <svg
+                      @click="AUDIO_LIST = !AUDIO_LIST"
+                      role="button"
+                      width="10"
+                      height="10"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 14 14"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                      ></path>
+                    </svg>
                   </div>
                   <div
-                    class="flex cursor-pointer border-b px-2 py-3 hover:shadow-md"
+                    class="bodrer-[#f2f2f2]-b flex cursor-pointer px-2 py-3 hover:shadow-md"
                     v-for="(chapter, index) in meta.data"
                     :key="chapter.id"
                   >
@@ -333,16 +379,14 @@
                     /> -->
 
                     <div
-                      class="flex w-full flex-col px-2"
+                      class="flex w-full items-center gap-3 px-2"
                       @click="playAudio(chapter.id, chapter.chapterUrl)"
                     >
-                      <span
-                        :class="`pt-1 text-sm font-semibold capitalize text-primary-600`"
-                      >
+                      <div
+                        class="h-5 w-2 shrink-0 rounded-full bg-primary-400"
+                      ></div>
+                      <span :class="`pt-1 font-semibold line-clamp-2 text-xs`">
                         {{ chapter.title }}
-                      </span>
-                      <span class="text-xs font-medium uppercase text-gray-500 mt-2">
-                        有沒有副標？
                       </span>
                     </div>
                   </div>
@@ -463,7 +507,7 @@
         </div>
       </div> -->
 
-      <button
+      <!-- <button
         type="button"
         class="bg-primary shadow-primary-3 hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 active:shadow-primary-2 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0 active:bg-primary-600 dark:shadow-black/30"
         data-twe-toggle="modal"
@@ -472,7 +516,7 @@
         data-twe-ripple-color="light"
       >
         Vertically centered scrollable modal
-      </button>
+      </button> -->
 
       <div
         data-twe-modal-init
@@ -497,7 +541,7 @@
                 class="text-surface text-xl font-medium leading-normal dark:text-white"
                 id="exampleModalCenteredScrollableLabel"
               >
-                十秒後播放下一首
+                「5秒後為您播放下一篇章。」
               </h5>
               <button
                 type="button"
@@ -524,7 +568,7 @@
             </div>
 
             <div class="relative p-4">
-              <p>想繼續閱讀誌嗎？</p>
+              <p>想繼續閱讀雜誌嗎?</p>
             </div>
 
             <div
@@ -536,6 +580,7 @@
                 data-twe-modal-dismiss
                 data-twe-ripple-init
                 data-twe-ripple-color="light"
+                @click="playlistNext()"
               >
                 繼續播放
               </button>
@@ -544,6 +589,8 @@
                 class="hover:bg-primary-accent-200 focus:bg-primary-accent-200 active:bg-primary-accent-200 inline-block grow rounded bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out focus:outline-none focus:ring-0 dark:bg-primary-300 dark:hover:bg-primary-400 dark:focus:bg-primary-400 dark:active:bg-primary-400"
                 data-twe-ripple-init
                 data-twe-ripple-color="light"
+                data-twe-modal-dismiss
+                @click="togglePlay()"
               >
                 停在本頁
               </button>

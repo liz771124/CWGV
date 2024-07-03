@@ -339,18 +339,15 @@
                 </div>
               </li>
             </ul>
-            <div>
+            <div class="flex flex-col">
               <div
-                :class="['absolute rounded-t-lg bottom-[120px] md:bottom-[65px] end-0 backdrop-blur-sm bg-black/80 shadow-xl w-screen md:max-w-[400px] h-[50svh] lg:h-[300px] transform duration-100 overflow-hidden',  AUDIO_LIST ?  'translate-y-0 opacity-100' : 'translate-y-[10%] opacity-0' ]"
+                :class="['absolute rounded-t-lg bottom-[120px] md:bottom-[65px] end-0 backdrop-blur-sm bg-black/80 shadow-xl w-screen md:max-w-[400px] h-[40svh] lg:h-[300px] transform duration-100 overflow-hidden',  AUDIO_LIST ?  'translate-y-0 opacity-100' : 'translate-y-[10%] opacity-0' ]"
               >
                 <div
                   class="relative flex items-center justify-between border-b border-[#535353] px-5 py-3 text-white"
                 >
                   <span class="font-semibold">播放清單</span>
-                  <div
-                    class="z-[1500] cursor-pointer"
-                    @click="AUDIO_LIST=!AUDIO_LIST"
-                  >
+                  <div class="cursor-pointer" @click="AUDIO_LIST=!AUDIO_LIST">
                     <svg
                       width="15"
                       height="15"
@@ -368,7 +365,7 @@
                     </svg>
                   </div>
                 </div>
-                <div class="h-full overflow-auto">
+                <div class="h-[calc(100%-50px)] grow overflow-auto">
                   <div
                     class="bodrer-[#f2f2f2]-b flex cursor-pointer px-2 py-3 hover:shadow-md"
                     v-for="(chapter, index) in meta.data"

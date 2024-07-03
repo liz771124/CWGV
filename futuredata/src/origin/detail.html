@@ -181,6 +181,7 @@
 
     <div class="container mx-auto h-[calc(100svh-285px)] py-5 md:min-h-[80svh]">
       <iframe
+        id="magIframe"
         src="https://efuturedata.cwgv.com.tw/MY11307/index.html"
         width="100%"
         height="100%"
@@ -191,12 +192,12 @@
       ></iframe>
     </div>
 
-    <div id="PodcastPlayerApp" class="relative">
+    <div id="PodcastPlayerApp">
       <audio ref="audio" controls="controls">
         <source type="audio/mpeg" />
       </audio>
       <div class="player--drawer" v-if="audio">
-        <div class="container">
+        <div class="container relative">
           <div class="player--controller">
             <ul>
               <li>
@@ -339,34 +340,32 @@
             </ul>
             <div>
               <div
-                :class="['absolute rounded-t-lg bottom-[82px] end-0 backdrop-blur-sm bg-black/80 shadow-xl w-screen max-w-[300px] h-[200px] transform',  AUDIO_LIST ? '' : 'hidden' ]"
+                :class="['absolute rounded-t-lg bottom-[65px] end-0 backdrop-blur-sm bg-black/80 shadow-xl w-screen max-w-[300px] h-[200px] transform duration-100 z-[-1] overflow-hidden',  AUDIO_LIST ?  'translate-y-0 opacity-100' : 'translate-y-[10%] opacity-0' ]"
               >
-                <div class="flex h-full flex-col overflow-auto">
-                  <div
-                    class="flex items-center justify-between border-b px-5 py-3 text-white"
+                <div
+                  class="flex items-center justify-between border-b border-[#535353] px-5 py-3 text-white"
+                >
+                  <span class="text-xs font-semibold">播放清單</span>
+                  <svg
+                    @click="AUDIO_LIST = !AUDIO_LIST"
+                    role="button"
+                    width="10"
+                    height="10"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 14"
                   >
-                    <span class="text-xs font-semibold uppercase"
-                      >播放清單</span
-                    >
-                    <svg
-                      @click="AUDIO_LIST = !AUDIO_LIST"
-                      role="button"
-                      width="10"
-                      height="10"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 14 14"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-                      ></path>
-                    </svg>
-                  </div>
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="h-full overflow-auto">
                   <div
                     class="bodrer-[#f2f2f2]-b flex cursor-pointer px-2 py-3 hover:shadow-md"
                     v-for="(chapter, index) in meta.data"
@@ -576,7 +575,7 @@
             >
               <button
                 type="button"
-                class="hover:bg-primary-accent-200 focus:bg-primary-accent-200 active:bg-primary-accent-200 inline-block grow rounded bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out focus:outline-none focus:ring-0 dark:bg-primary-300 dark:hover:bg-primary-400 dark:focus:bg-primary-400 dark:active:bg-primary-400"
+                class="inline-block grow rounded bg-primary-500 px-6 pb-2 pt-2.5 font-medium leading-normal text-white transition duration-150 ease-in-out hover:bg-primary-500 focus:bg-primary-600 focus:outline-none focus:ring-0 active:bg-primary-700"
                 data-twe-modal-dismiss
                 data-twe-ripple-init
                 data-twe-ripple-color="light"
@@ -586,7 +585,7 @@
               </button>
               <button
                 type="button"
-                class="hover:bg-primary-accent-200 focus:bg-primary-accent-200 active:bg-primary-accent-200 inline-block grow rounded bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out focus:outline-none focus:ring-0 dark:bg-primary-300 dark:hover:bg-primary-400 dark:focus:bg-primary-400 dark:active:bg-primary-400"
+                class="hover:bg-gary-600 inline-block grow rounded bg-gray-400 px-6 pb-2 pt-2.5 font-medium leading-normal text-white transition duration-150 ease-in-out focus:bg-primary-600 focus:outline-none focus:ring-0 active:bg-primary-800"
                 data-twe-ripple-init
                 data-twe-ripple-color="light"
                 data-twe-modal-dismiss

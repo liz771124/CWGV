@@ -24038,7 +24038,7 @@ var require_main = __commonJS({
           CONTROL_EPISODE.value.id == episode ? audio.value.play() : null;
           CONTROL_EPISODE.value = getEpisodeDataById(episode);
           isUserInput.value = true;
-          document.querySelector(".Flippingbook-box").src = chapterUrl;
+          document.querySelector("#magIframe").src = chapterUrl;
         };
         let clickTimer = 0;
         let click = false;
@@ -24232,7 +24232,7 @@ var require_main = __commonJS({
             setTimeout(() => {
               modalInstance.hide();
               playlistNext();
-            }, 10000);
+            }, 5000);
           });
         });
         // onUnmounted(() => {});

@@ -42,6 +42,7 @@
       href="https://futuredata.cwgv.com.tw/public/assets/css/style_rs.css"
     />
 
+    <!-- 新加的 style -->
     <link rel="stylesheet" href="../assets/css/audio-player.css" />
     <link rel="stylesheet" href="../css/main.css" />
   </head>
@@ -67,51 +68,43 @@
         <ul
           class="flex items-center gap-5 rounded-full bg-white py-2 pe-5 ps-3"
         >
-          <li>
+          <li class="flex items-center">
             <button
               class="flex items-center gap-2 rounded-full bg-gray-100 px-5 py-2 text-xs text-primary-600"
             >
-              <!-- <img
-            width="15"
-            height="15"
-            class="object-contain"
-            src="https://static-00.iconduck.com/assets.00/logout-1-icon-2048x2048-dsthju9g.png"
-            alt=""
-            style="
-              filter: drop-shadow(0px 100px 0 #00a7de);
-              transform: translateY(-100px);
-            "
-          /> -->
               回上頁
             </button>
           </li>
-          <li>
-            <a href="#">
+          <li class="flex items-center">
+            <a href="#" class="bolck" data-toggle="tooltip" data-title="音檔">
               <img
                 width="20"
-                height="20"
                 class="object-contain"
                 src="../assets/images/icons/audio-blue.svg"
                 alt=""
               />
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="flex items-center">
+            <a href="#" class="bolck" data-toggle="tooltip" data-title="影片">
               <img
                 width="20"
-                height="20"
                 class="object-contain"
                 src="../assets/images/icons/video-blue.svg"
                 alt=""
               />
             </a>
           </li>
-          <li>
-            <a href="#" id="heart-icon">
+          <li class="flex items-center">
+            <a
+              href="#"
+              class="bolck"
+              id="heart-icon"
+              data-toggle="tooltip"
+              data-title="喜歡"
+            >
               <img
                 width="20"
-                height="20"
                 class="object-contain"
                 src="../assets/images/icons/heart-gray.svg"
                 alt=""
@@ -119,10 +112,15 @@
             </a>
           </li>
           <li>
-            <a href="#" id="note-icon">
+            <a
+              href="#"
+              class="bolck"
+              id="note-icon"
+              data-toggle="tooltip"
+              data-title="筆記"
+            >
               <img
                 width="20"
-                height="20"
                 class="object-contain"
                 src="../assets/images/icons/note-gray.svg"
                 alt=""
@@ -464,7 +462,7 @@
         type="button"
         class="bg-primary shadow-primary-3 hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 active:shadow-primary-2 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0 active:bg-primary-600 dark:shadow-black/30"
         data-twe-toggle="modal"
-        data-twe-target="#exampleModalCenteredScrollable"
+        data-twe-target="#tweModal"
         data-twe-ripple-init
         data-twe-ripple-color="light"
       >
@@ -474,9 +472,9 @@
       <div
         data-twe-modal-init
         class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-        id="exampleModalCenteredScrollable"
+        id="tweModal"
         tabindex="-1"
-        aria-labelledby="exampleModalCenteredScrollableLabel"
+        aria-labelledby="tweModalLabel"
         aria-modal="true"
         role="dialog"
       >
@@ -492,7 +490,7 @@
             >
               <h5
                 class="text-surface text-xl font-medium leading-normal dark:text-white"
-                id="exampleModalCenteredScrollableLabel"
+                id="tweModalLabel"
               >
                 「5秒後為您播放下一篇章。」
               </h5>
@@ -540,9 +538,9 @@
               <button
                 type="button"
                 class="hover:bg-gary-600 inline-block grow rounded bg-gray-400 px-6 pb-2 pt-2.5 font-medium leading-normal text-white transition duration-150 ease-in-out focus:bg-primary-600 focus:outline-none focus:ring-0 active:bg-primary-800"
+                data-twe-modal-dismiss
                 data-twe-ripple-init
                 data-twe-ripple-color="light"
-                data-twe-modal-dismiss
                 @click="togglePlay()"
               >
                 停在本頁
@@ -715,8 +713,9 @@
       </div>
     </footer>
 
+    <!-- 新加的 js -->
     <script src="../js/tw-elements.umd.min.js"></script>
-    <script type="module" crossorigin src="../assets/js/main.js"></script>
+    <script type="module" crossorigin src="../assets/js/player.js"></script>
     <script type="module" src="../js/magazine-detail.js"></script>
   </body>
 </html>

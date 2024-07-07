@@ -42,165 +42,547 @@
       href="https://futuredata.cwgv.com.tw/public/assets/css/style_rs.css"
     />
 
-    <link rel="stylesheet" href="../assets/css/audio-player.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- 新加的 style -->
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/origin-main.css" />
   </head>
-  <body class="bgStyle">
-    <div>
-      <section class="py-6 dark:bg-gray-100 dark:text-gray-800 sm:py-12">
-        <div class="container mx-auto space-y-8 p-6">
-          <div class="space-y-2 text-center">
-            <h2 class="text-3xl font-bold">Partem reprimique an pro</h2>
-            <p class="font-serif text-sm dark:text-gray-600">
-              Qualisque erroribus usu at, duo te agam soluta mucius.
-            </p>
+  <body class="bgStyle mainmenu child">
+    <div class="headerBox">
+      <p style="background: none !important">繪圖：程宜方Yifun</p>
+      <div class="bg">
+        <img
+          src="https://futuredata.cwgv.com.tw/public/assets/img/header_child.png"
+          alt=""
+          class="header"
+        />
+        <img
+          src="https://futuredata.cwgv.com.tw/public/assets/img/header_child_fixed.png"
+          alt=""
+          class="headerfixed"
+        />
+        <img
+          src="https://futuredata.cwgv.com.tw/public/assets/img/header_child_mobile.png"
+          alt=""
+          class="headerMobile"
+        />
+        <img
+          src="https://futuredata.cwgv.com.tw/public/assets/img/header_child_fixed_mobile.png"
+          alt=""
+          class="headerfixedMobile"
+        />
+      </div>
+      <div class="logoBox">
+        <div class="container">
+          <a href="https://futuredata.cwgv.com.tw/junior" target="_blank"
+            ><img
+              src="https://futuredata.cwgv.com.tw/public/assets/img/ico/gkids/favicon-180.png"
+              alt=""
+          /></a>
+          <!--<img src="https://futuredata.cwgv.com.tw/public/assets/img/ico/child/favicon-180.png" alt="">-->
+        </div>
+      </div>
+    </div>
+
+    <nav>
+      <ul class="menuList">
+        <li>
+          <a href="javascript:void" title="" id="menuBtn"
+            ><i class="icon-menu"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://futuredata.cwgv.com.tw/member/index/junior" title=""
+            ><i class="icon-man"></i
+          ></a>
+        </li>
+        <li>
+          <a href="javascript:void" title="" class="searchBtn"
+            ><i class="icon-search"></i
+          ></a>
+          <div class="navSearch">
+            <form
+              action="https://futuredata.cwgv.com.tw/junior/searchList/index"
+              method="post"
+            >
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="searchText"
+                  placeholder="關鍵字全文檢索"
+                />
+                <button class="btn btn-default buttonStyle" type="submit">
+                  快速搜尋
+                </button>
+              </div>
+            </form>
+            <!--
+                  <p>還找不到你要的文章，試試<a href="">全庫檢索</a></p>
+                  <button type="button" class="closeBtnStyle"><i class="icon-close"></i></button>
+                  -->
           </div>
-          <div
-            class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4"
-          >
-            <article class="flex flex-col dark:bg-gray-50">
-              <a
-                rel="noopener noreferrer"
-                href="#"
-                aria-label="Te nulla oportere reprimique his dolorum"
-              >
-                <img
-                  alt=""
-                  class="h-52 w-full object-cover dark:bg-gray-500"
-                  src="https://source.unsplash.com/200x200/?fashion?1"
-                />
-              </a>
-              <div class="flex flex-1 flex-col p-6">
-                <a
-                  rel="noopener noreferrer"
-                  href="#"
-                  aria-label="Te nulla oportere reprimique his dolorum"
-                ></a>
-                <a
-                  rel="noopener noreferrer"
-                  href="#"
-                  class="text-xs uppercase tracking-wider hover:underline dark:text-violet-600"
-                  >Convenire</a
-                >
-                <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">
-                  Te nulla oportere reprimique his dolorum
-                </h3>
-                <div
-                  class="flex flex-wrap justify-between space-x-2 pt-3 text-xs dark:text-gray-600"
-                >
-                  <span>June 1, 2020</span>
-                  <span>2.1K views</span>
+        </li>
+        <li>
+          <a href="https://futuredata.cwgv.com.tw/junior" title=""
+            ><i class="icon-home"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://parenting.cwgv.com.tw/topic/MYMJ/2022data/index.html"
+            title=""
+            target="_blank"
+            ><img
+              src="https://futuredata.cwgv.com.tw/public/assets\img\icon\icon-question.png"
+              class="menu-icon"
+          /></a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="mainCtn">
+      <div class="container">
+        <div class="mt-20 flex gap-8">
+          <div class="w-1/3">
+            <div
+              style="
+                --swiper-navigation-color: #fff;
+                --swiper-pagination-color: #fff;
+              "
+              class="swiper mySwiper2 h-[450px]"
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide bg-white">
+                  <img
+                    class="h-full w-full object-contain"
+                    src="https://gpi.culture.tw/cover/1011100351/1011100351_01.jpg"
+                  />
+                </div>
+                <div class="swiper-slide bg-white">
+                  <img
+                    class="h-full w-full object-contain"
+                    src="https://health99.hpa.gov.tw/storage/images/materials/12983%E5%B0%81%E9%9D%A2.png"
+                  />
+                </div>
+                <div class="swiper-slide bg-white">
+                  <img
+                    class="h-full w-full object-contain"
+                    src="https://warehouse.kaik.network/attachment/public_image/0ab8d5a9-8fbb-465f-bbe6-845b0ce29ac9/3f6329d1-139f-47a4-b9be-9b05f83d4556.png"
+                  />
+                </div>
+                <div class="swiper-slide bg-white">
+                  <img
+                    class="h-full w-full object-contain"
+                    src="https://csr.cw.com.tw/lessonplan/_nuxt/kv-m.f1726249.jpg"
+                  />
+                </div>
+                <div class="swiper-slide bg-white">
+                  <img
+                    class="h-full w-full object-contain"
+                    src="https://rcci.naer.edu.tw/storage/files/13/original/55486296577d56d119dd.png"
+                  />
+                </div>
+                <div class="swiper-slide bg-white">
+                  <img
+                    class="h-full w-full object-contain"
+                    src="https://swiperjs.com/demos/images/nature-6.jpg"
+                  />
+                </div>
+                <div class="swiper-slide bg-white">
+                  <img
+                    class="h-full w-full object-contain"
+                    src="https://swiperjs.com/demos/images/nature-7.jpg"
+                  />
+                </div>
+                <div class="swiper-slide bg-white">
+                  <img
+                    class="h-full w-full object-contain"
+                    src="https://swiperjs.com/demos/images/nature-8.jpg"
+                  />
+                </div>
+                <div class="swiper-slide bg-white">
+                  <img
+                    class="h-full w-full object-contain"
+                    src="https://swiperjs.com/demos/images/nature-9.jpg"
+                  />
+                </div>
+                <div class="swiper-slide bg-white">
+                  <img
+                    class="h-full w-full object-contain"
+                    src="https://swiperjs.com/demos/images/nature-10.jpg"
+                  />
                 </div>
               </div>
-            </article>
-            <article class="flex flex-col dark:bg-gray-50">
-              <a
-                rel="noopener noreferrer"
-                href="#"
-                aria-label="Te nulla oportere reprimique his dolorum"
-              >
-                <img
-                  alt=""
-                  class="h-52 w-full object-cover dark:bg-gray-500"
-                  src="https://source.unsplash.com/200x200/?fashion?2"
-                />
-              </a>
-              <div class="flex flex-1 flex-col p-6">
-                <a
-                  rel="noopener noreferrer"
-                  href="#"
-                  aria-label="Te nulla oportere reprimique his dolorum"
-                ></a>
-                <a
-                  rel="noopener noreferrer"
-                  href="#"
-                  class="text-xs uppercase tracking-wider hover:underline dark:text-violet-600"
-                  >Convenire</a
-                >
-                <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">
-                  Te nulla oportere reprimique his dolorum
-                </h3>
-                <div
-                  class="flex flex-wrap justify-between space-x-2 pt-3 text-xs dark:text-gray-600"
-                >
-                  <span>June 2, 2020</span>
-                  <span>2.2K views</span>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiper mt-3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="https://gpi.culture.tw/cover/1011100351/1011100351_01.jpg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://health99.hpa.gov.tw/storage/images/materials/12983%E5%B0%81%E9%9D%A2.png"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://warehouse.kaik.network/attachment/public_image/0ab8d5a9-8fbb-465f-bbe6-845b0ce29ac9/3f6329d1-139f-47a4-b9be-9b05f83d4556.png"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://csr.cw.com.tw/lessonplan/_nuxt/kv-m.f1726249.jpg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://rcci.naer.edu.tw/storage/files/13/original/55486296577d56d119dd.png"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
                 </div>
               </div>
-            </article>
-            <article class="flex flex-col dark:bg-gray-50">
-              <a
-                rel="noopener noreferrer"
-                href="#"
-                aria-label="Te nulla oportere reprimique his dolorum"
-              >
-                <img
-                  alt=""
-                  class="h-52 w-full object-cover dark:bg-gray-500"
-                  src="https://source.unsplash.com/200x200/?fashion?3"
-                />
-              </a>
-              <div class="flex flex-1 flex-col p-6">
-                <a
-                  rel="noopener noreferrer"
-                  href="#"
-                  aria-label="Te nulla oportere reprimique his dolorum"
-                ></a>
-                <a
-                  rel="noopener noreferrer"
-                  href="#"
-                  class="text-xs uppercase tracking-wider hover:underline dark:text-violet-600"
-                  >Convenire</a
-                >
-                <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">
-                  Te nulla oportere reprimique his dolorum
-                </h3>
-                <div
-                  class="flex flex-wrap justify-between space-x-2 pt-3 text-xs dark:text-gray-600"
-                >
-                  <span>June 3, 2020</span>
-                  <span>2.3K views</span>
-                </div>
-              </div>
-            </article>
-            <article class="flex flex-col dark:bg-gray-50">
-              <a
-                rel="noopener noreferrer"
-                href="#"
-                aria-label="Te nulla oportere reprimique his dolorum"
-              >
-                <img
-                  alt=""
-                  class="h-52 w-full object-cover dark:bg-gray-500"
-                  src="https://source.unsplash.com/200x200/?fashion?4"
-                />
-              </a>
-              <div class="flex flex-1 flex-col p-6">
-                <a
-                  rel="noopener noreferrer"
-                  href="#"
-                  aria-label="Te nulla oportere reprimique his dolorum"
-                ></a>
-                <a
-                  rel="noopener noreferrer"
-                  href="#"
-                  class="text-xs uppercase tracking-wider hover:underline dark:text-violet-600"
-                  >Convenire</a
-                >
-                <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">
-                  Te nulla oportere reprimique his dolorum
-                </h3>
-                <div
-                  class="flex flex-wrap justify-between space-x-2 pt-3 text-xs dark:text-gray-600"
-                >
-                  <span>June 4, 2020</span>
-                  <span>2.4K views</span>
-                </div>
-              </div>
-            </article>
+            </div>
+          </div>
+          <div class="w-2/3 text-lg">
+            <h2 class="mb-3 text-3xl font-semibold">
+              教案大標教案大標教案大標教案大標教案大標教案大標教案大標教案大標教案大標教案大標
+            </h2>
+            <div class="mb-5">
+              教案敘述教案敘述教案敘述教案敘述教案敘述教案敘述教案敘述教案敘述
+            </div>
+            <ul class="flex flex-col gap-5">
+              <li>適用年齡：國小低年級 國小中年級</li>
+              <li>適用年齡：PDF</li>
+              <li>適用年齡：PDF</li>
+              <li>檔案頁數：10頁</li>
+              <li>內容素材：簡報、學習單</li>
+            </ul>
           </div>
         </div>
-      </section>
+        <div class="py-8">
+          <h3 class="font-display mb-2 text-2xl font-semibold">內容介紹</h3>
+          <div class="article-content">
+            <p>
+              教學演示即將到來！相信很多新手教師們想到要寫「教案」就很頭痛吧！其實教案就像是一篇食譜，不僅好看又要能讓人照著做，畢竟教案不是寫給自己看，是寫給其他人看的呀！我想無論是師培生、實習老師、還是老師們，寫好一份精彩、又好閱讀的教案不僅是我們的專業（挺胸）、也是我們的工作啊（留下辛酸淚），今天就讓小五跟大家分享五個教案撰寫小技巧吧！
+            </p>
+            <h2>一、教案像食譜，好看又要能照著做</h2>
+            <p class="article_photo--img">
+              <img
+                src="https://flipedu-cdn.parenting.com.tw/upload/lQ4v6V351AhJiVxxhJmxOLKEjXqbRc8cVGaUMbtT.png"
+                alt="教案像食譜"
+              />
+            </p>
+            <p class="source">
+              <span style="font-weight: 400"
+                >教案要像食譜，要讓人能照著做。圖片來源：為你打包五個教檢重點</span
+              >
+            </p>
+            <p>
+              教案撰寫最重要的就是讓人「好讀」！千萬不要標點符號格式亂七八糟、密密麻麻，一定會讓人看不下去的啊！<br /><br />
+            </p>
+            <h2>二、不一定要照常見結構順序寫</h2>
+            <p>
+              還記得我在念師培的時候，老師常常強調教案設計要有結構，常見的教案結構是：引起動機、發展活動、綜合活動、總結活動，因此我以前就傻傻的每一堂課都花個10分鐘在引起動機，結果開始講正課的時候，學生竟然開始打瞌睡！
+            </p>
+            <p class="article_photo--img">
+              <img
+                src="https://flipedu-cdn.parenting.com.tw/upload/3w5DO8gl6rWz7Gs12gNPsR1T4LvZw1Yk5UqT6Ulx.png"
+                alt="教案不一定要照固定結構順序寫"
+              />
+            </p>
+            <p class="source">
+              老師可以配合學生學習狀況、教學進度來調整，以免學生失去專注力。圖片來源：為你打包五個教檢重點
+            </p>
+            <p>
+              其實學生通常會在上課前十幾分鐘最認真，大家可以回想自己參加教師研習的經驗，是不是也是一開始幾分鐘最認真、觀察這位講師的上課風格、以及了解這場研習的內容，聽完之後就開始拿出聯絡簿、作業出來趕工了呢？
+            </p>
+            <p>
+              因此不是每一堂課都需要按照「引起動機、發展活動、綜合活動、總結活動」這樣的架構，老師可以配合學生學習狀況、教學進度來調整，不如趕快進入主題，中間融合引起動機、評量活動，如此一來既能延續學生的專注度、也能讓課程不會太沉悶唷！<br /><br />
+            </p>
+            <h2>三、教案記得要放圖片、照片或影片</h2>
+            <p>
+              如果一份食譜只有文字講解沒有照片，是不是很難讓人想像做出來的料理會是長什麼樣？其實教案也是一樣的道理。
+            </p>
+            <p class="article_photo--img">
+              <img
+                src="https://flipedu-cdn.parenting.com.tw/upload/WwnI1fMNxiK9tI9JBBSe5htMXJb8sHj2ZA2Kz2UY.png"
+                alt="教案要放圖片"
+              />
+            </p>
+            <p class="source">
+              教案要讓讀者好懂，課堂上會使用的照片、簡報、影片記得放入教案中。圖片來源：為你打包五個教檢重點
+            </p>
+            <div class="ad ad-tag" style="">
+              <div
+                id="gpt-ad-1628752216050-5"
+                class="ad-cover"
+                style=""
+                data-google-query-id=""
+              >
+                <script>
+                  googletag.cmd.push(function () {
+                    googletag.display("gpt-ad-1628752216050-5");
+                  });
+                </script>
+                <div
+                  id="google_ads_iframe_/6171979/flip_all_Rectangle_1_0__container__"
+                  style="border: 0pt none; width: 300px; height: 0px"
+                ></div>
+              </div>
+            </div>
+            <p>
+              老師常常會使用照片、簡報、影片等教學素材來補充、輔助教學，但是教案上面卻只有文字，教案會使用到的照片、簡報、影片等等通通都沒有，其實會讓讀者比較難懂你的教案，若是能將自己在課堂上會使用哪些照片、簡報、影片放入教案中，可以幫助讀者更能了解你會如何使用這些資源唷！&nbsp;
+            </p>
+            <h2>四、好的排版，可以讓閱讀事半功倍</h2>
+            <p class="article_photo--img">
+              <img
+                src="https://flipedu-cdn.parenting.com.tw/upload/gJPOWijXhJX19c9IQRTDORwCIe4hSC8iVyssOFQG.png"
+                alt="教案排版"
+              />
+            </p>
+            <p class="source">
+              教案也需要留意排版與美編。圖片來源：為你打包五個教檢重點
+            </p>
+            <p>
+              韓國女團、男團們各個那麼正、那麼帥，都需要門面、C位吸引大家注意了，教案想要人家看，當然也需要留意閱讀的排版與美編啦，「好讀」是寫教案的核心目標，一份精彩的教案，卻沒有用好的閱讀方式呈現，整篇教案密密麻麻，讓人一看就想睡，完全看不下去，那不是很可惜嗎！？
+            </p>
+            <p>
+              因此寫完教案之後，記得<strong>留意字體、層次符號、左右對齊、行距</strong>等等，不一定需要有華麗的美編，但是讓人「好閱讀」很重要唷。<br /><br />
+            </p>
+            <h2>五、其他小提醒</h2>
+            <ol>
+              <li>盡量不要寫成逐字稿</li>
+              <li>
+                盡量不要模擬師生對話<br />（如果有設計問答，記得寫出問題以及希望學生回答的答案）
+              </li>
+              <li>注意教學時間</li>
+              <li>教案寫完記得回去對照學習目標、學習表現、學習內容</li>
+              <li>
+                寫完一定要自己閱讀一次，或是請別人閱讀<br />（因為要讓讀者透過教案，就可以迅速掌握課程設計和教學重點）
+              </li>
+            </ol>
+            <p>
+              教案撰寫需要一次一次、一遍又一遍的累積，慢慢地就能掌握撰寫的方式與技巧啦，不過真正到了教育現場後，也沒有那麼多機會需要寫教案啦，畢竟實戰經驗更重要啊，因此趁自己還在儲備能量、吸收各種教學知識的過程中，透過寫教案的方式幫助自己整理教學架構，也是一個很不錯的訓練方式唷！
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="relative flex w-full flex-col items-start gap-5 rounded-lg p-5 md:flex-row"
+        >
+          <div
+            class="flex h-[150px] w-[150px] justify-center sm:w-auto sm:justify-start"
+          >
+            <img
+              class="h-full w-full rounded object-cover"
+              src="https://lh3.googleusercontent.com/a/AEdFTp70cvwI5eevfcr4LonOEX5gB2rzx7JnudOcnYbS1qU=s96-c"
+            />
+          </div>
+
+          <div
+            class="flex w-full flex-col items-center sm:w-auto sm:items-start"
+          >
+            <h3
+              class="font-display mb-2 text-2xl font-semibold"
+              itemprop="author"
+            >
+              作者姓名
+            </h3>
+            <p class="mb-4 text-gray-400">復興國小老師</p>
+            <div>
+              <p>
+                老師介紹老師介紹老師介紹老師介紹老師介紹老師介紹老師介紹老師介紹
+              </p>
+              <p>
+                老師介紹老師介紹老師介紹老師介紹老師介紹老師介紹老師介紹老師介紹
+              </p>
+              <p>
+                老師介紹老師介紹老師介紹老師介紹老師介紹老師介紹老師介紹老師介紹
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <section class="py-6 dark:bg-gray-100 dark:text-gray-800 sm:py-12">
+            <div class="container mx-auto space-y-8 p-6">
+              <div class="space-y-2 text-center">
+                <h2 class="text-3xl font-bold">Partem reprimique an pro</h2>
+                <p class="font-serif text-sm dark:text-gray-600">
+                  Qualisque erroribus usu at, duo te agam soluta mucius.
+                </p>
+              </div>
+              <div
+                class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4"
+              >
+                <article class="flex flex-col dark:bg-gray-50">
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    aria-label="Te nulla oportere reprimique his dolorum"
+                  >
+                    <img
+                      alt=""
+                      class="h-52 w-full object-cover dark:bg-gray-500"
+                      src="https://source.unsplash.com/200x200/?fashion?1"
+                    />
+                  </a>
+                  <div class="flex flex-1 flex-col p-6">
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      aria-label="Te nulla oportere reprimique his dolorum"
+                    ></a>
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      class="text-xs uppercase tracking-wider hover:underline dark:text-violet-600"
+                      >Convenire</a
+                    >
+                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">
+                      Te nulla oportere reprimique his dolorum
+                    </h3>
+                    <div
+                      class="flex flex-wrap justify-between space-x-2 pt-3 text-xs dark:text-gray-600"
+                    >
+                      <span>June 1, 2020</span>
+                      <span>2.1K views</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="flex flex-col dark:bg-gray-50">
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    aria-label="Te nulla oportere reprimique his dolorum"
+                  >
+                    <img
+                      alt=""
+                      class="h-52 w-full object-cover dark:bg-gray-500"
+                      src="https://source.unsplash.com/200x200/?fashion?2"
+                    />
+                  </a>
+                  <div class="flex flex-1 flex-col p-6">
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      aria-label="Te nulla oportere reprimique his dolorum"
+                    ></a>
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      class="text-xs uppercase tracking-wider hover:underline dark:text-violet-600"
+                      >Convenire</a
+                    >
+                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">
+                      Te nulla oportere reprimique his dolorum
+                    </h3>
+                    <div
+                      class="flex flex-wrap justify-between space-x-2 pt-3 text-xs dark:text-gray-600"
+                    >
+                      <span>June 2, 2020</span>
+                      <span>2.2K views</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="flex flex-col dark:bg-gray-50">
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    aria-label="Te nulla oportere reprimique his dolorum"
+                  >
+                    <img
+                      alt=""
+                      class="h-52 w-full object-cover dark:bg-gray-500"
+                      src="https://source.unsplash.com/200x200/?fashion?3"
+                    />
+                  </a>
+                  <div class="flex flex-1 flex-col p-6">
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      aria-label="Te nulla oportere reprimique his dolorum"
+                    ></a>
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      class="text-xs uppercase tracking-wider hover:underline dark:text-violet-600"
+                      >Convenire</a
+                    >
+                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">
+                      Te nulla oportere reprimique his dolorum
+                    </h3>
+                    <div
+                      class="flex flex-wrap justify-between space-x-2 pt-3 text-xs dark:text-gray-600"
+                    >
+                      <span>June 3, 2020</span>
+                      <span>2.3K views</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="flex flex-col dark:bg-gray-50">
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    aria-label="Te nulla oportere reprimique his dolorum"
+                  >
+                    <img
+                      alt=""
+                      class="h-52 w-full object-cover dark:bg-gray-500"
+                      src="https://source.unsplash.com/200x200/?fashion?4"
+                    />
+                  </a>
+                  <div class="flex flex-1 flex-col p-6">
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      aria-label="Te nulla oportere reprimique his dolorum"
+                    ></a>
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      class="text-xs uppercase tracking-wider hover:underline dark:text-violet-600"
+                      >Convenire</a
+                    >
+                    <h3 class="flex-1 py-2 text-lg font-semibold leading-snug">
+                      Te nulla oportere reprimique his dolorum
+                    </h3>
+                    <div
+                      class="flex flex-wrap justify-between space-x-2 pt-3 text-xs dark:text-gray-600"
+                    >
+                      <span>June 4, 2020</span>
+                      <span>2.4K views</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
 
     <footer>
@@ -366,7 +748,26 @@
     </footer>
 
     <script src="../js/tw-elements.umd.min.js"></script>
-    <script type="module" crossorigin src="../assets/js/main.js"></script>
-    <script type="module" src="../js/mag-detail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
+    </script>
   </body>
 </html>

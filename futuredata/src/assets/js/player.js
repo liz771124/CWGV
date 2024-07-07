@@ -24113,6 +24113,7 @@ var require_main = __commonJS({
           CONTROL_VOLUME.value = mapNumber(pX, 30, 70, 0, 100) / 100;
         };
         const togglePlay = () => {
+          console.log(audio.value.paused);
           if (audio.value.paused) {
             audio.value.play();
           } else {
@@ -24222,16 +24223,16 @@ var require_main = __commonJS({
 
           const { Modal, initTWE } = twe;
           initTWE({ Modal });
-          const modalElement = document.getElementById(
-            "exampleModalCenteredScrollable",
-          );
+          const modalElement = document.getElementById("tweModal");
           const modalInstance = new Modal(modalElement);
           audio.value.addEventListener("ended", (event) => {
-            console.log("ended");
+            // console.log("ended");
             modalInstance.show();
             setTimeout(() => {
               modalInstance.hide();
-              playlistNext();
+              if (!audio.value.paused) {
+                playlistNext();
+              }
             }, 5000);
           });
         });

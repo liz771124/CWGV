@@ -1004,7 +1004,7 @@ section {
 
 .player--drawer {
   position: fixed;
-  z-index: 1099;
+  z-index: 1000;
   width: 100%;
   left: 0;
   bottom: 0;

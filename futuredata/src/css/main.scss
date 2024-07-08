@@ -36,14 +36,14 @@
     color: #fff;
     text-align: center;
     border-radius: 5px;
-    padding: 5px 0;
+    padding: 5px;
     position: absolute;
     z-index: 1;
     bottom: -38px;
-    min-width: 45px;
     font-size: 12px;
     display: block;
     left: -10px;
+    white-space: pre;
   }
 
   [data-tooltip]:before {

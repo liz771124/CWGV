@@ -24038,7 +24038,7 @@ var require_main = __commonJS({
         const processbar = ref(null);
         const img = ref(null);
         const playAudio = (episode, chapterUrl) => {
-          CONTROL_EPISODE.value.id == episode ? audio.value.play() : null;
+          CONTROL_EPISODE.value.id == episode ? togglePlay() : null;
           CONTROL_EPISODE.value = getEpisodeDataById(episode);
           isUserInput.value = true;
           document.querySelector("#magIframe").src = chapterUrl;
@@ -24054,8 +24054,21 @@ var require_main = __commonJS({
           }
           clearTimeout(clickTimer);
           clickTimer = setTimeout(() => {
+            // console.log(data)
             audio.value.src = data.audio;
-            click ? (audio.value.autoplay = true) : (click = true);
+            if (click) {
+              // audio.value.play();
+              let playPromise = audio.value.play();
+              if (playPromise !== undefined) {
+                playPromise
+                  .then((_) => {
+                    audio.value.autoplay = true;
+                  })
+                  .catch((error) => {});
+              }
+            } else {
+              click = true;
+            }
             img.value = data.image;
             navigator.mediaSession.metadata = new MediaMetadata({
               title: data.title,
@@ -24104,6 +24117,7 @@ var require_main = __commonJS({
             }
           });
           next != "" ? playAudio(next) : null;
+          console.log(next);
         };
         const buttonVolume = ref(null);
         const { elementX, elementWidth } = useMouseInElement(buttonVolume);
@@ -24233,27 +24247,31 @@ var require_main = __commonJS({
           initTWE({ Modal });
           const modalElement = document.getElementById("tweModal");
           const modalInstance = new Modal(modalElement);
-          
 
           audio.value.addEventListener("ended", (event) => {
             console.log("ended");
-            modalInstance.show();
-            if (COUNTDOWN_TIMER.value) {
-              clearInterval(COUNTDOWN_TIMER.value);
-            }
-            modalInstance.show();
-            COUNTDOWN_TIMER.value = setInterval(() => {
-              COUNTDOWN.value--;
-              console.log(COUNTDOWN.value);
-              if (COUNTDOWN.value <= 0) {
+            console.log(
+              meta.data[meta.data.length - 1].id,
+              CONTROL_EPISODE.value.id,
+            );
+            if (
+              meta.data[meta.data.length - 1].id !== CONTROL_EPISODE.value.id
+            ) {
+              modalInstance.show();
+              if (COUNTDOWN_TIMER.value) {
                 clearInterval(COUNTDOWN_TIMER.value);
-                modalInstance.hide();
-                COUNTDOWN.value = 5;
-                // if (!audio.value.paused) {
-                //   playlistNext();
-                // }
               }
-            }, 1000);
+              COUNTDOWN_TIMER.value = setInterval(() => {
+                COUNTDOWN.value--;
+                console.log(COUNTDOWN.value);
+                if (COUNTDOWN.value <= 0) {
+                  // playlistNext();
+                  clearInterval(COUNTDOWN_TIMER.value);
+                  modalInstance.hide();
+                  COUNTDOWN.value = 5;
+                }
+              }, 1000);
+            }
           });
         });
         // onUnmounted(() => {});

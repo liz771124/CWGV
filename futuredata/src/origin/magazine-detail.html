@@ -49,7 +49,7 @@
 
     <!-- 新加的 style -->
     <link rel="stylesheet" href="../assets/css/audio-player.css" />
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/junior-main.css" />
   </head>
   <body class="bgStyle">
     <header class="sticky top-0 z-20 bg-primary-500 py-2 text-white">
@@ -59,21 +59,23 @@
         <div
           role="button"
           data-twe-offcanvas-toggle
-          data-twe-target="#offcanvasExample"
-          aria-controls="offcanvasExample"
-          class="hidden gap-3 text-lg leading-7 md:flex"
+          data-twe-target="#offcanvasMenu"
+          aria-controls="offcanvasMenu"
+          class="hidden gap-3 text-lg leading-7 text-white md:flex"
         >
-          <img
+          <svg
             width="15"
-            height="15"
-            class="object-contain"
-            src="https://www.svgrepo.com/show/126206/menu.svg"
-            alt=""
-            style="
-              filter: drop-shadow(0px 100px 0 #ffffff);
-              transform: translateY(-100px);
-            "
-          />
+            viewBox="0 0 122.36 122.88"
+            style="enable-background: new 0 0 122.36 122.88"
+            fill="currentColor"
+          >
+            <g>
+              <path
+                class="st0"
+                d="M5.85,0h20.09c3.22,0,5.85,2.63,5.85,5.85v20.09c0,3.22-2.63,5.85-5.85,5.85H5.85C2.63,31.8,0,29.16,0,25.94 V5.85C0,2.63,2.63,0,5.85,0L5.85,0z M96.42,91.08h20.09c3.22,0,5.86,2.63,5.86,5.86v20.09c0,3.22-2.63,5.86-5.86,5.86H96.42 c-3.22,0-5.86-2.63-5.86-5.86V96.94C90.56,93.72,93.2,91.08,96.42,91.08L96.42,91.08z M51.14,91.08h20.09 c3.22,0,5.86,2.63,5.86,5.86v20.09c0,3.22-2.63,5.86-5.86,5.86H51.14c-3.22,0-5.85-2.63-5.85-5.86V96.94 C45.28,93.72,47.92,91.08,51.14,91.08L51.14,91.08z M5.85,91.08h20.09c3.22,0,5.85,2.63,5.85,5.86v20.09 c0,3.22-2.63,5.86-5.85,5.86H5.85c-3.22,0-5.85-2.63-5.85-5.86V96.94C0,93.72,2.63,91.08,5.85,91.08L5.85,91.08z M96.42,45.54 h20.09c3.22,0,5.86,2.63,5.86,5.86v20.09c0,3.22-2.63,5.86-5.86,5.86H96.42c-3.22,0-5.86-2.63-5.86-5.86V51.4 C90.56,48.18,93.2,45.54,96.42,45.54L96.42,45.54z M51.14,45.54h20.09c3.22,0,5.86,2.63,5.86,5.86v20.09 c0,3.22-2.63,5.86-5.86,5.86H51.14c-3.22,0-5.85-2.63-5.85-5.86V51.4C45.28,48.18,47.92,45.54,51.14,45.54L51.14,45.54z M5.85,45.54h20.09c3.22,0,5.85,2.63,5.85,5.86v20.09c0,3.22-2.63,5.86-5.85,5.86H5.85C2.63,77.34,0,74.7,0,71.48V51.4 C0,48.18,2.63,45.54,5.85,45.54L5.85,45.54z M96.42,0h20.09c3.22,0,5.86,2.63,5.86,5.85v20.09c0,3.22-2.63,5.85-5.86,5.85H96.42 c-3.22,0-5.86-2.63-5.86-5.85V5.85C90.56,2.63,93.2,0,96.42,0L96.42,0z M51.14,0h20.09c3.22,0,5.86,2.63,5.86,5.85v20.09 c0,3.22-2.63,5.85-5.86,5.85H51.14c-3.22,0-5.85-2.63-5.85-5.85V5.85C45.28,2.63,47.92,0,51.14,0L51.14,0z"
+              />
+            </g>
+          </svg>
           2024年07月號 | <span class="font-bold">聽骨頭說故事</span>
         </div>
         <ul
@@ -107,9 +109,10 @@
             </a>
           </li>
           <li
+            class="flex items-center"
             data-twe-offcanvas-toggle
-            data-twe-target="#offcanvasRight"
-            aria-controls="offcanvasRight"
+            data-twe-target="#offcanvasNote"
+            aria-controls="offcanvasNote"
             data-twe-ripple-init
             data-twe-ripple-color="light"
           >
@@ -121,7 +124,7 @@
               data-title="筆記"
             >
               <img
-                width="20"
+                width="18"
                 class="object-contain"
                 src="../assets/images/icons/note-gray.svg"
                 alt=""
@@ -151,15 +154,12 @@
     <div
       class="dark:bg-body-dark invisible fixed bottom-0 left-0 top-0 z-[1045] flex w-96 max-w-full -translate-x-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out data-[twe-offcanvas-show]:transform-none dark:text-white"
       tabindex="-1"
-      id="offcanvasExample"
-      aria-labelledby="offcanvasExampleLabel"
+      id="offcanvasMenu"
+      aria-labelledby="offcanvasMenuLabel"
       data-twe-offcanvas-init
     >
       <div class="flex items-center justify-between bg-gray-100 p-4">
-        <h5
-          class="mb-0 font-semibold leading-normal"
-          id="offcanvasExampleLabel"
-        >
+        <h5 class="mb-0 font-semibold leading-normal" id="offcanvasMenuLabel">
           2024年07月號 | 聽骨頭說故事選單
         </h5>
         <button
@@ -199,12 +199,12 @@
     <div
       class="invisible fixed bottom-0 right-0 top-0 z-[1045] flex w-96 max-w-full translate-x-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-lg outline-none transition duration-300 ease-in-out data-[twe-offcanvas-show]:transform-none"
       tabindex="-1"
-      id="offcanvasRight"
+      id="offcanvasNote"
+      data-twe-scroll="true"
       data-twe-offcanvas-init
-      data-twe-backdrop="false"
     >
       <div class="flex items-center justify-between bg-gray-100 p-4">
-        <h5 class="mb-0 font-semibold leading-normal" id="offcanvasRightLabel">
+        <h5 class="mb-0 font-semibold leading-normal" id="offcanvasNoteLabel">
           我的筆記
         </h5>
         <!-- <button
@@ -231,10 +231,9 @@
         </button> -->
       </div>
       <div class="offcanvas-body flex-grow overflow-y-auto p-4">
-        <div class="relative mb-3" data-twe-input-wrapper-init>
+        <div class="relative h-full" data-twe-input-wrapper-init>
           <textarea
-            class="peer-focus:text-primary peer block min-h-[auto] w-full rounded border-0 bg-slate-50 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
-            rows="20"
+            class="peer-focus:text-primary peer block h-full min-h-[auto] w-full rounded border-0 bg-slate-50 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
             placeholder="請輸入筆記"
           ></textarea>
         </div>
@@ -248,6 +247,7 @@
           data-twe-offcanvas-dismiss
           data-twe-ripple-init
           data-twe-ripple-color="light"
+          id="unsaveNote"
         >
           取消編輯
         </button>

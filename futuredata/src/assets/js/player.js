@@ -24250,10 +24250,6 @@ var require_main = __commonJS({
 
           audio.value.addEventListener("ended", (event) => {
             console.log("ended");
-            console.log(
-              meta.data[meta.data.length - 1].id,
-              CONTROL_EPISODE.value.id,
-            );
             if (
               meta.data[meta.data.length - 1].id !== CONTROL_EPISODE.value.id
             ) {

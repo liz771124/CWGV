@@ -24027,9 +24027,6 @@ var require_main = __commonJS({
         const STATUS_SEEK = ref("00:00");
         const STATUS_DURATION = ref("00:00");
         const AUDIO_LIST = ref(false);
-        const COUNTDOWN = ref(5);
-        const COUNTDOWN_TIMER = ref(null);
-        const PLAY_NEXT_AUDIO = ref(true);
         const meta = reactive({
           data: null,
           list: null,
@@ -24116,7 +24113,6 @@ var require_main = __commonJS({
           CONTROL_VOLUME.value = mapNumber(pX, 30, 70, 0, 100) / 100;
         };
         const togglePlay = () => {
-          console.log(audio.value.paused);
           if (audio.value.paused) {
             audio.value.play();
           } else {
@@ -24177,11 +24173,6 @@ var require_main = __commonJS({
             }
           }
         };
-        const pauseAudio = () => {
-          // audio.value.pause();
-          // console.log(audio.value.paused)
-          clearInterval(COUNTDOWN_TIMER.value);
-        };
         onMounted(async () => {
           window.ResizeObserver = ResizeObserver;
           document.addEventListener("click", (e) => {
@@ -24231,29 +24222,17 @@ var require_main = __commonJS({
 
           const { Modal, initTWE } = twe;
           initTWE({ Modal });
-          const modalElement = document.getElementById("tweModal");
+          const modalElement = document.getElementById(
+            "exampleModalCenteredScrollable",
+          );
           const modalInstance = new Modal(modalElement);
-          
-
           audio.value.addEventListener("ended", (event) => {
             console.log("ended");
             modalInstance.show();
-            if (COUNTDOWN_TIMER.value) {
-              clearInterval(COUNTDOWN_TIMER.value);
-            }
-            modalInstance.show();
-            COUNTDOWN_TIMER.value = setInterval(() => {
-              COUNTDOWN.value--;
-              console.log(COUNTDOWN.value);
-              if (COUNTDOWN.value <= 0) {
-                clearInterval(COUNTDOWN_TIMER.value);
-                modalInstance.hide();
-                COUNTDOWN.value = 5;
-                // if (!audio.value.paused) {
-                //   playlistNext();
-                // }
-              }
-            }, 1000);
+            setTimeout(() => {
+              modalInstance.hide();
+              playlistNext();
+            }, 5000);
           });
         });
         // onUnmounted(() => {});
@@ -24280,7 +24259,6 @@ var require_main = __commonJS({
           isUserInput,
           buttonVolume,
           buttonSpeed,
-          pauseAudio,
           CONTROLLING,
           CONTROL_EPISODE,
           CONTROL_SEEK,
@@ -24293,8 +24271,6 @@ var require_main = __commonJS({
           CONTROL_PLAYING,
           CONTROL_USER_DURATION,
           AUDIO_LIST,
-          COUNTDOWN,
-          PLAY_NEXT_AUDIO,
         };
       },
     };

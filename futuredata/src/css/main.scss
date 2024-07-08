@@ -24,12 +24,12 @@
 }
 
 @media (min-width: 767px) {
-  [data-toggle="tooltip"] {
+  [data-tooltip] {
     position: relative;
     display: inline-block;
   }
 
-  [data-toggle="tooltip"]:after {
+  [data-tooltip]:after {
     content: attr(data-title);
     visibility: hidden;
     background-color: rgba(0, 0, 0, 0.8);
@@ -46,7 +46,7 @@
     left: -10px;
   }
 
-  [data-toggle="tooltip"]:before {
+  [data-tooltip]:before {
     content: "";
     position: absolute;
     visibility: hidden;
@@ -57,8 +57,8 @@
     border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
   }
 
-  [data-toggle="tooltip"]:hover:before,
-  [data-toggle="tooltip"]:hover:after {
+  [data-tooltip]:hover:before,
+  [data-tooltip]:hover:after {
     visibility: visible;
   }
 }

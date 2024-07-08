@@ -19,8 +19,7 @@
 }
 
 .searchbox-list {
-  margin: 0;
-  padding: 0;
+  margin: 40px 0 0 0;
 }
 .relative-list {
   display: flex;
@@ -64,4 +63,3 @@
 .infoItem {
   overflow: inherit;
 }
-

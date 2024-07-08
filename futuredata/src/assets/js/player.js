@@ -24265,7 +24265,7 @@ var require_main = __commonJS({
                 COUNTDOWN.value--;
                 console.log(COUNTDOWN.value);
                 if (COUNTDOWN.value <= 0) {
-                  // playlistNext();
+                  playlistNext();
                   clearInterval(COUNTDOWN_TIMER.value);
                   modalInstance.hide();
                   COUNTDOWN.value = 5;

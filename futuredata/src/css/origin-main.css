@@ -47,12 +47,12 @@
 }
 
 .child .hpBtn li:nth-child(4) a {
-  background: url(https://futuredata.cwgv.com.tw/public/assets/img/hpBtn_child03.png);
+  background: url(../assets/img/hpBtn_child04.png);
   background-size: contain;
 }
 
 .child .hpBtn li:nth-child(4) a:hover {
-  background: url(https://futuredata.cwgv.com.tw/public/assets/img/hpBtn_child03_hover.png);
+  background: url(../assets/img/hpBtn_child04_hover.png);
   background-size: contain;
 }
 

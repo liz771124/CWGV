@@ -2,7 +2,7 @@ module.exports = {
   content: [
     "./src/**/*.{html,js}",
     "./node_modules/tw-elements/js/**/*.js",
-    "./src/**/*.{html,js}",
+    "./src/**/**/*.{html,js}",
   ],
   plugins: [],
   darkMode: "class",
@@ -71,6 +71,28 @@ module.exports = {
         "primary-800": "#00546F",
         "primary-900": "#233034",
 
+        // "primary-50": "#DEF3DD",
+        // "primary-100": "#91F596",
+        // "primary-200": "#52F29D",
+        // "primary-300": "#7DF252",
+        // "primary-400": "rgb(61 183 223)",
+        // "primary-500": "#90C31F",
+        // "primary-600": "#67C844",
+        // "primary-700": "#006D91",
+        // "primary-800": "#44842D",
+        // "primary-900": "#233034",
+
+        // "primary-50": "var(--Primary-50)",
+        // "primary-100": "var(--Primary-100)",
+        // "primary-200": "var(--Primary-200)",
+        // "primary-300": "var(--Primary-300)",
+        // "primary-400": "var(--Primary-400)",
+        // "primary-500": "var(--Primary-500)",
+        // "primary-600": "var(--Primary-600)",
+        // "primary-700": "var(--Primary-700)",
+        // "primary-800": "var(--Primary-800)",
+        // "primary-900": "var(--Primary-900)",
+
         // 'secondary-100': 'var(--Secondary-100)',
         // 'secondary-300': 'var(--Secondary-300)',
         // 'secondary-500': 'var(--Secondary-500)',
@@ -122,9 +144,9 @@ module.exports = {
         // 'event-300': 'var(--Event-300)',
         // 'event-500': 'var(--Event-500)'
       },
-      backgroundColor: (theme) => ({
-        ...theme("colors"),
-      }),
+      // backgroundColor: (theme) => ({
+      //   ...theme("colors"),
+      // }),
     },
   },
   plugins: [

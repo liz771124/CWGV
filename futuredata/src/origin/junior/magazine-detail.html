@@ -48,20 +48,18 @@
     />
 
     <!-- 新加的 style -->
-    <link rel="stylesheet" href="../assets/css/audio-player.css" />
-    <link rel="stylesheet" href="../css/junior-main.css" />
+    <link rel="stylesheet" href="../../assets/css/audio-player.css" />
+    <link rel="stylesheet" href="../../css/junior-main.css" />
   </head>
   <body class="bgStyle">
     <header class="sticky top-0 z-20 bg-primary-500 py-2 text-white">
-      <div
-        class="container flex items-center justify-between md:justify-between"
-      >
+      <div class="container flex justify-between">
         <div
           role="button"
           data-twe-offcanvas-toggle
           data-twe-target="#offcanvasMenu"
           aria-controls="offcanvasMenu"
-          class="flex gap-3 text-lg leading-7 text-white"
+          class="flex gap-3 p-3 text-lg leading-7 text-white"
         >
           <svg
             width="15"
@@ -90,22 +88,25 @@
               回上頁
             </button>
           </li>
-          <li class="flex items-center">
-            <a href="#" class="bolck" data-tooltip data-title="音檔">
-              <img
-                width="20"
-                class="object-contain"
-                src="../assets/images/icons/audio-blue.svg"
-                alt=""
-              />
-            </a>
+          <li class="flex items-center" data-tooltip data-title="音檔">
+            <img
+              width="20"
+              class="object-contain"
+              src="../../assets/images/icons/audio-blue.svg"
+              alt=""
+            />
           </li>
-          <li class="flex items-center">
-            <a href="#" class="bolck" data-tooltip data-title="影片">
+          <li
+            class="flex items-center"
+            class="bolck"
+            data-tooltip
+            data-title="影片"
+          >
+            <a href="#">
               <img
                 width="20"
                 class="object-contain"
-                src="../assets/images/icons/video-blue.svg"
+                src="../../assets/images/icons/video-blue.svg"
                 alt=""
               />
             </a>
@@ -117,34 +118,24 @@
             aria-controls="offcanvasNote"
             data-twe-ripple-init
             data-twe-ripple-color="light"
+            data-tooltip
+            data-title="筆記"
           >
-            <a
-              href="#"
-              class="bolck"
-              id="note-icon"
-              data-tooltip
-              data-title="筆記"
-            >
+            <a href="#" class="bolck" id="note-icon">
               <img
                 width="18"
                 class="object-contain"
-                src="../assets/images/icons/note-gray.svg"
+                src="../../assets/images/icons/note-gray.svg"
                 alt=""
               />
             </a>
           </li>
-          <li class="flex items-center">
-            <a
-              href="#"
-              class="bolck"
-              id="heart-icon"
-              data-tooltip
-              data-title="收藏"
-            >
+          <li class="flex items-center" data-tooltip data-title="收藏">
+            <a href="#" class="bolck" id="heart-icon">
               <img
                 width="20"
                 class="object-contain"
-                src="../assets/images/icons/heart-gray.svg"
+                src="../../assets/images/icons/heart-gray.svg"
                 alt=""
               />
             </a>
@@ -510,7 +501,7 @@
         </div>
       </div>
 
-      <!-- <button
+      <button
         type="button"
         class="bg-primary shadow-primary-3 hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 active:shadow-primary-2 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0 active:bg-primary-600 dark:shadow-black/30"
         data-twe-toggle="modal"
@@ -519,7 +510,7 @@
         data-twe-ripple-color="light"
       >
         Vertically centered scrollable modal
-      </button> -->
+      </button>
 
       <div
         data-twe-modal-init
@@ -535,17 +526,20 @@
           class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]"
         >
           <div
-            class="shadow-4 pointer-events-auto relative m-5 flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current outline-none"
+            class="relative m-5 flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current outline-none"
           >
             <div
               class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4"
             >
-              <h5
-                class="text-surface text-xl font-medium leading-normal"
-                id="tweModalLabel"
-              >
-                「{{ COUNTDOWN }}秒後為您播放下一篇章。」
-              </h5>
+              <div class="flex items-center gap-2">
+                <div
+                  class="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-primary-300 text-2xl font-bold leading-normal text-white shadow-lg"
+                  id="tweModalLabel"
+                >
+                  {{ COUNTDOWN }}
+                </div>
+                倒數完成後將為您播放下一篇章
+              </div>
               <button
                 type="button"
                 class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none"
@@ -766,8 +760,8 @@
     </footer>
 
     <!-- 新加的 js -->
-    <script src="../js/tw-elements.umd.min.js"></script>
-    <script type="module" crossorigin src="../assets/js/player.js"></script>
-    <script type="module" src="../js/magazine-detail.js"></script>
+    <script src="../../js/tw-elements.umd.min.js"></script>
+    <script type="module" crossorigin src="../../assets/js/player.js"></script>
+    <script type="module" src="../../js/magazine-detail.js"></script>
   </body>
 </html>

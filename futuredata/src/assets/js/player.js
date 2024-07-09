@@ -24050,7 +24050,14 @@ var require_main = __commonJS({
           CONTROL_SEEK.value =
             (audio.value.currentTime / audio.value.duration) * 100;
           if (!audio.value.paused) {
-            audio.value.pause();
+            let playPromise = audio.value.play();
+            if (playPromise !== undefined) {
+              playPromise
+                .then((_) => {
+                  audio.value.pause();
+                })
+                .catch((error) => {});
+            }
           }
           clearTimeout(clickTimer);
           clickTimer = setTimeout(() => {
@@ -24130,7 +24137,7 @@ var require_main = __commonJS({
           CONTROL_VOLUME.value = mapNumber(pX, 30, 70, 0, 100) / 100;
         };
         const togglePlay = () => {
-          console.log(audio.value.paused);
+          // console.log(audio.value.paused);
           if (audio.value.paused) {
             audio.value.play();
           } else {
@@ -24140,7 +24147,15 @@ var require_main = __commonJS({
         let pausedStatus = false;
         const processSliderDragStart = () => {
           pausedStatus = audio.value.paused;
-          audio.value.pause();
+
+          let playPromise = audio.value.play();
+          if (playPromise !== undefined) {
+            playPromise
+              .then((_) => {
+                audio.value.pause();
+              })
+              .catch((error) => {});
+          }
         };
         const processSliderDragging = () => {
           audio.value.currentTime =
@@ -24151,7 +24166,14 @@ var require_main = __commonJS({
             (CONTROL_SEEK.value / 100) * audio.value.duration;
           if (!pausedStatus) {
             setTimeout(() => {
-              audio.value.play();
+              let playPromise = audio.value.play();
+              if (playPromise !== undefined) {
+                playPromise
+                  .then((_) => {
+                    audio.value.play();
+                  })
+                  .catch((error) => {});
+              }
             }, 555);
           }
         };

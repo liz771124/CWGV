@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "j-tw": "npx tailwindcss -i ./src/css/junior-main.scss -o ./src/css/junior-main.css --minify --watch"
+    "j-tw": "npx tailwindcss -i ./src/assets/css/junior-main.scss -o ./src/assets/css/junior-main.css --minify --watch"
   },
   "keywords": [],
   "author": "",

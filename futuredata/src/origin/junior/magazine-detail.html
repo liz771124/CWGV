@@ -49,7 +49,7 @@
 
     <!-- 新加的 style -->
     <link rel="stylesheet" href="../../assets/css/audio-player.css" />
-    <link rel="stylesheet" href="../../css/junior-main.css" />
+    <link rel="stylesheet" href="../../assets/css/junior-main.css" />
   </head>
   <body class="bgStyle">
     <header class="sticky top-0 z-20 bg-primary-500 py-2 text-white">
@@ -92,7 +92,7 @@
             <img
               width="20"
               class="object-contain"
-              src="../../assets/images/icons/audio-blue.svg"
+              src="../../assets/img/icons/audio-blue.svg"
               alt=""
             />
           </li>
@@ -106,7 +106,7 @@
               <img
                 width="20"
                 class="object-contain"
-                src="../../assets/images/icons/video-blue.svg"
+                src="../../assets/img/icons/video-blue.svg"
                 alt=""
               />
             </a>
@@ -125,7 +125,7 @@
               <img
                 width="18"
                 class="object-contain"
-                src="../../assets/images/icons/note-gray.svg"
+                src="../../assets/img/icons/note-gray.svg"
                 alt=""
               />
             </a>
@@ -135,7 +135,7 @@
               <img
                 width="20"
                 class="object-contain"
-                src="../../assets/images/icons/heart-gray.svg"
+                src="../../assets/img/icons/heart-gray.svg"
                 alt=""
               />
             </a>
@@ -145,7 +145,7 @@
     </header>
 
     <div
-      class="dark:bg-body-dark invisible fixed bottom-0 left-0 top-0 z-[1045] flex w-96 max-w-full -translate-x-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out data-[twe-offcanvas-show]:transform-none dark:text-white"
+      class="invisible fixed bottom-0 left-0 top-0 z-[1045] flex w-96 max-w-full -translate-x-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out data-[twe-offcanvas-show]:transform-none"
       tabindex="-1"
       id="offcanvasMenu"
       aria-labelledby="offcanvasMenuLabel"
@@ -157,7 +157,7 @@
         </h5>
         <button
           type="button"
-          class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300"
+          class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none"
           data-twe-offcanvas-dismiss
           aria-label="Close"
         >
@@ -500,18 +500,6 @@
           </div>
         </div>
       </div>
-
-      <button
-        type="button"
-        class="bg-primary shadow-primary-3 hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 active:shadow-primary-2 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong inline-block rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0 active:bg-primary-600 dark:shadow-black/30"
-        data-twe-toggle="modal"
-        data-twe-target="#tweModal"
-        data-twe-ripple-init
-        data-twe-ripple-color="light"
-      >
-        Vertically centered scrollable modal
-      </button>
-
       <div
         data-twe-modal-init
         class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
@@ -759,9 +747,14 @@
       </div>
     </footer>
 
+    <div
+      class="absolute z-50 hidden h-screen w-screen"
+      id="note-backdrop"
+    ></div>
+
     <!-- 新加的 js -->
-    <script src="../../js/tw-elements.umd.min.js"></script>
+    <script src="../../assets/js/tw-elements.umd.min.js"></script>
     <script type="module" crossorigin src="../../assets/js/player.js"></script>
-    <script type="module" src="../../js/magazine-detail.js"></script>
+    <script type="module" src="../../assets/js/magazine-detail.js"></script>
   </body>
 </html>

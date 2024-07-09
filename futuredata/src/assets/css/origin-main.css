@@ -46,30 +46,62 @@
   margin: 0;
 }
 
-.child .hpBtn li:nth-child(2) a {
-  background: url(../assets/img/hpBtn_child02.png);
-  background-size: contain;
-}
-
-.child .hpBtn li:nth-child(2) a:hover {
-  background: url(../assets/img/hpBtn_child02_hover.png);
-  background-size: contain;
-}
-
-.child .hpBtn li:nth-child(4) a {
-  background: url(../assets/img/hpBtn_child04.png);
-  background-size: contain;
-}
-
-.child .hpBtn li:nth-child(4) a:hover {
-  background: url(../assets/img/hpBtn_child04_hover.png);
-  background-size: contain;
-}
-
 .musicList ol li {
   width: 100%;
 }
 
 .infoItem {
   overflow: inherit;
+}
+
+/* 兒童 */
+.child .hpBtn li:nth-child(2) a {
+  background: url(../img/hpBtn_child02.png);
+  background-size: contain;
+}
+
+.child .hpBtn li:nth-child(2) a:hover {
+  background: url(../img/hpBtn_child02_hover.png);
+  background-size: contain;
+}
+
+.child .hpBtn li:nth-child(4) a {
+  background: url(../img/hpBtn_child04.png);
+  background-size: contain;
+}
+
+.child .hpBtn li:nth-child(4) a:hover {
+  background: url(../img/hpBtn_child04_hover.png);
+  background-size: contain;
+}
+
+/* 少年 */
+.hpBtn li:nth-child(2) a {
+  background: url("../img/hpBtn_young02.png");
+  background-size: contain;
+}
+
+.hpBtn li:nth-child(2) a:hover {
+  background: url("../img/hpBtn_young02_hover.png");
+  background-size: contain;
+}
+
+.hpBtn li:nth-child(3) a {
+  background: url("../img/hpBtn_young03.png");
+  background-size: contain;
+}
+
+.hpBtn li:nth-child(3) a:hover {
+  background: url("../img/hpBtn_young03_hover.png");
+  background-size: contain;
+}
+
+.hpBtn li:nth-child(4) a {
+  background: url("../img/hpBtn_young04.png");
+  background-size: contain;
+}
+
+.hpBtn li:nth-child(4) a:hover {
+  background: url("../img/hpBtn_young04_hover.png");
+  background-size: contain;
 }

@@ -46,6 +46,16 @@
   margin: 0;
 }
 
+.child .hpBtn li:nth-child(2) a {
+  background: url(../assets/img/hpBtn_child02.png);
+  background-size: contain;
+}
+
+.child .hpBtn li:nth-child(2) a:hover {
+  background: url(../assets/img/hpBtn_child02_hover.png);
+  background-size: contain;
+}
+
 .child .hpBtn li:nth-child(4) a {
   background: url(../assets/img/hpBtn_child04.png);
   background-size: contain;

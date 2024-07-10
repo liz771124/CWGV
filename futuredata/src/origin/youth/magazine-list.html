@@ -1,0 +1,219 @@
+<html>
+  <!-- 共用 head -->
+  <div data-include="head"></div>
+
+  <body class="bgStyle mainmenu young">
+    <!-- 共用版頭 -->
+    <div data-include="youth-header"></div>
+
+    <div class="mainCtn">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li>
+            <a href="https://futuredata.cwgv.com.tw/youth" title="">未來少年</a>
+          </li>
+          <li class="active">各期主題</li>
+        </ol>
+        <div class="tabList">
+          <h5>所有雜誌</h5>
+          <div class="tabListUl">
+            <div class="tabListLi">
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/magazinelist/index/2024"
+                title=""
+              >
+                2024
+              </a>
+            </div>
+            <div class="tabListLi">
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/magazinelist/index/2023"
+                title=""
+              >
+                2023
+              </a>
+            </div>
+            <div class="tabListLi">
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/magazinelist/index/2022"
+                title=""
+              >
+                2022
+              </a>
+            </div>
+            <div class="tabListLi">
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/magazinelist/index/2021"
+                title=""
+              >
+                2021
+              </a>
+            </div>
+            <div class="tabListLi">
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/magazinelist/index/2020"
+                title=""
+              >
+                2020
+              </a>
+            </div>
+            <div class="tabListLi">
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/magazinelist/index/2019"
+                title=""
+              >
+                2019
+              </a>
+            </div>
+            <div class="tabListLi">
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/magazinelist/index/2018"
+                title=""
+              >
+                2018
+              </a>
+            </div>
+            <div class="tabListLi">
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/magazinelist/index/2017"
+                title=""
+              >
+                2017
+              </a>
+            </div>
+            <div class="tabListLi">
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/magazinelist/index/2016"
+                title=""
+              >
+                2016
+              </a>
+            </div>
+            <div class="tabListLi">
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/magazinelist/index/2015"
+                title=""
+              >
+                2015
+              </a>
+            </div>
+            <div class="tabListLi">
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/magazinelist/index/2014"
+                title=""
+              >
+                2014
+              </a>
+            </div>
+            <div class="tabListLi">
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/magazinelist/index/2013"
+                title=""
+              >
+                2013
+              </a>
+            </div>
+            <div class="tabListLi">
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/magazinelist/index/2012"
+                title=""
+              >
+                2012
+              </a>
+            </div>
+            <div class="tabListLi">
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/magazinelist/index/2011"
+                title=""
+              >
+                2011
+              </a>
+            </div>
+          </div>
+        </div>
+        <ul class="magazineList">
+          <li>
+            <a
+              href="https://futuredata.cwgv.com.tw/youth/emag/index/MY11307"
+              title=""
+            >
+              <div class="imgBox">
+                <img
+                  src="https://imgs.cwgv.com.tw/books/MY1/MY11307/cover/MY11307.png"
+                  alt=""
+                />
+              </div>
+              <h2>2024年7月號</h2>
+            </a>
+            <div class="relative-list">
+              <div>
+                <a data-tooltip data-title="音檔" href="#">
+                  <img src="../../assets/img/icons/audio-green.svg" alt="" />
+                </a>
+              </div>
+              <div>
+                <a data-tooltip data-title="影片" href="#">
+                  <img src="../../assets/img/icons/video-green.svg" alt="" />
+                </a>
+              </div>
+              <div>
+                <a data-tooltip data-title="測驗" href="#">
+                  <img src="../../assets/img/icons/test-green.svg" alt="" />
+                </a>
+              </div>
+              <div>
+                <a href="#" data-tooltip data-title="學習單" id="note-icon">
+                  <img src="../../assets/img/icons/lesson-green.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="rightNow">
+          <a
+            href="https://futureparenting.cwgv.com.tw/future"
+            target="_blank"
+            title="立即訂閱"
+          >
+            <div class="info">
+              <img
+                src="https://imgs.cwgv.com.tw/books/MY1/MY11307/cover/MY11307.png"
+                alt="逛逛書店"
+              />
+            </div>
+            <div class="rightBtn">立即訂閱</div>
+          </a>
+          <div class="smallBtn">
+            立即<br />
+            訂閱
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 共用版尾 -->
+    <div data-include="footer"></div>
+
+    <!-- 這段是拿來生成版頭尾用 不需要在渲然時使用請忽略 -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let pages = document.querySelectorAll("[data-include]");
+        pages.forEach(function (element) {
+          let file =
+            "../components/" + element.getAttribute("data-include") + ".html";
+          fetch(file)
+            .then(function (response) {
+              if (response.ok) {
+                return response.text();
+              } else {
+                throw new Error("Network response was not ok");
+              }
+            })
+            .then(function (data) {
+              element.innerHTML = data;
+            })
+            .catch(function (error) {});
+        });
+      });
+    </script>
+  </body>
+</html>

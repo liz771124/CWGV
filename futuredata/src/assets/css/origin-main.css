@@ -11,11 +11,17 @@
   margin: auto;
 }
 
+.infoItem .infoData {
+  width: auto;
+}
+
 .musicList ol li a {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  max-width: 150px;
+  margin-left: auto;
 }
 
 .searchbox-list {
@@ -104,4 +110,20 @@
 .hpBtn li:nth-child(4) a:hover {
   background: url("../img/hpBtn_young04_hover.png");
   background-size: contain;
+}
+
+.young ul li a:hover,
+.young .linkBox ul li.active a {
+  color: #90c31f;
+}
+.young .musicList ol li a {
+  border-color: #90c31f;
+}
+
+.musicList ol li a:hover {
+  background: rgb(245 255 202);
+}
+
+.young .linkBox ul li.active a:before {
+  background: #b2c31f4f;
 }

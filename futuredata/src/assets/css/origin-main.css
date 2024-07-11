@@ -34,11 +34,6 @@
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 767px) {
-  .relative-list {
-    gap: 10px;
-  }
-}
 
 .relative-list-col {
   flex-direction: column;
@@ -126,4 +121,15 @@
 
 .young .linkBox ul li.active a:before {
   background: #b2c31f4f;
+}
+
+@media (max-width: 767px) {
+  .infoItem .infoData {
+    float: unset;
+  }
+
+  .relative-list {
+    gap: 10px;
+    justify-content: end;
+  }
 }

@@ -21,7 +21,7 @@
   justify-content: center;
   gap: 1rem;
   max-width: 150px;
-  margin-left: auto;
+  margin: auto;
 }
 
 .searchbox-list {
@@ -120,7 +120,7 @@
   border-color: #90c31f;
 }
 
-.musicList ol li a:hover {
+.young .musicList ol li a:hover {
   background: rgb(245 255 202);
 }
 

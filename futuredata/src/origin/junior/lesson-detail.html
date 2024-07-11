@@ -17,13 +17,7 @@
       <div class="container">
         <div class="mt-20 flex gap-8">
           <div class="w-1/3">
-            <div
-              style="
-                --swiper-navigation-color: #fff;
-                --swiper-pagination-color: #fff;
-              "
-              class="swiper mySwiper2 h-[450px]"
-            >
+            <div class="swiper mySwiper2 h-[450px]">
               <div class="swiper-wrapper">
                 <div class="swiper-slide bg-white">
                   <img
@@ -144,10 +138,38 @@
               <p>檔案頁數：10頁</p>
               <p>內容素材：簡報、學習單</p>
             </div>
+            <div class="w-full text-end">
+              <button
+                type="button"
+                class="ms-auto mt-8 flex rounded bg-primary-500 px-20 pb-2 pt-2.5 font-medium leading-normal text-white transition duration-150 ease-in-out hover:bg-primary-500 focus:bg-primary-600 focus:outline-none focus:ring-0 active:bg-primary-700"
+                data-twe-modal-dismiss
+                data-twe-ripple-init
+                data-twe-ripple-color="light"
+              >
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.25589 16C3.8899 15.0291 3 13.4422 3 11.6493C3 9.20008 4.8 6.9375 7.5 6.5C8.34694 4.48637 10.3514 3 12.6893 3C15.684 3 18.1317 5.32251 18.3 8.25C19.8893 8.94488 21 10.6503 21 12.4969C21 14.0582 20.206 15.4339 19 16.2417M12 21V11M12 21L9 18M12 21L15 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                檔案下載
+              </button>
+            </div>
           </div>
         </div>
         <div class="py-8">
-          <h3 class="font-display mb-2 text-2xl font-semibold">內容介紹</h3>
+          <h3 class="font-display my-8 text-center text-2xl font-semibold">
+            內容介紹
+          </h3>
           <div class="article-content">
             <p>
               教學演示即將到來！相信很多新手教師們想到要寫「教案」就很頭痛吧！其實教案就像是一篇食譜，不僅好看又要能讓人照著做，畢竟教案不是寫給自己看，是寫給其他人看的呀！我想無論是師培生、實習老師、還是老師們，寫好一份精彩、又好閱讀的教案不僅是我們的專業（挺胸）、也是我們的工作啊（留下辛酸淚），今天就讓小五跟大家分享五個教案撰寫小技巧吧！
@@ -217,14 +239,14 @@
         </div>
 
         <section class="py-6 sm:py-12">
-          <div class="container mx-auto space-y-8 p-6">
+          <div class="container">
             <div class="space-y-2 text-center">
               <h2 class="text-3xl font-bold">相關教案</h2>
             </div>
             <div
-              class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4"
+              class="grid grid-cols-1 gap-x-4 gap-y-8 rounded md:grid-cols-2"
             >
-              <article class="flex flex-col dark:bg-gray-50">
+              <article class="flex gap-5 bg-white">
                 <a
                   rel="noopener noreferrer"
                   href="#"

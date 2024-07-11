@@ -24,6 +24,11 @@
   --youth-primary-700: #006d91;
   --youth-primary-800: #44842d;
   --youth-primary-900: #233034;
+
+  --swiper-navigation-size: 30px;
+  --swiper-navigation-size: var(--junior-primary-500);
+  --swiper-navigation-color: var(--junior-primary-500);
+  --swiper-pagination-color: var(--junior-primary-500);
 }
 
 html {
@@ -41,6 +46,8 @@ html {
     @apply text-lg;
   }
 
+  line-height: 1.85;
+
   h1,
   h2,
   h3,
@@ -51,7 +58,7 @@ html {
     margin-bottom: 1rem;
   }
   p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   img,
   video {

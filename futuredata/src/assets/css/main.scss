@@ -2,19 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --junior-primary-50: rgb(230 245 255);
+  --junior-primary-100: #cee3f1;
+  --junior-primary-200: rgb(73 202 245);
+  --junior-primary-300: #68c4e3;
+  --junior-primary-400: rgb(61 183 223);
+  --junior-primary-500: #00a7de;
+  --junior-primary-600: #24acd9;
+  --junior-primary-700: #006d91;
+  --junior-primary-800: #00546f;
+  --junior-primary-900: #233034;
+
+  --youth-primary-50: #def3dd;
+  --youth-primary-100: #91f596;
+  --youth-primary-200: #52f29d;
+  --youth-primary-300: #7df252;
+  --youth-primary-400: rgb(61 183 223);
+  --youth-primary-500: #90c31f;
+  --youth-primary-600: #67c844;
+  --youth-primary-700: #006d91;
+  --youth-primary-800: #44842d;
+  --youth-primary-900: #233034;
+}
+
+html {
+  font-size: inherit;
+}
+
 .article-content {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
+    font-weight: bold;
     margin-bottom: 1rem;
   }
   p {
     margin-bottom: 1rem;
   }
-  img {
+  img,
+  video {
     margin: auto;
   }
   iframe {

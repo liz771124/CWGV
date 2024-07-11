@@ -793,6 +793,10 @@ section {
   }
 } */
 
+:root {
+  --primary-500: var(--junior-primary-500);
+}
+
 #PodcastPlayerApp audio {
   pointer-events: none;
   visibility: hidden;
@@ -982,12 +986,12 @@ section {
   grid-row: 2;
   grid-column: 2;
   font-size: 14px;
-  color: #ea5514;
+  color: var(--primary-500);
 }
 
 .item--episode .played {
   font-size: 14px;
-  color: #ea5514;
+  color: var(--primary-500);
 }
 
 .item--episode.is-lock {
@@ -999,7 +1003,7 @@ section {
 }
 
 .item--episode:hover {
-  border: 1px solid #ea5514;
+  border: 1px solid var(--primary-500);
 }
 
 .player--drawer {
@@ -1205,7 +1209,7 @@ section {
 .player--speed ul li:hover {
   color: #343434;
   background: #d8d8d8;
-  border: 1px solid #ea5514;
+  border: 1px solid var(--junior-primary-50);
 }
 
 .player--speed ul li.is-active {
@@ -1264,7 +1268,7 @@ section {
   align-items: center;
   padding: 8px;
   width: 100%;
-  background: #ea5514;
+  background: var(--primary-500);
 }
 
 .button--sm > .label {
@@ -1360,7 +1364,7 @@ section {
 }
 
 .card--alert .hd {
-  background: #ea5514;
+  background: var(--primary-500);
 }
 
 .card--alert .hd .icon {
@@ -1876,7 +1880,7 @@ section {
 
 .vue-slider-process,
 .vue-slider-dot-handle {
-  background: #ea5514;
+  background: var(--primary-500);
   box-shadow: none;
 }
 

@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>未來少年知識庫</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+
+    <!-- bootstrap 一定要隱藏 不然畫面會大跑版 -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />-->
+
+    <!-- 以下也都可以不用 -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://futuredata.cwgv.com.tw/public/assets/css/icomoon/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://futuredata.cwgv.com.tw/public/assets/css/icheck-bootstrap.min.css"
+    /> -->
+
+    <!-- 以下兩支為原先的網站的 css 要載入舊的選單版頭尾 需要使用 -->
+    <link
+      rel="stylesheet"
+      href="https://futuredata.cwgv.com.tw/public/assets/css/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://futuredata.cwgv.com.tw/public/assets/css/style_rs.css"
+    />
+
+    <!-- 新加的 style -->
+    <link rel="stylesheet" href="../../assets/css/audio-player.css" />
+    <link rel="stylesheet" href="../../assets/css/youth-main.css" />
+  </head>
+  <body class="bgStyle">
+    <header class="sticky top-0 z-20 bg-primary-500 py-2 text-white">
+      <div class="container flex justify-between">
+        <div
+          role="button"
+          data-twe-offcanvas-toggle
+          data-twe-target="#offcanvasMenu"
+          aria-controls="offcanvasMenu"
+          class="flex gap-3 p-3 text-lg leading-7 text-white"
+        >
+          <svg
+            width="15"
+            viewBox="0 0 122.36 122.88"
+            style="enable-background: new 0 0 122.36 122.88"
+            fill="currentColor"
+          >
+            <g>
+              <path
+                class="st0"
+                d="M5.85,0h20.09c3.22,0,5.85,2.63,5.85,5.85v20.09c0,3.22-2.63,5.85-5.85,5.85H5.85C2.63,31.8,0,29.16,0,25.94 V5.85C0,2.63,2.63,0,5.85,0L5.85,0z M96.42,91.08h20.09c3.22,0,5.86,2.63,5.86,5.86v20.09c0,3.22-2.63,5.86-5.86,5.86H96.42 c-3.22,0-5.86-2.63-5.86-5.86V96.94C90.56,93.72,93.2,91.08,96.42,91.08L96.42,91.08z M51.14,91.08h20.09 c3.22,0,5.86,2.63,5.86,5.86v20.09c0,3.22-2.63,5.86-5.86,5.86H51.14c-3.22,0-5.85-2.63-5.85-5.86V96.94 C45.28,93.72,47.92,91.08,51.14,91.08L51.14,91.08z M5.85,91.08h20.09c3.22,0,5.85,2.63,5.85,5.86v20.09 c0,3.22-2.63,5.86-5.85,5.86H5.85c-3.22,0-5.85-2.63-5.85-5.86V96.94C0,93.72,2.63,91.08,5.85,91.08L5.85,91.08z M96.42,45.54 h20.09c3.22,0,5.86,2.63,5.86,5.86v20.09c0,3.22-2.63,5.86-5.86,5.86H96.42c-3.22,0-5.86-2.63-5.86-5.86V51.4 C90.56,48.18,93.2,45.54,96.42,45.54L96.42,45.54z M51.14,45.54h20.09c3.22,0,5.86,2.63,5.86,5.86v20.09 c0,3.22-2.63,5.86-5.86,5.86H51.14c-3.22,0-5.85-2.63-5.85-5.86V51.4C45.28,48.18,47.92,45.54,51.14,45.54L51.14,45.54z M5.85,45.54h20.09c3.22,0,5.85,2.63,5.85,5.86v20.09c0,3.22-2.63,5.86-5.85,5.86H5.85C2.63,77.34,0,74.7,0,71.48V51.4 C0,48.18,2.63,45.54,5.85,45.54L5.85,45.54z M96.42,0h20.09c3.22,0,5.86,2.63,5.86,5.85v20.09c0,3.22-2.63,5.85-5.86,5.85H96.42 c-3.22,0-5.86-2.63-5.86-5.85V5.85C90.56,2.63,93.2,0,96.42,0L96.42,0z M51.14,0h20.09c3.22,0,5.86,2.63,5.86,5.85v20.09 c0,3.22-2.63,5.85-5.86,5.85H51.14c-3.22,0-5.85-2.63-5.85-5.85V5.85C45.28,2.63,47.92,0,51.14,0L51.14,0z"
+              />
+            </g>
+          </svg>
+          <span class="hidden md:block">
+            2024年07月號 | <span class="font-bold">聽骨頭說故事</span>
+          </span>
+        </div>
+        <ul
+          class="flex items-center gap-5 rounded-full bg-white py-1 pe-5 ps-3"
+        >
+          <li class="flex items-center">
+            <button
+              class="flex items-center gap-2 rounded-full bg-gray-100 px-5 py-2 text-xs text-primary-600"
+            >
+              回上頁
+            </button>
+          </li>
+          <li class="flex items-center" data-tooltip data-title="音檔">
+            <img
+              width="20"
+              class="object-contain"
+              src="../../assets/img/icons/audio-green.svg"
+              alt=""
+            />
+          </li>
+          <li
+            class="flex items-center"
+            class="bolck"
+            data-tooltip
+            data-title="影片"
+          >
+            <a href="#">
+              <img
+                width="20"
+                class="object-contain"
+                src="../../assets/img/icons/video-green.svg"
+                alt=""
+              />
+            </a>
+          </li>
+          <li
+            class="flex items-center"
+            data-twe-offcanvas-toggle
+            data-twe-target="#offcanvasNote"
+            aria-controls="offcanvasNote"
+            data-twe-ripple-init
+            data-twe-ripple-color="light"
+            data-tooltip
+            data-title="筆記"
+          >
+            <a href="#" class="bolck" id="note-icon">
+              <img
+                width="18"
+                class="object-contain"
+                src="../../assets/img/icons/note-gray.svg"
+                alt=""
+              />
+            </a>
+          </li>
+          <li class="flex items-center" data-tooltip data-title="收藏">
+            <a href="#" class="bolck" id="heart-icon">
+              <img
+                width="20"
+                class="object-contain"
+                src="../../assets/img/icons/heart-gray.svg"
+                alt=""
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <div
+      class="invisible fixed bottom-0 left-0 top-0 z-[1045] flex w-96 max-w-full -translate-x-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out data-[twe-offcanvas-show]:transform-none"
+      tabindex="-1"
+      id="offcanvasMenu"
+      aria-labelledby="offcanvasMenuLabel"
+      data-twe-offcanvas-init
+    >
+      <div class="flex items-center justify-between bg-gray-100 p-4">
+        <h5 class="mb-0 font-semibold leading-normal" id="offcanvasMenuLabel">
+          2024年07月號 | 聽骨頭說故事選單
+        </h5>
+        <button
+          type="button"
+          class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none"
+          data-twe-offcanvas-dismiss
+          aria-label="Close"
+        >
+          <span class="[&>svg]:h-6 [&>svg]:w-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="flex-grow overflow-y-auto px-4">
+        <ul class="flex flex-col">
+          <li class="border-b py-3"><a href="#">雜誌選單一</a></li>
+          <li class="border-b py-3"><a href="#">雜誌選單二</a></li>
+          <li class="border-b py-3"><a href="#">雜誌選單三</a></li>
+          <li class="border-b py-3"><a href="#">雜誌選單四</a></li>
+          <li class="border-b py-3"><a href="#">雜誌選單五</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="invisible fixed bottom-0 right-0 top-0 z-[1045] flex w-96 max-w-full translate-x-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-lg outline-none transition duration-300 ease-in-out data-[twe-offcanvas-show]:transform-none"
+      tabindex="-1"
+      id="offcanvasNote"
+      data-twe-scroll="true"
+      data-twe-offcanvas-init
+    >
+      <div class="flex items-center justify-between bg-gray-100 p-4">
+        <h5 class="mb-0 font-semibold leading-normal" id="offcanvasNoteLabel">
+          我的筆記
+        </h5>
+        <!-- <button
+          type="button"
+          class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none"
+          data-twe-offcanvas-dismiss
+          aria-label="Close"
+        >
+          <span class="[&>svg]:h-6 [&>svg]:w-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </span>
+        </button> -->
+      </div>
+      <div class="offcanvas-body flex-grow overflow-y-auto p-4">
+        <div class="relative h-full" data-twe-input-wrapper-init>
+          <textarea
+            class="peer-focus:text-primary peer block h-full min-h-[auto] w-full rounded border-0 bg-slate-50 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
+            placeholder="請輸入筆記"
+          ></textarea>
+        </div>
+      </div>
+      <div
+        class="flex flex-shrink-0 flex-wrap items-center justify-stretch gap-3 rounded-b-md border-t-2 border-neutral-100 p-4"
+      >
+        <button
+          type="button"
+          class="hover:bg-gary-600 inline-block rounded bg-gray-400 px-6 pb-2 pt-2.5 font-medium leading-normal text-white transition duration-150 ease-in-out focus:bg-primary-600 focus:outline-none focus:ring-0 active:bg-primary-800"
+          data-twe-offcanvas-dismiss
+          data-twe-ripple-init
+          data-twe-ripple-color="light"
+          id="unsaveNote"
+        >
+          取消編輯
+        </button>
+        <button
+          type="button"
+          class="grow rounded bg-primary-500 px-6 pb-2 pt-2.5 font-medium leading-normal text-white transition duration-150 ease-in-out hover:bg-primary-500 focus:bg-primary-600 focus:outline-none focus:ring-0 active:bg-primary-700"
+          data-twe-offcanvas-dismiss
+        >
+          儲存筆記
+        </button>
+      </div>
+    </div>
+
+    <div class="container mx-auto h-[calc(100svh-285px)] py-5 md:min-h-[80svh]">
+      <iframe
+        id="magIframe"
+        class="relative"
+        src="https://efuturedata.cwgv.com.tw/MY11307/index.html"
+        width="100%"
+        height="100%"
+        frameborder="0"
+        scrolling="no"
+        style="margin: 0"
+        allowfullscreen="allowfullscreen"
+      ></iframe>
+    </div>
+
+    <div id="PodcastPlayerApp">
+      <audio ref="audio" controls="controls">
+        <source type="audio/mpeg" />
+      </audio>
+      <div class="player--drawer" v-if="audio">
+        <div class="container relative">
+          <div class="player--controller">
+            <ul>
+              <li>
+                <a
+                  class="item--control"
+                  alt="跳前10秒"
+                  @click="playlistPrevTenSec()"
+                >
+                  <div class="icon">
+                    <div class="icon__prev__10sec"></div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="item--control"
+                  alt="跳上一章節"
+                  @click="playlistPrev()"
+                >
+                  <div class="icon">
+                    <div class="icon__prev"></div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item--control" alt="播放/暫停" @click="togglePlay()">
+                  <div class="icon">
+                    <div class="icon__play" v-if="!CONTROL_PLAYING"></div>
+                    <div class="icon__pause" v-if="CONTROL_PLAYING"></div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="item--control"
+                  alt="跳下一章節"
+                  @click="playlistNext()"
+                >
+                  <div class="icon">
+                    <div class="icon__next"></div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="item--control"
+                  alt="跳下10秒"
+                  @click="playlistNextTenSec()"
+                >
+                  <div class="icon">
+                    <div class="icon__next__10sec"></div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="player--screen">
+            <div class="title" v-if="CONTROL_EPISODE">
+              <h3 class="line-clamp-1 w-full font-bold text-white">
+                {{ CONTROL_EPISODE.title }}
+              </h3>
+            </div>
+            <div class="process--slider" v-if="CONTROL_SEEK">
+              <div class="label">{{ STATUS_SEEK }}</div>
+              <vue-slider
+                ref="processbar"
+                @drag-start="processSliderDragStart"
+                @dragging="processSliderDragging"
+                @drag-end="processSliderDragEnd"
+                @click="processSliderClick"
+                v-model="CONTROL_SEEK"
+                :height="8"
+                :dotSize="32"
+                :duration="CONTROL_USER_DURATION"
+                :dragOnClick="true"
+                :tooltip="'none'"
+              ></vue-slider>
+              <div class="label">{{ STATUS_DURATION }}</div>
+            </div>
+            <div class="process--slider" v-if="!CONTROL_SEEK">
+              <div class="label">00:00</div>
+              <vue-slider
+                :height="8"
+                :dotSize="32"
+                :tooltip="'none'"
+              ></vue-slider>
+              <div class="label">00:00</div>
+            </div>
+          </div>
+          <div class="player--controller">
+            <ul>
+              <li v-if="isTablet || isDesktop">
+                <div
+                  class="item--control"
+                  alt="音量調整"
+                  @mouseup="changeVolume()"
+                  ref="buttonVolume"
+                >
+                  <div class="icon">
+                    <div class="icon__volume">
+                      <span :class="{'is-active': CONTROL_VOLUME > .1}"></span>
+                      <span :class="{'is-active': CONTROL_VOLUME > .3}"></span>
+                      <span :class="{'is-active': CONTROL_VOLUME > .5}"></span>
+                      <span :class="{'is-active': CONTROL_VOLUME > .75}"></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a
+                  class="item--control"
+                  ref="buttonSpeed"
+                  alt="播放速度調整"
+                  @click="(CONTROL_SPEED_OPEN)?CONTROL_SPEED_OPEN=false:CONTROL_SPEED_OPEN=true"
+                >
+                  <div class="icon">
+                    <div class="icon__more"></div>
+                  </div>
+                </a>
+                <div class="player--speed" v-if="CONTROL_SPEED_OPEN">
+                  <ul>
+                    <li :class="{'is-active': CONTROL_SPEED==.5}">
+                      <a @click="(CONTROL_SPEED = .5)">0.5x</a>
+                    </li>
+                    <li :class="{'is-active': CONTROL_SPEED==1}">
+                      <a @click="(CONTROL_SPEED = 1)">1x</a>
+                    </li>
+                    <li :class="{'is-active': CONTROL_SPEED==1.25}">
+                      <a @click="(CONTROL_SPEED = 1.25)">1.25x</a>
+                    </li>
+                    <li :class="{'is-active': CONTROL_SPEED==1.5}">
+                      <a @click="(CONTROL_SPEED = 1.5)">1.5x</a>
+                    </li>
+                    <li :class="{'is-active': CONTROL_SPEED==2}">
+                      <a @click="(CONTROL_SPEED = 2)">2x</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <div class="flex flex-col">
+              <div
+                :class="['absolute rounded-t-lg bottom-[120px] md:bottom-[65px] end-0 backdrop-blur-sm bg-black/80 shadow-xl w-screen md:max-w-[400px] h-[40svh] lg:h-[300px] transform duration-100 overflow-hidden',  AUDIO_LIST ?  'translate-y-0 opacity-100' : 'translate-y-[10%] opacity-0 hidden' ]"
+              >
+                <div
+                  class="relative flex items-center justify-between border-b border-[#535353] px-5 py-3 text-white"
+                >
+                  <span class="font-semibold">播放清單</span>
+                  <div class="cursor-pointer" @click="AUDIO_LIST=!AUDIO_LIST">
+                    <svg
+                      width="15"
+                      height="15"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 14 14"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="h-[calc(100%-50px)] grow overflow-auto">
+                  <div
+                    class="bodrer-[#f2f2f2]-b flex cursor-pointer px-2 py-3 hover:shadow-md"
+                    v-for="(chapter, index) in meta.data"
+                    :key="chapter.id"
+                  >
+                    <!-- <img
+                      class="h-10 w-10 rounded-lg object-cover"
+                      alt="User avatar"
+                      src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=200"
+                    /> -->
+
+                    <div
+                      class="flex w-full items-center gap-3 px-2"
+                      @click="playAudio(chapter.id, chapter.chapterUrl)"
+                    >
+                      <div
+                        class="h-5 w-2 shrink-0 rounded-full bg-primary-400"
+                      ></div>
+                      <span :class="`pt-1 font-semibold line-clamp-2`">
+                        {{ chapter.title }}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                role="button"
+                class="item--control text-white/80"
+                @click="AUDIO_LIST=!AUDIO_LIST"
+              >
+                <svg
+                  fill="currentColor"
+                  height="17"
+                  width="17"
+                  viewBox="0 0 458.18 458.18"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <g>
+                      <path
+                        d="M487.2,69.7c0,12.9-10.5,23.4-23.4,23.4h-322c-12.9,0-23.4-10.5-23.4-23.4s10.5-23.4,23.4-23.4h322.1
+                      C476.8,46.4,487.2,56.8,487.2,69.7z M463.9,162.3H141.8c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1
+                      c12.9,0,23.4-10.5,23.4-23.4C487.2,172.8,476.8,162.3,463.9,162.3z M463.9,278.3H141.8c-12.9,0-23.4,10.5-23.4,23.4
+                      s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,288.8,476.8,278.3,463.9,278.3z M463.9,394.3H141.8
+                      c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,404.8,476.8,394.3,463.9,394.3z
+                        M38.9,30.8C17.4,30.8,0,48.2,0,69.7s17.4,39,38.9,39s38.9-17.5,38.9-39S60.4,30.8,38.9,30.8z M38.9,146.8
+                      C17.4,146.8,0,164.2,0,185.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,146.8,38.9,146.8z M38.9,262.8
+                      C17.4,262.8,0,280.2,0,301.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,262.8,38.9,262.8z M38.9,378.7
+                      C17.4,378.7,0,396.1,0,417.6s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9C77.8,396.2,60.4,378.7,38.9,378.7z"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        data-twe-modal-init
+        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+        id="tweModal"
+        tabindex="-1"
+        aria-labelledby="tweModalLabel"
+        aria-modal="true"
+        role="dialog"
+      >
+        <div
+          data-twe-modal-dialog-ref
+          class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]"
+        >
+          <div
+            class="relative m-5 flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current outline-none"
+          >
+            <div
+              class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4"
+            >
+              <div class="flex items-center gap-2">
+                <div
+                  class="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-primary-300 text-2xl font-bold leading-normal text-white shadow-lg"
+                  id="tweModalLabel"
+                >
+                  {{ COUNTDOWN }}
+                </div>
+                倒數完成後將為您播放下一篇章
+              </div>
+              <button
+                type="button"
+                class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none"
+                data-twe-modal-dismiss
+                aria-label="Close"
+              >
+                <span class="[&>svg]:h-6 [&>svg]:w-6">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+
+            <div class="relative p-4">
+              <p>想繼續閱讀雜誌嗎?</p>
+            </div>
+
+            <div
+              class="flex flex-shrink-0 flex-wrap items-center justify-stretch gap-3 rounded-b-md border-t-2 border-neutral-100 p-4"
+            >
+              <button
+                type="button"
+                class="inline-block grow rounded bg-primary-500 px-6 pb-2 pt-2.5 font-medium leading-normal text-white transition duration-150 ease-in-out hover:bg-primary-500 focus:bg-primary-600 focus:outline-none focus:ring-0 active:bg-primary-700"
+                data-twe-modal-dismiss
+                data-twe-ripple-init
+                data-twe-ripple-color="light"
+                @click="playlistNext()"
+              >
+                繼續播放
+              </button>
+              <button
+                type="button"
+                class="hover:bg-gary-600 inline-block grow rounded bg-gray-400 px-6 pb-2 pt-2.5 font-medium leading-normal text-white transition duration-150 ease-in-out focus:bg-primary-600 focus:outline-none focus:ring-0 active:bg-primary-800"
+                data-twe-modal-dismiss
+                data-twe-ripple-init
+                data-twe-ripple-color="light"
+                @click="() => pauseAudio()"
+              >
+                停在本頁
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footerDownBox">
+        <div class="container">
+          <h2>
+            <a
+              href="https://www.cwgv.com.tw/"
+              title="遠見‧天下文化事業群"
+              target="_blank"
+              >遠見‧天下文化事業群</a
+            >
+          </h2>
+          <ul class="footerDown">
+            <li>
+              <a href="https://www.gvm.com.tw/" title="遠見雜誌" target="_blank"
+                >遠見雜誌</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://bookzone.cwgv.com.tw/"
+                title="天下文化"
+                target="_blank"
+                >天下文化</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://futureparenting.cwgv.com.tw/"
+                title="未來親子學習平台"
+                target="_blank"
+                >未來親子學習平台</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://futureparenting.cwgv.com.tw/kids"
+                title="小天下 / 未來出版"
+                target="_blank"
+                >小天下 / 未來出版</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://futureparenting.cwgv.com.tw/junior"
+                title="未來兒童"
+                target="_blank"
+                >未來兒童
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://futureparenting.cwgv.com.tw/youth"
+                title="未來少年"
+                target="_blank"
+                >未來少年</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://futureparenting.cwgv.com.tw/family"
+                title="未來Family"
+                target="_blank"
+                >未來Family</a
+              >
+            </li>
+            <li>
+              <a
+                href="http://gvsrc.cwgv.com.tw/"
+                title="遠見研究調查"
+                target="_blank"
+                >遠見研究調查</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.hbrtaiwan.com/"
+                title="哈佛商業評論"
+                target="_blank"
+                >哈佛商業評論</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/cafebookzone/"
+                title="人文空間"
+                target="_blank"
+                >人文空間</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.cwgv.com.tw/zh/foundation.html"
+                title="遠見‧天下文化教育基金會"
+                target="_blank"
+                >遠見‧天下文化教育基金會</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://50plus.cwgv.com.tw/"
+                title="50+好好"
+                target="_blank"
+                >50+好好</a
+              >
+            </li>
+            <li>
+              <a href="https://www.wonder.mobi/" title="1號課堂" target="_blank"
+                >1號課堂</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/copyright/index/A"
+                title="著作權聲明"
+                target="_blank"
+                >著作權聲明</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/copyright/index/B"
+                title="隱私權政策"
+                target="_blank"
+                >隱私權政策</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/copyright/index/C"
+                title="個資保護聲明"
+                target="_blank"
+                >個資保護聲明</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://futuredata.cwgv.com.tw/youth/qa"
+                title="QA"
+                target="_blank"
+                >QA</a
+              >
+            </li>
+          </ul>
+
+          <ul class="footerList">
+            <li>
+              聯絡方式：<a href="tel:0226620012" title="">02-2662-0012</a>‧<a
+                href="mailto:gkids@cwgv.com.tw"
+                title=""
+                >gkids@cwgv.com.tw</a
+              >
+            </li>
+            <li>服務時間：週一至週五 9:00~12:30:13:30~17:00</li>
+            <li>
+              Copyright © 未來親子學習平台﹒All rights
+              reserved.版權所有，禁止擅自轉貼節錄
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="absolute z-50 hidden h-screen w-screen"
+      id="note-backdrop"
+    ></div>
+
+    <!-- 新加的 js -->
+    <script src="../../assets/js/tw-elements.umd.min.js"></script>
+    <script type="module" crossorigin src="../../assets/js/player.js"></script>
+    <script type="module" src="../../assets/js/magazine-detail.js"></script>
+  </body>
+</html>

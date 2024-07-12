@@ -123,11 +123,16 @@
   background: #b2c31f4f;
 }
 
-@media (max-width: 767px) {
-  .infoItem .infoData {
-    float: unset;
-  }
+.infoItem {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
+.infoItem .infoData {
+  float: unset;
+}
+@media (max-width: 767px) {
   .relative-list {
     gap: 10px;
     justify-content: end;

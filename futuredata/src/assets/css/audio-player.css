@@ -794,7 +794,7 @@ section {
 } */
 
 :root {
-  --primary-500: var(--junior-primary-500);
+  --primary-500: #EA5514;
 }
 
 #PodcastPlayerApp audio {

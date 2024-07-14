@@ -25,7 +25,7 @@
   --youth-primary-800: #44842d;
   --youth-primary-900: #233034;
 
-  --swiper-navigation-size: 25px !important;
+  --swiper-navigation-size: 20px !important;
   --swiper-navigation-color: #fff !important;
   --swiper-pagination-color: var(--junior-primary-500) !important;
 }
@@ -113,10 +113,6 @@ html {
 .swiper-button-next,
 .swiper-button-prev {
   background: rgba(0, 0, 0, 0.5);
-  width: 40px;
-  height: 40px;
-  display: center;
-  place-items: center;
   color: #fff;
   padding: 20px;
   border-radius: 50%;

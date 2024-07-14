@@ -254,26 +254,6 @@
     <div data-include="footer"></div>
 
     <!-- 這段是拿來生成版頭尾用 不需要在渲然時使用請忽略 -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        let pages = document.querySelectorAll("[data-include]");
-        pages.forEach(function (element) {
-          let file =
-            "../components/" + element.getAttribute("data-include") + ".html";
-          fetch(file)
-            .then(function (response) {
-              if (response.ok) {
-                return response.text();
-              } else {
-                throw new Error("Network response was not ok");
-              }
-            })
-            .then(function (data) {
-              element.innerHTML = data;
-            })
-            .catch(function (error) {});
-        });
-      });
-    </script>
+    <script src="../../assets/js/include-html.js"></script>
   </body>
 </html>

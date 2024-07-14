@@ -1,4 +1,25 @@
 {
-  "plugins": ["prettier-plugin-tailwindcss"],
-  "tailwindConfig": "./tailwind.config.js"
+  "plugins": [
+    "prettier-plugin-tailwindcss"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "src/origin/junior/*.css",
+        "src/origin/junior/*.js"
+      ],
+      "options": {
+        "tailwindConfig": "./tailwind.config.junior.js"
+      }
+    },
+    {
+      "files": [
+        "src/origin/youth/*.css",
+        "src/origin/youth/*.js"
+      ],
+      "options": {
+        "tailwindConfig": "./tailwind.config.youth.js"
+      }
+    }
+  ]
 }

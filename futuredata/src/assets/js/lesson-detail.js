@@ -1,7 +1,7 @@
 const lessonThumbSwiper = new Swiper(".lessonThumbSwiper", {
   loop: true,
   spaceBetween: 10,
-  slidesPerView: 5.5,
+  slidesPerView: 5.3,
   freeMode: true,
   watchSlidesProgress: true,
 });

@@ -1,9 +1,9 @@
 const lessonThumbSwiper = new Swiper(".lessonThumbSwiper", {
   loop: true,
   spaceBetween: 10,
-  slidesPerView: 5.3,
-  freeMode: true,
-  watchSlidesProgress: true,
+  slidesPerView: 4,
+  // freeMode: true,
+  // watchSlidesProgress: true,
 });
 const lessonMainSwiper = new Swiper(".lessonMainSwiper", {
   loop: true,

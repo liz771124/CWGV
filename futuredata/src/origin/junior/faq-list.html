@@ -15,423 +15,338 @@
           <li class="active">小測驗</li>
         </ol>
         <div
-          class="container flex items-center justify-center md:justify-between"
+          class="mb-5 flex w-full flex-wrap items-center gap-3 md:flex-nowrap"
         >
-          <div class="hidden text-lg leading-7 md:block">
-            2024年07月號 | <span class="font-bold">學習測驗</span>
-          </div>
-          <ul class="py-2 pe-5 ps-3">
-            <!-- <li>
+          <h2 class="font-display text-center text-2xl font-semibold">
+            2024/07 學習測驗
+          </h2>
+          <div class="h-[1px] grow bg-gray-700"></div>
+          <!-- <div class="flex gap-5">
+            <div class="flex items-center text-xl text-black">
+              我的成績
+              <span
+                class="text-primary-100 mx-2 font-serif text-3xl font-bold italic text-red-500"
+                >100</span
+              >
+              分
+            </div>
             <button
-              class="text-primary-600 flex items-center gap-2 rounded-full bg-gray-100 px-5 py-2 text-xs"
+              class="bg-primary-500 flex items-center gap-2 rounded-full px-5 py-2 text-white"
             >
-              回上頁
+              再測一次
             </button>
-          </li> -->
-            <li>
-              <div class="flex items-center text-lg font-light text-black">
-                我的成績
-                <span class="font-bold">100</span>
-                分
-              </div>
-            </li>
-            <li>
-              <button
-                class="bg-primary-500 flex items-center gap-2 rounded-full px-5 py-2 text-xs text-white"
-              >
-                再測一次
-              </button>
-            </li>
-          </ul>
+          </div> -->
         </div>
-        <h3 class="= my-6 flex items-center gap-2">
-          <div class="bg-primary-400 h-5 w-2 rounded-full"></div>
-          <span class="text-xl font-bold">是非題</span>
-          <span class="font-light">下列敘述正確選「是」,不正確選「否」</span>
-        </h3>
-        <div class="flex flex-col gap-5">
-          <div class="relative rounded-lg border bg-white p-8 shadow">
-            <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
-              <span
-                class="text-primary-100 font-serif text-3xl font-bold italic"
-                >Q1</span
-              >
-              人體骨頭裡最長和最強大的是大腿骨，它和小腿骨負責支撐起身體的重量
-            </h3>
-            <div class="mt-2 flex gap-3">
-              <button
-                type="button"
-                data-question="1"
-                data-option="1"
-                class="faq-item mt-2 flex rounded border border-gray-400 text-gray-500"
-              >
-                <div class="px-5 py-1">是</div>
-                <!-- <svg
-                    width="18"
-                    height="18"
-                    class="me-4 ms-auto text-primary-500"
-                    viewBox="0 0 36 36"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M18 36C20.3638 36 22.7044 35.5344 24.8883 34.6298C27.0722 33.7253 29.0565 32.3994 30.7279 30.7279C32.3994 29.0565 33.7253 27.0722 34.6298 24.8883C35.5344 22.7044 36 20.3638 36 18C36 15.6362 35.5344 13.2956 34.6298 11.1117C33.7253 8.92784 32.3994 6.94353 30.7279 5.27208C29.0565 3.60062 27.0722 2.27475 24.8883 1.37017C22.7044 0.465584 20.3638 -3.52233e-08 18 0C13.2261 7.11366e-08 8.64773 1.89642 5.27208 5.27208C1.89642 8.64773 0 13.2261 0 18C0 22.7739 1.89642 27.3523 5.27208 30.7279C8.64773 34.1036 13.2261 36 18 36ZM17.536 25.28L27.536 13.28L24.464 10.72L15.864 21.038L11.414 16.586L8.586 19.414L14.586 25.414L16.134 26.962L17.536 25.28Z"
-                      fill="currentColor"
-                    />
-                  </svg> -->
-              </button>
-              <button
-                type="button"
-                data-question="1"
-                data-option="2"
-                class="faq-item mt-2 flex rounded border border-gray-400 text-gray-500"
-              >
-                <div class="px-5 py-1">否</div>
-              </button>
-            </div>
-          </div>
-          <div class="relative rounded-lg border bg-white p-8 shadow">
-            <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
-              <span
-                class="text-primary-100 font-serif text-3xl font-bold italic"
-                >Q2</span
-              >
-              骨頭在青春期結束之後就結束生長，沒有再生能力，所以要好好維護骨頭健康。
-            </h3>
-            <div class="mt-2 flex gap-3">
-              <button
-                type="button"
-                data-question="2"
-                data-option="1"
-                class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
-              >
-                <div class="px-5 py-1">是</div>
-              </button>
-              <button
-                type="button"
-                data-question="2"
-                data-option="2"
-                class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
-              >
-                <div class="px-5 py-1">否</div>
-              </button>
-            </div>
-          </div>
-          <div class="relative rounded-lg border bg-white p-8 shadow">
-            <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
-              <span
-                class="text-primary-100 font-serif text-3xl font-bold italic"
-                >Q3</span
-              >
-              血液在骨髓製造，由此可知，骨頭和血管相通，血管會把營養素帶給骨頭組織，讓骨頭長得堅固
-              健康。
-            </h3>
-            <div class="mt-2 flex gap-3">
-              <button
-                type="button"
-                data-question="3"
-                data-option="1"
-                class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
-              >
-                <div class="px-5 py-1">是</div>
-              </button>
-              <button
-                type="button"
-                data-question="3"
-                data-option="2"
-                class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
-              >
-                <div class="px-5 py-1">否</div>
-              </button>
-            </div>
-          </div>
-          <div class="relative rounded-lg border bg-white p-8 shadow">
-            <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
-              <span
-                class="text-primary-100 font-serif text-3xl font-bold italic"
-                >Q4</span
-              >
-              嬰兒時期和幼童時期的骨頭數量比較多，成年之後就固定為 206 根。
-            </h3>
-            <div class="mt-2 flex gap-3">
-              <button
-                type="button"
-                data-question="4"
-                data-option="1"
-                class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
-              >
-                <div class="px-5 py-1">是</div>
-              </button>
-              <button
-                type="button"
-                data-question="4"
-                data-option="2"
-                class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
-              >
-                <div class="px-5 py-1">否</div>
-              </button>
-            </div>
-          </div>
-          <div class="relative rounded-lg border bg-white p-8 shadow">
-            <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
-              <span
-                class="text-primary-100 font-serif text-3xl font-bold italic"
-                >Q5</span
-              >
-              啄木鳥啄木的次數，一天超過一萬次，但是不會頭暈，是因為嘴和頭骨之間，有舌頭和軟骨連接，可以緩衝撞擊力量。
-            </h3>
-            <div class="mt-2 flex gap-3">
-              <button
-                type="button"
-                data-question="5"
-                data-option="1"
-                class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
-              >
-                <div class="px-5 py-1">是</div>
-              </button>
-              <button
-                type="button"
-                data-question="5"
-                data-option="2"
-                class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
-              >
-                <div class="px-5 py-1">否</div>
-              </button>
-            </div>
-          </div>
-        </div>
-        <h3 class="= my-6 flex items-center gap-2">
-          <div class="bg-primary-400 h-5 w-2 rounded-full"></div>
-          <span class="text-xl font-bold">選擇題</span>
-          <span class="font-light">選出最正確的選項</span>
-        </h3>
-        <div class="flex flex-col gap-5">
-          <div class="relative rounded-lg border bg-white p-8 shadow">
-            <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
-              <span
-                class="text-primary-100 font-serif text-3xl font-bold italic"
-                >Q1</span
-              >
-              龍的生肖代表的是哪一個時辰？
-            </h3>
-            <div class="mt-2 flex flex-col">
-              <button
-                type="button"
-                data-question="6"
-                data-option="1"
-                class="faq-item mt-2 flex self-start rounded border border-gray-500 text-gray-500"
-              >
-                <div class="px-5 py-1">卯時 5-7 點</div>
-              </button>
-              <button
-                type="button"
-                data-question="6"
-                data-option="2"
-                class="faq-item mt-2 flex self-start rounded border border-gray-500 text-gray-500"
-              >
-                <div class="px-5 py-1">辰時 7-9 點</div>
-              </button>
-            </div>
-          </div>
-          <div class="relative rounded-lg border bg-white p-8 shadow">
-            <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
-              <span
-                class="text-primary-100 font-serif text-3xl font-bold italic"
-                >Q2</span
-              >
-              龍喜歡水，很早以前，龍的圖案有鱗片，這和哪一個傳說有關?
-            </h3>
-            <div class="mt-2 flex flex-col">
-              <button
-                type="button"
-                data-question="7"
-                data-option="1"
-                class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
-              >
-                <div class="px-5 py-1">魚躍龍門</div>
-              </button>
-              <button
-                type="button"
-                data-question="7"
-                data-option="2"
-                class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
-              >
-                <div class="px-5 py-1">畫蛇添足</div>
-              </button>
-            </div>
-          </div>
-          <div class="relative rounded-lg border bg-white p-8 shadow">
-            <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
-              <span
-                class="text-primary-100 font-serif text-3xl font-bold italic"
-                >Q3</span
-              >
-              「大水沖倒龍王廟」，這是一句歇後語，表示什麼意思呢?
-            </h3>
-            <div class="mt-2 flex flex-col">
-              <button
-                type="button"
-                data-question="8"
-                data-option="1"
-                class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
-              >
-                <div class="px-5 py-1">自家人不認自家人</div>
-              </button>
-              <button
-                type="button"
-                data-question="8"
-                data-option="2"
-                class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
-              >
-                <div class="px-5 py-1">有其父必有其子</div>
-              </button>
-            </div>
-          </div>
-          <div class="relative rounded-lg border bg-white p-8 shadow">
-            <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
-              <span
-                class="text-primary-100 font-serif text-3xl font-bold italic"
-                >Q4</span
-              >
-              人們把龍神化，民間十分崇拜龍，哪一個朝代開始將龍變成帝王的象徵?
-            </h3>
-            <div class="mt-2 flex flex-col">
-              <button
-                type="button"
-                data-question="9"
-                data-option="1"
-                class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
-              >
-                <div class="px-5 py-1">唐朝</div>
-              </button>
-              <button
-                type="button"
-                data-question="9"
-                data-option="2"
-                class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
-              >
-                <div class="px-5 py-1">漢朝</div>
-              </button>
-            </div>
-          </div>
-          <div class="relative rounded-lg border bg-white p-8 shadow">
-            <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
-              <span
-                class="text-primary-100 font-serif text-3xl font-bold italic"
-                >Q5</span
-              >
-              天空中的閃電細細長長又有分支，就像帶爪的龍，傳說閃電是龍的化身，因而衍伸出哪一個語詞?
-            </h3>
-            <div class="mt-2 flex flex-col">
-              <button
-                type="button"
-                data-question="10"
-                data-option="1"
-                class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
-              >
-                <div class="px-5 py-1">飛龍在天</div>
-              </button>
-              <button
-                type="button"
-                data-question="10"
-                data-option="2"
-                class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
-              >
-                <div class="px-5 py-1">蛟龍入海</div>
-              </button>
-            </div>
-          </div>
-        </div>
-        <h3 class="= my-6 flex items-center gap-2">
-          <div class="bg-primary-400 h-5 w-2 rounded-full"></div>
-          <span class="text-xl font-bold">修正範例</span>
-          <span class="font-light">以下是題型修正範例</span>
-        </h3>
-        <div class="flex flex-col gap-5">
-          <div class="relative rounded-lg border bg-white p-8 shadow">
-            <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
-              <span
-                class="text-primary-100 font-serif text-3xl font-bold italic"
-                >Q1</span
-              >
-              龍的生肖代表的是哪一個時辰？
-            </h3>
-            <div class="mt-2 flex flex-col">
-              <div
-                class="border-primary-400 bg-primary-50 text-primary-500 mt-2 flex self-start rounded border line-through"
-              >
-                <div class="px-5 py-1">使用者如果選錯答案會被劃掉</div>
-              </div>
-              <div
-                class="mt-2 flex self-start rounded border border-red-500 bg-red-50 text-red-500"
-              >
-                <div class="px-5 py-1">我才是正確答案</div>
-              </div>
-              <div
-                class="mt-2 flex self-start rounded border border-gray-300 bg-gray-100 text-gray-300 line-through"
-              >
-                <div class="px-5 py-1">我是你沒選的錯誤答案</div>
+
+        <div class="w-full">
+          <h3 class="my-6 flex flex-wrap items-center gap-2 md:flex-nowrap">
+            <div class="bg-primary-400 h-5 w-2 rounded-full"></div>
+            <span class="text-xl font-bold">是非題</span>
+            <span class="font-light">下列敘述正確選「是」,不正確選「否」</span>
+          </h3>
+          <div class="flex flex-col gap-5">
+            <div class="relative rounded-lg border bg-white p-8 shadow">
+              <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+                <span
+                  class="text-primary-100 font-serif text-3xl font-bold italic"
+                  >Q1</span
+                >
+                人體骨頭裡最長和最強大的是大腿骨，它和小腿骨負責支撐起身體的重量
+              </h3>
+              <div class="mt-2 flex gap-3">
+                <button
+                  type="button"
+                  data-question="1"
+                  data-option="1"
+                  class="faq-item mt-2 flex rounded border border-gray-400 text-gray-500"
+                >
+                  <div class="px-5 py-1">是</div>
+                  <!-- <svg
+                      width="18"
+                      height="18"
+                      class="me-4 ms-auto text-primary-500"
+                      viewBox="0 0 36 36"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M18 36C20.3638 36 22.7044 35.5344 24.8883 34.6298C27.0722 33.7253 29.0565 32.3994 30.7279 30.7279C32.3994 29.0565 33.7253 27.0722 34.6298 24.8883C35.5344 22.7044 36 20.3638 36 18C36 15.6362 35.5344 13.2956 34.6298 11.1117C33.7253 8.92784 32.3994 6.94353 30.7279 5.27208C29.0565 3.60062 27.0722 2.27475 24.8883 1.37017C22.7044 0.465584 20.3638 -3.52233e-08 18 0C13.2261 7.11366e-08 8.64773 1.89642 5.27208 5.27208C1.89642 8.64773 0 13.2261 0 18C0 22.7739 1.89642 27.3523 5.27208 30.7279C8.64773 34.1036 13.2261 36 18 36ZM17.536 25.28L27.536 13.28L24.464 10.72L15.864 21.038L11.414 16.586L8.586 19.414L14.586 25.414L16.134 26.962L17.536 25.28Z"
+                        fill="currentColor"
+                      />
+                    </svg> -->
+                </button>
+                <button
+                  type="button"
+                  data-question="1"
+                  data-option="2"
+                  class="faq-item mt-2 flex rounded border border-gray-400 text-gray-500"
+                >
+                  <div class="px-5 py-1">否</div>
+                </button>
               </div>
             </div>
-            <div class="absolute bottom-5 end-5 opacity-80">
-              <img
-                width="60"
-                height="60"
-                src="../../assets/img/icon__wrong.png"
-                alt=""
-              />
+            <div class="relative rounded-lg border bg-white p-8 shadow">
+              <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+                <span
+                  class="text-primary-100 font-serif text-3xl font-bold italic"
+                  >Q2</span
+                >
+                骨頭在青春期結束之後就結束生長，沒有再生能力，所以要好好維護骨頭健康。
+              </h3>
+              <div class="mt-2 flex gap-3">
+                <button
+                  type="button"
+                  data-question="2"
+                  data-option="1"
+                  class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
+                >
+                  <div class="px-5 py-1">是</div>
+                </button>
+                <button
+                  type="button"
+                  data-question="2"
+                  data-option="2"
+                  class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
+                >
+                  <div class="px-5 py-1">否</div>
+                </button>
+              </div>
+            </div>
+            <div class="relative rounded-lg border bg-white p-8 shadow">
+              <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+                <span
+                  class="text-primary-100 font-serif text-3xl font-bold italic"
+                  >Q3</span
+                >
+                血液在骨髓製造，由此可知，骨頭和血管相通，血管會把營養素帶給骨頭組織，讓骨頭長得堅固
+                健康。
+              </h3>
+              <div class="mt-2 flex gap-3">
+                <button
+                  type="button"
+                  data-question="3"
+                  data-option="1"
+                  class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
+                >
+                  <div class="px-5 py-1">是</div>
+                </button>
+                <button
+                  type="button"
+                  data-question="3"
+                  data-option="2"
+                  class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
+                >
+                  <div class="px-5 py-1">否</div>
+                </button>
+              </div>
+            </div>
+            <div class="relative rounded-lg border bg-white p-8 shadow">
+              <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+                <span
+                  class="text-primary-100 font-serif text-3xl font-bold italic"
+                  >Q4</span
+                >
+                嬰兒時期和幼童時期的骨頭數量比較多，成年之後就固定為 206 根。
+              </h3>
+              <div class="mt-2 flex gap-3">
+                <button
+                  type="button"
+                  data-question="4"
+                  data-option="1"
+                  class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
+                >
+                  <div class="px-5 py-1">是</div>
+                </button>
+                <button
+                  type="button"
+                  data-question="4"
+                  data-option="2"
+                  class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
+                >
+                  <div class="px-5 py-1">否</div>
+                </button>
+              </div>
+            </div>
+            <div class="relative rounded-lg border bg-white p-8 shadow">
+              <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+                <span
+                  class="text-primary-100 font-serif text-3xl font-bold italic"
+                  >Q5</span
+                >
+                啄木鳥啄木的次數，一天超過一萬次，但是不會頭暈，是因為嘴和頭骨之間，有舌頭和軟骨連接，可以緩衝撞擊力量。
+              </h3>
+              <div class="mt-2 flex gap-3">
+                <button
+                  type="button"
+                  data-question="5"
+                  data-option="1"
+                  class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
+                >
+                  <div class="px-5 py-1">是</div>
+                </button>
+                <button
+                  type="button"
+                  data-question="5"
+                  data-option="2"
+                  class="faq-item mt-2 flex rounded border border-gray-500 text-gray-500"
+                >
+                  <div class="px-5 py-1">否</div>
+                </button>
+              </div>
             </div>
           </div>
-          <div class="relative rounded-lg border bg-white p-8 shadow">
-            <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
-              <span
-                class="text-primary-100 font-serif text-3xl font-bold italic"
-                >Q1</span
-              >
-              龍的生肖代表的是哪一個時辰？
-            </h3>
-            <div class="mt-2 flex flex-col">
-              <div
-                class="mt-2 flex self-start rounded border border-gray-300 bg-gray-100 text-gray-300 line-through"
-              >
-                <div class="px-5 py-1">其他都是錯的</div>
-              </div>
-              <div
-                class="mt-2 flex self-start rounded border border-gray-300 bg-gray-100 text-gray-300 line-through"
-              >
-                <div class="px-5 py-1">我是你沒選的錯誤答案</div>
-              </div>
-              <div
-                class="border-primary-500 bg-primary-50 text-primary-500 mt-2 flex self-start rounded border"
-              >
-                <div class="px-5 py-1">我選對囉</div>
+          <h3 class="my-6 flex flex-wrap items-center gap-2 md:flex-nowrap">
+            <div class="bg-primary-400 h-5 w-2 rounded-full"></div>
+            <span class="text-xl font-bold">選擇題</span>
+            <span class="font-light">選出最正確的選項</span>
+          </h3>
+          <div class="flex flex-col gap-5">
+            <div class="relative rounded-lg border bg-white p-8 shadow">
+              <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+                <span
+                  class="text-primary-100 font-serif text-3xl font-bold italic"
+                  >Q1</span
+                >
+                龍的生肖代表的是哪一個時辰？
+              </h3>
+              <div class="mt-2 flex flex-col">
+                <button
+                  type="button"
+                  data-question="6"
+                  data-option="1"
+                  class="faq-item mt-2 flex self-start rounded border border-gray-500 text-gray-500"
+                >
+                  <div class="px-5 py-1">卯時 5-7 點</div>
+                </button>
+                <button
+                  type="button"
+                  data-question="6"
+                  data-option="2"
+                  class="faq-item mt-2 flex self-start rounded border border-gray-500 text-gray-500"
+                >
+                  <div class="px-5 py-1">辰時 7-9 點</div>
+                </button>
               </div>
             </div>
-            <div class="absolute bottom-5 end-5 opacity-80">
-              <img
-                width="60"
-                height="60"
-                src="../../assets/img/icon__correct.png"
-                alt=""
-              />
+            <div class="relative rounded-lg border bg-white p-8 shadow">
+              <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+                <span
+                  class="text-primary-100 font-serif text-3xl font-bold italic"
+                  >Q2</span
+                >
+                龍喜歡水，很早以前，龍的圖案有鱗片，這和哪一個傳說有關?
+              </h3>
+              <div class="mt-2 flex flex-col">
+                <button
+                  type="button"
+                  data-question="7"
+                  data-option="1"
+                  class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
+                >
+                  <div class="px-5 py-1">魚躍龍門</div>
+                </button>
+                <button
+                  type="button"
+                  data-question="7"
+                  data-option="2"
+                  class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
+                >
+                  <div class="px-5 py-1">畫蛇添足</div>
+                </button>
+              </div>
+            </div>
+            <div class="relative rounded-lg border bg-white p-8 shadow">
+              <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+                <span
+                  class="text-primary-100 font-serif text-3xl font-bold italic"
+                  >Q3</span
+                >
+                「大水沖倒龍王廟」，這是一句歇後語，表示什麼意思呢?
+              </h3>
+              <div class="mt-2 flex flex-col">
+                <button
+                  type="button"
+                  data-question="8"
+                  data-option="1"
+                  class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
+                >
+                  <div class="px-5 py-1">自家人不認自家人</div>
+                </button>
+                <button
+                  type="button"
+                  data-question="8"
+                  data-option="2"
+                  class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
+                >
+                  <div class="px-5 py-1">有其父必有其子</div>
+                </button>
+              </div>
+            </div>
+            <div class="relative rounded-lg border bg-white p-8 shadow">
+              <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+                <span
+                  class="text-primary-100 font-serif text-3xl font-bold italic"
+                  >Q4</span
+                >
+                人們把龍神化，民間十分崇拜龍，哪一個朝代開始將龍變成帝王的象徵?
+              </h3>
+              <div class="mt-2 flex flex-col">
+                <button
+                  type="button"
+                  data-question="9"
+                  data-option="1"
+                  class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
+                >
+                  <div class="px-5 py-1">唐朝</div>
+                </button>
+                <button
+                  type="button"
+                  data-question="9"
+                  data-option="2"
+                  class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
+                >
+                  <div class="px-5 py-1">漢朝</div>
+                </button>
+              </div>
+            </div>
+            <div class="relative rounded-lg border bg-white p-8 shadow">
+              <h3 class="relative font-bold text-gray-700 hover:text-gray-600">
+                <span
+                  class="text-primary-100 font-serif text-3xl font-bold italic"
+                  >Q5</span
+                >
+                天空中的閃電細細長長又有分支，就像帶爪的龍，傳說閃電是龍的化身，因而衍伸出哪一個語詞?
+              </h3>
+              <div class="mt-2 flex flex-col">
+                <button
+                  type="button"
+                  data-question="10"
+                  data-option="1"
+                  class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
+                >
+                  <div class="px-5 py-1">飛龍在天</div>
+                </button>
+                <button
+                  type="button"
+                  data-question="10"
+                  data-option="2"
+                  class="faq-item mt-2 flex items-center self-start rounded border border-gray-500 text-gray-500"
+                >
+                  <div class="px-5 py-1">蛟龍入海</div>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="my-8 text-center">
-          <button
-            type="button"
-            class="bg-primary-500 rounded-full px-5 py-1 text-white"
-          >
-            送出測驗
-          </button>
-          <button
-            type="button"
-            class="bg-primary-500 rounded-full px-5 py-1 text-white"
-          >
-            再測一次
-          </button>
+          <div class="mt-10">
+            <button
+              type="button"
+              class="bg-primary-500 hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 w-ful mx-auto flex items-center justify-center gap-3 rounded-full px-10 py-3 font-bold text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0 md:max-w-[350px]"
+            >
+              送出測驗
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -445,6 +360,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.js"></script>
     <script src="https://futuredata.cwgv.com.tw/public/assets/plugins/jquery.showmore.min.js"></script>
     <script src="https://futuredata.cwgv.com.tw/public/assets/js/script.js"></script>
+
+    <!-- 新加的 js -->
+    <script src="../../assets/js/tw-elements.umd.min.js"></script>
+    <script src="../../assets/js/faq-list.js"></script>
 
     <!-- 這段是拿來生成版頭尾用 不需要在渲然時使用請忽略 -->
     <script src="../../assets/js/include-html.js"></script>

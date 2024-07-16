@@ -71,7 +71,8 @@
                     <img
                       class="h-full w-full object-contain"
                       src="https://swiperjs.com/demos/images/nature-7.jpg"
-                    />
+                    />mx-auto flex aspect-square h-full w-full shrink-0
+                    overflow-hidden rounded bg-gray-50 md:h-[150px] md:w-[150px]
                   </div>
                   <div class="swiper-slide">
                     <img
@@ -229,11 +230,10 @@
 
         <div class="article-content py-3">
           <p>
-            編輯器可以<strong>粗體</strong><span style="color: red">變色</span
+            編輯器要可以<strong>粗體</strong><span style="color: red">變色</span
             ><span style="font-size: 25px">放大</span>
             <span style="font-size: 10px">縮小</span>
           </p>
-          <p>有沒有需要放前言區域？如果有要再補充設計</p>
           <p><a href="#">我是連結區域</a></p>
           <p>
             本教案由林心茹老師（基隆市仁愛國民小學）、王立衍老師（基隆市仁愛國民小學）共同編寫。
@@ -242,6 +242,20 @@
           <p>
             教學演示即將到來！相信很多新手教師們想到要寫「教案」就很頭痛吧！其實教案就像是一篇食譜，不僅好看又要能讓人照著做，畢竟教案不是寫給自己看，是寫給其他人看的呀！我想無論是師培生、實習老師、還是老師們，寫好一份精彩、又好閱讀的教案不僅是我們的專業（挺胸）、也是我們的工作啊（留下辛酸淚），今天就讓小五跟大家分享五個教案撰寫小技巧吧！
           </p>
+          <h1>標題</h1>
+          <h2>標題</h2>
+          <h3>標題</h3>
+          <h4>標題</h4>
+          <h5>標題</h5>
+          <h6>標題</h6>
+          <ul>
+            <li>圓點列點一列點一列點一列點一列點一列點一</li>
+            <li>圓點列點二列點二列點二列點二列點二列點二</li>
+          </ul>
+          <ol>
+            <li>數字列點一列點一列點一列點一列點一列點一</li>
+            <li>數字列點二列點二列點二列點二列點二列點二</li>
+          </ol>
           <p>
             <img
               src="https://greenfuture-ea.greenpeace.org/media/c8a4dae1-2b8b-4a05-aee3-754963cbcf78.jpeg"
@@ -316,14 +330,18 @@
 
         <div class="grid grid-cols-1 gap-5 rounded py-6 md:grid-cols-2">
           <div
-            class="flex items-start justify-between gap-3 rounded border border-gray-700 p-5 md:p-6"
+            class="flex flex-col items-start justify-between gap-3 rounded border border-gray-700 p-5 md:flex-row md:p-6"
           >
-            <a class="flex items-start" rel="noopener noreferrer" href="#">
+            <a
+              class="mx-auto flex items-start"
+              rel="noopener noreferrer"
+              href="#"
+            >
               <div
-                class="mx-auto flex h-[100px] w-[100px] shrink-0 overflow-hidden rounded bg-gray-50 md:h-[150px] md:w-[150px]"
+                class="flex max-w-full shrink-0 overflow-hidden rounded bg-gray-50 md:h-[150px] md:w-[150px]"
               >
                 <img
-                  class="h-full w-full object-contain"
+                  class="aspect-[1/1] h-full w-full object-contain"
                   src="https://www.tec.ntust.edu.tw/var/file/40/1040/pictures/318/m/mczh-tw1920x700_large5730_515051693040.png"
                 />
               </div>
@@ -337,33 +355,6 @@
                   <div class="pe-1">作者</div>
                   <div class="ps-1">楊仁華 老師</div>
                 </div>
-                <!-- <div class="flex flex-wrap gap-2">
-                  <a
-                    href="#"
-                    class="hover:bg-primary-500 rounded-full bg-gray-50 px-3 py-1 text-sm hover:text-white"
-                    >#課文</a
-                  >
-                  <a
-                    href="#"
-                    class="hover:bg-primary-500 rounded-full bg-gray-50 px-3 py-1 text-sm hover:text-white"
-                    >#科學知識</a
-                  >
-                  <a
-                    href="#"
-                    class="hover:bg-primary-500 rounded-full bg-gray-50 px-3 py-1 text-sm hover:text-white"
-                    >#名字很長名字很長</a
-                  >
-                  <a
-                    href="#"
-                    class="hover:bg-primary-500 rounded-full bg-gray-50 px-3 py-1 text-sm hover:text-white"
-                    >#標籤很多</a
-                  >
-                  <a
-                    href="#"
-                    class="hover:bg-primary-500 rounded-full bg-gray-50 px-3 py-1 text-sm hover:text-white"
-                    >#不要太多最多五個</a
-                  >
-                </div> -->
               </div>
             </div>
           </div>
@@ -376,10 +367,10 @@
               href="#"
             >
               <div
-                class="mx-auto flex aspect-square h-full w-full shrink-0 overflow-hidden rounded bg-gray-50 md:h-[150px] md:w-[150px]"
+                class="flex max-w-full shrink-0 overflow-hidden rounded bg-gray-50 md:h-[150px] md:w-[150px]"
               >
                 <img
-                  class="h-full w-full object-contain"
+                  class="aspect-[1/1] h-full w-full object-contain"
                   src="https://assets-au-01.kc-usercontent.com/e095818a-c2b1-025d-b9b3-a502057ea75e/e84744b0-795a-4301-84e4-98dbab320f36/guidebanner.jpg"
                 />
               </div>

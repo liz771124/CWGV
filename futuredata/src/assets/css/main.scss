@@ -45,6 +45,15 @@ html {
   h3 {
     @apply text-lg;
   }
+  h4 {
+    font-size: 16px;
+  }
+  h5 {
+    font-size: 14px;
+  }
+  h6 {
+    font-size: 12px;
+  }
 
   h1,
   h2,
@@ -56,12 +65,14 @@ html {
     margin-bottom: 1rem;
   }
 
-  img,
-  video {
-    margin: auto;
+  img {
+    margin: 20px auto;
   }
+
+  video,
   iframe {
     @apply h-auto w-full max-w-full;
+    margin: auto;
     aspect-ratio: 16 / 9;
     max-width: 768px;
     margin: 20px auto;
@@ -76,11 +87,13 @@ html {
       @apply mb-3 list-inside list-disc;
     }
   }
+
   ol {
     li {
       @apply mb-3 list-inside list-decimal;
     }
   }
+
   a {
     @apply text-primary-500 underline;
   }

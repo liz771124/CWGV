@@ -55,18 +55,34 @@ html {
     font-weight: bold;
     margin-bottom: 1rem;
   }
-  p {
-    margin-bottom: 1.5rem;
-  }
+
   img,
   video {
     margin: auto;
   }
   iframe {
-    width: 100%;
-    max-width: 768px;
+    @apply h-auto w-full max-w-full;
     aspect-ratio: 16 / 9;
+    max-width: 768px;
     margin: 20px auto;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  ul {
+    li {
+      @apply mb-3 list-inside list-disc;
+    }
+  }
+  ol {
+    li {
+      @apply mb-3 list-inside list-decimal;
+    }
+  }
+  a {
+    @apply text-primary-500 underline;
   }
 }
 

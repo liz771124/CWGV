@@ -1,8 +1,7 @@
 module.exports = {
   content: [
-    "./src/**/*.{html,js}",
     "./node_modules/tw-elements/js/**/*.js",
-    "./src/**/**/*.{html,js}",
+    "./src/**/**/*.{html,js,scss}",
   ],
   plugins: [],
   darkMode: "class",

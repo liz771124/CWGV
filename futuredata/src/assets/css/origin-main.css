@@ -30,7 +30,7 @@
 .relative-list {
   display: flex;
   gap: 2rem;
-  margin-top: 1rem;
+  margin-top: 5px;
   justify-content: center;
   align-items: center;
 }
@@ -126,7 +126,6 @@
 .infoItem {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -134,8 +133,13 @@
   float: unset;
 }
 @media (max-width: 767px) {
+  .infoItem {
+    gap: 0px;
+    flex-wrap: wrap;
+  }
   .relative-list {
     gap: 10px;
+    flex-grow: 1;
     justify-content: end;
   }
 }

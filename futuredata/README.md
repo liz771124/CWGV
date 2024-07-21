@@ -31,12 +31,12 @@ https://liz771124.github.io/CWGV/futuredata/src/origin/junior/search-list.html
 https://liz771124.github.io/CWGV/futuredata/src/origin/youth/search-list.html  
 
 ### 教學資源列表
-https://liz771124.github.io/CWGV/futuredata/src/origin/junior/lesson-detail.html  
-https://liz771124.github.io/CWGV/futuredata/src/origin/youth/lesson-detail.html  
-
-### 教學資源內頁
 https://liz771124.github.io/CWGV/futuredata/src/origin/junior/lesson-list.html  
 https://liz771124.github.io/CWGV/futuredata/src/origin/youth/lesson-list.html  
+
+### 教學資源內頁
+https://liz771124.github.io/CWGV/futuredata/src/origin/junior/lesson-detail.html  
+https://liz771124.github.io/CWGV/futuredata/src/origin/youth/lesson-detail.html  
 
 ### 測驗題型
 https://liz771124.github.io/CWGV/futuredata/src/origin/junior/faq-list.html  

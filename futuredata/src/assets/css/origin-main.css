@@ -140,6 +140,6 @@
   .relative-list {
     gap: 10px;
     flex-grow: 1;
-    justify-content: end;
+    /* justify-content: end; */
   }
 }

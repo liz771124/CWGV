@@ -1,9 +1,5 @@
 # 兒童&少年 舊站頁面改版
 
-### 注意事項
-1. Bootstrap 相關套件盡量不使用 以免跑版
-2. include-html.js 在正式環境不需載入 僅作 demo 用
-
 ## 以下頁面共用版頭尾元件 僅作 demo 用
 
 ### 兒童
@@ -53,3 +49,7 @@ https://liz771124.github.io/CWGV/futuredata/src/origin/youth/faq-list.html
 ### 測驗題型結果
 https://liz771124.github.io/CWGV/futuredata/src/origin/junior/faq-result.html  
 https://liz771124.github.io/CWGV/futuredata/src/origin/youth/faq-result.html  
+
+### 注意事項
+1. Bootstrap 相關套件盡量不使用 以免跑版
+2. include-html.js 在正式環境不需載入 僅作 demo 用

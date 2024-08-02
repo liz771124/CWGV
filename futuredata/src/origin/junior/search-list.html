@@ -128,7 +128,7 @@
         <main>
           <div class="magazineBox">
             <div class="infoItemBox">
-              <div class="infoItem" id="article-1">
+              <div class="infoItem">
                 <div class="infoData">
                   <p>
                     <a
@@ -198,11 +198,11 @@
                       id="buyList-8105"
                       data-tooltip
                       data-title="收藏"
-                      onClick="setTracking(1)"
+                      onclick="setTracking(this)"
                     >
                       <img
                         class="tracking-icon"
-                        src="../../assets/img/icons/heart-blue.svg"
+                        src="../../assets/img/icons/heart-red.svg"
                         alt=""
                       />
                     </div>
@@ -210,7 +210,7 @@
                 </div>
               </div>
               <div class="infoItem">
-                <div class="infoData" id="article-2">
+                <div class="infoData">
                   <p>
                     <a
                       href="https://futuredata.cwgv.com.tw/junior/emag/index/202404_016/8105"
@@ -279,7 +279,7 @@
                       id="buyList-8105"
                       data-tooltip
                       data-title="收藏"
-                      onClick="setTracking(2, event)"
+                      onclick="setTracking(this)"
                     >
                       <img
                         class="tracking-icon"
@@ -320,21 +320,8 @@
     <script src="https://futuredata.cwgv.com.tw/public/assets/plugins/jquery.showmore.min.js"></script>
     <script src="https://futuredata.cwgv.com.tw/public/assets/js/script.js"></script>
 
-    <script>
-      const setTracking = (id, event) => {
-        console.log(id, event);
-        const trackingIcon = event.target.find(`tracking-icon`);
-        console.log(trackingIcon);
-        trackingIcon.addEventListener("click", (e) => {
-          this.setAttribute(
-            "src",
-            e.target.src.includes("blue")
-              ? "../../assets/img/icons/heart-red.svg"
-              : "../../assets/img/icons/heart-blue.svg",
-          );
-        });
-      };
-    </script>
+    <!-- 新加的 js -->
+    <script src="../../assets/js/search-list.js"></script>
 
     <!-- 這段是拿來生成版頭尾用 不需要在渲然時使用請忽略 -->
     <script src="../../assets/js/include-html.js"></script>

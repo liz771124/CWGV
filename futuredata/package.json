@@ -9,6 +9,9 @@
     "y-tw": "npx tailwindcss -i ./src/assets/css/main.scss -o ./src/assets/css/youth-main.css --minify --config ./tailwind.config.youth.js --watch",
     "build-tw": "concurrently \"npm run j-tw\" \"npm run y-tw\""
   },
+  "safelist": [
+    
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",

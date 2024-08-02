@@ -128,7 +128,7 @@
         <main>
           <div class="magazineBox">
             <div class="infoItemBox">
-              <div class="infoItem">
+              <div class="infoItem" id="article-1">
                 <div class="infoData">
                   <p>
                     <a
@@ -196,9 +196,90 @@
                     <div
                       role="button"
                       id="buyList-8105"
-                      onclick="ListCollects('8105')"
                       data-tooltip
                       data-title="收藏"
+                      onClick="setTracking(1)"
+                    >
+                      <img
+                        class="tracking-icon"
+                        src="../../assets/img/icons/heart-blue.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="infoItem">
+                <div class="infoData" id="article-2">
+                  <p>
+                    <a
+                      href="https://futuredata.cwgv.com.tw/junior/emag/index/202404_016/8105"
+                      >地球轉轉轉地球轉轉轉地球轉轉轉地球轉轉轉地球轉轉轉地球轉轉轉地球轉轉轉地球轉轉轉地球轉轉轉</a
+                    >
+                  </p>
+                  <ul class="subItem">
+                    <li>主題：封面故事</li>
+                    <!--<li>作者/繪者：放藝術工作室,王予彤</li>-->
+                  </ul>
+                  <ul class="subItem">
+                    <li>
+                      本文出自：<a
+                        href="https://futuredata.cwgv.com.tw/junior/emag/index/MJ11304"
+                        ><font color="#898989"
+                          >未來兒童2024年4月號(第121期)</font
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                  <ul class="tagItem">
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        onclick="getSearch('地球科學');"
+                        >地球科學</a
+                      >
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)" onclick="getSearch('天文');"
+                        >天文</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        onclick="getSearch('生態與環保');"
+                        >生態與環保</a
+                      >
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)" onclick="getSearch('科學');"
+                        >科學</a
+                      >
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)" onclick="getSearch('自然');"
+                        >自然</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="grow">
+                  <div class="relative-list !justify-end">
+                    <div data-tooltip data-title="音檔">
+                      <img src="../../assets/img/icons/audio-blue.svg" alt="" />
+                    </div>
+                    <div data-tooltip data-title="影片">
+                      <img src="../../assets/img/icons/video-blue.svg" alt="" />
+                    </div>
+                    <div data-tooltip data-title="筆記">
+                      <img src="../../assets/img/icons/note-full.svg" alt="" />
+                    </div>
+                    <div
+                      role="button"
+                      id="buyList-8105"
+                      data-tooltip
+                      data-title="收藏"
+                      onClick="setTracking(2, event)"
                     >
                       <img
                         class="tracking-icon"
@@ -238,6 +319,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.js"></script>
     <script src="https://futuredata.cwgv.com.tw/public/assets/plugins/jquery.showmore.min.js"></script>
     <script src="https://futuredata.cwgv.com.tw/public/assets/js/script.js"></script>
+
+    <script>
+      const setTracking = (id, event) => {
+        console.log(id, event);
+        const trackingIcon = event.target.find(`tracking-icon`);
+        console.log(trackingIcon);
+        trackingIcon.addEventListener("click", (e) => {
+          this.setAttribute(
+            "src",
+            e.target.src.includes("blue")
+              ? "../../assets/img/icons/heart-red.svg"
+              : "../../assets/img/icons/heart-blue.svg",
+          );
+        });
+      };
+    </script>
 
     <!-- 這段是拿來生成版頭尾用 不需要在渲然時使用請忽略 -->
     <script src="../../assets/js/include-html.js"></script>

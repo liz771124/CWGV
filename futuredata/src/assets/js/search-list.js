@@ -1,4 +1,4 @@
-const setTracking = (element, id) => {
+const setTracking = (element) => {
   const icon = element.querySelector(".tracking-icon");
   const currentSrc = icon.getAttribute("src");
   icon.setAttribute(

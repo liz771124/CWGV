@@ -4,7 +4,7 @@ const setTracking = (element) => {
   icon.setAttribute(
     "src",
     currentSrc.includes("heart-red.svg")
-      ? "../../assets/img/icons/heart-gray.svg"
+      ? "../../assets/img/icons/heart-blue.svg"
       : "../../assets/img/icons/heart-red.svg",
   );
 };

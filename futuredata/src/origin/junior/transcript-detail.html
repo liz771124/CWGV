@@ -70,8 +70,7 @@
                     <img
                       class="h-full w-full object-contain"
                       src="https://swiperjs.com/demos/images/nature-7.jpg"
-                    />mx-auto flex aspect-square h-full w-full shrink-0
-                    overflow-hidden rounded bg-gray-50 md:h-[150px] md:w-[150px]
+                    />
                   </div>
                   <div class="swiper-slide">
                     <img
@@ -156,42 +155,20 @@
           <div class="flex w-full grow flex-col gap-3 text-lg">
             <div class="mb-5 flex flex-col gap-3">
               <div class="flex divide-x divide-gray-600">
-                <div class="shrink-0 pe-4">適用年齡</div>
-                <div class="ps-4 font-semibold">國小低年級、國小中年級</div>
+                <div class="shrink-0 pe-4">挑戰者</div>
+                <div class="ps-4 font-semibold">ABCDEFG</div>
               </div>
               <div class="flex divide-x divide-gray-600">
-                <div class="shrink-0 pe-4">檔案格式</div>
-                <div class="ps-4 font-semibold">PDF</div>
+                <div class="shrink-0 pe-4">等級</div>
+                <div class="ps-4 font-semibold">Level 1 菜菜來寶</div>
               </div>
               <div class="flex divide-x divide-gray-600">
-                <div class="shrink-0 pe-4">適用科目</div>
-                <div class="ps-4 font-semibold">
-                  <div class="flex flex-wrap gap-2">
-                    <a
-                      href="#"
-                      class="hover:bg-primary-500 rounded-full bg-gray-50 px-3 py-1 text-sm hover:text-white"
-                      >#課文</a
-                    >
-                    <a
-                      href="#"
-                      class="hover:bg-primary-500 rounded-full bg-gray-50 px-3 py-1 text-sm hover:text-white"
-                      >#科學知識</a
-                    >
-                    <a
-                      href="#"
-                      class="hover:bg-primary-500 rounded-full bg-gray-50 px-3 py-1 text-sm hover:text-white"
-                      >#名字很長名字很長</a
-                    >
-                  </div>
-                </div>
+                <div class="shrink-0 pe-4">登入次數</div>
+                <div class="ps-4 font-semibold">666次</div>
               </div>
               <div class="flex divide-x divide-gray-600">
-                <div class="shrink-0 pe-4">檔案頁數</div>
-                <div class="ps-4 font-semibold">10頁</div>
-              </div>
-              <div class="flex divide-x divide-gray-600">
-                <div class="shrink-0 pe-4">內容素材</div>
-                <div class="ps-4 font-semibold">簡報、學習單</div>
+                <div class="shrink-0 pe-4">累積閱讀</div>
+                <div class="ps-4 font-semibold">1年6個月25天又22小時</div>
               </div>
             </div>
             <button
@@ -219,9 +196,106 @@
           </div>
         </div>
 
-        <div class="chart">
-          <canvas id="myChart" width="400" height="200"></canvas>
-          <canvas id="myChart2" width="400" height="200"></canvas>
+        <div class="mb-4 flex w-full items-center gap-3">
+          <div class="h-[1px] grow bg-gray-700"></div>
+          <h2 class="font-display text-center text-2xl font-semibold">
+            相關教學資源
+          </h2>
+          <div class="h-[1px] grow bg-gray-700"></div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-5 rounded py-6 md:grid-cols-3">
+          <div
+            class="flex flex-col items-start justify-between gap-3 rounded border border-gray-700 p-5 md:flex-row md:p-6"
+          >
+            <div class="flex w-full flex-1 flex-col md:grow">
+              <h3 class="mb-3 line-clamp-2 text-lg font-semibold">儲備知識</h3>
+              <div class="flex flex-col">
+                <div
+                  class="flex items-center gap-3 border-b border-slate-500 py-1"
+                >
+                  <div class="h-[50px] w-[50px] pe-1">
+                    <img
+                      class="h-full w-full object-contain"
+                      src="https://cdn-icons-png.flaticon.com/512/8652/8652433.png"
+                    />
+                  </div>
+                  <div class="text-xl font-extrabold">X 32</div>
+                  <div
+                    class="hover:bg-primary-700 bg-primary-500 ms-auto rounded-full px-3 py-1 text-sm text-white"
+                  >
+                    本月 +10
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-3 border-b border-slate-500 py-1"
+                >
+                  <div class="h-[50px] w-[50px] pe-1">
+                    <img
+                      class="h-full w-full object-contain"
+                      src="https://cdn-icons-png.flaticon.com/512/6080/6080520.png"
+                    />
+                  </div>
+                  <div class="text-xl font-extrabold">X 3440</div>
+                  <div
+                    class="hover:bg-primary-700 bg-primary-500 ms-auto rounded-full px-3 py-1 text-sm text-white"
+                  >
+                    本月 +1
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-3 border-b border-slate-500 py-1"
+                >
+                  <div class="h-[50px] w-[50px] pe-1">
+                    <img
+                      class="h-full w-full object-contain"
+                      src="https://cdn-icons-png.flaticon.com/512/9270/9270802.png"
+                    />
+                  </div>
+                  <div class="text-xl font-extrabold">X 0</div>
+                  <div
+                    class="hover:bg-primary-700 bg-primary-500 ms-auto rounded-full px-3 py-1 text-sm text-white"
+                  >
+                    本月 +100
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-3 border-b border-slate-500 py-1"
+                >
+                  <div class="h-[50px] w-[50px] pe-1">
+                    <img
+                      class="h-full w-full object-contain"
+                      src="https://cdn-icons-png.flaticon.com/512/3025/3025014.png"
+                    />
+                  </div>
+                  <div class="text-xl font-extrabold">X 0</div>
+                  <div
+                    class="hover:bg-primary-700 bg-primary-500 ms-auto rounded-full px-3 py-1 text-sm text-white"
+                  >
+                    本月 +100
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-start justify-between gap-3 rounded border border-gray-700 p-5 md:flex-row md:p-6"
+          >
+            <div class="flex w-full flex-1 flex-col md:grow">
+              <h3 class="mb-3 line-clamp-2 text-lg font-semibold">核心素養</h3>
+              <canvas id="myChart2" width="400" height="200"></canvas>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-start justify-between gap-3 rounded border border-gray-700 p-5 md:flex-row md:p-6"
+          >
+            <div class="flex w-full flex-1 flex-col md:grow">
+              <h3 class="mb-3 line-clamp-2 text-lg font-semibold">
+                累積解題力
+              </h3>
+              <canvas id="myChart" width="400" height="200"></canvas>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,8 +1,12 @@
-// const lessonThumbSwiper = new Swiper(".lessonThumbSwiper", {
-//   loop: true,
-//   spaceBetween: 10,
-//   slidesPerView: 4
-// });
+const lessonThumbSwiper = new Swiper(".lessonThumbSwiper", {
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 4,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 // const lessonMainSwiper = new Swiper(".lessonMainSwiper", {
 //   loop: true,
 //   navigation: {
@@ -15,12 +19,32 @@
 // });
 
 var data = {
-  labels: ["一月", "二月", "三月", "四月"],
+  labels: [
+    "1月",
+    "2月",
+    "3月",
+    "4月",
+    "5月",
+    "6月",
+    "7月",
+    "8月",
+    "9月",
+    "10月",
+    "11月",
+    "12月",
+  ],
   datasets: [
     {
-      label: "營收統計",
-      data: [5000, 8000, 12000, 6500],
-      backgroundColor: "rgb(116, 185, 255)",
+      label: "全站閱讀",
+      data: [50, 80, 25, 65, 10, 23, 74, 15, 25, 14, 6, 28],
+      backgroundColor: "#00276880",
+      borderColor: "rgb(116, 185, 255)",
+    },
+    {
+      label: "個人閱讀",
+      data: [10, 20, 40, 55, 16, 3, 42, 2, 5, 4, 36, 8],
+      backgroundColor: "#FFD54F",
+      borderColor: "#ffaabb",
     },
   ],
 };
@@ -35,15 +59,29 @@ var options = {
 };
 
 var data2 = {
-  labels: ["語文", "數學", "自然科學"],
+  labels: [
+    "語文",
+    "人文史地",
+    "社會",
+    "自然科學",
+    "數理",
+    "生活",
+    "藝術",
+    "國際",
+  ],
   datasets: [
     {
       // label: "My First Dataset",
-      data: [300, 50, 100],
+      data: [30, 50, 10, 30, 5, 1, 6, 22],
       backgroundColor: [
-        "rgb(255, 99, 132)",
-        "rgb(54, 162, 235)",
-        "rgb(255, 205, 86)",
+        "#FF6B6B",
+        "#FFA726",
+        "#FFD54F",
+        "#81C784",
+        "#64B5F6",
+        "#4FC3F7",
+        "#BA68C8",
+        "#F8BBD0",
       ],
       hoverOffset: 4,
     },
@@ -58,14 +96,14 @@ var options2 = {
     },
     // title: {
     //   display: true,
-    //   text: "Chart.js Pie Chart",
+    //   text: "Chart.js Line Chart",
     // },
   },
 };
 
 const ctx = document.getElementById("myChart").getContext("2d");
 const myChart = new Chart(ctx, {
-  type: "bar",
+  type: "line",
   data: data,
   options: options,
 });

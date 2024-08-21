@@ -9,11 +9,11 @@ const lessonThumbSwiper = new Swiper(".lessonThumbSwiper", {
   },
   effect: "slide",
   loop: true,
-  autoplay: {
-    delay: 2000,
-    reverseDirection: true,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2000,
+  //   reverseDirection: true,
+  //   disableOnInteraction: false,
+  // },
 });
 // const lessonMainSwiper = new Swiper(".lessonMainSwiper", {
 //   loop: true,

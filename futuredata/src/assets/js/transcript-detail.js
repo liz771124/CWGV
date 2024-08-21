@@ -1,10 +1,18 @@
 const lessonThumbSwiper = new Swiper(".lessonThumbSwiper", {
   loop: true,
   spaceBetween: 10,
-  slidesPerView: 4,
+  slidesPerView: 3,
+  direction: "vertical",
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next2",
+    prevEl: ".swiper-button-prev2",
+  },
+  effect: "slide",
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    reverseDirection: true,
+    disableOnInteraction: false,
   },
 });
 // const lessonMainSwiper = new Swiper(".lessonMainSwiper", {

@@ -66,7 +66,24 @@
               />
             </div>
           </div>
-          <div class="flex w-[300px] grow flex-col flex-wrap gap-3">
+          <div class="flex w-[600px] grow flex-col flex-wrap gap-3">
+            <div class="py-3">
+              <h5 class="mb-2 text-xl">Level 2完成進度條</h5>
+              <div class="flex gap-3">
+                <div
+                  class="bg-primary-50 flex h-4 w-full overflow-hidden rounded-full"
+                  role="progressbar"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div
+                    class="bg-primary-500 flex flex-col justify-center overflow-hidden whitespace-nowrap rounded-full text-center text-xs text-white transition duration-500"
+                    style="width: 25%"
+                  ></div>
+                </div>
+              </div>
+            </div>
             <div class="flex flex-wrap gap-3">
               <button
                 type="button"
@@ -93,26 +110,25 @@
                 完成1個小測驗
               </button>
             </div>
-            <div class="py-3">
-              <h5 class="mb-2">Level 2完成進度條</h5>
-              <div class="flex gap-3">
-                <div
-                  class="bg-primary-50 flex h-4 w-full overflow-hidden rounded-full"
-                  role="progressbar"
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <div
-                    class="bg-primary-500 flex flex-col justify-center overflow-hidden whitespace-nowrap rounded-full text-center text-xs text-white transition duration-500"
-                    style="width: 25%"
-                  ></div>
-                </div>
-              </div>
-            </div>
           </div>
           <div>
-            <div class="swiper-button-next2">;e;l;etl;e</div>
+            <div
+              class="swiper-button-next2 hover:text-primary-500 flex justify-center rounded-md bg-white/80 py-2 text-gray-400"
+            >
+              <svg
+                fill="currentColor"
+                height="30"
+                width="30"
+                viewBox="0 0 330 330"
+              >
+                <path
+                  id="XMLID_224_"
+                  d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+             l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+             C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"
+                />
+              </svg>
+            </div>
             <div
               class="swiper lessonThumbSwiper mt-2 max-h-[500px] max-w-[150px]"
             >
@@ -178,7 +194,23 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-button-prev2">ergethe</div>
+            <div
+              class="swiper-button-prev2 hover:text-primary-500 flex justify-center rounded-md bg-white/80 py-2 text-gray-400"
+            >
+              <svg
+                fill="currentColor"
+                height="39"
+                width="39"
+                viewBox="0 0 330 330"
+              >
+                <path
+                  id="XMLID_225_"
+                  d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+	c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+	s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+                />
+              </svg>
+            </div>
           </div>
         </div>
 

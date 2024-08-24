@@ -1,4 +1,4 @@
-const lessonThumbSwiper = new Swiper(".lessonThumbSwiper", {
+const gradeSwiper = new Swiper(".gradeSwiper", {
   loop: true,
   spaceBetween: 10,
   slidesPerView: 3,

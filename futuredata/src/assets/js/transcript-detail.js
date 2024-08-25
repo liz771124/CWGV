@@ -2,13 +2,24 @@ const gradeSwiper = new Swiper(".gradeSwiper", {
   loop: true,
   spaceBetween: 10,
   slidesPerView: 3,
-  direction: "vertical",
+
   navigation: {
     nextEl: ".swiper-button-next2",
     prevEl: ".swiper-button-prev2",
   },
   effect: "slide",
   loop: true,
+  breakpoints: {
+    480: {
+      direction: "horizontal",
+    },
+    768: {
+      direction: "vertical",
+    },
+    1024: {
+      direction: "vertical",
+    },
+  },
   // autoplay: {
   //   delay: 2000,
   //   reverseDirection: true,

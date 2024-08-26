@@ -1,9 +1,9 @@
+document.querySelector("body").style.display = "none";
 document.addEventListener("DOMContentLoaded", function () {
   let pages = document.querySelectorAll("[data-include]");
-  pages.forEach(function (element) {
+  pages.forEach(function (element, index) {
     let file =
       "../components/" + element.getAttribute("data-include") + ".html";
-
     fetch(file)
       .then(function (response) {
         if (response.ok) {
@@ -14,7 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .then(function (data) {
         element.innerHTML = data;
-      })
-      .catch(function (error) {});
+      });
   });
 });
+setTimeout(() => {
+  document.querySelector("body").style.display = "block";
+}, 2000);

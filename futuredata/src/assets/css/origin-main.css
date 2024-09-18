@@ -143,3 +143,11 @@
     /* justify-content: end; */
   }
 }
+
+button:focus,
+select:focus,
+option:hover,
+.form-control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}

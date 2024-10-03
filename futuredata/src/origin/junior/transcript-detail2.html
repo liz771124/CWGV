@@ -220,9 +220,9 @@
 
         <div class="mb-5 rounded border border-gray-700 p-5">
           <div
-            id="tag"
+            id="cloud"
             class="mx-auto h-full w-full"
-            style="height: 350px; width: 100%"
+            style="height: 350px"
           ></div>
         </div>
 
@@ -262,6 +262,12 @@
         { text: "國文", size: 20, fill: "#1848D9", link: "https://shopee.tw/" },
         { text: "作文", size: 20, fill: "#1848D9", link: "https://shopee.tw/" },
         { text: "地理", size: 20, fill: "#1848D9", link: "https://shopee.tw/" },
+        { text: "動力", size: 20, fill: "#1848D9", link: "https://shopee.tw/" },
+        { text: "求職", size: 20, fill: "#1848D9", link: "https://shopee.tw/" },
+        { text: "小字", size: 20, fill: "#1848D9", link: "https://shopee.tw/" },
+        { text: "寓教", size: 20, fill: "#1848D9", link: "https://shopee.tw/" },
+        { text: "運動", size: 20, fill: "#1848D9", link: "https://shopee.tw/" },
+        { text: "體育", size: 20, fill: "#1848D9", link: "https://shopee.tw/" },
         {
           text: "四個文字",
           size: 20,
@@ -276,6 +282,12 @@
         },
         {
           text: "社會人文",
+          size: 30,
+          fill: "#1ABB27",
+          link: "https://tw.yahoo.com/",
+        },
+        {
+          text: "三個字",
           size: 30,
           fill: "#1ABB27",
           link: "https://tw.yahoo.com/",
@@ -300,6 +312,12 @@
         },
         {
           text: "數理",
+          size: 30,
+          fill: "#1ABB27",
+          link: "https://tw.yahoo.com/",
+        },
+        {
+          text: "電腦",
           size: 30,
           fill: "#1ABB27",
           link: "https://tw.yahoo.com/",
@@ -346,7 +364,20 @@
           fill: "#EF5024",
           link: "https://24h.pchome.com.tw/",
         },
+        {
+          text: "颱風",
+          size: 35,
+          fill: "#EF5024",
+          link: "https://24h.pchome.com.tw/",
+        },
+        {
+          text: "安全宣導",
+          size: 35,
+          fill: "#EF5024",
+          link: "https://24h.pchome.com.tw/",
+        },
         { text: "心靈成長", size: 45, fill: "#A89127", link: null },
+        { text: "很多文字標籤", size: 45, fill: "#A89127", link: null },
         { text: "科技", size: 45, fill: "#A89127", link: null },
         { text: "國文", size: 45, fill: "#A89127", link: null },
         { text: "家庭教育", size: 45, fill: "#A89127", link: null },
@@ -355,13 +386,13 @@
       ];
 
       function generateCloud() {
-        const tagContainer = document.getElementById("tag");
-        const w = tagContainer.clientWidth;
-        const h = tagContainer.clientHeight;
-        const boundingWidth = tagContainer.getBoundingClientRect().width;
+        const cloudContainer = document.getElementById("cloud");
+        const w = cloudContainer.clientWidth;
+        const h = cloudContainer.clientHeight;
+        const boundingWidth = cloudContainer.getBoundingClientRect().width;
         console.log(w, boundingWidth);
 
-        tagContainer.innerHTML = "";
+        cloudContainer.innerHTML = "";
 
         d3.layout
           .cloud()
@@ -375,7 +406,7 @@
           .start();
 
         function draw(words) {
-          d3.select("#tag")
+          d3.select("#cloud")
             .append("svg")
             .attr("width", w)
             .attr("height", h)
@@ -387,6 +418,7 @@
             .append("text")
             .style("font-size", (d) => d.size + "px")
             .style("font-family", "Noto Sans")
+            .style("margin", "auto")
             .style("font-weight", "800")
             .style("cursor", "pointer")
             .style("fill", (d, i) => d.fill)
@@ -400,7 +432,36 @@
         }
       }
 
-      window.addEventListener("load", generateCloud());
+      function setTagElementWidth() {
+        // 取得目標元素
+        const tagElement = document.getElementById("cloud");
+
+        // 確認元素是否存在
+        if (!tagElement) return;
+
+        // 取得目前視窗的寬度
+        const screenWidth = window.innerWidth;
+
+        console.log(screenWidth);
+
+        // 根據畫面寬度設定元素寬度
+        if (screenWidth <= 1000) {
+          console.log("2", screenWidth);
+          return (tagElement.style.width = "500px");
+        } else if (screenWidth <= 500) {
+          console.log("1", screenWidth);
+          return (tagElement.style.width = "300px");
+        } else {
+          return (tagElement.style.width = "800px");
+        }
+      }
+
+      // 監聽視窗大小變化並動態調整
+      window.addEventListener("resize", setTagElementWidth);
+
+      setTagElementWidth();
+
+      generateCloud();
     </script>
 
     <!-- 這段是拿來生成版頭尾用 不需要在渲然時使用請忽略 -->

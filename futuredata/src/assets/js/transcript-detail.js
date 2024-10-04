@@ -1,135 +1,283 @@
-const gradeSwiper = new Swiper(".gradeSwiper", {
-  loop: true,
-  spaceBetween: 10,
-  slidesPerView: 3,
+const userAgent = navigator.userAgent;
+const fontBase = /iPad|iPhone|iPod/.test(userAgent) ? 15 : 20;
+const wordList = [
+  {
+    text: "國文",
+    size: fontBase,
+    fill: "#1848D9",
+    link: "https://shopee.tw/",
+  },
+  {
+    text: "作文",
+    size: fontBase,
+    fill: "#1848D9",
+    link: "https://shopee.tw/",
+  },
+  {
+    text: "地理",
+    size: fontBase,
+    fill: "#1848D9",
+    link: "https://shopee.tw/",
+  },
+  {
+    text: "動力",
+    size: fontBase,
+    fill: "#1848D9",
+    link: "https://shopee.tw/",
+  },
+  {
+    text: "求職",
+    size: fontBase,
+    fill: "#1848D9",
+    link: "https://shopee.tw/",
+  },
+  {
+    text: "小字",
+    size: fontBase,
+    fill: "#1848D9",
+    link: "https://shopee.tw/",
+  },
+  {
+    text: "寓教",
+    size: fontBase,
+    fill: "#1848D9",
+    link: "https://shopee.tw/",
+  },
+  {
+    text: "運動",
+    size: fontBase,
+    fill: "#1848D9",
+    link: "https://shopee.tw/",
+  },
+  {
+    text: "體育",
+    size: fontBase,
+    fill: "#1848D9",
+    link: "https://shopee.tw/",
+  },
+  {
+    text: "四個文字",
+    size: fontBase,
+    fill: "#1848D9",
+    link: "https://shopee.tw/",
+  },
+  {
+    text: "科學知識",
+    size: fontBase,
+    fill: "#1848D9",
+    link: "https://shopee.tw/",
+  },
+  {
+    text: "社會人文",
+    size: fontBase + 10,
+    fill: "#1ABB27",
+    link: "https://tw.yahoo.com/",
+  },
+  {
+    text: "三個字",
+    size: fontBase + 10,
+    fill: "#1ABB27",
+    link: "https://tw.yahoo.com/",
+  },
+  {
+    text: "動物",
+    size: fontBase + 10,
+    fill: "#1ABB27",
+    link: "https://tw.yahoo.com/",
+  },
+  {
+    text: "植物",
+    size: fontBase + 10,
+    fill: "#1ABB27",
+    link: "https://tw.yahoo.com/",
+  },
+  {
+    text: "語文",
+    size: fontBase + 10,
+    fill: "#1ABB27",
+    link: "https://tw.yahoo.com/",
+  },
+  {
+    text: "數理",
+    size: fontBase + 10,
+    fill: "#1ABB27",
+    link: "https://tw.yahoo.com/",
+  },
+  {
+    text: "電腦",
+    size: fontBase + 10,
+    fill: "#1ABB27",
+    link: "https://tw.yahoo.com/",
+  },
+  {
+    text: "數學",
+    size: fontBase + 10,
+    fill: "#1ABB27",
+    link: "https://tw.yahoo.com/",
+  },
+  {
+    text: "地球",
+    size: fontBase + 15,
+    fill: "#EF5024",
+    link: "https://24h.pchome.com.tw/",
+  },
+  {
+    text: "海洋生物",
+    size: fontBase + 15,
+    fill: "#EF5024",
+    link: "https://24h.pchome.com.tw/",
+  },
+  {
+    text: "哲學",
+    size: fontBase + 15,
+    fill: "#EF5024",
+    link: "https://24h.pchome.com.tw/",
+  },
+  {
+    text: "自然科學",
+    size: fontBase + 15,
+    fill: "#EF5024",
+    link: "https://24h.pchome.com.tw/",
+  },
+  {
+    text: "天氣",
+    size: fontBase + 15,
+    fill: "#EF5024",
+    link: "https://24h.pchome.com.tw/",
+  },
+  {
+    text: "路權",
+    size: fontBase + 15,
+    fill: "#EF5024",
+    link: "https://24h.pchome.com.tw/",
+  },
+  {
+    text: "颱風",
+    size: fontBase + 15,
+    fill: "#EF5024",
+    link: "https://24h.pchome.com.tw/",
+  },
+  {
+    text: "安全宣導",
+    size: fontBase + 15,
+    fill: "#EF5024",
+    link: "https://24h.pchome.com.tw/",
+  },
+  {
+    text: "心靈成長",
+    size: fontBase + 25,
+    fill: "#A89127",
+    link: "https://google.com.tw/",
+  },
+  {
+    text: "很多文字標籤",
+    size: fontBase + 25,
+    fill: "#A89127",
+    link: "https://google.com.tw/",
+  },
+  {
+    text: "科技",
+    size: fontBase + 25,
+    fill: "#A89127",
+    link: "https://google.com.tw/",
+  },
+  {
+    text: "國文",
+    size: fontBase + 25,
+    fill: "#A89127",
+    link: "https://google.com.tw/",
+  },
+  {
+    text: "家庭教育",
+    size: fontBase + 25,
+    fill: "#A89127",
+    link: "https://google.com.tw/",
+  },
+  {
+    text: "台灣文學",
+    size: fontBase + 25,
+    fill: "#A89127",
+    link: "https://google.com.tw/",
+  },
+  {
+    text: "英文",
+    size: fontBase + 25,
+    fill: "#A89127",
+    link: "https://google.com.tw/",
+  },
+];
 
-  navigation: {
-    nextEl: ".swiper-button-next2",
-    prevEl: ".swiper-button-prev2",
-  },
-  effect: "slide",
-  loop: true,
-  breakpoints: {
-    480: {
-      direction: "horizontal",
-    },
-    768: {
-      direction: "vertical",
-    },
-    1024: {
-      direction: "vertical",
-    },
-  },
-  // autoplay: {
-  //   delay: 2000,
-  //   reverseDirection: true,
-  //   disableOnInteraction: false,
-  // },
+let currentWidth = null;
+
+const getTagElementWidth = () => {
+  const screenWidth = window.innerWidth;
+  if (screenWidth <= 500) {
+    return "300px";
+  } else if (screenWidth <= 1000) {
+    return "500px";
+  } else {
+    return "1000px";
+  }
+};
+
+const generateCloud = () => {
+  const cloudContainer = document.getElementById("cloud");
+  if (!cloudContainer) return;
+
+  const newWidth = getTagElementWidth();
+  if (newWidth === currentWidth) return;
+
+  currentWidth = newWidth;
+  cloudContainer.style.width = newWidth;
+
+  const w = cloudContainer.clientWidth;
+  const h = cloudContainer.clientHeight;
+  cloudContainer.innerHTML = "";
+
+  d3.layout
+    .cloud()
+    .size([w, h])
+    .words(wordList)
+    .padding(10)
+    // .rotate(() => ~~(Math.random() * 2) * 90)
+    .rotate(0)
+    .fontSize((d) => d.size)
+    .on("end", draw)
+    .start();
+
+  function draw(words) {
+    d3.select("#cloud")
+      .append("svg")
+      .attr("width", w)
+      .attr("height", h)
+      .append("g")
+      .attr("transform", "translate(" + w / 2 + "," + h / 2 + ")")
+      .selectAll("text")
+      .data(words)
+      .enter()
+      .append("text")
+      .style("font-size", (d) => d.size + "px")
+      .style("font-family", "Noto Sans")
+      .style("margin", "auto")
+      .style("font-weight", "800")
+      .style("cursor", "pointer")
+      .style("fill", (d) => d.fill)
+      .attr("text-anchor", "middle")
+      .attr(
+        "transform",
+        (d) => "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")",
+      )
+      .text((d) => d.text)
+      .on("click", (d) => d.link && window.open(d.link, "_blank"));
+  }
+};
+
+generateCloud();
+
+let resizeTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(generateCloud, 250);
 });
-// const lessonMainSwiper = new Swiper(".lessonMainSwiper", {
-//   loop: true,
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   thumbs: {
-//     swiper: lessonThumbSwiper,
-//   },
-// });
 
-var data = {
-  labels: [
-    "1月",
-    "2月",
-    "3月",
-    "4月",
-    "5月",
-    "6月",
-    "7月",
-    "8月",
-    "9月",
-    "10月",
-    "11月",
-    "12月",
-  ],
-  datasets: [
-    {
-      label: "全站閱讀",
-      data: [50, 80, 25, 65, 10, 23, 74, 15, 25, 14, 6, 28],
-      backgroundColor: "#00276880",
-      borderColor: "rgb(116, 185, 255)",
-    },
-    {
-      label: "個人閱讀",
-      data: [10, 20, 40, 55, 16, 3, 42, 2, 5, 4, 36, 8],
-      backgroundColor: "#FFD54F",
-      borderColor: "#ffaabb",
-    },
-  ],
-};
-
-var options = {
-  responsive: true,
-  scales: {
-    y: {
-      beginAtZero: true,
-    },
-  },
-};
-
-var data2 = {
-  labels: [
-    "語文",
-    "人文史地",
-    "社會",
-    "自然科學",
-    "數理",
-    "生活",
-    "藝術",
-    "國際",
-  ],
-  datasets: [
-    {
-      // label: "My First Dataset",
-      data: [30, 50, 10, 30, 5, 1, 6, 22],
-      backgroundColor: [
-        "#FF6B6B",
-        "#FFA726",
-        "#FFD54F",
-        "#81C784",
-        "#64B5F6",
-        "#4FC3F7",
-        "#BA68C8",
-        "#F8BBD0",
-      ],
-      hoverOffset: 4,
-    },
-  ],
-};
-
-var options2 = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: "top",
-    },
-    // title: {
-    //   display: true,
-    //   text: "Chart.js Line Chart",
-    // },
-  },
-};
-
-const ctx = document.getElementById("myChart").getContext("2d");
-const myChart = new Chart(ctx, {
-  type: "line",
-  data: data,
-  options: options,
-});
-
-const ctx2 = document.getElementById("myChart2").getContext("2d");
-const myChart2 = new Chart(ctx2, {
-  type: "doughnut",
-  data: data2,
-  options: options2,
-});
+window.addEventListener("orientationchange", generateCloud);

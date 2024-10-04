@@ -24,7 +24,7 @@
           <div class="h-[1px] grow bg-gray-700"></div>
         </div>
 
-        <div class="grid grid-cols-2 gap-5 rounded py-6 md:grid-cols-3">
+        <div class="grid grid-cols-1 gap-5 rounded py-6 md:grid-cols-3">
           <div
             class="flex flex-col items-start justify-between gap-3 rounded border border-gray-700 p-5 md:flex-row md:p-6"
           >
@@ -157,7 +157,7 @@
             </div>
           </div>
           <div
-            class="flex flex-col items-center justify-between gap-3 rounded border border-gray-700 p-5 md:flex-row md:p-6"
+            class="flex items-center justify-between gap-3 rounded border border-gray-700 p-5 md:flex-row md:p-6"
           >
             <div class="flex w-full flex-1 flex-col items-center md:grow">
               <h3 class="mb-3 line-clamp-2">總答題數</h3>
@@ -256,213 +256,7 @@
     <!-- 新加的 js -->
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
-
-    <script>
-      const textList = [
-        { text: "國文", size: 20, fill: "#1848D9", link: "https://shopee.tw/" },
-        { text: "作文", size: 20, fill: "#1848D9", link: "https://shopee.tw/" },
-        { text: "地理", size: 20, fill: "#1848D9", link: "https://shopee.tw/" },
-        { text: "動力", size: 20, fill: "#1848D9", link: "https://shopee.tw/" },
-        { text: "求職", size: 20, fill: "#1848D9", link: "https://shopee.tw/" },
-        { text: "小字", size: 20, fill: "#1848D9", link: "https://shopee.tw/" },
-        { text: "寓教", size: 20, fill: "#1848D9", link: "https://shopee.tw/" },
-        { text: "運動", size: 20, fill: "#1848D9", link: "https://shopee.tw/" },
-        { text: "體育", size: 20, fill: "#1848D9", link: "https://shopee.tw/" },
-        {
-          text: "四個文字",
-          size: 20,
-          fill: "#1848D9",
-          link: "https://shopee.tw/",
-        },
-        {
-          text: "科學知識",
-          size: 20,
-          fill: "#1848D9",
-          link: "https://shopee.tw/",
-        },
-        {
-          text: "社會人文",
-          size: 30,
-          fill: "#1ABB27",
-          link: "https://tw.yahoo.com/",
-        },
-        {
-          text: "三個字",
-          size: 30,
-          fill: "#1ABB27",
-          link: "https://tw.yahoo.com/",
-        },
-        {
-          text: "動物",
-          size: 30,
-          fill: "#1ABB27",
-          link: "https://tw.yahoo.com/",
-        },
-        {
-          text: "植物",
-          size: 30,
-          fill: "#1ABB27",
-          link: "https://tw.yahoo.com/",
-        },
-        {
-          text: "語文",
-          size: 30,
-          fill: "#1ABB27",
-          link: "https://tw.yahoo.com/",
-        },
-        {
-          text: "數理",
-          size: 30,
-          fill: "#1ABB27",
-          link: "https://tw.yahoo.com/",
-        },
-        {
-          text: "電腦",
-          size: 30,
-          fill: "#1ABB27",
-          link: "https://tw.yahoo.com/",
-        },
-        {
-          text: "數學",
-          size: 30,
-          fill: "#1ABB27",
-          link: "https://tw.yahoo.com/",
-        },
-        {
-          text: "地球",
-          size: 35,
-          fill: "#EF5024",
-          link: "https://24h.pchome.com.tw/",
-        },
-        {
-          text: "海洋生物",
-          size: 35,
-          fill: "#EF5024",
-          link: "https://24h.pchome.com.tw/",
-        },
-        {
-          text: "哲學",
-          size: 35,
-          fill: "#EF5024",
-          link: "https://24h.pchome.com.tw/",
-        },
-        {
-          text: "自然科學",
-          size: 35,
-          fill: "#EF5024",
-          link: "https://24h.pchome.com.tw/",
-        },
-        {
-          text: "天氣",
-          size: 35,
-          fill: "#EF5024",
-          link: "https://24h.pchome.com.tw/",
-        },
-        {
-          text: "路權",
-          size: 35,
-          fill: "#EF5024",
-          link: "https://24h.pchome.com.tw/",
-        },
-        {
-          text: "颱風",
-          size: 35,
-          fill: "#EF5024",
-          link: "https://24h.pchome.com.tw/",
-        },
-        {
-          text: "安全宣導",
-          size: 35,
-          fill: "#EF5024",
-          link: "https://24h.pchome.com.tw/",
-        },
-        { text: "心靈成長", size: 45, fill: "#A89127", link: null },
-        { text: "很多文字標籤", size: 45, fill: "#A89127", link: null },
-        { text: "科技", size: 45, fill: "#A89127", link: null },
-        { text: "國文", size: 45, fill: "#A89127", link: null },
-        { text: "家庭教育", size: 45, fill: "#A89127", link: null },
-        { text: "台灣文學", size: 45, fill: "#A89127", link: null },
-        { text: "英文", size: 45, fill: "#A89127", link: null },
-      ];
-
-      function generateCloud() {
-        const cloudContainer = document.getElementById("cloud");
-        const w = cloudContainer.clientWidth;
-        const h = cloudContainer.clientHeight;
-        const boundingWidth = cloudContainer.getBoundingClientRect().width;
-        console.log(w, boundingWidth);
-
-        cloudContainer.innerHTML = "";
-
-        d3.layout
-          .cloud()
-          .size([w, h])
-          .words(textList)
-          .padding(10)
-          .rotate(() => ~~(Math.random() * 2) * 90)
-          .rotate(0)
-          .fontSize((d) => d.size)
-          .on("end", draw)
-          .start();
-
-        function draw(words) {
-          d3.select("#cloud")
-            .append("svg")
-            .attr("width", w)
-            .attr("height", h)
-            .append("g")
-            .attr("transform", "translate(" + w / 2 + "," + h / 2 + ")")
-            .selectAll("text")
-            .data(words)
-            .enter()
-            .append("text")
-            .style("font-size", (d) => d.size + "px")
-            .style("font-family", "Noto Sans")
-            .style("margin", "auto")
-            .style("font-weight", "800")
-            .style("cursor", "pointer")
-            .style("fill", (d, i) => d.fill)
-            .attr("text-anchor", "middle")
-            .attr(
-              "transform",
-              (d) => "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")",
-            )
-            .text((d) => d.text)
-            .on("click", (d) => d.link && window.open(d.link, "_blank"));
-        }
-      }
-
-      function setTagElementWidth() {
-        // 取得目標元素
-        const tagElement = document.getElementById("cloud");
-
-        // 確認元素是否存在
-        if (!tagElement) return;
-
-        // 取得目前視窗的寬度
-        const screenWidth = window.innerWidth;
-
-        console.log(screenWidth);
-
-        // 根據畫面寬度設定元素寬度
-        if (screenWidth <= 1000) {
-          console.log("2", screenWidth);
-          return (tagElement.style.width = "500px");
-        } else if (screenWidth <= 500) {
-          console.log("1", screenWidth);
-          return (tagElement.style.width = "300px");
-        } else {
-          return (tagElement.style.width = "800px");
-        }
-      }
-
-      // 監聽視窗大小變化並動態調整
-      window.addEventListener("resize", setTagElementWidth);
-
-      setTagElementWidth();
-
-      generateCloud();
-    </script>
+    <script src="../../assets/js/transcript-detail.js"></script>
 
     <!-- 這段是拿來生成版頭尾用 不需要在渲然時使用請忽略 -->
     <script src="../../assets/js/include-html.js"></script>

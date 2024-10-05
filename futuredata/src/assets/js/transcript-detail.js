@@ -272,12 +272,6 @@ const generateCloud = () => {
   }
 };
 
-generateCloud();
-
-let resizeTimer;
-window.addEventListener("resize", () => {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(generateCloud, 250);
-});
-
+// generateCloud();
+window.addEventListener("resize", generateCloud);
 window.addEventListener("orientationchange", generateCloud);

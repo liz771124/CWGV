@@ -1,6 +1,21 @@
 const userAgent = navigator.userAgent;
-const fontBase = /iPad|iPhone|iPod/.test(userAgent) ? 15 : 20;
+const fontBase = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+  ? 13
+  : 20;
+console.log(fontBase);
 const wordList = [
+  {
+    text: "英文",
+    size: fontBase,
+    fill: "#1848D9",
+    link: "https://shopee.tw/",
+  },
+  {
+    text: "電腦",
+    size: fontBase,
+    fill: "#1848D9",
+    link: "https://shopee.tw/",
+  },
   {
     text: "國文",
     size: fontBase,
@@ -74,6 +89,12 @@ const wordList = [
     link: "https://tw.yahoo.com/",
   },
   {
+    text: "心靈",
+    size: fontBase + 10,
+    fill: "#1ABB27",
+    link: "https://tw.yahoo.com/",
+  },
+  {
     text: "三個字",
     size: fontBase + 10,
     fill: "#1ABB27",
@@ -114,6 +135,12 @@ const wordList = [
     size: fontBase + 10,
     fill: "#1ABB27",
     link: "https://tw.yahoo.com/",
+  },
+  {
+    text: "生活居家",
+    size: fontBase + 15,
+    fill: "#EF5024",
+    link: "https://24h.pchome.com.tw/",
   },
   {
     text: "地球",
@@ -200,7 +227,7 @@ const wordList = [
     link: "https://google.com.tw/",
   },
   {
-    text: "英文",
+    text: "上下區塊二擇一",
     size: fontBase + 25,
     fill: "#A89127",
     link: "https://google.com.tw/",
@@ -212,7 +239,7 @@ let currentWidth = null;
 const getTagElementWidth = () => {
   const screenWidth = window.innerWidth;
   if (screenWidth <= 500) {
-    return "300px";
+    return "340px";
   } else if (screenWidth <= 1000) {
     return "500px";
   } else {
@@ -239,7 +266,6 @@ const generateCloud = () => {
     .size([w, h])
     .words(wordList)
     .padding(10)
-    // .rotate(() => ~~(Math.random() * 2) * 90)
     .rotate(0)
     .fontSize((d) => d.size)
     .on("end", draw)
@@ -257,9 +283,9 @@ const generateCloud = () => {
       .enter()
       .append("text")
       .style("font-size", (d) => d.size + "px")
-      .style("font-family", "Noto Sans")
+      .style("font-family", "Noto Sans TC")
       .style("margin", "auto")
-      .style("font-weight", "800")
+      .style("font-weight", "600")
       .style("cursor", "pointer")
       .style("fill", (d) => d.fill)
       .attr("text-anchor", "middle")
@@ -272,6 +298,6 @@ const generateCloud = () => {
   }
 };
 
-// generateCloud();
+generateCloud();
 window.addEventListener("resize", generateCloud);
 window.addEventListener("orientationchange", generateCloud);

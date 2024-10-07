@@ -1,6 +1,6 @@
 const userAgent = navigator.userAgent;
 const fontBase = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
-  ? 13
+  ? 12
   : 15;
 console.log(fontBase);
 const wordList = [

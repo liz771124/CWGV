@@ -107,6 +107,12 @@ const wordList = [
     link: "https://shopee.tw/",
   },
   {
+    text: "外國",
+    size: fontBase + 10,
+    fill: "#2E8C03",
+    link: "https://tw.yahoo.com/",
+  },
+  {
     text: "社會人文",
     size: fontBase + 10,
     fill: "#2E8C03",
@@ -114,6 +120,30 @@ const wordList = [
   },
   {
     text: "心靈",
+    size: fontBase + 10,
+    fill: "#2E8C03",
+    link: "https://tw.yahoo.com/",
+  },
+  {
+    text: "清心",
+    size: fontBase + 10,
+    fill: "#2E8C03",
+    link: "https://tw.yahoo.com/",
+  },
+  {
+    text: "可不可",
+    size: fontBase + 10,
+    fill: "#2E8C03",
+    link: "https://tw.yahoo.com/",
+  },
+  {
+    text: "其他",
+    size: fontBase + 10,
+    fill: "#2E8C03",
+    link: "https://tw.yahoo.com/",
+  },
+  {
+    text: "小小字",
     size: fontBase + 10,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
@@ -167,6 +197,30 @@ const wordList = [
     link: "https://tw.yahoo.com/",
   },
   {
+    text: "螢幕",
+    size: fontBase + 10,
+    fill: "#2E8C03",
+    link: "https://tw.yahoo.com/",
+  },
+  {
+    text: "耳機",
+    size: fontBase + 10,
+    fill: "#2E8C03",
+    link: "https://tw.yahoo.com/",
+  },
+  {
+    text: "運動鍛鍊",
+    size: fontBase + 10,
+    fill: "#2E8C03",
+    link: "https://tw.yahoo.com/",
+  },
+  {
+    text: "筆記",
+    size: fontBase + 10,
+    fill: "#2E8C03",
+    link: "https://tw.yahoo.com/",
+  },
+  {
     text: "數學",
     size: fontBase + 10,
     fill: "#2E8C03",
@@ -210,6 +264,18 @@ const wordList = [
   },
   {
     text: "天氣",
+    size: fontBase + 15,
+    fill: "#D9A404",
+    link: "https://24h.pchome.com.tw/",
+  },
+  {
+    text: "思維訓練",
+    size: fontBase + 15,
+    fill: "#D9A404",
+    link: "https://24h.pchome.com.tw/",
+  },
+  {
+    text: "邏輯",
     size: fontBase + 15,
     fill: "#D9A404",
     link: "https://24h.pchome.com.tw/",

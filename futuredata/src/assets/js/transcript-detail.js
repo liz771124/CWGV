@@ -1,349 +1,361 @@
-const userAgent = navigator.userAgent;
-const fontBase = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
-  ? 12
-  : 15;
-console.log(fontBase);
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+const fontBase = isMobile ? 12 : 15;
+
+// 標籤雲資料格式
+// level 1 < 2 < 3 < 4
+// fill #0F3BBF < #2E8C03 < #D9A404 < #EF5024
 const wordList = [
   {
     text: "天文",
-    size: fontBase,
+    level: 1,
     fill: "#0F3BBF",
     link: "https://shopee.tw/",
   },
   {
     text: "宇宙",
-    size: fontBase,
+    level: 1,
     fill: "#0F3BBF",
     link: "https://shopee.tw/",
   },
   {
     text: "星球",
-    size: fontBase,
+    level: 1,
     fill: "#0F3BBF",
     link: "https://shopee.tw/",
   },
   {
     text: "英文",
-    size: fontBase,
+    level: 1,
     fill: "#0F3BBF",
     link: "https://shopee.tw/",
   },
   {
     text: "電腦",
-    size: fontBase,
+    level: 1,
     fill: "#0F3BBF",
     link: "https://shopee.tw/",
   },
   {
     text: "國文",
-    size: fontBase,
+    level: 1,
     fill: "#0F3BBF",
     link: "https://shopee.tw/",
   },
   {
     text: "作文",
-    size: fontBase,
+    level: 1,
     fill: "#0F3BBF",
     link: "https://shopee.tw/",
   },
   {
     text: "地理",
-    size: fontBase,
+    level: 1,
     fill: "#0F3BBF",
     link: "https://shopee.tw/",
   },
   {
     text: "動力",
-    size: fontBase,
+    level: 1,
     fill: "#0F3BBF",
     link: "https://shopee.tw/",
   },
   {
     text: "求職",
-    size: fontBase,
+    level: 1,
     fill: "#0F3BBF",
     link: "https://shopee.tw/",
   },
   {
     text: "小字",
-    size: fontBase,
+    level: 1,
     fill: "#0F3BBF",
     link: "https://shopee.tw/",
   },
   {
     text: "寓教",
-    size: fontBase,
+    level: 1,
     fill: "#0F3BBF",
     link: "https://shopee.tw/",
   },
   {
     text: "運動",
-    size: fontBase,
+    level: 1,
     fill: "#0F3BBF",
     link: "https://shopee.tw/",
   },
   {
     text: "體育",
-    size: fontBase,
+    level: 1,
     fill: "#0F3BBF",
     link: "https://shopee.tw/",
   },
   {
     text: "四個文字",
-    size: fontBase,
+    level: 1,
     fill: "#0F3BBF",
     link: "https://shopee.tw/",
   },
   {
     text: "科學知識",
-    size: fontBase,
+    level: 1,
     fill: "#0F3BBF",
     link: "https://shopee.tw/",
   },
   {
     text: "自然",
-    size: fontBase,
+    level: 1,
     fill: "#0F3BBF",
     link: "https://shopee.tw/",
   },
   {
     text: "外國",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "社會人文",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "心靈",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "清心",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "可不可",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "其他",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "小小字",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "三個字",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "動物",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "植物",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "語文",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "小字22",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "日常",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "數理",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "電腦",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "螢幕",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "耳機",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "運動鍛鍊",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "筆記",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "數學",
-    size: fontBase + 10,
+    level: 2,
     fill: "#2E8C03",
     link: "https://tw.yahoo.com/",
   },
   {
     text: "生活居家",
-    size: fontBase + 15,
+    level: 3,
     fill: "#D9A404",
     link: "https://24h.pchome.com.tw/",
   },
   {
     text: "地球",
-    size: fontBase + 15,
+    level: 3,
     fill: "#D9A404",
     link: "https://24h.pchome.com.tw/",
   },
   {
     text: "安全",
-    size: fontBase + 15,
+    level: 3,
     fill: "#D9A404",
     link: "https://24h.pchome.com.tw/",
   },
   {
     text: "海洋生物",
-    size: fontBase + 15,
+    level: 3,
     fill: "#D9A404",
     link: "https://24h.pchome.com.tw/",
   },
   {
     text: "哲學",
-    size: fontBase + 15,
+    level: 3,
     fill: "#D9A404",
     link: "https://24h.pchome.com.tw/",
   },
   {
     text: "自然科學",
-    size: fontBase + 15,
+    level: 3,
     fill: "#D9A404",
     link: "https://24h.pchome.com.tw/",
   },
   {
     text: "天氣",
-    size: fontBase + 15,
+    level: 3,
     fill: "#D9A404",
     link: "https://24h.pchome.com.tw/",
   },
   {
     text: "思維訓練",
-    size: fontBase + 15,
+    level: 3,
     fill: "#D9A404",
     link: "https://24h.pchome.com.tw/",
   },
   {
     text: "邏輯",
-    size: fontBase + 15,
+    level: 3,
     fill: "#D9A404",
     link: "https://24h.pchome.com.tw/",
   },
   {
     text: "路權",
-    size: fontBase + 15,
+    level: 3,
     fill: "#D9A404",
     link: "https://24h.pchome.com.tw/",
   },
   {
     text: "颱風",
-    size: fontBase + 15,
+    level: 3,
     fill: "#D9A404",
     link: "https://24h.pchome.com.tw/",
   },
   {
     text: "安全宣導",
-    size: fontBase + 15,
+    level: 3,
     fill: "#D9A404",
     link: "https://24h.pchome.com.tw/",
   },
   {
     text: "心靈成長",
-    size: fontBase + 20,
+    level: 4,
     fill: "#EF5024",
     link: "https://google.com.tw/",
   },
   {
     text: "很多文字標籤",
-    size: fontBase + 20,
+    level: 4,
     fill: "#EF5024",
     link: "https://google.com.tw/",
   },
   {
     text: "科技",
-    size: fontBase + 20,
+    level: 4,
     fill: "#EF5024",
     link: "https://google.com.tw/",
   },
   {
     text: "國文",
-    size: fontBase + 20,
+    level: 4,
     fill: "#EF5024",
     link: "https://google.com.tw/",
   },
   {
     text: "家庭教育",
-    size: fontBase + 20,
+    level: 4,
     fill: "#EF5024",
     link: "https://google.com.tw/",
   },
   {
     text: "台灣文學",
-    size: fontBase + 20,
+    level: 4,
     fill: "#EF5024",
     link: "https://google.com.tw/",
   },
   {
     text: "上下區塊二擇一",
-    size: fontBase + 20,
+    level: 4,
     fill: "#EF5024",
     link: "https://google.com.tw/",
   },
 ];
 
-let currentWidth = null;
+const sizeLevels = {
+  1: fontBase,
+  2: fontBase + 10,
+  3: fontBase + 15,
+  4: fontBase + 20,
+};
 
+const updatedWordList = wordList.map((word) => ({
+  ...word,
+  size: sizeLevels[word.level] || fontBase,
+}));
+
+let currentWidth = null;
 const getTagElementWidth = () => {
   const screenWidth = window.innerWidth;
   if (screenWidth <= 500) {
@@ -372,8 +384,8 @@ const generateCloud = () => {
   d3.layout
     .cloud()
     .size([w, h])
-    .words(wordList)
-    .padding(10)
+    .words(updatedWordList)
+    .padding(isMobile ? 10 : 0)
     .rotate(0)
     .fontSize((d) => d.size)
     .on("end", draw)

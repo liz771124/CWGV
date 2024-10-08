@@ -1,7 +1,8 @@
 module.exports = {
   content: [
+    "./src/**/*.{html,js,vue,scss}",
     "./node_modules/tw-elements/js/**/*.js",
-    "./src/**/**/*.{html,js,scss}",
+    "./src/**/**/*.{html,js,vue,scss}",
   ],
   plugins: [],
   darkMode: "class",

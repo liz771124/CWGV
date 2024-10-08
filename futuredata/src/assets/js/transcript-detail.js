@@ -385,7 +385,7 @@ const generateCloud = () => {
     .cloud()
     .size([w, h])
     .words(updatedWordList)
-    .padding(isMobile ? 5 : 10)
+    .padding(10)
     .rotate(0)
     .fontSize((d) => d.size)
     .on("end", draw)

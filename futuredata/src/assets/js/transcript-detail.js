@@ -1,7 +1,7 @@
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 const fontBase = isMobile ? 12 : 15;
 
-// 標籤雲資料格式
+// 標籤雲資料格式：四個階級 由小到大
 // level 1 < 2 < 3 < 4
 // fill #0F3BBF < #2E8C03 < #D9A404 < #EF5024
 const wordList = [

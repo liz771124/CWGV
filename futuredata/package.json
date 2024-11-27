@@ -5,13 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "j-tw-n": "npx tailwindcss -i ./src/new/assets/css/main.scss -o ./src/new/assets/css/junior-main.css --minify --config ./tailwind.config.junior-new.js --watch",
     "j-tw": "npx tailwindcss -i ./src/assets/css/main.scss -o ./src/assets/css/junior-main.css --minify --config ./tailwind.config.junior.js --watch",
     "y-tw": "npx tailwindcss -i ./src/assets/css/main.scss -o ./src/assets/css/youth-main.css --minify --config ./tailwind.config.youth.js --watch",
     "build-tw": "concurrently \"npm run j-tw\" \"npm run y-tw\""
   },
-  "safelist": [
-    
-  ],
+  "safelist": [],
   "keywords": [],
   "author": "",
   "license": "ISC",

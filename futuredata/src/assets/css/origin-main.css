@@ -15,6 +15,19 @@
   width: 100%;
 }
 
+.musicList {
+  row-gap: 10px;
+}
+
+.musicList ol li {
+  width: 100%;
+}
+
+.musicList li ol {
+  gap: 8px;
+  bottom: inherit;
+}
+
 .musicList ol li a {
   display: flex;
   align-items: center;
@@ -45,10 +58,6 @@
 
 .hpBtn li {
   margin: 0;
-}
-
-.musicList ol li {
-  width: 100%;
 }
 
 .infoItem {
@@ -141,6 +150,12 @@
     gap: 10px;
     flex-grow: 1;
     /* justify-content: end; */
+  }
+}
+
+@media (max-width: 991px) {
+  .musicList li ol {
+    flex-wrap: wrap;
   }
 }
 

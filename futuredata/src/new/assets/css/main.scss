@@ -35,5 +35,6 @@ html {
 }
 
 #menuContainer {
-  transform: translateX(-100%);
+  transform: translateX(-100%); /* 初始隱藏在畫面外 */
+  opacity: 0; /* 完全透明 */
 }

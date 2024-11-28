@@ -15,10 +15,6 @@
   width: 100%;
 }
 
-.musicList {
-  row-gap: 10px;
-}
-
 .musicList ol li {
   width: 100%;
 }
@@ -150,6 +146,9 @@
     gap: 10px;
     flex-grow: 1;
     /* justify-content: end; */
+  }
+  .child .musicList {
+    row-gap: 10px;
   }
 }
 

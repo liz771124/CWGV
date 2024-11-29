@@ -21,23 +21,26 @@
       />
     </h1>
   </div>
-  <div class="bg-primary-500 p-5 font-sans text-white" id="menuContainer">
+  <div
+    class="bg-primary-500 fixed start-0 top-0 h-screen w-screen p-5 font-sans text-white"
+    id="menuContainer"
+  >
+    <div class="flex items-center justify-between">
+      <button
+        type="button"
+        class="h-10 w-10 rounded-full border text-4xl text-white"
+        id="closeMenu"
+      >
+        &times;
+      </button>
+      <button
+        type="button"
+        class="rounded-full border border-white px-4 py-2 text-sm font-semibold"
+      >
+        未來少年 &raquo;
+      </button>
+    </div>
     <div class="mx-auto flex max-w-[1200px]">
-      <div class="flex items-center justify-between">
-        <button
-          type="button"
-          class="h-10 w-10 rounded-full border text-4xl text-white"
-          id="closeMenu"
-        >
-          &times;
-        </button>
-        <button
-          type="button"
-          class="rounded-full border border-white px-4 py-2 text-sm font-semibold"
-        >
-          未來少年 &raquo;
-        </button>
-      </div>
       <div class="flex h-screen w-full items-center justify-center">
         <div
           class="grid gap-5 [grid-template-columns:repeat(3,1fr)] [grid-template-rows:repeat(3,1fr)]"

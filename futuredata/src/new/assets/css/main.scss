@@ -25,9 +25,22 @@
   --youth-primary-800: #1f4f0d;
   --youth-primary-900: #002702;
 
-  --swiper-navigation-size: 20px !important;
-  --swiper-navigation-color: #fff !important;
-  --swiper-pagination-color: var(--junior-primary-500) !important;
+  --home-primary-500: #e95513;
+
+  --gray2-50: #f7f7f7;
+  --gray2-100: #dbdcdc;
+  --gray2-200: #c8c9ca;
+  --gray2-300: #b4b4b5;
+  --gray2-400: #939393;
+  --gray2-500: #888888;
+  --gray2-600: #595757;
+  --gray2-700: #3e3a39;
+  --gray2-800: #3e3a39;
+  --gray2-900: #231815;
+}
+
+body.menu-open {
+  overflow: hidden;
 }
 
 html {
@@ -35,6 +48,6 @@ html {
 }
 
 #menuContainer {
-  transform: translateX(-100%); /* 初始隱藏在畫面外 */
-  opacity: 0; /* 完全透明 */
+  transform: translateX(-100%);
+  opacity: 0;
 }

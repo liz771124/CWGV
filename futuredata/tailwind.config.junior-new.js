@@ -37,6 +37,8 @@ module.exports = {
         serif: ["Times New Roman"],
       },
       colors: {
+        "home-primary-500": "var(--home-primary-500)",
+
         "primary-50": "var(--junior-primary-50)",
         "primary-100": "var(--junior-primary-100)",
         "primary-200": "var(--junior-primary-200)",
@@ -79,13 +81,15 @@ module.exports = {
         // 'info-700': 'var(--Info-700)',
         // 'info-900': 'var(--Info-900)',
 
-        // 'gray2-100': 'var(--Gray-100)',
-        // 'gray2-300': 'var(--Gray-300)',
-        // 'gray2-400': 'var(--Gray-400)',
-        // 'gray2-500': 'var(--Gray-500)',
-        // 'gray2-600': 'var(--Gray-600)',
-        // 'gray2-700': 'var(--Gray-700)',
-        // 'gray2-900': 'var(--Gray-900)',
+        "gray2-100": "var(--Gray-100)",
+        "gray2-200": "var(--Gray-200)",
+        "gray2-300": "var(--Gray-300)",
+        "gray2-400": "var(--Gray-400)",
+        "gray2-500": "var(--Gray-500)",
+        "gray2-600": "var(--Gray-600)",
+        "gray2-700": "var(--Gray-700)",
+        "gray2-800": "var(--Gray-800)",
+        "gray2-900": "var(--Gray-900)",
 
         // 'typography-100': 'var(--Typography-100)',
         // 'typography-200': 'var(--Typography-200)',

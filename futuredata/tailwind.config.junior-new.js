@@ -50,12 +50,12 @@ module.exports = {
         "primary-800": "var(--junior-primary-800)",
         "primary-900": "var(--junior-primary-900)",
 
-        // 'secondary-100': 'var(--Secondary-100)',
-        // 'secondary-300': 'var(--Secondary-300)',
-        // 'secondary-500': 'var(--Secondary-500)',
-        // 'secondary-600': 'var(--Secondary-600)',
-        // 'secondary-700': 'var(--Secondary-700)',
-        // 'secondary-900': 'var(--Secondary-900)',
+        // "secondary-100": "var(--secondary-100)",
+        // "secondary-300": "var(--secondary-300)",
+        "secondary-500": "var(--secondary-500)",
+        "secondary-600": "var(--secondary-600)",
+        // "secondary-700": "var(--secondary-700)",
+        // "secondary-900": "var(--secondary-900)",
 
         // 'success-100': 'var(--Success-100)',
         // 'success-200': 'var(--Success-300)',

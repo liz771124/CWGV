@@ -81,6 +81,7 @@ module.exports = {
         // 'info-700': 'var(--Info-700)',
         // 'info-900': 'var(--Info-900)',
 
+        "gray2-50": "var(--gray-50)",
         "gray2-100": "var(--gray-100)",
         "gray2-200": "var(--gray-200)",
         "gray2-300": "var(--gray-300)",

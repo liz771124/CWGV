@@ -6,11 +6,7 @@ document.querySelectorAll(".faq-item").forEach(function (item) {
       `.faq-item[data-question="${question}"]`,
     );
     const option = this.getAttribute("data-option");
-    const activeClass = [
-      "bg-primary-50",
-      "text-primary-500",
-      "border-primary-500",
-    ];
+    const activeClass = ["bg-primary-500", "border-primary-500"];
     questionItems.forEach(function (button) {
       button.classList.remove(...activeClass);
     });

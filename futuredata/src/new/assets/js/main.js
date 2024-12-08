@@ -40,4 +40,31 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
   });
+
+  const goTop = document.getElementById("goTop");
+  const nav = document.getElementById("nav");
+
+  // 獲取 nav 的高度
+  const navHeight = document.querySelector("nav").offsetHeight;
+
+  // 滾動事件
+  window.addEventListener("scroll", () => {
+    // 取得目前滾軸的位置
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
+
+    // 判斷是否超過 nav 的高度
+    if (scrollY > navHeight) {
+      goTop.style.display = "block"; // 顯示 goTop
+    } else {
+      goTop.style.display = "none"; // 隱藏 goTop
+    }
+  });
+
+  // 點擊事件：回到頂部
+  goTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // 平滑滾動效果
+    });
+  });
 });

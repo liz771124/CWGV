@@ -1,29 +1,30 @@
-<nav class="bg-gray2-100 sticky top-0 z-50 py-1">
-  <div class="container mx-auto flex items-center justify-between gap-3 p-5">
-    <div class="flex gap-3">
+<nav class="sticky top-0 z-50 py-5 backdrop-blur-lg">
+  <div
+    class="container mx-auto flex flex-wrap items-center justify-between gap-3 px-5"
+  >
+    <div class="flex items-center gap-3">
       <img
         id="menuIcon"
-        class="max-f-full cursor-pointer"
-        width="50"
+        class="max-f-full h-[45px] w-[45px] cursor-pointer md:-ms-[70px]"
         src="../assets/img/navbar-menu-open.svg"
         alt=""
       />
       <h1>
         <img
           class="max-f-full"
-          width="300"
+          width="280"
           src="../assets/img/logo-junior.svg"
           alt="logo"
         />
       </h1>
     </div>
 
-    <div class="relative mt-2 rounded-full">
+    <div class="relative mt-2 grow rounded-full md:grow-0">
       <form role="form" class="bg-gray2-800 relative flex rounded-full p-1">
         <input
           type="text"
           placeholder="搜尋"
-          class="text-gray2-700 flex-1 rounded-full px-3 py-1 pe-20 focus:outline-none"
+          class="text-gray2-700 w-full flex-1 rounded-full px-3 py-1 pe-20 focus:outline-none"
         />
         <button
           class="bg-gray2-800 absolute right-0 rounded-full px-5 py-2 font-semibold text-white"

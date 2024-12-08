@@ -26,9 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 1. 底部色塊（左或右滑入）
   timeline
-    .from(".banner-bg-01", { x: "-100%", opacity: 0, duration: 0.85 })
-    .from(".banner-bg-02", { x: "100%", opacity: 0, duration: 0.85 })
-    .from(".banner-bg-03", { opacity: 0, y: "50%", duration: 0.85 })
+    .from(".banner-bg-01", { x: "-100%", opacity: 0, duration: 0.5 })
+    .from(".banner-bg-02", { x: "100%", opacity: 0, duration: 0.5 })
+    .from(".banner-bg-03", { opacity: 0, y: "50%", duration: 0.5 })
 
     // 3. 中間吉祥物放大縮小滑入
     .from(".banner-img-01", { scale: 0, opacity: 0, y: 50 })

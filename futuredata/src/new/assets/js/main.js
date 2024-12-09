@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       opacity: 1,
       duration: 0.3,
       ease: "power3.out",
-      stagger: 0.25, 
+      stagger: 0.25,
     });
   });
 
@@ -74,3 +74,18 @@ if (yearContainer) {
   });
   moreYearItem.addEventListener("click", toggleYearItems);
 }
+
+const favoriteItem = document.querySelectorAll(".icon-favorite");
+favoriteItem.forEach((item, index) => {
+  item.addEventListener("click", (event) => {
+    // 檢查是否點擊到 .icon-favorite
+    const favoriteIcon = event.target.closest(".icon-favorite");
+    if (favoriteIcon) {
+      // 切換 .favorite-on 和 .favorite-off 的顯示狀態
+      const favoriteOn = favoriteIcon.querySelector(".favorite-on");
+      const favoriteOff = favoriteIcon.querySelector(".favorite-off");
+      favoriteOn.classList.toggle("hidden");
+      favoriteOff.classList.toggle("hidden");
+    }
+  });
+});

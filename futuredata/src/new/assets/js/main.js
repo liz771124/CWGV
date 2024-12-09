@@ -3,68 +3,74 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeMenu = document.getElementById("closeMenu");
   const menuContainer = document.getElementById("menuContainer");
   const menuItems = document.querySelectorAll(".menu-item");
-  const body = document.body;
-
   menuIcon.addEventListener("click", () => {
     body.classList.add("menu-open");
     gsap.set(menuItems, { x: -50, opacity: 0 });
     gsap.to(menuContainer, {
       x: 0,
       opacity: 1,
-      duration: 0.5,
+      duration: 0.3,
       ease: "power3.out",
       display: "block",
     });
     gsap.to(menuItems, {
       x: 0,
       opacity: 1,
-      duration: 0.5,
+      duration: 0.3,
       ease: "power3.out",
-      stagger: 0.25, // 滑入間隔
+      stagger: 0.25, 
     });
   });
 
-  // 關閉選單
   closeMenu.addEventListener("click", () => {
-    // 恢復滾動
     body.classList.remove("menu-open");
-
-    // 選單收合
     gsap.to(menuContainer, {
       x: "-100%",
       opacity: 0,
-      duration: 0.5,
+      duration: 0.3,
       ease: "power3.in",
       onComplete: () => {
-        menuContainer.style.display = "none"; // 隱藏選單
+        menuContainer.style.display = "none";
       },
     });
   });
 
   const goTop = document.getElementById("goTop");
-  const nav = document.getElementById("nav");
-
-  // 獲取 nav 的高度
   const navHeight = document.querySelector("nav").offsetHeight;
-
-  // 滾動事件
+  const body = document.body;
   window.addEventListener("scroll", () => {
-    // 取得目前滾軸的位置
     const scrollY = window.scrollY || document.documentElement.scrollTop;
-
-    // 判斷是否超過 nav 的高度
-    if (scrollY > navHeight) {
-      goTop.style.display = "block"; // 顯示 goTop
-    } else {
-      goTop.style.display = "none"; // 隱藏 goTop
-    }
+    scrollY > navHeight
+      ? (goTop.style.display = "block")
+      : (goTop.style.display = "none");
   });
-
-  // 點擊事件：回到頂部
   goTop.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // 平滑滾動效果
+      behavior: "smooth",
     });
   });
 });
+
+const yearContainer = document.getElementById("year-container");
+if (yearContainer) {
+  const yearItems = yearContainer.querySelectorAll(".year-item");
+  const moreYearItem = document.getElementById("toggle-more");
+  let isYearContainerExpanded = false;
+  const toggleYearItems = () => {
+    if (isYearContainerExpanded) {
+      yearItems.forEach((item, index) => {
+        item.style.display = index < 10 ? "inline-block" : "none";
+      });
+      moreYearItem.style.transform = "rotate(0deg)";
+    } else {
+      yearItems.forEach((item) => (item.style.display = "inline-block"));
+      moreYearItem.style.transform = "rotate(180deg)";
+    }
+    isYearContainerExpanded = !isYearContainerExpanded;
+  };
+  yearItems.forEach((item, index) => {
+    item.style.display = index < 10 ? "inline-block" : "none";
+  });
+  moreYearItem.addEventListener("click", toggleYearItems);
+}

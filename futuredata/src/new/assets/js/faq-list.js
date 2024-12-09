@@ -24,8 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
     defaults: { duration: 0.8, ease: "power3.out" },
   });
 
-  // 1. 底部色塊（左或右滑入）
   timeline
+    .fromTo(
+      ".banner-container",
+      { height: "0px", opacity: 0 },
+      { height: "300px", opacity: 1, duration: 0.35, ease: "power1.in" },
+    )
     .from(".banner-bg-01", {
       x: "-100%",
       opacity: 0,

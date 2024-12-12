@@ -10,14 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
       x: 0,
       opacity: 1,
       duration: 0.3,
-      ease: "power3.out",
+      ease: "power2.out",
       display: "block",
     });
     gsap.to(menuItems, {
       x: 0,
       opacity: 1,
       duration: 0.3,
-      ease: "power3.out",
+      ease: "power2.out",
       stagger: 0.25,
     });
   });
@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.to(menuContainer, {
       x: "-100%",
       opacity: 0,
-      duration: 0.3,
-      ease: "power3.in",
+      duration: 0.25,
+      ease: "power4.in",
       onComplete: () => {
         menuContainer.style.display = "none";
       },

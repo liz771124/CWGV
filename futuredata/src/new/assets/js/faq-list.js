@@ -62,9 +62,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 2. 學習測驗文字由左側滑入
     .from(".banner-string-01", {
-      x: "-50%",
+      y: "50%",
       opacity: 0,
-      duration: 0.5,
+      duration: 0.3,
       ease: "sine.inOut",
     })
 
@@ -72,11 +72,11 @@ document.addEventListener("DOMContentLoaded", () => {
     .from(".banner-string-02", {
       x: "50%",
       opacity: 0,
-      duration: 0.5,
+      duration: 0.3,
       ease: "sine.inOut",
     })
-    // 數字亂數動畫
 
+    // 數字亂數動畫
     .to(".score-number", {
       duration: 0.5,
       ease: "elastic.out",
@@ -91,5 +91,22 @@ document.addEventListener("DOMContentLoaded", () => {
       onComplete: () => {
         document.querySelector(".score-number").textContent = finalScore;
       },
+    })
+
+    .from(".banner-crown", {
+      scale: 0,
+      opacity: 0,
+      y: -10,
+      ease: "bounce.out",
+      duration: 0.5,
     });
+
+  // 8. Crown 的左右搖晃無限循環動畫
+  gsap.to(".banner-crown", {
+    y: "0",
+    yoyo: true,
+    repeat: -1,
+    duration: 1,
+    ease: "sine.out",
+  });
 });

@@ -54,7 +54,7 @@ module.exports = {
         // "secondary-300": "var(--secondary-300)",
         "secondary-500": "var(--secondary-500)",
         "secondary-600": "var(--secondary-600)",
-        // "secondary-700": "var(--secondary-700)",
+        "secondary-700": "var(--secondary-700)",
         // "secondary-900": "var(--secondary-900)",
 
         // 'success-100': 'var(--Success-100)',

@@ -36,9 +36,9 @@
   --gray-800: #3e3a39;
   --gray-900: #231815;
 
-  --secondary-100: #EDC0AD;
-  --secondary-200: #DE917A;
-  --secondary-400: #D25B42;
+  --secondary-100: #edc0ad;
+  --secondary-200: #de917a;
+  --secondary-400: #d25b42;
   --secondary-500: #e95513;
   --secondary-600: #bd3c00;
   --secondary-700: #c30d23;
@@ -231,43 +231,8 @@ h5 {
   border-radius: 50%;
 }
 
-.gradeSwiper {
-  .swiper-slide {
-    background-color: #fff;
-  }
-
-  .swiper-slide:not([data-accomplished="1"]) {
-    position: relative;
-    &::after {
-      content: attr(data-level-title);
-      background-color: rgba(0, 0, 0, 0.4);
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      bottom: 0;
-      left: 0;
-    }
-    img {
-      opacity: 0.5;
-    }
-  }
-
-  .swiper-button-prev2 {
-    padding: 10px;
-    text-align: center;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-  }
-}
-
 ::-webkit-scrollbar {
-  background-color: #838383;
+  background-color: #fff;
   width: 8px;
 }
 
@@ -276,7 +241,7 @@ h5 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--gray2-300);
+  background-color: var(--gray-400);
   border-radius: 15px;
 }
 

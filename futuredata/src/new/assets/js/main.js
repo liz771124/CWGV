@@ -20,16 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
       ease: "power2.out",
       stagger: 0.25,
     });
-    gsap.to(
-      closeMenu,
-      {
-        rotation: -90, // 初始旋轉 -90 度
-        x: "100%", // 從右側滑入
-        opacity: 0,
-        duration: 0.8,
-        ease: "back.out(1.7)", // 使用彈性效果
-      }
-    );
+    // gsap.to(closeMenu, {
+    //   rotation: -90,
+    //   x: "100%",
+    //   opacity: 0,
+    //   duration: 0.8,
+    //   ease: "back.out(1.7)",
+    // });
   });
 
   closeMenu.addEventListener("click", () => {

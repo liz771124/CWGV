@@ -75,7 +75,9 @@
         id="menuContainer"
       >
         <div class="container mx-auto">
-          <div class="my-5 grid w-full grid-cols-3 gap-5">
+          <div
+            class="my-5 flex w-full justify-between gap-5 md:grid md:grid-cols-3"
+          >
             <button type="button" id="closeMenu">
               <img
                 width="50"
@@ -113,7 +115,7 @@
             </div>
           </div>
           <div
-            class="h-[calc(100vh - 70px)] flex w-full items-center justify-center"
+            class="md:h-[calc(100vh - 70px)] flex w-full items-center justify-center"
           >
             <div
               class="grid h-full w-full gap-5 [grid-template-columns:repeat(3,1fr)] [grid-template-rows:repeat(3,1fr)]"

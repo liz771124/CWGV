@@ -68,7 +68,9 @@
         id="menuContainer"
       >
         <div class="container mx-auto">
-          <div class="my-5 grid w-full grid-cols-3 gap-5">
+          <div
+            class="my-5 flex w-full justify-between gap-5 md:grid md:grid-cols-3"
+          >
             <button type="button" id="closeMenu">
               <img
                 width="50"
@@ -106,7 +108,7 @@
             </div>
           </div>
           <div
-            class="h-[calc(100vh - 70px)] flex w-full items-center justify-center"
+            class="md:h-[calc(100vh - 70px)] flex w-full items-center justify-center"
           >
             <div
               class="grid h-full w-full gap-5 [grid-template-columns:repeat(3,1fr)] [grid-template-rows:repeat(3,1fr)]"
@@ -290,10 +292,10 @@
         </div>
         <div class="mt-2 grid grid-cols-1 gap-6 lg:grid-cols-2">
           <div
-            class="bg-gray2-50 relative overflow-hidden rounded-lg px-5 py-8 shadow-[0px_3px_8px_0px_rgba(0,0,0,0.3)]"
+            class="bg-gray2-50 relative overflow-hidden rounded-lg px-5 py-5 shadow-[0px_3px_8px_0px_rgba(0,0,0,0.3)] md:py-8"
           >
             <div
-              class="absolute bottom-0 start-0 flex h-full w-[135px] items-end"
+              class="absolute bottom-0 start-0 flex h-full w-[100px] items-end md:w-[135px]"
             >
               <svg
                 viewBox="0 0 114 136"
@@ -306,19 +308,21 @@
                 />
               </svg>
             </div>
-            <div class="relative flex items-center justify-between">
+            <div class="relative flex items-center md:justify-between">
               <h2
                 class="relative mb-4 mt-6 shrink-0 text-3xl font-bold text-white"
               >
                 語文
               </h2>
-              <div class="divide-gray2-500 flex divide-x text-lg">
-                <ul class="space-y-3 px-8 md:px-12">
+              <div
+                class="divide-gray2-500 ms-auto flex max-w-[380px] grow divide-x md:text-lg"
+              >
+                <ul class="w-1/2 space-y-2 px-8 md:space-y-3 md:px-12">
                   <li><a href="#">英語學習</a></li>
                   <li><a href="#">語文能力</a></li>
                   <li><a href="#">文學賞析</a></li>
                 </ul>
-                <ul class="space-y-3 px-8 md:px-12">
+                <ul class="w-1/2 space-y-2 px-8 md:space-y-3 md:px-12">
                   <li><a href="#">創作故事</a></li>
                   <li><a href="#">圖像閱讀</a></li>
                   <li><a href="#">寫作練習</a></li>
@@ -327,10 +331,10 @@
             </div>
           </div>
           <div
-            class="bg-gray2-50 relative overflow-hidden rounded-lg px-5 py-8 shadow-[0px_3px_8px_0px_rgba(0,0,0,0.3)]"
+            class="bg-gray2-50 relative overflow-hidden rounded-lg px-5 py-5 shadow-[0px_3px_8px_0px_rgba(0,0,0,0.3)] md:py-8"
           >
             <div
-              class="absolute bottom-0 start-0 flex h-full w-[135px] items-end"
+              class="absolute bottom-0 start-0 flex h-full w-[100px] items-end md:w-[135px]"
             >
               <svg
                 viewBox="0 0 114 136"
@@ -343,19 +347,21 @@
                 />
               </svg>
             </div>
-            <div class="relative flex items-center justify-between">
+            <div class="relative flex items-center md:justify-between">
               <h2
                 class="relative mb-4 mt-6 shrink-0 text-3xl font-bold text-white"
               >
                 數學
               </h2>
-              <div class="divide-gray2-500 flex divide-x text-lg">
-                <ul class="space-y-3 px-8 md:px-12">
+              <div
+                class="divide-gray2-500 ms-auto flex max-w-[380px] grow divide-x md:text-lg"
+              >
+                <ul class="w-1/2 space-y-2 px-8 md:space-y-3 md:px-12">
                   <li><a href="#">數學運算</a></li>
                   <li><a href="#">形狀與面積</a></li>
                   <li><a href="#">統計與機率</a></li>
                 </ul>
-                <ul class="space-y-3 px-8 md:px-12">
+                <ul class="w-1/2 space-y-2 px-8 md:space-y-3 md:px-12">
                   <li><a href="#">距離與時間</a></li>
                   <li><a href="#">邏輯思考</a></li>
                 </ul>
@@ -363,10 +369,10 @@
             </div>
           </div>
           <div
-            class="bg-gray2-50 relative overflow-hidden rounded-lg px-5 py-8 shadow-[0px_3px_8px_0px_rgba(0,0,0,0.3)]"
+            class="bg-gray2-50 relative overflow-hidden rounded-lg px-5 py-5 shadow-[0px_3px_8px_0px_rgba(0,0,0,0.3)] md:py-8"
           >
             <div
-              class="absolute bottom-0 start-0 flex h-full w-[135px] items-end"
+              class="absolute bottom-0 start-0 flex h-full w-[100px] items-end md:w-[135px]"
             >
               <svg
                 viewBox="0 0 114 136"
@@ -379,19 +385,21 @@
                 />
               </svg>
             </div>
-            <div class="relative flex items-center justify-between">
+            <div class="relative flex items-center md:justify-between">
               <h2
                 class="relative mb-4 mt-6 shrink-0 text-3xl font-bold text-white"
               >
                 社會
               </h2>
-              <div class="divide-gray2-500 flex divide-x text-lg">
-                <ul class="space-y-3 px-8 md:px-12">
+              <div
+                class="divide-gray2-500 ms-auto flex max-w-[380px] grow divide-x md:text-lg"
+              >
+                <ul class="w-1/2 space-y-2 px-8 md:space-y-3 md:px-12">
                   <li><a href="#">歷史素養</a></li>
                   <li><a href="#">地理素養</a></li>
                   <li><a href="#">公民素養</a></li>
                 </ul>
-                <ul class="space-y-3 px-8 md:px-12">
+                <ul class="w-1/2 space-y-2 px-8 md:space-y-3 md:px-12">
                   <li><a href="#">認識世界</a></li>
                   <li><a href="#">認識臺灣</a></li>
                   <li><a href="#">新聞時事</a></li>
@@ -400,10 +408,10 @@
             </div>
           </div>
           <div
-            class="bg-gray2-50 relative overflow-hidden rounded-lg px-5 py-8 shadow-[0px_3px_8px_0px_rgba(0,0,0,0.3)]"
+            class="bg-gray2-50 relative overflow-hidden rounded-lg px-5 py-5 shadow-[0px_3px_8px_0px_rgba(0,0,0,0.3)] md:py-8"
           >
             <div
-              class="absolute bottom-0 start-0 flex h-full w-[135px] items-end"
+              class="absolute bottom-0 start-0 flex h-full w-[100px] items-end md:w-[135px]"
             >
               <svg
                 viewBox="0 0 114 136"
@@ -416,19 +424,21 @@
                 />
               </svg>
             </div>
-            <div class="relative flex items-center justify-between">
+            <div class="relative flex items-center md:justify-between">
               <h2
                 class="relative mb-4 mt-6 shrink-0 text-3xl font-bold text-white"
               >
                 自然
               </h2>
-              <div class="divide-gray2-500 flex divide-x text-lg">
-                <ul class="space-y-3 px-8 md:px-12">
+              <div
+                class="divide-gray2-500 ms-auto flex max-w-[380px] grow divide-x md:text-lg"
+              >
+                <ul class="w-1/2 space-y-2 px-8 md:space-y-3 md:px-12">
                   <li><a href="#">生命科學</a></li>
                   <li><a href="#">生態與環保</a></li>
                   <li><a href="#">地球科學</a></li>
                 </ul>
-                <ul class="space-y-3 px-8 md:px-12">
+                <ul class="w-1/2 space-y-2 px-8 md:space-y-3 md:px-12">
                   <li><a href="#">認識人體</a></li>
                   <li><a href="#">探索物理</a></li>
                   <li><a href="#">探索化學</a></li>
@@ -436,54 +446,157 @@
               </div>
             </div>
           </div>
-
-          <!--
-
-
-
-      <div class="rounded-lg bg-yellow-500 p-6 text-white shadow-md">
-        <h2 class="mb-4 text-xl font-bold">綜合</h2>
-        <ul class="space-y-2">
-          <li>名人故事</li>
-          <li>人際關係</li>
-          <li>品格與學習</li>
-          <li>趣味遊戲</li>
-          <li>生活邏輯</li>
-        </ul>
-      </div>
-
-      <div class="rounded-lg bg-indigo-500 p-6 text-white shadow-md">
-        <h2 class="mb-4 text-xl font-bold">科技</h2>
-        <ul class="space-y-2">
-          <li>機械與工程</li>
-          <li>生活科技</li>
-          <li>資訊科技</li>
-          <li>太空科技</li>
-          <li>人工智慧</li>
-        </ul>
-      </div>
-
-      <div class="rounded-lg bg-purple-500 p-6 text-white shadow-md">
-        <h2 class="mb-4 text-xl font-bold">藝術</h2>
-        <ul class="space-y-2">
-          <li>音樂欣賞</li>
-          <li>美術欣賞</li>
-          <li>表演藝術</li>
-          <li>藝術創作</li>
-        </ul>
-      </div>
-
-      <div class="rounded-lg bg-teal-500 p-6 text-white shadow-md">
-        <h2 class="mb-4 text-xl font-bold">健體</h2>
-        <ul class="space-y-2">
-          <li>心理健康</li>
-          <li>照顧身體</li>
-          <li>體育運動</li>
-          <li>休閒生活</li>
-          <li>健康飲食</li>
-        </ul>
-      </div>
-      -->
+          <div
+            class="bg-gray2-50 relative overflow-hidden rounded-lg px-5 py-5 shadow-[0px_3px_8px_0px_rgba(0,0,0,0.3)] md:py-8"
+          >
+            <div
+              class="absolute bottom-0 start-0 flex h-full w-[100px] items-end md:w-[135px]"
+            >
+              <svg
+                viewBox="0 0 114 136"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M-51.5899 124.54C-69.1899 89.9 -81.9799 53.66 -64.6499 27.33C-47.3199 1.00002 -8.9699 -1.58999 29.8001 0.870015C68.5701 3.33002 98.7001 17.03 107.5 26.43C127.19 47.44 91.0601 109.63 81.7901 123.71C72.5301 137.79 29.7001 195.57 2.6201 185.8C-9.4899 181.43 -33.9999 159.18 -51.5899 124.55V124.54Z"
+                  fill="#F3B013"
+                />
+              </svg>
+            </div>
+            <div class="relative flex items-center md:justify-between">
+              <h2
+                class="relative mb-4 mt-6 shrink-0 text-3xl font-bold text-white"
+              >
+                綜合
+              </h2>
+              <div
+                class="divide-gray2-500 ms-auto flex max-w-[380px] grow divide-x md:text-lg"
+              >
+                <ul class="w-1/2 space-y-2 px-8 md:space-y-3 md:px-12">
+                  <li><a href="#">名人故事</a></li>
+                  <li><a href="#">人際關係</a></li>
+                  <li><a href="#">品格與學習</a></li>
+                </ul>
+                <ul class="w-1/2 space-y-2 px-8 md:space-y-3 md:px-12">
+                  <li><a href="#">趣味遊戲</a></li>
+                  <li><a href="#">生活邏輯</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-gray2-50 relative overflow-hidden rounded-lg px-5 py-5 shadow-[0px_3px_8px_0px_rgba(0,0,0,0.3)] md:py-8"
+          >
+            <div
+              class="absolute bottom-0 start-0 flex h-full w-[100px] items-end md:w-[135px]"
+            >
+              <svg
+                viewBox="0 0 114 136"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M-51.5899 124.54C-69.1899 89.9 -81.9799 53.66 -64.6499 27.33C-47.3199 1.00002 -8.9699 -1.58999 29.8001 0.870015C68.5701 3.33002 98.7001 17.03 107.5 26.43C127.19 47.44 91.0601 109.63 81.7901 123.71C72.5301 137.79 29.7001 195.57 2.6201 185.8C-9.4899 181.43 -33.9999 159.18 -51.5899 124.55V124.54Z"
+                  fill="#315C9A"
+                />
+              </svg>
+            </div>
+            <div class="relative flex items-center md:justify-between">
+              <h2
+                class="relative mb-4 mt-6 shrink-0 text-3xl font-bold text-white"
+              >
+                科技
+              </h2>
+              <div
+                class="divide-gray2-500 ms-auto flex max-w-[380px] grow divide-x md:text-lg"
+              >
+                <ul class="w-1/2 space-y-2 px-8 md:space-y-3 md:px-12">
+                  <li><a href="#">機械與工程</a></li>
+                  <li><a href="#">生活科技</a></li>
+                  <li><a href="#">資訊科技</a></li>
+                </ul>
+                <ul class="w-1/2 space-y-2 px-8 md:space-y-3 md:px-12">
+                  <li><a href="#">太空科技</a></li>
+                  <li><a href="#">人工智慧</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-gray2-50 relative overflow-hidden rounded-lg px-5 py-5 shadow-[0px_3px_8px_0px_rgba(0,0,0,0.3)] md:py-8"
+          >
+            <div
+              class="absolute bottom-0 start-0 flex h-full w-[100px] items-end md:w-[135px]"
+            >
+              <svg
+                viewBox="0 0 114 136"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M-51.5899 124.54C-69.1899 89.9 -81.9799 53.66 -64.6499 27.33C-47.3199 1.00002 -8.9699 -1.58999 29.8001 0.870015C68.5701 3.33002 98.7001 17.03 107.5 26.43C127.19 47.44 91.0601 109.63 81.7901 123.71C72.5301 137.79 29.7001 195.57 2.6201 185.8C-9.4899 181.43 -33.9999 159.18 -51.5899 124.55V124.54Z"
+                  fill="#8D127B"
+                />
+              </svg>
+            </div>
+            <div class="relative flex items-center md:justify-between">
+              <h2
+                class="relative mb-4 mt-6 shrink-0 text-3xl font-bold text-white"
+              >
+                藝術
+              </h2>
+              <div
+                class="divide-gray2-500 ms-auto flex max-w-[380px] grow divide-x md:text-lg"
+              >
+                <ul class="w-1/2 space-y-2 px-8 md:space-y-3 md:px-12">
+                  <li><a href="#">音樂欣賞</a></li>
+                  <li><a href="#">美術欣賞</a></li>
+                  <li><a href="#">表演藝術</a></li>
+                </ul>
+                <ul class="w-1/2 space-y-2 px-8 md:space-y-3 md:px-12">
+                  <li><a href="#">藝術創作</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-gray2-50 relative overflow-hidden rounded-lg px-5 py-5 shadow-[0px_3px_8px_0px_rgba(0,0,0,0.3)] md:py-8"
+          >
+            <div
+              class="absolute bottom-0 start-0 flex h-full w-[100px] items-end md:w-[135px]"
+            >
+              <svg
+                viewBox="0 0 114 136"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M-51.5899 124.54C-69.1899 89.9 -81.9799 53.66 -64.6499 27.33C-47.3199 1.00002 -8.9699 -1.58999 29.8001 0.870015C68.5701 3.33002 98.7001 17.03 107.5 26.43C127.19 47.44 91.0601 109.63 81.7901 123.71C72.5301 137.79 29.7001 195.57 2.6201 185.8C-9.4899 181.43 -33.9999 159.18 -51.5899 124.55V124.54Z"
+                  fill="#2D8D3A"
+                />
+              </svg>
+            </div>
+            <div class="relative flex items-center md:justify-between">
+              <h2
+                class="relative mb-4 mt-6 shrink-0 text-3xl font-bold text-white"
+              >
+                健體
+              </h2>
+              <div
+                class="divide-gray2-500 ms-auto flex max-w-[380px] grow divide-x md:text-lg"
+              >
+                <ul class="w-1/2 space-y-2 px-8 md:space-y-3 md:px-12">
+                  <li><a href="#">心理健康</a></li>
+                  <li><a href="#">照顧身體</a></li>
+                  <li><a href="#">體育運動</a></li>
+                </ul>
+                <ul class="w-1/2 space-y-2 px-8 md:space-y-3 md:px-12">
+                  <li><a href="#">休閒生活</a></li>
+                  <li><a href="#">健康飲食</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>

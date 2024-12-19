@@ -15,7 +15,7 @@
   </head>
   <body class="bg-gray2-50 relative">
     <!-- 共用版頭 -->
-    <nav class="sticky top-0 z-50 py-5 backdrop-blur-lg">
+    <nav class="sticky top-0 z-50 bg-gray-50/50 py-5 backdrop-blur-lg">
       <div
         class="container mx-auto flex flex-wrap items-center justify-between gap-3 px-5"
       >
@@ -379,7 +379,9 @@
           >
             <div class="flex flex-wrap gap-5">
               <div class="flex max-w-[700px] flex-col gap-3">
-                <h2 class="text-3xl font-bold">333 紅包理財術</h2>
+                <h2 class="text-3xl font-bold">
+                  <a href="#">333 紅包理財術</a>
+                </h2>
                 <div>
                   我們熟悉的「十進位」，個位數的數 字從 0 開始，1、2 一直到
                   9，再進到「十 位數」，等到 99
@@ -396,7 +398,7 @@
                   <div>作者 | 鄧曉飛 繪圖 | 右耳</div>
                 </div>
 
-                <div class="flex justify-start gap-3">
+                <div class="flex flex-wrap justify-start gap-3">
                   <a
                     href="#"
                     class="text-primary-500 hover:bg-primary-600 block rounded-full bg-white px-3 py-1 font-bold hover:text-white"
@@ -419,16 +421,16 @@
                   >
                 </div>
               </div>
-              <div class="relative mx-3 ms-auto w-[180px] shrink-0">
+              <a href="#" class="relative mx-3 ms-auto w-[180px] shrink-0">
                 <span
                   class="bg-primary-500 absolute -bottom-3 -end-3 z-0 h-full w-full rounded-xl"
                 ></span>
                 <img
                   class="z-1 relative h-full w-full rounded-xl object-cover"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcvLvn3iPuFI_C6pkppVyeJbWOH2aEnmaHYiN1tetf0D_BVQm2lXegidpLeD9DLgLp2D4&usqp=CAU"
+                  src="https://imgs.cwgv.com.tw/books_subject/99/1499/thumb/1499.png"
                   alt=""
                 />
-              </div>
+              </a>
               <ul class="flex h-full justify-between gap-8 md:flex-col">
                 <li class="text-primary-500">
                   <svg
@@ -480,7 +482,9 @@
           >
             <div class="flex flex-wrap gap-5">
               <div class="flex max-w-[700px] flex-col gap-3">
-                <h2 class="text-3xl font-bold">333 紅包理財術</h2>
+                <h2 class="text-3xl font-bold">
+                  <a href="#">333 紅包理財術</a>
+                </h2>
                 <div>
                   <p>
                     我們熟悉的「十進位」，個位數的數 字從 0 開始，1、2 一直到
@@ -499,7 +503,7 @@
                   <div>作者 | 鄧曉飛 繪圖 | 右耳</div>
                 </div>
 
-                <div class="flex justify-start gap-3">
+                <div class="flex flex-wrap justify-start gap-3">
                   <a
                     href="#"
                     class="text-primary-500 hover:bg-primary-600 block rounded-full bg-white px-3 py-1 font-bold hover:text-white"
@@ -522,16 +526,16 @@
                   >
                 </div>
               </div>
-              <div class="relative mx-3 ms-auto w-[180px] shrink-0">
+              <a href="#" class="relative mx-3 ms-auto w-[180px] shrink-0">
                 <span
                   class="bg-primary-500 absolute -bottom-3 -end-3 z-0 h-full w-full rounded-xl"
                 ></span>
                 <img
                   class="z-1 relative h-full w-full rounded-xl object-cover"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcvLvn3iPuFI_C6pkppVyeJbWOH2aEnmaHYiN1tetf0D_BVQm2lXegidpLeD9DLgLp2D4&usqp=CAU"
+                  src="https://imgs.cwgv.com.tw/books_subject/99/1499/thumb/1499.png"
                   alt=""
                 />
-              </div>
+              </a>
               <ul class="flex h-full justify-between gap-8 md:flex-col">
                 <li class="text-primary-500">
                   <svg
@@ -612,17 +616,12 @@
                   </div>
                 </div>
 
-                <div class="flex justify-start gap-3">
-                  <a
-                    href="#"
-                    class="text-primary-500 hover:bg-primary-600 block rounded-full bg-white px-3 py-1 font-bold hover:text-white"
-                    >＃自我成長</a
-                  >
+                <div class="flex flex-wrap justify-start gap-3">
                   <a
                     v-for="(tag, index) in article.tag"
                     :key="index"
                     :href="tag.url"
-                    class="text-primary-500 hover:bg-primary-600 block rounded-full bg-white px-3 py-1 font-bold hover:text-white"
+                    :class="`text-primary-500 hover:bg-primary-600 block rounded-full ${tag.isCustom ? 'bg-gray2-200' :'bg-white'} px-3 py-1 font-bold hover:text-white`"
                     >#{{ tag.title }}</a
                   >
                 </div>
@@ -634,7 +633,7 @@
                 <img
                   class="z-1 relative h-full w-full rounded-xl object-cover"
                   :src="article.image"
-                  alt=""
+                  :alt="article.title"
                 />
               </div>
               <ul class="flex h-full justify-between gap-8 md:flex-col">
@@ -741,11 +740,11 @@
           <div>
             <ul class="mb-2 flex divide-x">
               <li class="px-2">
-                <a
+                <a2
                   href="https://futureparenting.cwgv.com.tw/"
                   title="未來親子學習平台"
                   target="_blank"
-                  >未來親子學習平台</a
+                  >未來親子學習平台</a2
                 >
               </li>
               <li class="px-2">
@@ -930,18 +929,22 @@
                 {
                   title: "語文",
                   url: "#",
+                  isCustom: false,
                 },
                 {
                   title: "自我成長",
                   url: "#",
+                  isCustom: false,
                 },
                 {
                   title: "科學",
                   url: "#",
+                  isCustom: false,
                 },
                 {
                   title: "自訂標籤",
                   url: "#",
+                  isCustom: true,
                 },
               ],
               category: "精彩專題",

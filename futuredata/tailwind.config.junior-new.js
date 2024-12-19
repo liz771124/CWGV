@@ -4,7 +4,6 @@ module.exports = {
     "./node_modules/tw-elements/js/**/*.js",
     "./src/**/**/*.{html,js,vue,scss}",
   ],
-  plugins: [],
   darkMode: "class",
   theme: {
     container: {

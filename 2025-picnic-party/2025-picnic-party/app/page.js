@@ -1,9 +1,12 @@
-import Image from "next/image";
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <>
+      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <div className="text-primary-500">1234</div>
+        {/* <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -95,7 +98,120 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
+      </footer> */}
+      </div>
+      <footer className="tracking-wide">
+        <div className="container mx-auto flex flex-wrap items-center justify-between gap-5 px-3 py-5 text-sm">
+          <div className="flex grow flex-wrap items-center gap-2">
+            <h3>
+              <Image
+                className="max-f-full"
+                width="80"
+                height="40"
+                src="img/footer-logo.png"
+                alt="logo"
+              />
+            </h3>
+            <div>
+              <ul className="mb-2 flex divide-x">
+                <li className="px-2">
+                  <Link
+                    href="https://futureparenting.cwgv.com.tw/"
+                    title="未來親子學習平台"
+                    target="_blank"
+                  >
+                    未來親子學習平台
+                  </Link>
+                </li>
+                <li className="px-2">
+                  <Link
+                    href="https://futureparenting.cwgv.com.tw/kids"
+                    title="小天下 / 未來出版"
+                    target="_blank"
+                  >
+                    小天下 / 未來出版
+                  </Link>
+                </li>
+                <li className="px-2">
+                  <Link
+                    href="https://futureparenting.cwgv.com.tw/junior"
+                    title="未來兒童"
+                    target="_blank"
+                  >
+                    未來兒童
+                  </Link>
+                </li>
+                <li className="px-2">
+                  <Link
+                    href="https://futureparenting.cwgv.com.tw/youth"
+                    title="未來少年"
+                    target="_blank"
+                  >
+                    未來少年
+                  </Link>
+                </li>
+                <li className="px-2">
+                  <Link
+                    href="https://futureparenting.cwgv.com.tw/family"
+                    title="未來Family"
+                    target="_blank"
+                  >
+                    未來Family
+                  </Link>
+                </li>
+              </ul>
+              <div className="px-2">
+                Copyright © 未來親子學習平台﹒All rights reserved.
+              </div>
+            </div>
+          </div>
+          <div>
+            <ul className="mb-2 flex flex-wrap divide-x text-end">
+              <li className="px-2">
+                <Link
+                  href="https://futuredata.cwgv.com.tw/copyright/index/A"
+                  title="著作權聲明"
+                  target="_blank"
+                >
+                  著作權聲明
+                </Link>
+              </li>
+              <li className="px-2">
+                <Link
+                  href="https://futuredata.cwgv.com.tw/copyright/index/B"
+                  title="隱私權政策"
+                  target="_blank"
+                >
+                  隱私權政策
+                </Link>
+              </li>
+            </ul>
+            <ul className="flex divide-x text-end">
+              <li className="px-2">
+                <Link
+                  href="https://futuredata.cwgv.com.tw/copyright/index/C"
+                  title="個資保護聲明"
+                  target="_blank"
+                >
+                  個資保護聲明
+                </Link>
+              </li>
+              <li className="px-2">
+                <Link
+                  href="https://futuredata.cwgv.com.tw/qa"
+                  title="QA"
+                  target="_blank"
+                >
+                  常見問題
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="fixed bottom-5 end-3" id="goTop">
+          <Image width="40" height="40" src="/img/go-top.svg" alt="" />
+        </div>
       </footer>
-    </div>
-  );
+    </>
+  )
 }

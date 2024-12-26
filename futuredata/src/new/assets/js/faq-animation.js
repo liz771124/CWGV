@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   const finalScore = document.querySelector(".final-score").innerText;
   const timeline = gsap.timeline({
     defaults: { duration: 0.8, ease: "power3.out" },
@@ -8,7 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
     .fromTo(
       ".banner-container",
       { height: "0px", opacity: 0 },
-      { height: "300px", opacity: 1, duration: 0.35, ease: "power1.in" },
+      {
+        height: isMobile ? "200px" : "300px",
+        opacity: 1,
+        duration: 0.35,
+        ease: "power1.in",
+      },
     )
     .from(".banner-bg-01", {
       x: "-100%",

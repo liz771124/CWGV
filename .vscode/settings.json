@@ -33,7 +33,8 @@
   // "cSpell.words": ["SUAG"],
   // "cSpell.autoFormatConfigFile": false,
   "html.format.wrapLineLength": 0,
-  "javascript.format.enable": true
+  "javascript.format.enable": true,
+  "liveServer.settings.port": 5501
   // "peacock.color": "#723e27",
   // "workbench.colorCustomizations": {
   //   "activityBar.activeBackground": "#985334",

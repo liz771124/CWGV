@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ".banner-container",
       { height: "0px", opacity: 0 },
       {
-        height: isMobile ? "200px" : "300px",
+        height: isMobile ? "150px" : "300px",
         opacity: 1,
         duration: 0.35,
         ease: "power1.in",

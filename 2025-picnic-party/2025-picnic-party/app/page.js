@@ -81,28 +81,28 @@ export default function Home() {
           <div className="container flex items-center justify-between px-3">
             <h1>
               <Link href="/">
-                <Image width={180} height={90} src="/img/logo.svg" alt="logo"></Image>
+                <Image width={180} height={90} src="./img/logo.svg" alt="logo"></Image>
               </Link>
             </h1>
 
             <ul className="flex items-center gap-5">
               <li>
-                <Link className="text-xl font-bold text-white hover:text-gray-50" href="/">
+                <Link className="text-xl font-bold text-white hover:text-gray-50" href="./">
                   首頁
                 </Link>
               </li>
               <li>
-                <Link className="text-xl font-bold text-white hover:text-gray-50" href="/gift">
+                <Link className="text-xl font-bold text-white hover:text-gray-50" href="./gift/">
                   報名拿好禮
                 </Link>
               </li>
               <li>
-                <Link className="text-xl font-bold text-white hover:text-gray-50" href="/game">
+                <Link className="text-xl font-bold text-white hover:text-gray-50" href="./game/">
                   主題體驗區
                 </Link>
               </li>
               <li>
-                <Link className="text-xl font-bold text-white hover:text-gray-50" href="/game">
+                <Link className="text-xl font-bold text-white hover:text-gray-50" href="./game/">
                   超人氣舞台秀
                 </Link>
               </li>
@@ -110,10 +110,10 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      <header className="flex h-screen items-center justify-center bg-[url('/img/bg_all.gif')] bg-cover bg-no-repeat p-5">
+      <header className="flex h-screen items-center justify-center bg-cover bg-no-repeat p-5">
         <div className="flex flex-col gap-5">
-          <Link href="/">
-            <Image width={500} height={400} src="/img/date.png" alt="logo"></Image>
+          <Link href="./">
+            <Image width={500} height={400} src="./img/date.png" alt="logo"></Image>
           </Link>
         </div>
       </header>
@@ -489,7 +489,7 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4">
             <Link href="#" target="_blank">
-              <Image src="/img/logo01.jpg" width="200" height="50" alt="" />
+              <Image src="./img/logo01.jpg" width="200" height="50" alt="" />
             </Link>
           </div>
         </div>
@@ -503,7 +503,7 @@ export default function Home() {
                 className="max-f-full"
                 width="80"
                 height="40"
-                src="/img/footer-logo.png"
+                src="./img/footer-logo.png"
                 alt="logo"
               />
             </h3>
@@ -560,7 +560,7 @@ export default function Home() {
           </div>
         </div>
         <div className="fixed bottom-5 end-3" id="goTop">
-          <Image width="40" height="40" src="/img/go-top.svg" alt="" />
+          <Image width="40" height="40" src="./img/go-top.svg" alt="" />
         </div>
       </footer>
     </>

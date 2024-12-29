@@ -288,8 +288,11 @@
         <div
           class="banner-container relative flex items-center justify-between overflow-hidden rounded-xl bg-gradient-to-r from-[#F6C346] via-[#FEDD73] to-[#EDBD34] shadow-[0px_3px_8px_0px_rgba(0,0,0,0.3)]"
         >
-          <div class="banner-bg-01 absolute bottom-0 top-0 text-[#FEDD73]">
+          <div
+            class="banner-bg-01 absolute bottom-0 top-0 w-[100px] text-[#FEDD73] md:w-auto"
+          >
             <svg
+              class="w-full"
               width="252"
               height="112"
               viewBox="0 0 252 112"
@@ -303,7 +306,7 @@
             </svg>
           </div>
 
-          <div class="banner-bg-02 absolute bottom-0 end-0">
+          <div class="banner-bg-02 absolute bottom-0 end-0 w-[135px] md:w-auto">
             <svg
               width="316"
               height="269"
@@ -323,11 +326,14 @@
               />
             </svg>
           </div>
-          <div class="z-1 absolute inset-x-0 bottom-0 text-center">
+          <div
+            class="text-[#FEDD73]z-1 absolute inset-x-0 bottom-0 text-center"
+          >
             <div
-              class="banner-bg-03 absolute bottom-0 start-1/4 text-[#FEDD73]"
+              class="banner-bg-03 absolute bottom-0 start-1/4 w-[120px] text-[#FEDD73] md:w-auto"
             >
               <svg
+                class="w-full"
                 width="479"
                 height="164"
                 viewBox="0 0 479 164"
@@ -341,20 +347,24 @@
               </svg>
             </div>
             <img
-              class="banner-img-01 z-1 relative mx-auto"
+              class="banner-img-01 z-1 relative mx-auto w-[150px] md:w-auto"
               src="../assets/img/faq-list-banner-02.svg"
               alt=""
             />
           </div>
           <div
-            class="relative z-10 flex w-full flex-wrap items-center justify-between gap-2 p-5 md:p-16"
+            class="relative z-10 flex w-full flex-wrap items-center justify-between gap-2 p-5 lg:p-16"
           >
             <div class="banner-string-01 text-center leading-[60px]">
-              <div class="mb-6 text-[5rem] font-black">太棒了!</div>
-              <div class="text-4xl font-extrabold">都答對了</div>
+              <div class="text-3xl font-black md:mb-6 md:text-[5rem]">
+                太棒了!
+              </div>
+              <div class="text-xl font-extrabold md:text-4xl">都答對了</div>
             </div>
             <div class="banner-string-02 relative flex flex-col items-center">
-              <div class="banner-crown absolute -top-[50px] end-0 w-[80px]">
+              <div
+                class="banner-crown absolute -end-5 -top-6 w-[40px] md:-top-[50px] md:end-0 md:w-[80px]"
+              >
                 <img src="../assets/img/faq-list-crown-01.svg" alt="" />
               </div>
               <div
@@ -363,7 +373,8 @@
                 我的成績
               </div>
               <div class="font-black">
-                <span class="score-number text-secondary-700 text-8xl"
+                <span
+                  class="score-number text-secondary-700 text-4xl md:text-8xl"
                   >000</span
                 >
                 <span class="final-score hidden">100</span>
@@ -374,7 +385,7 @@
         </div>
 
         <div class="w-full">
-          <div class="my-6 flex flex-wrap items-start gap-2 md:flex-nowrap">
+          <div class="my-6 flex items-start gap-2">
             <div
               class="bg-primary-500 mt-1.5 h-4 w-4 shrink-0 rounded-full"
             ></div>
@@ -470,7 +481,7 @@
             </div>
           </div>
 
-          <div class="my-6 flex flex-wrap items-start gap-2 md:flex-nowrap">
+          <div class="my-6 flex items-start gap-2">
             <div
               class="bg-primary-500 mt-1.5 h-4 w-4 shrink-0 rounded-full"
             ></div>
@@ -610,14 +621,14 @@
         class="container mx-auto flex flex-wrap items-center justify-between gap-5 px-3 py-5 text-sm"
       >
         <div class="flex grow flex-wrap items-center gap-2">
-          <h3>
+          <a class="mx-auto" href="#" target="_blank">
             <img
               class="max-f-full"
-              width="80"
+              width="120"
               src="../assets/img/footer-logo.svg"
               alt="logo"
             />
-          </h3>
+          </a>
           <div>
             <ul class="mb-2 flex flex-wrap divide-x">
               <li class="px-2">

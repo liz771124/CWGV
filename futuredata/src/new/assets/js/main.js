@@ -61,10 +61,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const yearContainer = document.getElementById("year-container");
 if (yearContainer) {
+  const thisYear = new Date().getFullYear();
+  const params = new URLSearchParams(document.location.search);
+  const searchYear = Number(params.get("year"));
+  const dataYear = document.getElementById(searchYear);
   const yearItems = yearContainer.querySelectorAll(".year-item");
   const moreYearItem = document.getElementById("toggle-more");
   let isYearContainerExpanded = false;
-  const toggleYearItems = () => {
+
+  if (dataYear && searchYear < thisYear - 10) {
+    isYearContainerExpanded = true;
+    moreYearItem.style.transform = "rotate(180deg)";
+  } else {
+    yearItems.forEach((item, index) => {
+      item.style.display = index < 10 ? "inline-block" : "none";
+    });
+  }
+  if (dataYear) {
+    if (dataYear.classList.contains("bg-gray2-200")) {
+      dataYear.classList.remove("bg-gray2-200", "text-gray2-700");
+      dataYear.classList.add("bg-primary-500", "text-white");
+    } else {
+      dataYear.classList.remove("bg-primary-500", "text-white");
+      dataYear.classList.add("bg-gray2-200", "text-gray2-700");
+    }
+  }
+  moreYearItem.addEventListener("click", () => {
     if (isYearContainerExpanded) {
       yearItems.forEach((item, index) => {
         item.style.display = index < 10 ? "inline-block" : "none";
@@ -75,24 +97,29 @@ if (yearContainer) {
       moreYearItem.style.transform = "rotate(180deg)";
     }
     isYearContainerExpanded = !isYearContainerExpanded;
-  };
-  yearItems.forEach((item, index) => {
-    item.style.display = index < 10 ? "inline-block" : "none";
   });
-  moreYearItem.addEventListener("click", toggleYearItems);
 }
 
 const favoriteItem = document.querySelectorAll(".icon-favorite");
-favoriteItem.forEach((item, index) => {
+const favoriteOffPath =
+  "M16.59 30.73L3.62002 17.76C2.26002 16.4 1.28003 14.8 0.820031 13.05C0.370031 11.39 0.400024 9.59998 1.00002 7.78998C1.53002 6.20998 2.44002 4.77997 3.62002 3.62997C4.81002 2.46997 6.26003 1.56998 7.85003 1.06998C9.71003 0.479977 11.55 0.469975 13.27 0.919975C14.81 1.31998 16.25 2.08998 17.51 3.14998C18.79 2.08998 20.22 1.31998 21.76 0.919975C23.49 0.469975 25.32 0.479977 27.18 1.06998C28.77 1.56998 30.23 2.47998 31.41 3.63998C32.58 4.79998 33.51 6.21998 34.03 7.79998C34.63 9.59998 34.65 11.38 34.2 13.05C33.73 14.79 32.76 16.39 31.4 17.75L31.33 17.81L18.41 30.72C17.9 31.22 17.08 31.22 16.57 30.72L16.59 30.73ZM19.06 5.25998L17.49 6.81998L16.44 5.67998L16.39 5.62997C15.27 4.56997 13.99 3.79998 12.61 3.43998C11.35 3.10998 10 3.11998 8.64004 3.54998C7.45004 3.92998 6.35004 4.60997 5.45004 5.48997C4.55004 6.36997 3.86002 7.43998 3.47002 8.61998C3.04002 9.90998 3.02002 11.19 3.34002 12.38C3.68002 13.66 4.42002 14.87 5.46002 15.9L17.51 27.95L29.5 15.96L29.56 15.89C30.6 14.85 31.34 13.65 31.68 12.37C32 11.19 31.98 9.90998 31.54 8.60998C31.15 7.43998 30.46 6.35997 29.56 5.48997C28.66 4.60997 27.56 3.92998 26.37 3.54998C25.01 3.11998 23.67 3.10998 22.4 3.43998C21.19 3.75998 20.05 4.38998 19.04 5.24998L19.06 5.25998Z";
+const favoriteOnPath =
+  "M16.8799 30.1273L3.90994 17.1573C2.54994 15.7973 1.56995 14.1973 1.10995 12.4473C0.659948 10.7873 0.689941 8.99732 1.28994 7.18732C1.81994 5.60732 2.72994 4.17731 3.90994 3.02731C5.09994 1.86731 6.54995 0.967315 8.13995 0.467315C9.99995 -0.122685 11.84 -0.132686 13.56 0.317314C15.1 0.717314 16.5399 1.48732 17.7999 2.54732C19.08 1.48732 20.5099 0.717314 22.0499 0.317314C23.7799 -0.132686 25.6099 -0.122685 27.4699 0.467315C29.0599 0.967315 30.52 1.87732 31.7 3.03732C32.87 4.19732 33.8 5.61732 34.32 7.19732C34.92 8.99732 34.94 10.7773 34.49 12.4473C34.02 14.1873 33.05 15.7873 31.69 17.1473L31.62 17.2073L18.6999 30.1173C18.1899 30.6173 17.3699 30.6173 16.8599 30.1173L16.8799 30.1273Z";
+favoriteItem.forEach((item) => {
+  const path = item.querySelector("svg path");
+  item.classList.contains("favorite-on")
+    ? path.setAttribute("d", favoriteOnPath)
+    : path.setAttribute("d", favoriteOffPath);
+
   item.addEventListener("click", (event) => {
-    // 檢查是否點擊到 .icon-favorite
     const favoriteIcon = event.target.closest(".icon-favorite");
     if (favoriteIcon) {
-      // 切換 .favorite-on 和 .favorite-off 的顯示狀態
-      const favoriteOn = favoriteIcon.querySelector(".favorite-on");
-      const favoriteOff = favoriteIcon.querySelector(".favorite-off");
-      favoriteOn.classList.toggle("hidden");
-      favoriteOff.classList.toggle("hidden");
+      const path = favoriteIcon.querySelector("svg path");
+      favoriteIcon.classList.toggle("favorite-on");
+      favoriteIcon.classList.toggle("favorite-off");
+      favoriteIcon.classList.contains("favorite-on")
+        ? path.setAttribute("d", favoriteOnPath)
+        : path.setAttribute("d", favoriteOffPath);
     }
   });
 });

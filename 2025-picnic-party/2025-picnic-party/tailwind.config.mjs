@@ -1,9 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+const flowbite = require("flowbite-react/tailwind");
+
 export default {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}'
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    flowbite.content()
   ],
   theme: {
     fontSize: {
@@ -140,5 +143,9 @@ export default {
       })
     }
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/aspect-ratio')]
+  plugins: [
+    require('@tailwindcss/forms'), 
+    require('@tailwindcss/aspect-ratio'),
+    flowbite.plugin()
+  ]
 }

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import gsap from 'gsap'
 import { useRef, useState } from 'react'
 import { useGSAP } from '@gsap/react'
-import Swiper from '../components/Swiper'
+import Swiper from '@/components/Swiper'
 
 import UserProfile from '@/components/UserProfile'
 
@@ -75,9 +75,55 @@ export default function Home() {
 
   return (
     <>
+      <header id="header" className="fixed-top">
+        <div className="bg-primary-500 px-3 py-2">
+          <div className="container flex items-center justify-between px-3">
+            <h1>
+              <Link href="index.html">
+                <Image width={180} height={90} src="/img/logo.svg" alt="logo"></Image>
+              </Link>
+            </h1>
+
+            <nav>
+              <ul className="flex items-center gap-5">
+                <li>
+                  <Link className="text-xl font-bold text-white hover:text-gray-50" href="/">
+                    首頁
+                  </Link>
+                </li>
+                <li>
+                  <Link className="text-xl font-bold text-white hover:text-gray-50" href="/gift">
+                    報名拿好禮
+                  </Link>
+                </li>
+                <li>
+                  <Link className="text-xl font-bold text-white hover:text-gray-50" href="/game">
+                    主題體驗區
+                  </Link>
+                </li>
+                <li>
+                  <Link className="text-xl font-bold text-white hover:text-gray-50" href="/game">
+                    超人氣舞台秀
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <div className="flex flex-col gap-5">
+        <div>未來親子野餐日陪伴孩子10週年啦！</div>
+        <div>不只是我們共創的里程碑，也象徵著「幸福永續」</div>
+        <div>期待能陪伴孩子，朝著更美好的未來邁進！</div>
+        <div>更多歡樂、甜蜜的親子時光，</div>
+        <div>就從今年的10歲生日派對開始吧！</div>
+      </div>
+
       <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
         <Swiper images={swiperImages} />
       </div>
+
+      <Link href="/about">ABOUT</Link>
 
       <form action={formAction}>
         <input type="text" name="item" placeholder="新增待辦..." />
@@ -104,6 +150,18 @@ export default function Home() {
 
       <main className="py-6">
         <UserProfile />
+
+        <div>
+          <div className="py-3 text-center text-xl font-bold">
+            <h3>常見問題</h3>
+          </div>
+          <div>
+            <div className="border-b px-3 py-5 text-primary-500">
+              問題問題問題問題問題問題問題問題問題問題問題問題問題問題問題問題問題問題問題問題問題問題問題問題問題問題問題問題問題問題
+            </div>
+            <div>答案答案答案答案答案答案答案答案答案答案答案</div>
+          </div>
+        </div>
 
         <div className="container mx-auto rounded-lg bg-white pb-8 pt-5 shadow-[0px_3px_8px_0px_rgba(0,0,0,0.3)] md:px-8">
           <div className="mb-3 flex flex-wrap gap-8 py-5 md:flex-nowrap">

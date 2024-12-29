@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  assetPrefix: './', // 使用相對路徑來處理資源
+  assetPrefix: '.', // 使用相對路徑來處理資源
   images: {
     // 本地圖片與第三方圖片來源混用
     unoptimized: true, // 禁用 Next.js 內建圖片優化（適用於靜態匯出）

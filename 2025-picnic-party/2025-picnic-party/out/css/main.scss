@@ -8,7 +8,7 @@
   --Primary-200: rgb(138, 212, 237);
   --Primary-300: #69caea;
   --Primary-400: rgb(79, 195, 234);
-  --Primary-500: #00a7de;
+  --Primary-500: #e95513;
   --Primary-600: #1790b9;
   --Primary-700: #006d91;
   --Primary-800: #00546f;
@@ -38,6 +38,7 @@
 }
 
 body {
+  font-family: 'Open Sans', sans-serif;
   color: var(--gray-900);
   font-size: 16px;
 }

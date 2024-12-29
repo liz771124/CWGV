@@ -2,9 +2,8 @@
 const nextConfig = {
   distDir: 'test',
   output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
-  assetPrefix: process.env.NODE_ENV === 'production' ? '.' : '',
-  basePath:
-    process.env.NODE_ENV === 'production' ? '/CWGV/2025-picnic-party/2025-picnic-party/test' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? './' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/' : '',
   images: {
     unoptimized: process.env.NODE_ENV === 'production'
   },

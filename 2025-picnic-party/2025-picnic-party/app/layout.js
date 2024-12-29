@@ -21,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
+      <body className={`relative antialiased`}>
         <ThemeProvider>
           <UserProvider>{children}</UserProvider>
         </ThemeProvider>

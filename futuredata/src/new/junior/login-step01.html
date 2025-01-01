@@ -18,100 +18,25 @@
       class="bg-gray2-200 bg-cover bg-fixed bg-no-repeat"
       style="background-image: url(&quot;../assets/img/login_bg.jpg&quot;)"
     >
-      <div class="flex min-h-screen w-screen items-center justify-center px-8">
+      <main class="flex min-h-screen w-screen items-center justify-center px-8">
         <div class="relative mx-auto max-w-[800px]">
           <div
-            class="relative z-10 my-8 w-full rounded-lg bg-white p-8 shadow-lg"
+            class="relative z-10 my-8 w-full rounded-lg bg-white px-8 pt-8 shadow-lg md:px-10 md:pb-10 md:pt-10"
           >
             <div class="mb-5">
               <div class="flex items-center justify-center gap-3">
                 <div>
-                  <img class="w-full" src="../assets/img/login_logo01.png" />
+                  <img class="w-full" src="../assets/img/login_logo01.svg" />
                 </div>
                 <div>
-                  <img class="w-full" src="../assets/img/login_logo02.png" />
+                  <img class="w-full" src="../assets/img/login_logo02.svg" />
                 </div>
               </div>
-              <div class="flex justify-center">
-                <img class="py-3" src="../assets/img/login_logo03.png" />
+              <div class="mx-auto flex w-[100px] justify-center md:w-auto">
+                <img class="py-3" src="../assets/img/login_logo03.svg" />
               </div>
             </div>
             <div class="mx-auto max-w-[450px]">
-              <form class="flex flex-col gap-5">
-                <div
-                  class="flex gap-2 overflow-hidden rounded-full border border-gray-200 p-2"
-                >
-                  <div
-                    class="bg-secondary-500 flex h-[40px] w-[40px] items-center justify-center rounded-full p-3 shadow-lg"
-                  >
-                    <svg
-                      width="19"
-                      height="21"
-                      viewBox="0 0 19 21"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9.31 0.0698242C11.14 0.0698242 12.8 0.809806 14 2.01981C15.19 3.20981 15.93 4.86982 15.93 6.68982C15.93 8.50982 15.19 10.1798 14 11.3698C13.78 11.5998 13.54 11.7998 13.3 11.9798C14.42 12.2798 15.41 12.8798 16.21 13.6698C17.39 14.8398 18.13 16.4898 18.13 18.2798V19.5298C18.13 19.9598 17.78 20.3098 17.35 20.3098H1.28C0.849999 20.3098 0.5 19.9598 0.5 19.5298V18.2798C0.5 16.4898 1.23001 14.8398 2.42001 13.6698C3.21001 12.8598 4.21999 12.2798 5.32999 11.9798C5.07999 11.7898 4.85 11.5898 4.63 11.3698C3.43 10.1798 2.69 8.51982 2.69 6.68982C2.69 4.85982 3.43 3.20981 4.63 2.01981C5.82 0.819806 7.48999 0.0698242 9.29999 0.0698242H9.31ZM12.9 3.1098C11.98 2.1898 10.72 1.62982 9.31 1.62982C7.9 1.62982 6.65001 2.1898 5.73001 3.1098C4.81001 4.0298 4.23999 5.28982 4.23999 6.68982C4.23999 8.08982 4.81001 9.34981 5.73001 10.2698C6.64001 11.1898 7.91 11.7598 9.31 11.7598C10.71 11.7598 11.97 11.1898 12.89 10.2698C13.81 9.34981 14.38 8.07982 14.38 6.68982C14.38 5.29982 13.81 4.0298 12.89 3.1098H12.9ZM11.61 13.3098H7.03C5.66 13.3098 4.42 13.8698 3.53 14.7798C2.62 15.6798 2.07001 16.9198 2.07001 18.2798V18.7598H16.58V18.2798C16.58 16.9198 16.02 15.6698 15.12 14.7798C14.22 13.8698 12.98 13.3098 11.61 13.3098Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </div>
-
-                  <input
-                    type="email"
-                    id="email"
-                    placeholder="會員帳號"
-                    class="focus:ourline-0 grow border-0 p-2 focus:border-0"
-                  />
-                </div>
-                <div
-                  class="flex gap-2 overflow-hidden rounded-full border border-gray-200 p-2"
-                >
-                  <div
-                    class="bg-secondary-500 flex h-[40px] w-[40px] items-center justify-center rounded-full p-3 shadow-lg"
-                  >
-                    <svg
-                      width="17"
-                      height="22"
-                      viewBox="0 0 17 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M2.73001 8.67966H2.89001V6.26965C2.89001 4.65965 3.54999 3.18968 4.60999 2.13968L4.66 2.08966C5.72 1.04966 7.17 0.409668 8.75 0.409668C10.33 0.409668 11.81 1.06967 12.88 2.12967C13.94 3.17967 14.59 4.64967 14.59 6.25967V8.66968H14.76C15.37 8.66968 15.94 8.90967 16.33 9.31967C16.74 9.71967 16.98 10.2797 16.98 10.8997V19.0397C16.98 19.6497 16.73 20.2097 16.33 20.6197L16.26 20.6697C15.86 21.0497 15.33 21.2597 14.76 21.2597H2.72C2.11 21.2597 1.55999 21.0096 1.14999 20.6096C0.739994 20.1996 0.48999 19.6397 0.48999 19.0297V10.8897C0.48999 10.2697 0.749994 9.70966 1.14999 9.30966C1.54999 8.89966 2.1 8.65967 2.72 8.65967L2.73001 8.67966ZM8.73001 15.2897H8.78C9.08 15.2797 9.34001 15.1497 9.54001 14.9597C9.74001 14.7497 9.87 14.4797 9.87 14.1597C9.87 13.8397 9.74001 13.5697 9.54001 13.3797C9.34001 13.1697 9.06001 13.0397 8.76001 13.0397C8.46001 13.0397 8.16999 13.1697 7.95999 13.3797C7.75999 13.5797 7.63 13.8597 7.63 14.1597C7.63 14.4597 7.74999 14.7497 7.95999 14.9597C8.15999 15.1497 8.42001 15.2697 8.73001 15.2897ZM9.29001 16.3197V17.4597C9.29001 17.7597 9.05 18.0097 8.75 18.0097C8.45 18.0097 8.19 17.7597 8.19 17.4597V16.3197C7.8 16.2197 7.45001 16.0097 7.17001 15.7397C6.77001 15.3397 6.51999 14.7697 6.51999 14.1697C6.51999 13.5697 6.78001 12.9997 7.17001 12.5997C7.58001 12.1897 8.14 11.9497 8.75 11.9497C9.36 11.9497 9.91001 12.1997 10.32 12.5997C10.72 12.9997 10.97 13.5697 10.97 14.1697C10.97 14.7697 10.71 15.3397 10.32 15.7397C10.05 16.0097 9.69001 16.2197 9.29001 16.3197ZM4.73001 8.67966H12.75V6.26965C12.75 5.16965 12.3 4.16966 11.57 3.42966C10.84 2.71966 9.85 2.25967 8.75 2.25967C7.65 2.25967 6.67001 2.67968 5.95001 3.38968L5.91 3.42966C5.18 4.16966 4.73001 5.15965 4.73001 6.26965V8.67966ZM14.76 10.5097H2.72C2.62 10.5097 2.52001 10.5597 2.45001 10.6297C2.38001 10.6897 2.35001 10.7897 2.35001 10.9097V19.0497C2.35001 19.1397 2.39001 19.2497 2.45001 19.3097C2.53001 19.3897 2.63 19.4297 2.72 19.4297H14.76C14.85 19.4297 14.93 19.3897 15.01 19.3397L15.04 19.2997C15.11 19.2397 15.16 19.1297 15.16 19.0397V10.8997C15.16 10.7897 15.11 10.6797 15.04 10.6197C14.96 10.5497 14.87 10.4997 14.77 10.4997L14.76 10.5097Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </div>
-                  <input
-                    type="password"
-                    id="password"
-                    placeholder="會員密碼"
-                    class="focus:ourline-0 grow border-0 p-2 focus:border-0"
-                  />
-                </div>
-                <div class="flex flex-wrap justify-between">
-                  <div class="mt-2 flex items-center">
-                    <input
-                      id="checked-checkbox"
-                      type="checkbox"
-                      class="text-secondary-500 border-gray2-300 bg-gray2-50 text-bg-secondary-500 size-4 rounded"
-                    />
-                    <label for="checked-checkbox" class="ms-2">
-                      記住我的帳號密碼
-                    </label>
-                  </div>
-                  <a href="#">忘記密碼</a>
-                </div>
-
-                <button
-                  type="submit"
-                  class="bg-secondary-500 hover:bg-primary-600 focus:ring-primary-300 w-full rounded-full px-5 py-3 text-xl text-white focus:ring"
-                >
-                  會員登入
-                </button>
-              </form>
               <div class="mt-auto flex flex-col items-center gap-5">
                 <div class="flex w-full items-center py-4">
                   <div class="bg-gray2-300 h-[1px] grow"></div>
@@ -120,7 +45,7 @@
                   >
                   <div class="bg-gray2-300 h-[1px] grow"></div>
                 </div>
-                <div class="flex w-full max-w-[300px] flex-col gap-5">
+                <div class="mb-5 flex w-full max-w-[300px] flex-col gap-5">
                   <a
                     href="#"
                     class="w-full rounded-full bg-[var(--junior-primary-500)] px-5 py-3 text-center text-2xl text-white shadow-sm hover:bg-[var(--junior-primary-600)] focus:ring focus:ring-[var(--junior-primary-700)]"
@@ -134,52 +59,41 @@
                     未來少年
                   </a>
                 </div>
-                <div class="flex w-full items-center py-4">
-                  <div class="h-[1px] grow bg-gray-300"></div>
-                  <span class="text-typography-200 shrink px-5 font-light"
-                    >使用社群帳號登入</span
-                  >
-                  <div class="h-[1px] grow bg-gray-300"></div>
-                </div>
-                <div class="flex gap-16">
-                  <a
-                    class="rounded-full border border-gray-100 bg-white px-10 py-3 shadow-lg"
-                    href="#"
-                  >
-                    <img src="../assets/img/icon-facebook.svg" alt="" />
-                  </a>
-                  <a
-                    class="rounded-full border border-gray-100 bg-white px-10 py-3 shadow-lg"
-                    href="#"
-                  >
-                    <img src="../assets/img/icon-google.svg" alt="" />
-                  </a>
-                </div>
+              </div>
+              <div class="mt-5 block w-full md:hidden">
+                <img
+                  class="mx-auto"
+                  width="150"
+                  src="../assets/img/login_p02.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
           <div class="absolute -end-[150px] bottom-10 z-0 hidden md:block">
-            <img width="200" src="../assets/img/login_p01.png" alt="" />
+            <img width="200" src="../assets/img/login_p01.svg" alt="" />
           </div>
         </div>
-      </div>
-
-      <!-- 共用版尾 -->
+      </main>
       <footer class="tracking-wide">
         <div
-          class="container mx-auto flex flex-wrap items-center justify-between gap-5 px-3 py-5 text-sm"
+          class="container mx-auto flex flex-wrap items-center justify-between gap-5 px-3 pb-5 text-sm"
         >
-          <div class="flex grow flex-wrap items-center gap-2">
-            <h3>
+          <div class="flex w-full grow flex-wrap items-center gap-2 md:w-auto">
+            <a
+              class="mx-auto hidden md:mx-0 md:inline-flex"
+              href="#"
+              target="_blank"
+            >
               <img
                 class="max-f-full"
-                width="80"
+                width="120"
                 src="../assets/img/footer-logo.svg"
                 alt="logo"
               />
-            </h3>
-            <div>
-              <ul class="mb-2 flex flex-wrap divide-x">
+            </a>
+            <div class="w-full text-center md:w-auto">
+              <ul class="mb-2 hidden flex-wrap divide-x md:flex">
                 <li class="px-2">
                   <a
                     href="https://futureparenting.cwgv.com.tw/"
@@ -221,12 +135,12 @@
                   >
                 </li>
               </ul>
-              <div class="px-2">
+              <div class="px-2 text-center md:text-left">
                 Copyright © 未來親子學習平台﹒All rights reserved.
               </div>
             </div>
           </div>
-          <div>
+          <div class="hidden md:block">
             <ul class="mb-2 flex flex-wrap divide-x text-end">
               <li class="px-2">
                 <a
@@ -264,16 +178,6 @@
               </li>
             </ul>
           </div>
-          <!-- <ul class="mt-3 text-sm">
-          <li>
-            聯絡方式：<a href="tel:0226620012" title="">02-2662-0012</a>‧<a
-              href="mailto:gkids@cwgv.com.tw"
-              title=""
-              >gkids@cwgv.com.tw</a
-            >
-          </li>
-          <li>服務時間：週一至週五 9:00~12:30:13:30~17:00</li>
-        </ul> -->
         </div>
         <div class="fixed bottom-5 end-3" id="goTop">
           <img width="40" height="40" src="../assets/img/go-top.svg" alt="" />
@@ -283,6 +187,5 @@
 
     <script src="../assets/js/tw-elements.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="../assets/js/main.js"></script>
   </body>
 </html>

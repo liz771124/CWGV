@@ -3,60 +3,66 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeMenu = document.getElementById("closeMenu");
   const menuContainer = document.getElementById("menuContainer");
   const menuItems = document.querySelectorAll(".menu-item");
-  menuIcon.addEventListener("click", () => {
-    body.classList.add("menu-open");
-    gsap.set(menuItems, { x: -50, opacity: 0 });
-    gsap.to(menuContainer, {
-      x: 0,
-      opacity: 1,
-      duration: 0.3,
-      ease: "power2.out",
-      display: "block",
-    });
-    gsap.to(menuItems, {
-      x: 0,
-      opacity: 1,
-      duration: 0.3,
-      ease: "power2.out",
-      stagger: 0.25,
-    });
-    // gsap.to(closeMenu, {
-    //   rotation: -90,
-    //   x: "100%",
-    //   opacity: 0,
-    //   duration: 0.8,
-    //   ease: "back.out(1.7)",
-    // });
-  });
-
-  closeMenu.addEventListener("click", () => {
-    body.classList.remove("menu-open");
-    gsap.to(menuContainer, {
-      x: "-100%",
-      opacity: 0,
-      duration: 0.25,
-      ease: "power4.in",
-      onComplete: () => {
-        menuContainer.style.display = "none";
-      },
-    });
-  });
-
   const goTop = document.getElementById("goTop");
-  const navHeight = document.querySelector("nav").offsetHeight;
+  const navContainer = document.querySelector("nav");
   const body = document.body;
-  window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY || document.documentElement.scrollTop;
-    scrollY > navHeight
-      ? (goTop.style.display = "block")
-      : (goTop.style.display = "none");
-  });
-  goTop.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
+
+  if (menuIcon) {
+    menuIcon.addEventListener("click", () => {
+      body.classList.add("menu-open");
+      gsap.set(menuItems, { x: -50, opacity: 0 });
+      gsap.to(menuContainer, {
+        x: 0,
+        opacity: 1,
+        duration: 0.3,
+        ease: "power2.out",
+        display: "block",
+      });
+      gsap.to(menuItems, {
+        x: 0,
+        opacity: 1,
+        duration: 0.3,
+        ease: "power2.out",
+        stagger: 0.25,
+      });
+      // gsap.to(closeMenu, {
+      //   rotation: -90,
+      //   x: "100%",
+      //   opacity: 0,
+      //   duration: 0.8,
+      //   ease: "back.out(1.7)",
+      // });
     });
-  });
+
+    closeMenu.addEventListener("click", () => {
+      body.classList.remove("menu-open");
+      gsap.to(menuContainer, {
+        x: "-100%",
+        opacity: 0,
+        duration: 0.25,
+        ease: "power4.in",
+        onComplete: () => {
+          menuContainer.style.display = "none";
+        },
+      });
+    });
+  }
+
+  if (navContainer) {
+    const navHeight = navContainer.offsetHeight;
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      scrollY > navHeight
+        ? (goTop.style.display = "block")
+        : (goTop.style.display = "none");
+    });
+    goTop.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
 });
 
 const yearContainer = document.getElementById("year-container");

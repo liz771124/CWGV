@@ -60,12 +60,7 @@
               alt=""
             />
           </li>
-          <li
-            class="flex items-center"
-            class="bolck"
-            data-tooltip
-            data-title="影片"
-          >
+          <li class="flex items-center" data-tooltip data-title="影片">
             <a href="#">
               <img
                 width="20"
@@ -94,15 +89,21 @@
               />
             </a>
           </li>
-          <li class="flex items-center" data-tooltip data-title="收藏">
-            <a href="#" class="bolck" id="heart-icon">
-              <img
-                width="20"
-                class="object-contain"
-                src="../../assets/img/icons/heart-gray.svg"
-                alt=""
-              />
-            </a>
+          <li
+            class="text-primary-500 flex items-center"
+            data-tooltip
+            data-title="收藏"
+          >
+            <svg
+              class="icon-favorite favorite-on mx-auto cursor-pointer"
+              width="20"
+              height="17"
+              viewBox="0 0 35 31"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="" fill="currentColor"></path>
+            </svg>
           </li>
         </ul>
       </div>
@@ -574,7 +575,7 @@
     </main>
 
     <!-- 共用版尾 -->
-    <footer class="tracking-wide md:bg-transparent bg-white">
+    <footer class="bg-white tracking-wide md:bg-transparent">
       <div
         class="container mx-auto flex flex-wrap items-center justify-between gap-5 px-3 py-5 text-sm"
       >
@@ -691,5 +692,6 @@
 
     <script src="../assets/js/tw-elements.umd.min.js"></script>
     <script type="module" crossorigin src="../assets/js/player.js"></script>
+    <script src="../assets/js/main.js"></script>
   </body>
 </html>

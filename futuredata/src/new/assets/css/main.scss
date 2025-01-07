@@ -275,3 +275,10 @@ input:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
+.search-container-hidden {
+  // transform: translateY(-200%);
+  // opacity: 0;
+  // transition: 0.3s;
+  display: none;
+}

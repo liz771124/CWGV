@@ -80,7 +80,7 @@ if (yearContainer) {
     moreYearItem.style.transform = "rotate(180deg)";
   } else {
     yearItems.forEach((item, index) => {
-      item.style.display = index < 10 ? "inline-block" : "none";
+      item.style.display = index < 15 ? "inline-block" : "none";
     });
   }
   if (dataYear) {
@@ -128,4 +128,21 @@ favoriteItem.forEach((item) => {
         : path.setAttribute("d", favoriteOffPath);
     }
   });
+});
+
+let lastScrollY = window.scrollY;
+const navbar = document.getElementById("search-container");
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+  console.log(currentScrollY > lastScrollY);
+  if (currentScrollY > lastScrollY && currentScrollY > 50) {
+    // 向下滾動且超過50px
+    // navbar.style.display = "none"; // 隱藏導航欄
+  } else {
+    // 向上滾動
+    // navbar.style.display = "block"; // 顯示導航欄
+  }
+
+  lastScrollY = currentScrollY;
 });

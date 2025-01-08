@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="../assets/css/junior-main.css" />
   </head>
-  <body class="bg-gray2-50 relative">
+  <body data-page="home" class="bg-gray2-50 relative">
     <!-- 共用版頭 -->
     <nav
       id="navbar"
@@ -40,7 +40,10 @@
           </a>
         </div>
 
-        <div id="search-container" class="relative grow rounded-full md:grow-0">
+        <div
+          id="navbar-search-container"
+          class="relative grow rounded-full md:grow-0"
+        >
           <form
             role="form"
             class="border-gray2-800 relative flex overflow-hidden rounded-full border-2"
@@ -291,7 +294,7 @@
 
     <main class="py-5">
       <div class="container mx-auto">
-        <div class="flex h-[700px] w-full items-center justify-center">
+        <div class="mb-10 flex h-[700px] w-full items-center justify-center">
           <div
             class="grid h-full w-full gap-3 [grid-template-columns:repeat(2,1fr)] [grid-template-rows:repeat(5,1fr)] sm:gap-5 sm:[grid-template-columns:repeat(3,1fr)] sm:[grid-template-rows:repeat(3,1fr)]"
           >
@@ -325,7 +328,7 @@
                 <div class="absolute bottom-0 left-0 w-full">
                   <img
                     class="max-w-full"
-                    width="250"
+                    width="290"
                     src="../assets/img/junior-index-menu02.png"
                     alt="收聽音檔"
                   />
@@ -533,7 +536,7 @@
     <!-- 共用版尾 -->
     <footer class="bg-white py-5 tracking-wide">
       <div
-        class="container mx-auto flex flex-wrap items-center justify-between gap-5 px-3 py-5 text-sm"
+        class="container mx-auto flex flex-wrap items-center justify-between gap-1 px-3 py-5 text-sm md:gap-5"
       >
         <div class="flex grow flex-wrap items-center gap-2">
           <a class="mx-auto md:mx-0" href="#" target="_blank">
@@ -544,7 +547,7 @@
               alt="logo"
             />
           </a>
-          <div>
+          <div class="flex grow flex-col items-center md:items-start">
             <ul class="mb-2 flex flex-wrap divide-x">
               <li class="px-2">
                 <a
@@ -587,48 +590,49 @@
                 >
               </li>
             </ul>
-            <div class="px-2">
+            <div class="hidden px-2 text-center md:flex">
               Copyright © 未來親子學習平台﹒All rights reserved.
             </div>
           </div>
         </div>
-        <div>
-          <ul class="mb-2 flex flex-wrap divide-x text-end">
-            <li class="px-2">
-              <a
-                href="https://futuredata.cwgv.com.tw/copyright/index/A"
-                title="著作權聲明"
-                target="_blank"
-                >著作權聲明</a
-              >
-            </li>
-            <li class="px-2">
-              <a
-                href="https://futuredata.cwgv.com.tw/copyright/index/B"
-                title="隱私權政策"
-                target="_blank"
-                >隱私權政策</a
-              >
-            </li>
-          </ul>
-          <ul class="flex divide-x text-end">
-            <li class="px-2">
-              <a
-                href="https://futuredata.cwgv.com.tw/copyright/index/C"
-                title="個資保護聲明"
-                target="_blank"
-                >個資保護聲明</a
-              >
-            </li>
-            <li class="px-2">
-              <a
-                href="https://futuredata.cwgv.com.tw/qa"
-                title="QA"
-                target="_blank"
-                >常見問題</a
-              >
-            </li>
-          </ul>
+
+        <ul class="mx-auto flex flex-wrap divide-x text-end">
+          <li class="px-2">
+            <a
+              href="https://futuredata.cwgv.com.tw/copyright/index/A"
+              title="著作權聲明"
+              target="_blank"
+              >著作權聲明</a
+            >
+          </li>
+          <li class="px-2">
+            <a
+              href="https://futuredata.cwgv.com.tw/copyright/index/B"
+              title="隱私權政策"
+              target="_blank"
+              >隱私權政策</a
+            >
+          </li>
+          <li class="px-2">
+            <a
+              href="https://futuredata.cwgv.com.tw/copyright/index/C"
+              title="個資保護聲明"
+              target="_blank"
+              >個資保護聲明</a
+            >
+          </li>
+          <li class="px-2">
+            <a
+              href="https://futuredata.cwgv.com.tw/qa"
+              title="QA"
+              target="_blank"
+              >常見問題</a
+            >
+          </li>
+        </ul>
+
+        <div class="mx-auto mt-5 block text-center md:hidden">
+          Copyright © 未來親子學習平台﹒All rights reserved.
         </div>
       </div>
       <div class="fixed bottom-5 end-3" id="goTop">

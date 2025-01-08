@@ -1,11 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   const menuIcon = document.getElementById("menuIcon");
   const closeMenu = document.getElementById("closeMenu");
   const menuContainer = document.getElementById("menuContainer");
   const menuItems = document.querySelectorAll(".menu-item");
   const goTop = document.getElementById("goTop");
   const navContainer = document.querySelector("nav");
+  const navbarSearch = document.getElementById("navbar-search-container");
+  const isHomePage = document.body.dataset.page === "home";
   const body = document.body;
+
+  if (isHomePage) {
+    navbarSearch.style.display = "none";
+  }
 
   if (menuIcon) {
     menuIcon.addEventListener("click", () => {
@@ -130,19 +137,45 @@ favoriteItem.forEach((item) => {
   });
 });
 
+const navbar = document.getElementById("navbar");
 let lastScrollY = window.scrollY;
-const navbar = document.getElementById("search-container");
+let ticking = false;
+navbar.classList.add("nav-visible");
 
-window.addEventListener("scroll", () => {
+const throttle = (func, limit) => {
+  let inThrottle;
+  return function (...args) {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+};
+
+const handleScroll = () => {
   const currentScrollY = window.scrollY;
-  console.log(currentScrollY > lastScrollY);
-  if (currentScrollY > lastScrollY && currentScrollY > 50) {
-    // 向下滾動且超過50px
-    // navbar.style.display = "none"; // 隱藏導航欄
-  } else {
-    // 向上滾動
-    // navbar.style.display = "block"; // 顯示導航欄
-  }
+  const scrollDistance = Math.abs(currentScrollY - lastScrollY);
 
-  lastScrollY = currentScrollY;
+  if (scrollDistance > 5) {
+    if (currentScrollY > lastScrollY && currentScrollY > 300) {
+      navbar.classList.remove("nav-visible");
+      navbar.classList.add("nav-hidden");
+    } else {
+      navbar.classList.remove("nav-hidden");
+      navbar.classList.add("nav-visible");
+    }
+    lastScrollY = currentScrollY;
+  }
+};
+
+const throttledHandleScroll = throttle(handleScroll, 150);
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      throttledHandleScroll();
+      ticking = false;
+    });
+    ticking = true;
+  }
 });

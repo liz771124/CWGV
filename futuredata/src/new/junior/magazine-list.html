@@ -15,7 +15,10 @@
   </head>
   <body class="bg-gray2-50 relative">
     <!-- 共用版頭 -->
-    <nav class="sticky top-0 z-50 bg-gray-50/50 py-5 backdrop-blur-lg">
+    <nav
+      id="navbar"
+      class="sticky top-0 z-50 bg-gray-50/50 py-5 backdrop-blur-lg transition"
+    >
       <div
         class="container mx-auto flex flex-wrap items-center justify-between gap-3 px-5"
       >
@@ -37,15 +40,21 @@
           </a>
         </div>
 
-        <div class="relative grow rounded-full md:grow-0">
-          <form role="form" class="bg-gray2-800 relative flex rounded-full p-1">
+        <div
+          id="navbar-search-container"
+          class="relative grow rounded-full md:grow-0"
+        >
+          <form
+            role="form"
+            class="border-gray2-800 relative flex overflow-hidden rounded-full border-2"
+          >
             <input
               type="text"
               placeholder="搜尋"
               class="text-gray2-700 w-full flex-1 rounded-full px-3 py-1 pe-20 focus:outline-none"
             />
             <button
-              class="bg-gray2-800 absolute right-0 rounded-full px-4 py-2 font-semibold text-white"
+              class="bg-gray2-800 absolute -right-1 rounded-full px-4 py-2 font-semibold text-white"
             >
               <svg
                 width="20"

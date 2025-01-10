@@ -141,7 +141,7 @@ if (isMobile) {
   const navbar = document.getElementById("navbar");
   let lastScrollY = window.scrollY;
   let ticking = false;
-  navbar.classList.add("nav-visible");
+  navbar.classList.add("nav-transition", "nav-visible");
 
   const throttle = (func, limit) => {
     let inThrottle;

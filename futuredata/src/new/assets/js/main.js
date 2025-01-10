@@ -1,5 +1,5 @@
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 document.addEventListener("DOMContentLoaded", () => {
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   const menuIcon = document.getElementById("menuIcon");
   const closeMenu = document.getElementById("closeMenu");
   const menuContainer = document.getElementById("menuContainer");
@@ -137,45 +137,47 @@ favoriteItem.forEach((item) => {
   });
 });
 
-const navbar = document.getElementById("navbar");
-let lastScrollY = window.scrollY;
-let ticking = false;
-navbar.classList.add("nav-visible");
+if (isMobile) {
+  const navbar = document.getElementById("navbar");
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+  navbar.classList.add("nav-visible");
 
-const throttle = (func, limit) => {
-  let inThrottle;
-  return function (...args) {
-    if (!inThrottle) {
-      func.apply(this, args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
+  const throttle = (func, limit) => {
+    let inThrottle;
+    return function (...args) {
+      if (!inThrottle) {
+        func.apply(this, args);
+        inThrottle = true;
+        setTimeout(() => (inThrottle = false), limit);
+      }
+    };
+  };
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    const scrollDistance = Math.abs(currentScrollY - lastScrollY);
+
+    if (scrollDistance > 5) {
+      if (currentScrollY > lastScrollY && currentScrollY > 300) {
+        navbar.classList.remove("nav-visible");
+        navbar.classList.add("nav-hidden");
+      } else {
+        navbar.classList.remove("nav-hidden");
+        navbar.classList.add("nav-visible");
+      }
+      lastScrollY = currentScrollY;
     }
   };
-};
 
-const handleScroll = () => {
-  const currentScrollY = window.scrollY;
-  const scrollDistance = Math.abs(currentScrollY - lastScrollY);
-
-  if (scrollDistance > 5) {
-    if (currentScrollY > lastScrollY && currentScrollY > 300) {
-      navbar.classList.remove("nav-visible");
-      navbar.classList.add("nav-hidden");
-    } else {
-      navbar.classList.remove("nav-hidden");
-      navbar.classList.add("nav-visible");
+  const throttledHandleScroll = throttle(handleScroll, 150);
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        throttledHandleScroll();
+        ticking = false;
+      });
+      ticking = true;
     }
-    lastScrollY = currentScrollY;
-  }
-};
-
-const throttledHandleScroll = throttle(handleScroll, 150);
-window.addEventListener("scroll", () => {
-  if (!ticking) {
-    window.requestAnimationFrame(() => {
-      throttledHandleScroll();
-      ticking = false;
-    });
-    ticking = true;
-  }
-});
+  });
+}

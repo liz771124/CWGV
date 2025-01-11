@@ -81,13 +81,13 @@ if (yearContainer) {
   const yearItems = yearContainer.querySelectorAll(".year-item");
   const moreYearItem = document.getElementById("toggle-more");
   let isYearContainerExpanded = false;
-
-  if (dataYear && searchYear < thisYear - 10) {
+  let maxLength = isMobile ? 4 : 14;
+  if (dataYear && searchYear < thisYear - maxLength) {
     isYearContainerExpanded = true;
     moreYearItem.style.transform = "rotate(180deg)";
   } else {
     yearItems.forEach((item, index) => {
-      item.style.display = index < 15 ? "inline-block" : "none";
+      item.style.display = index < maxLength ? "inline-block" : "none";
     });
   }
   if (dataYear) {
@@ -102,7 +102,7 @@ if (yearContainer) {
   moreYearItem.addEventListener("click", () => {
     if (isYearContainerExpanded) {
       yearItems.forEach((item, index) => {
-        item.style.display = index < 10 ? "inline-block" : "none";
+        item.style.display = index < maxLength ? "inline-block" : "none";
       });
       moreYearItem.style.transform = "rotate(0deg)";
     } else {

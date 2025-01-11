@@ -794,7 +794,7 @@ section {
 } */
 
 :root {
-  --primary-500: #EA5514;
+  --primary-500: #ea5514;
 }
 
 #PodcastPlayerApp audio {
@@ -1007,14 +1007,14 @@ section {
 }
 
 .player--drawer {
-  position: fixed;
+  /* position: fixed; */
   z-index: 1000;
   width: 100%;
-  left: 0;
-  bottom: 0;
-  padding: 20px 0 16px;
+  /* left: 0;
+  bottom: 0; */
+  padding: 15px 0;
   color: white;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.8);
   transition: all 0.3s ease;
   transform: translateY(0);
   backdrop-filter: blur(5px);

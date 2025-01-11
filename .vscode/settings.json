@@ -34,7 +34,8 @@
   // "cSpell.autoFormatConfigFile": false,
   "html.format.wrapLineLength": 0,
   "javascript.format.enable": true,
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "livePreview.defaultPreviewPath": "/futuredata/src/new/junior/magazine-detail.html"
   // "peacock.color": "#723e27",
   // "workbench.colorCustomizations": {
   //   "activityBar.activeBackground": "#985334",

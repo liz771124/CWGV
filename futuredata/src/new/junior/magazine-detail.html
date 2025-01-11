@@ -230,341 +230,15 @@
         <div class="md:px-auto container mx-auto px-8 md:min-h-[80svh] md:py-5">
           <iframe
             id="magIframe"
-            class="relative h-[500px] md:h-[800px]"
+            class="relative h-[500px] shadow-[0px_3px_8px_0px_rgba(0,0,0,0.3)] md:h-[800px]"
             src="https://efuturedata.cwgv.com.tw/MY11307/index.html"
             width="100%"
-            height="800px"
+            height="auto"
             frameborder="0"
             scrolling="no"
             style="margin: 0"
             allowfullscreen="allowfullscreen"
           ></iframe>
-        </div>
-
-        <div id="PodcastPlayerApp">
-          <audio ref="audio" controls="controls">
-            <source type="audio/mpeg" />
-          </audio>
-          <div class="player--drawer" v-if="audio">
-            <div class="container relative">
-              <div class="player--controller">
-                <ul>
-                  <li>
-                    <a
-                      class="item--control"
-                      alt="跳前10秒"
-                      @click="playlistPrevTenSec()"
-                    >
-                      <div class="icon">
-                        <div class="icon__prev__10sec"></div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="item--control"
-                      alt="跳上一章節"
-                      @click="playlistPrev()"
-                    >
-                      <div class="icon">
-                        <div class="icon__prev"></div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="item--control"
-                      alt="播放/暫停"
-                      @click="togglePlay()"
-                    >
-                      <div class="icon">
-                        <div class="icon__play" v-if="!CONTROL_PLAYING"></div>
-                        <div class="icon__pause" v-if="CONTROL_PLAYING"></div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="item--control"
-                      alt="跳下一章節"
-                      @click="playlistNext()"
-                    >
-                      <div class="icon">
-                        <div class="icon__next"></div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="item--control"
-                      alt="跳下10秒"
-                      @click="playlistNextTenSec()"
-                    >
-                      <div class="icon">
-                        <div class="icon__next__10sec"></div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="player--screen">
-                <div class="title" v-if="CONTROL_EPISODE">
-                  <h3 class="line-clamp-1 w-full font-bold text-white">
-                    {{ CONTROL_EPISODE.title }}
-                  </h3>
-                </div>
-                <div class="process--slider" v-if="CONTROL_SEEK">
-                  <div class="label">{{ STATUS_SEEK }}</div>
-                  <vue-slider
-                    ref="processbar"
-                    @drag-start="processSliderDragStart"
-                    @dragging="processSliderDragging"
-                    @drag-end="processSliderDragEnd"
-                    @click="processSliderClick"
-                    v-model="CONTROL_SEEK"
-                    :height="8"
-                    :dotSize="32"
-                    :duration="CONTROL_USER_DURATION"
-                    :dragOnClick="true"
-                    :tooltip="'none'"
-                  ></vue-slider>
-                  <div class="label">{{ STATUS_DURATION }}</div>
-                </div>
-                <div class="process--slider" v-if="!CONTROL_SEEK">
-                  <div class="label">00:00</div>
-                  <vue-slider
-                    :height="8"
-                    :dotSize="32"
-                    :tooltip="'none'"
-                  ></vue-slider>
-                  <div class="label">00:00</div>
-                </div>
-              </div>
-              <div class="player--controller">
-                <ul>
-                  <li v-if="isTablet || isDesktop">
-                    <div
-                      class="item--control"
-                      alt="音量調整"
-                      @mouseup="changeVolume()"
-                      ref="buttonVolume"
-                    >
-                      <div class="icon">
-                        <div class="icon__volume">
-                          <span
-                            :class="{'is-active': CONTROL_VOLUME > .1}"
-                          ></span>
-                          <span
-                            :class="{'is-active': CONTROL_VOLUME > .3}"
-                          ></span>
-                          <span
-                            :class="{'is-active': CONTROL_VOLUME > .5}"
-                          ></span>
-                          <span
-                            :class="{'is-active': CONTROL_VOLUME > .75}"
-                          ></span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <a
-                      class="item--control"
-                      ref="buttonSpeed"
-                      alt="播放速度調整"
-                      @click="(CONTROL_SPEED_OPEN)?CONTROL_SPEED_OPEN=false:CONTROL_SPEED_OPEN=true"
-                    >
-                      <div class="icon">
-                        <div class="icon__more"></div>
-                      </div>
-                    </a>
-                    <div class="player--speed" v-if="CONTROL_SPEED_OPEN">
-                      <ul>
-                        <li :class="{'is-active': CONTROL_SPEED==.5}">
-                          <a @click="(CONTROL_SPEED = .5)">0.5x</a>
-                        </li>
-                        <li :class="{'is-active': CONTROL_SPEED==1}">
-                          <a @click="(CONTROL_SPEED = 1)">1x</a>
-                        </li>
-                        <li :class="{'is-active': CONTROL_SPEED==1.25}">
-                          <a @click="(CONTROL_SPEED = 1.25)">1.25x</a>
-                        </li>
-                        <li :class="{'is-active': CONTROL_SPEED==1.5}">
-                          <a @click="(CONTROL_SPEED = 1.5)">1.5x</a>
-                        </li>
-                        <li :class="{'is-active': CONTROL_SPEED==2}">
-                          <a @click="(CONTROL_SPEED = 2)">2x</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-                <div class="flex flex-col">
-                  <div
-                    :class="['absolute rounded-t-lg bottom-[120px] md:bottom-[65px] end-0 backdrop-blur-sm bg-black/80 shadow-xl w-screen md:max-w-[400px] h-[40svh] lg:h-[300px] transform duration-100 overflow-hidden',  AUDIO_LIST ?  'translate-y-0 opacity-100' : 'translate-y-[10%] opacity-0 hidden' ]"
-                  >
-                    <div
-                      class="relative flex items-center justify-between border-b border-[#535353] px-5 py-3 text-white"
-                    >
-                      <span class="font-semibold">播放清單</span>
-                      <div
-                        class="cursor-pointer"
-                        @click="AUDIO_LIST=!AUDIO_LIST"
-                      >
-                        <svg
-                          width="15"
-                          height="15"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 14 14"
-                        >
-                          <path
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="h-[calc(100%-50px)] grow overflow-auto">
-                      <div
-                        class="bodrer-[#f2f2f2]-b flex cursor-pointer px-2 py-3 hover:shadow-md"
-                        v-for="(chapter, index) in meta.data"
-                        :key="chapter.id"
-                      >
-                        <div
-                          class="flex w-full items-center gap-3 px-2"
-                          @click="playAudio(chapter.id, chapter.chapterUrl)"
-                        >
-                          <div
-                            class="bg-primary-400 h-5 w-2 shrink-0 rounded-full"
-                          ></div>
-                          <span :class="`pt-1 font-semibold line-clamp-2`">
-                            {{ chapter.title }}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    role="button"
-                    class="item--control text-white/80"
-                    @click="AUDIO_LIST=!AUDIO_LIST"
-                  >
-                    <svg
-                      fill="currentColor"
-                      height="17"
-                      width="17"
-                      viewBox="0 0 458.18 458.18"
-                      xml:space="preserve"
-                    >
-                      <g>
-                        <g>
-                          <path
-                            d="M487.2,69.7c0,12.9-10.5,23.4-23.4,23.4h-322c-12.9,0-23.4-10.5-23.4-23.4s10.5-23.4,23.4-23.4h322.1
-                          C476.8,46.4,487.2,56.8,487.2,69.7z M463.9,162.3H141.8c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1
-                          c12.9,0,23.4-10.5,23.4-23.4C487.2,172.8,476.8,162.3,463.9,162.3z M463.9,278.3H141.8c-12.9,0-23.4,10.5-23.4,23.4
-                          s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,288.8,476.8,278.3,463.9,278.3z M463.9,394.3H141.8
-                          c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,404.8,476.8,394.3,463.9,394.3z
-                            M38.9,30.8C17.4,30.8,0,48.2,0,69.7s17.4,39,38.9,39s38.9-17.5,38.9-39S60.4,30.8,38.9,30.8z M38.9,146.8
-                          C17.4,146.8,0,164.2,0,185.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,146.8,38.9,146.8z M38.9,262.8
-                          C17.4,262.8,0,280.2,0,301.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,262.8,38.9,262.8z M38.9,378.7
-                          C17.4,378.7,0,396.1,0,417.6s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9C77.8,396.2,60.4,378.7,38.9,378.7z"
-                          />
-                        </g>
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            data-twe-modal-init
-            class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-            id="tweModal"
-            tabindex="-1"
-            aria-labelledby="tweModalLabel"
-            aria-modal="true"
-            role="dialog"
-          >
-            <div
-              data-twe-modal-dialog-ref
-              class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]"
-            >
-              <div
-                class="relative m-5 flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current outline-none"
-              >
-                <div
-                  class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4"
-                >
-                  <div class="flex items-center gap-2">
-                    <div
-                      class="bg-primary-300 flex h-[40px] w-[40px] items-center justify-center rounded-full text-2xl font-bold leading-normal text-white shadow-lg"
-                      id="tweModalLabel"
-                    >
-                      {{ COUNTDOWN }}
-                    </div>
-                    倒數完成後將為您播放下一篇章
-                  </div>
-                  <button
-                    type="button"
-                    class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none"
-                    data-twe-modal-dismiss
-                    aria-label="Close"
-                  >
-                    <span class="[&>svg]:h-6 [&>svg]:w-6">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M6 18L18 6M6 6l12 12"
-                        />
-                      </svg>
-                    </span>
-                  </button>
-                </div>
-
-                <div class="relative p-4">
-                  <p>想繼續閱讀雜誌嗎?</p>
-                </div>
-
-                <div
-                  class="flex flex-shrink-0 flex-wrap items-center justify-stretch gap-3 rounded-b-md border-t-2 border-neutral-100 p-4"
-                >
-                  <button
-                    type="button"
-                    class="bg-primary-500 hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 inline-block grow rounded px-6 pb-2 pt-2.5 font-medium leading-normal text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0"
-                    data-twe-modal-dismiss
-                    data-twe-ripple-init
-                    data-twe-ripple-color="light"
-                    @click="playlistNext()"
-                  >
-                    繼續播放
-                  </button>
-                  <button
-                    type="button"
-                    class="hover:bg-gary-600 focus:bg-primary-600 active:bg-primary-800 inline-block grow rounded bg-gray-400 px-6 pb-2 pt-2.5 font-medium leading-normal text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0"
-                    data-twe-modal-dismiss
-                    data-twe-ripple-init
-                    data-twe-ripple-color="light"
-                    @click="() => pauseAudio()"
-                  >
-                    停在本頁
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div
@@ -674,21 +348,325 @@
             </li>
           </ul>
         </div>
-        <!-- <ul class="mt-3 text-sm">
-              <li>
-                聯絡方式：<a href="tel:0226620012" title="">02-2662-0012</a>‧<a
-                  href="mailto:gkids@cwgv.com.tw"
-                  title=""
-                  >gkids@cwgv.com.tw</a
-                >
-              </li>
-              <li>服務時間：週一至週五 9:00~12:30:13:30~17:00</li>
-            </ul> -->
       </div>
       <div class="fixed bottom-5 end-3" id="goTop">
         <img width="40" height="40" src="../assets/img/go-top.svg" alt="" />
       </div>
     </footer>
+
+    <div class="sticky bottom-0" id="PodcastPlayerApp">
+      <audio ref="audio" controls="controls">
+        <source type="audio/mpeg" />
+      </audio>
+      <div class="player--drawer" v-if="audio">
+        <div class="container relative">
+          <div class="player--controller">
+            <ul>
+              <li>
+                <a
+                  class="item--control"
+                  alt="跳前10秒"
+                  @click="playlistPrevTenSec()"
+                >
+                  <div class="icon">
+                    <div class="icon__prev__10sec"></div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="item--control"
+                  alt="跳上一章節"
+                  @click="playlistPrev()"
+                >
+                  <div class="icon">
+                    <div class="icon__prev"></div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item--control" alt="播放/暫停" @click="togglePlay()">
+                  <div class="icon">
+                    <div class="icon__play" v-if="!CONTROL_PLAYING"></div>
+                    <div class="icon__pause" v-if="CONTROL_PLAYING"></div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="item--control"
+                  alt="跳下一章節"
+                  @click="playlistNext()"
+                >
+                  <div class="icon">
+                    <div class="icon__next"></div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="item--control"
+                  alt="跳下10秒"
+                  @click="playlistNextTenSec()"
+                >
+                  <div class="icon">
+                    <div class="icon__next__10sec"></div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="player--screen">
+            {{ CONTROL_EPISODE }}
+            <div class="title" v-if="CONTROL_EPISODE">
+              <h3 class="line-clamp-1 w-full px-2 text-sm font-bold text-white">
+                {{ CONTROL_EPISODE.title }}
+              </h3>
+            </div>
+            <div class="process--slider" v-if="CONTROL_SEEK">
+              <div class="label">{{ STATUS_SEEK }}</div>
+              <vue-slider
+                ref="processbar"
+                @drag-start="processSliderDragStart"
+                @dragging="processSliderDragging"
+                @drag-end="processSliderDragEnd"
+                @click="processSliderClick"
+                v-model="CONTROL_SEEK"
+                :height="8"
+                :dotSize="32"
+                :duration="CONTROL_USER_DURATION"
+                :dragOnClick="true"
+                :tooltip="'none'"
+              ></vue-slider>
+              <div class="label">{{ STATUS_DURATION }}</div>
+            </div>
+            <div class="process--slider" v-if="!CONTROL_SEEK">
+              <div class="label">00:00</div>
+              <vue-slider
+                :height="8"
+                :dotSize="32"
+                :tooltip="'none'"
+              ></vue-slider>
+              <div class="label">00:00</div>
+            </div>
+          </div>
+          <div class="player--controller">
+            <ul>
+              <li v-if="isTablet || isDesktop">
+                <div
+                  class="item--control"
+                  alt="音量調整"
+                  @mouseup="changeVolume()"
+                  ref="buttonVolume"
+                >
+                  <div class="icon">
+                    <div class="icon__volume">
+                      <span :class="{'is-active': CONTROL_VOLUME > .1}"></span>
+                      <span :class="{'is-active': CONTROL_VOLUME > .3}"></span>
+                      <span :class="{'is-active': CONTROL_VOLUME > .5}"></span>
+                      <span :class="{'is-active': CONTROL_VOLUME > .75}"></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a
+                  class="item--control"
+                  ref="buttonSpeed"
+                  alt="播放速度調整"
+                  @click="(CONTROL_SPEED_OPEN)?CONTROL_SPEED_OPEN=false:CONTROL_SPEED_OPEN=true"
+                >
+                  <div class="icon">
+                    <div class="icon__more"></div>
+                  </div>
+                </a>
+                <div class="player--speed" v-if="CONTROL_SPEED_OPEN">
+                  <ul>
+                    <li :class="{'is-active': CONTROL_SPEED==.5}">
+                      <a @click="(CONTROL_SPEED = .5)">0.5x</a>
+                    </li>
+                    <li :class="{'is-active': CONTROL_SPEED==1}">
+                      <a @click="(CONTROL_SPEED = 1)">1x</a>
+                    </li>
+                    <li :class="{'is-active': CONTROL_SPEED==1.25}">
+                      <a @click="(CONTROL_SPEED = 1.25)">1.25x</a>
+                    </li>
+                    <li :class="{'is-active': CONTROL_SPEED==1.5}">
+                      <a @click="(CONTROL_SPEED = 1.5)">1.5x</a>
+                    </li>
+                    <li :class="{'is-active': CONTROL_SPEED==2}">
+                      <a @click="(CONTROL_SPEED = 2)">2x</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <div class="flex flex-col">
+              <div
+                :class="['absolute rounded-t-lg bottom-[120px] md:bottom-[58px] end-0 backdrop-blur-sm bg-black/80 shadow-xl w-screen md:max-w-[400px] h-[40svh] lg:h-[300px] transform duration-100 overflow-hidden',  AUDIO_LIST ?  'translate-y-0 opacity-100' : 'translate-y-[10%] opacity-0 hidden' ]"
+              >
+                <div
+                  class="relative flex items-center justify-between border-b border-[#535353] px-5 py-3 text-white"
+                >
+                  <span class="font-semibold">播放清單</span>
+                  <div class="cursor-pointer" @click="AUDIO_LIST=!AUDIO_LIST">
+                    <svg
+                      width="15"
+                      height="15"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 14 14"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="h-[calc(100%-50px)] grow overflow-auto">
+                  <div
+                    class="bodrer-[#f2f2f2]-b flex cursor-pointer px-2 py-3 hover:shadow-md"
+                    v-for="(chapter, index) in meta.data"
+                    :key="chapter.id"
+                  >
+                    <div
+                      class="flex w-full items-center gap-3 px-2"
+                      @click="playAudio(chapter.id, chapter.chapterUrl)"
+                    >
+                      <div
+                        class="bg-primary-400 h-5 w-2 shrink-0 rounded-full"
+                      ></div>
+                      <span
+                        :class="`font-semibold line-clamp-2 ${CONTROL_EPISODE && 'text-primary-500'}`"
+                      >
+                        {{ chapter.title }}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                role="button"
+                class="item--control text-white/80"
+                @click="AUDIO_LIST=!AUDIO_LIST"
+              >
+                <svg
+                  fill="currentColor"
+                  height="17"
+                  width="17"
+                  viewBox="0 0 458.18 458.18"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <g>
+                      <path
+                        d="M487.2,69.7c0,12.9-10.5,23.4-23.4,23.4h-322c-12.9,0-23.4-10.5-23.4-23.4s10.5-23.4,23.4-23.4h322.1
+                      C476.8,46.4,487.2,56.8,487.2,69.7z M463.9,162.3H141.8c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1
+                      c12.9,0,23.4-10.5,23.4-23.4C487.2,172.8,476.8,162.3,463.9,162.3z M463.9,278.3H141.8c-12.9,0-23.4,10.5-23.4,23.4
+                      s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,288.8,476.8,278.3,463.9,278.3z M463.9,394.3H141.8
+                      c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,404.8,476.8,394.3,463.9,394.3z
+                        M38.9,30.8C17.4,30.8,0,48.2,0,69.7s17.4,39,38.9,39s38.9-17.5,38.9-39S60.4,30.8,38.9,30.8z M38.9,146.8
+                      C17.4,146.8,0,164.2,0,185.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,146.8,38.9,146.8z M38.9,262.8
+                      C17.4,262.8,0,280.2,0,301.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,262.8,38.9,262.8z M38.9,378.7
+                      C17.4,378.7,0,396.1,0,417.6s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9C77.8,396.2,60.4,378.7,38.9,378.7z"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        data-twe-modal-init
+        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+        id="tweModal"
+        tabindex="-1"
+        aria-labelledby="tweModalLabel"
+        aria-modal="true"
+        role="dialog"
+      >
+        <div
+          data-twe-modal-dialog-ref
+          class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]"
+        >
+          <div
+            class="relative m-5 flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current outline-none"
+          >
+            <div
+              class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4"
+            >
+              <div class="flex items-center gap-2">
+                <div
+                  class="bg-primary-300 flex h-[40px] w-[40px] items-center justify-center rounded-full text-2xl font-bold leading-normal text-white shadow-lg"
+                  id="tweModalLabel"
+                >
+                  {{ COUNTDOWN }}
+                </div>
+                倒數完成後將為您播放下一篇章
+              </div>
+              <button
+                type="button"
+                class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none"
+                data-twe-modal-dismiss
+                aria-label="Close"
+              >
+                <span class="[&>svg]:h-6 [&>svg]:w-6">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+
+            <div class="relative p-4">
+              <p>想繼續閱讀雜誌嗎?</p>
+            </div>
+
+            <div
+              class="flex flex-shrink-0 flex-wrap items-center justify-stretch gap-3 rounded-b-md border-t-2 border-neutral-100 p-4"
+            >
+              <button
+                type="button"
+                class="bg-primary-500 hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 inline-block grow rounded px-6 pb-2 pt-2.5 font-medium leading-normal text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0"
+                data-twe-modal-dismiss
+                data-twe-ripple-init
+                data-twe-ripple-color="light"
+                @click="playlistNext()"
+              >
+                繼續播放
+              </button>
+              <button
+                type="button"
+                class="hover:bg-gary-600 focus:bg-primary-600 active:bg-primary-800 inline-block grow rounded bg-gray-400 px-6 pb-2 pt-2.5 font-medium leading-normal text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0"
+                data-twe-modal-dismiss
+                data-twe-ripple-init
+                data-twe-ripple-color="light"
+                @click="() => pauseAudio()"
+              >
+                停在本頁
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="../assets/js/tw-elements.umd.min.js"></script>
     <script type="module" crossorigin src="../assets/js/player.js"></script>

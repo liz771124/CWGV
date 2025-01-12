@@ -417,7 +417,7 @@
     <!-- 共用版尾 -->
     <footer class="bg-white py-5 tracking-wide">
       <div
-        class="container mx-auto flex flex-wrap items-center justify-between gap-5 px-3 py-5 text-sm"
+        class="container mx-auto flex flex-wrap items-center justify-between gap-3 px-3 py-5 text-sm lg:gap-5"
       >
         <div class="flex grow flex-wrap items-center gap-2">
           <a class="mx-auto md:mx-0" href="#" target="_blank">
@@ -428,8 +428,10 @@
               alt="logo"
             />
           </a>
-          <div>
-            <ul class="mb-2 flex flex-wrap divide-x">
+          <div class="flex grow flex-col items-center sm:items-start">
+            <ul
+              class="flex flex-wrap justify-center gap-y-2 divide-x text-center md:mx-0 md:flex-nowrap md:text-start lg:mb-3"
+            >
               <li class="px-2">
                 <a
                   href="https://futureparenting.cwgv.com.tw/"
@@ -471,13 +473,16 @@
                 >
               </li>
             </ul>
-            <div class="px-2">
+            <div class="hidden px-2 text-center text-xs md:flex">
               Copyright © 未來親子學習平台﹒All rights reserved.
             </div>
           </div>
         </div>
-        <div>
-          <ul class="mb-2 flex flex-wrap divide-x text-end">
+
+        <div class="mx-auto flex flex-col items-center gap-y-2 sm:mx-0">
+          <ul
+            class="flex flex-wrap justify-center gap-y-2 divide-x text-center md:text-end"
+          >
             <li class="px-2">
               <a
                 href="https://futuredata.cwgv.com.tw/copyright/index/A"
@@ -495,7 +500,9 @@
               >
             </li>
           </ul>
-          <ul class="flex divide-x text-end">
+          <ul
+            class="flex flex-wrap justify-center gap-y-2 divide-x text-center md:text-end"
+          >
             <li class="px-2">
               <a
                 href="https://futuredata.cwgv.com.tw/copyright/index/C"
@@ -513,6 +520,10 @@
               >
             </li>
           </ul>
+        </div>
+
+        <div class="mx-auto block text-center text-xs sm:mx-0 md:hidden">
+          Copyright © 未來親子學習平台﹒All rights reserved.
         </div>
       </div>
       <div class="fixed bottom-5 end-3" id="goTop">

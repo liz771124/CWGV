@@ -125,6 +125,7 @@ favoriteItem.forEach((item) => {
     : path.setAttribute("d", favoriteOffPath);
 
   item.addEventListener("click", (event) => {
+    console.log("click");
     const favoriteIcon = event.target.closest(".icon-favorite");
     if (favoriteIcon) {
       const path = favoriteIcon.querySelector("svg path");

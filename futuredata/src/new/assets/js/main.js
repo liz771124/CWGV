@@ -138,8 +138,8 @@ favoriteItem.forEach((item) => {
   });
 });
 
-if (isMobile) {
-  const navbar = document.getElementById("navbar");
+const navbar = document.getElementById("navbar");
+if (isMobile && navbar) {
   let lastScrollY = window.scrollY;
   let ticking = false;
   navbar.classList.add("nav-transition", "nav-visible");

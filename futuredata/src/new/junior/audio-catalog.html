@@ -15,8 +15,8 @@
   </head>
   <body class="bg-gray2-50 relative">
     <!-- 共用版頭 -->
-    <nav class="sticky top-0 z-50">
-      <div id="navbar" class="bg-gray-50/50 py-5 backdrop-blur-lg transition">
+    <nav id="navbar" class="sticky top-0 z-50">
+      <div class="bg-gray-50/50 py-3 backdrop-blur-lg transition md:py-5">
         <div
           class="container mx-auto flex flex-wrap items-center justify-between gap-3 px-5"
         >
@@ -308,7 +308,7 @@
             class="flex grow flex-wrap justify-between gap-3 p-5 shadow md:flex-nowrap md:gap-5 md:p-6"
           >
             <div
-              class="text-primary-500 relative mx-auto flex h-[200px] w-[200px] max-w-full shrink-0 overflow-hidden rounded"
+              class="text-primary-500 relative mx-auto flex max-w-full shrink-0 overflow-hidden rounded md:h-[200px] md:w-[200px]"
             >
               <svg
                 width="65"
@@ -541,7 +541,7 @@
                 </div>
                 <div class="relative max-w-[120px] shrink-0 md:max-w-[180px]">
                   <span
-                    class="bg-primary-500 absolute -end-[10px] top-[10px] z-0 aspect-[4/6] w-full rounded-xl"
+                    class="bg-primary-500 absolute -end-[5px] top-[5px] z-0 aspect-[4/6] w-full rounded-xl"
                   ></span>
                   <img
                     class="z-1 relative aspect-[4/6] rounded-xl object-cover"
@@ -691,7 +691,9 @@
           </div>
         </div>
 
-        <div class="mx-auto flex flex-col items-center gap-y-2 sm:mx-0">
+        <div
+          class="mx-auto mt-4 flex flex-col items-center gap-y-2 sm:mx-0 md:mt-0"
+        >
           <ul
             class="flex flex-wrap justify-center gap-y-2 divide-x text-center md:text-end"
           >

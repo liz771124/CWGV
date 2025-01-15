@@ -6,15 +6,52 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuItems = document.querySelectorAll(".menu-item");
   const goTop = document.getElementById("goTop");
   const navContainer = document.querySelector("nav");
-  const navbarSearch = document.getElementById("navbar-search-container");
+  const navbarSearchContainer = document.getElementById(
+    "navbar-search-container",
+  );
+  // const navbarSearchIcon = document.getElementById("navbar-search-icon");
   const isHomePage = document.body.dataset.page === "home";
   const body = document.body;
 
+  // const toggleButton = document.getElementById("searchToggleButton");
+  // const searchContainer = document.getElementById("navbarSearchContainer");
+  // let isExpanded = false;
+
   if (isHomePage) {
-    navbarSearch.style.display = "none";
+    navbarSearchContainer.style.display = "none";
   }
 
   if (menuIcon) {
+    // gsap.set(searchContainer, { opacity: 0, y: -20 });
+
+    // toggleButton.addEventListener("click", () => {
+    //   if (!isExpanded) {
+    //     // 展開動畫
+    //     searchContainer.classList.remove("hidden");
+    //     gsap.to(searchContainer, {
+    //       duration: 0.25,
+    //       opacity: 1,
+    //       y: 0,
+    //       ease: "power2.out",
+    //       onComplete: () => {
+    //         isExpanded = true;
+    //       },
+    //     });
+    //   } else {
+    //     // 收合動畫
+    //     gsap.to(searchContainer, {
+    //       duration: 0.25,
+    //       opacity: 0,
+    //       y: -20,
+    //       ease: "power2.in",
+    //       onComplete: () => {
+    //         searchContainer.classList.add("hidden");
+    //         isExpanded = false;
+    //       },
+    //     });
+    //   }
+    // });
+
     menuIcon.addEventListener("click", () => {
       body.classList.add("menu-open");
       gsap.set(menuItems, { x: -50, opacity: 0 });
@@ -158,7 +195,7 @@ if (isMobile && navbar) {
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
     const scrollDistance = Math.abs(currentScrollY - lastScrollY);
-
+    console.log(scrollDistance, lastScrollY);
     if (scrollDistance > 5) {
       if (currentScrollY > lastScrollY && currentScrollY > 300) {
         navbar.classList.remove("nav-visible");

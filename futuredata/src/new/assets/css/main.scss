@@ -51,6 +51,9 @@
 body {
   color: var(--gray-900);
   font-size: inherit;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .article-content {

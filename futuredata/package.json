@@ -9,7 +9,7 @@
     "y-tw-n": "npx tailwindcss -i ./src/new/assets/css/main.scss -o ./src/new/assets/css/youth-main.css --minify --config ./tailwind.config.youth-new.js --watch",
     "j-tw": "npx tailwindcss -i ./src/assets/css/main.scss -o ./src/assets/css/junior-main.css --minify --config ./tailwind.config.junior.js --watch",
     "y-tw": "npx tailwindcss -i ./src/assets/css/main.scss -o ./src/assets/css/youth-main.css --minify --config ./tailwind.config.youth.js --watch",
-    "build-tw": "concurrently \"npm run j-tw\" \"npm run y-tw\""
+    "build-tw": "concurrently \"npm run j-tw-n\" \"npm run y-tw-n\""
   },
   "safelist": [],
   "keywords": [],

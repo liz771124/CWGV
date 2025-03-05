@@ -296,338 +296,71 @@
         <div class="flex gap-3 pb-3 text-sm">
           <a href="#">未來兒童</a>
           <span>></span>
-          <a href="#">收聽主題音檔</a>
-          <span>></span>
-          <a href="#">主題大標</a>
+          <a href="#">漫畫專區</a>
         </div>
-
-        <div
-          class="bg-gray2-100 mt-3 flex flex-col items-stretch justify-stretch overflow-hidden rounded-xl shadow md:flex-row"
-        >
-          <div
-            class="flex grow flex-wrap justify-between gap-3 p-5 shadow md:flex-nowrap md:gap-5 md:p-6"
-          >
-            <div
-              class="text-primary-500 relative mx-auto flex max-w-full shrink-0 overflow-hidden rounded md:h-[200px] md:w-[200px]"
+        <div class="my-4 flex items-center divide-x divide-gray-600">
+          <div class="shrink-0 pe-4">
+            <a
+              href="#"
+              class="hover:bg-primary-600 bg-primary-500 text-gray2-700 transtion rounded-full px-4 py-2.5 text-center text-white hover:text-white"
+              >全部</a
             >
-              <svg
-                width="65"
-                height="65"
-                class="z-1 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform opacity-80 drop-shadow-lg transition-all md:group-hover:scale-125 md:group-hover:drop-shadow-xl"
-                viewBox="0 0 24 24"
-                fill="#ffffff"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g>
-                  <g>
-                    <path
-                      d="M3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12Z"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M10 15V9L15 12L10 15Z"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </g>
-              </svg>
-              <img
-                class="aspect-[1/1] h-full w-full object-cover"
-                src="https://mir-s3-cdn-cf.behance.net/projects/404/bf7980206529281.66ce10369c5dc.jpg"
-              />
-            </div>
-            <div class="flex w-full grow flex-col">
-              <h3 class="mb-3 line-clamp-2 text-xl font-semibold">主題大標</h3>
-              <div class="flex flex-col gap-3 divide-x-2">
-                主題介紹主題介紹主題介紹主題介紹主題介紹主題介紹主題介紹主題介紹主題介紹主題介紹主題介紹主題介紹
-              </div>
-            </div>
           </div>
-          <div>
-            <div
-              class="bg-primary-500 h-[20px] w-full grow md:h-full md:w-[20px]"
-            ></div>
+          <div class="grow ps-4 font-semibold md:grow-0">
+            <div class="flex gap-2">
+              <a
+                href="#"
+                class="hover:bg-primary-600 bg-primary-500 text-gray2-700 transtion flex grow items-center gap-2 rounded-full px-4 py-2 text-center text-white hover:text-white"
+              >
+                <span class="hidden md:block">單篇漫畫</span>
+              </a>
+              <a
+                href="#"
+                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex grow items-center gap-2 rounded-full px-4 py-2 hover:text-white"
+              >
+                <span class="hidden md:block">連載中</span>
+              </a>
+              <a
+                href="#"
+                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex grow items-center gap-2 rounded-full px-4 py-2 hover:text-white"
+              >
+                <span class="hidden md:block">已完結</span>
+              </a>
+            </div>
           </div>
         </div>
-
-        <!-- <div class="mt-6 flex items-start divide-gray-600 md:divide-x">
-          <div class="mt-1 hidden shrink-0 md:block md:pe-4">年份</div>
-          <div class="font-semibold">
-            <div class="flex flex-wrap items-center gap-2" id="year-container">
-              <a
-                class="year-item hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                href="#"
-                id="2024"
-                >2024</a
+        <div
+          class="grid grid-cols-2 gap-5 py-5 md:grid-cols-3 md:gap-10 lg:grid-cols-4"
+        >
+          <div class="flex flex-col gap-2">
+            <div class="relative">
+              <img
+                class="h-[65%] w-full object-contain"
+                src="https://imgs.cwgv.com.tw/books/MJ1/MJ11312/cover/MJ11312.png"
+                alt=""
+              />
+              <span
+                class="bg-primary-500 absolute bottom-3 start-3 rounded-lg px-2 text-white"
+                >連載</span
               >
-              <a
-                class="year-item hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                href="#"
-                id="2023"
-                >2023</a
+              <span
+                class="bg-gray2-500 absolute bottom-3 start-3 rounded-lg px-2 text-white"
+                >完結
+                </span
               >
-              <a
-                class="year-item hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                href="#"
-                id="2022"
-                >2022</a
+              <span
+                class="bg-primary-500 absolute bottom-3 start-3 rounded-lg px-2 text-white"
+                >連載</span
               >
-              <a
-                class="year-item hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                href="#"
-                id="2021"
-                >2021</a
-              >
-              <a
-                class="year-item hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                href="#"
-                id="2020"
-                >2020</a
-              >
-              <a
-                class="year-item hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                href="#"
-                id="2019"
-                >2019</a
-              >
-              <a
-                class="year-item hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                href="#"
-                id="2018"
-                >2018</a
-              >
-              <a
-                class="year-item hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                href="#"
-                id="2017"
-                >2017</a
-              >
-              <a
-                class="year-item hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                href="#"
-                id="2016"
-                >2016</a
-              >
-              <a
-                class="year-item hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                href="#"
-                id="2015"
-                >2015</a
-              >
-              <a
-                class="year-item hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                href="#"
-                id="2014"
-                >2014</a
-              >
-              <a
-                class="year-item hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                href="#"
-                id="2013"
-                >2013</a
-              >
-              <a
-                class="year-item hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                href="#"
-                id="2012"
-                >2012</a
-              >
-              <a
-                class="year-item hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                href="#"
-                id="2011"
-                >2011</a
-              >
-              <a
-                class="year-item hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                href="#"
-                id="2010"
-                >2010</a
-              >
-              <svg
-                class="more-year-item text-gray2-800 hover:text-primary-500 cursor-pointer"
-                id="toggle-more"
-                width="13"
-                height="11"
-                viewBox="0 0 13 11"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.15976 9.87987L12.0298 1.43987C12.3698 0.849865 11.9398 0.109863 11.2598 0.109863H1.51981C0.839809 0.109863 0.409789 0.849865 0.749789 1.43987L5.61978 9.87987C5.95978 10.4699 6.81976 10.4699 7.15976 9.87987Z"
-                  fill="currentColor"
-                />
-              </svg>
             </div>
-          </div>
-        </div> -->
-        <div class="grid gap-5 py-5">
-          <div
-            class="bg-gray2-100 rounded-lg p-5 shadow-[0px_3px_8px_0px_rgba(0,0,0,0.3)] md:p-8"
-          >
-            <div class="flex flex-wrap justify-end gap-5 md:flex-nowrap">
-              <div
-                class="flex w-full grow items-center justify-between gap-2 md:gap-5"
-              >
-                <div class="flex flex-col gap-2">
-                  <div class="text-sm">
-                    <a href="#" class="text-primary-500">精彩專題</a>
-                  </div>
-                  <h2 class="text-xl font-bold md:text-2xl">
-                    <a class="line-clamp-2 leading-8" href="#"
-                      >紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術</a
-                    >
-                  </h2>
-                  <div class="line-clamp-2 hidden md:block">
-                    我們熟悉的「十進位」，個位數的數 字從 0 開始，1、2 一直到
-                    9，再進到「十 位數」，等到
-                    99再進到「百位」。個位數後，愈大的位數，代表愈多 10 相乘。
-                    以 314 為例，可以拆成 3 個 10 × 10，加 上 1 個 10 ，再加上 4
-                    個 1。
-                  </div>
-                  <div
-                    class="text-gray2-600 hidden flex-wrap text-sm md:flex md:gap-5"
-                  >
-                    <div>
-                      <span>專欄</span>
-                      |
-                      <a href="#" class="text-primary-500">來寶報新聞</a>
-                    </div>
-                  </div>
-                  <div
-                    class="text-gray2-600 flex flex-wrap gap-2 text-sm md:gap-5"
-                  >
-                    <div>
-                      <span>本文出自</span>
-                      |
-                      <a href="#" class="text-primary-500"
-                        >未來少年2024年2月號(第158期)</a
-                      >
-                    </div>
-                    <!-- <div>
-                      作者 | <a href="#" class="text-primary-500">鄧曉飛</a>
-                      <span class="hidden md:block">繪圖 | 右耳</span>
-                    </div> -->
-                  </div>
-
-                  <div class="mt-2 flex flex-wrap justify-start gap-2">
-                    <a
-                      href="#"
-                      class="text-primary-500 hover:bg-primary-600 block rounded-full bg-white px-3 py-1 text-sm font-bold hover:text-white"
-                      >＃自我成長</a
-                    >
-                    <a
-                      href="#"
-                      class="text-primary-500 hover:bg-primary-600 block rounded-full bg-white px-3 py-1 text-sm font-bold hover:text-white"
-                      >#二進位</a
-                    >
-                    <a
-                      href="#"
-                      class="text-primary-500 hover:bg-primary-600 block rounded-full bg-white px-3 py-1 text-sm font-bold hover:text-white"
-                      >＃社會</a
-                    >
-                    <a
-                      href="#"
-                      class="text-primary-500 hover:bg-primary-600 bg-gray2-200 block rounded-full px-3 py-1 text-sm font-bold hover:text-white"
-                      >＃自訂tag1</a
-                    >
-                  </div>
-                </div>
-                <div class="relative max-w-[120px] shrink-0 md:max-w-[180px]">
-                  <span
-                    class="bg-primary-500 absolute -end-[5px] top-[5px] z-0 aspect-[4/6] w-full rounded-xl"
-                  ></span>
-                  <img
-                    class="z-1 relative aspect-[4/6] rounded-xl object-cover"
-                    src="https://imgs.cwgv.com.tw/books_subject/93/1493/thumb/1493.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <ul
-                class="flex h-full items-center justify-between gap-5 md:flex-col md:gap-8 md:ps-4"
-              >
-                <!-- <li class="text-primary-500">
-                  <svg
-                    class="icon-favorite favorite-on cursor-pointer"
-                    width="35"
-                    height="31"
-                    viewBox="0 0 35 31"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="" fill="currentColor"></path>
-                  </svg>
-                </li> -->
-                <li class="text-primary-500">
-                  <svg
-                    class="icon-favorite favorite-off cursor-pointer"
-                    width="35"
-                    height="31"
-                    viewBox="0 0 35 31"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="" fill="currentColor"></path>
-                  </svg>
-                </li>
-                <li class="text-gray2-800">
-                  <svg
-                    width="30"
-                    height="22"
-                    viewBox="0 0 30 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M29.6277 1.39004C29.6477 1.51004 29.6477 1.64004 29.6277 1.77004L26.5076 17.59V17.64C26.2176 18.98 25.3176 20.05 24.0376 20.68C22.8576 21.27 21.3576 21.51 19.8276 21.2C18.3176 20.9 17.0077 20.13 16.1477 19.13H16.1277C15.1977 18.05 14.7477 16.7 15.0177 15.32C15.2877 13.97 16.2077 12.89 17.4877 12.25C18.6777 11.66 20.1676 11.42 21.6976 11.73C22.9776 11.98 24.0876 12.56 24.9176 13.32L26.3476 6.06003L14.1976 6.50004L11.9277 18.05V18.1C11.6377 19.44 10.7276 20.5 9.47764 21.14C8.28764 21.73 6.78764 21.96 5.25764 21.66C3.74764 21.36 2.43764 20.59 1.56764 19.59C0.637639 18.51 0.187643 17.16 0.447643 15.8C0.717643 14.44 1.63764 13.36 2.91764 12.72C4.09764 12.13 5.60766 11.91 7.11766 12.2C8.39766 12.45 9.50766 13.02 10.3377 13.78L12.6976 1.77004V1.70003L12.7177 1.67003L12.7377 1.65003V1.63004V1.61004L12.7477 1.57004H12.7677V1.54003V1.51003V1.49004L12.7876 1.48003V1.46004V1.44004L12.8176 1.40003H12.8377C12.8677 1.32003 12.8977 1.28004 12.9377 1.22004L12.9577 1.20003V1.18003H12.9677L13.0076 1.14004H13.0277L13.0476 1.13004L13.0676 1.09003H13.0877V1.08004V1.06003H13.1076V1.04003H13.1277V1.02004H13.1477L13.2177 0.960043H13.2477L13.2677 0.930028H13.2876L13.3476 0.910039H13.3677V0.890035H13.3876L13.4476 0.870031H13.4677H13.5076H13.5277C13.5877 0.830031 13.6277 0.820043 13.6877 0.820043C13.7377 0.820043 13.7976 0.810043 13.8576 0.820043L28.3876 0.290029C29.0176 0.260029 29.5376 0.740031 29.6076 1.37003V1.39004H29.6277Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </li>
-                <li class="text-gray2-800">
-                  <svg
-                    width="30"
-                    height="26"
-                    viewBox="0 0 30 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M27.8077 2.51996C26.8677 1.56996 25.5577 0.97998 24.1077 0.97998H5.89767C4.47767 0.97998 3.16766 1.56997 2.22766 2.49997L2.20767 2.51996C1.25767 3.45996 0.677673 4.77997 0.677673 6.21997V19.96C0.677673 21.38 1.25767 22.69 2.17767 23.63L2.20767 23.65C3.14767 24.6 4.46767 25.19 5.89767 25.19H24.1077C25.5277 25.19 26.7977 24.63 27.7477 23.72L27.8077 23.66C28.7677 22.71 29.3477 21.4 29.3477 19.96V6.21997C29.3477 4.77997 28.7677 3.45996 27.8077 2.51996ZM27.1377 19.95C27.1377 20.79 26.7877 21.54 26.2577 22.09L26.2077 22.14C25.6677 22.66 24.9277 22.98 24.1077 22.98H5.89767C5.07767 22.98 4.30766 22.64 3.75766 22.09C3.20766 21.54 2.86768 20.79 2.86768 19.95V6.20996C2.86768 5.37996 3.20766 4.60996 3.75766 4.07996C4.30766 3.51996 5.06767 3.17996 5.89767 3.17996H24.1077C24.9477 3.17996 25.6977 3.52996 26.2577 4.07996C26.7877 4.60996 27.1377 5.37996 27.1377 6.20996V19.95ZM16.7377 9.39996L11.3777 6.31998C11.2877 6.23998 11.1377 6.19998 10.9977 6.19998C10.6377 6.19998 10.3577 6.48996 10.3577 6.86996V19.31C10.3577 19.42 10.3877 19.52 10.4377 19.62C10.6177 19.94 11.0277 20.06 11.3477 19.87L16.7377 16.76L22.0577 13.68C22.1877 13.62 22.2777 13.52 22.3577 13.4C22.5277 13.1 22.4177 12.7 22.1077 12.51L16.7377 9.39996Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </li>
-                <li class="text-gray2-800">
-                  <svg
-                    width="28"
-                    height="29"
-                    viewBox="0 0 28 29"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M27.96 9.74001C27.96 8.64001 27.53 7.54 26.71 6.72L21.87 1.88C21.03 1.04 19.93 0.619995 18.84 0.619995C17.75 0.619995 16.64 1.04 15.83 1.88C10.74 6.95001 5.65998 12.05 0.569977 17.13L0.549957 17.15L0.529968 17.17L0.509979 17.19V17.21H0.48996V17.23V17.25L0.469971 17.27V17.29H0.449982L0.429962 17.31L0.409973 17.33V17.35H0.389984V17.37L0.369965 17.39V17.41L0.349976 17.43V17.46L0.329956 17.48V17.5V17.52H0.309967V17.54V17.56L0.289978 17.58V17.6V17.62L0.269958 17.64V17.66L0.249969 17.69V17.75L0.22998 17.77V17.8V17.9V27.22C0.22998 27.86 0.739974 28.37 1.37997 28.37H10.76H10.79H10.86L10.89 28.35H10.92H10.94H10.97L11.02 28.32H11.05L11.08 28.3L11.1 28.28L11.12 28.26L11.14 28.24H11.16L11.18 28.22L11.21 28.2L11.23 28.18H11.26L11.28 28.16L11.3 28.14L11.33 28.12L11.35 28.1L11.38 28.08L11.4 28.05L11.42 28.03C16.51 22.93 21.59 17.86 26.68 12.78C27.51 11.94 27.93 10.85 27.93 9.75999L27.96 9.74001ZM13.9 7.08L15.28 8.46001L4.41998 19.33L3.03998 17.96L13.9 7.08ZM2.54996 26.04V20.73L7.84998 26.04H2.54996ZM5.39996 20.31L16.26 9.45L19.15 12.34L8.26996 23.2L5.39996 20.31ZM10.65 25.56L9.25998 24.17L20.14 13.29L21.52 14.68L10.66 25.55L10.65 25.56ZM25.66 9.74001H25.64C25.64 10.25 25.46 10.74 25.07 11.13L23.15 13.05L15.53 5.45L15.71 5.25L16.41 4.55L17.46 3.5C17.85 3.12 18.35 2.92999 18.85 2.92999C19.35 2.92999 19.86 3.13 20.23 3.5L25.08 8.35001C25.47 8.73001 25.67 9.23 25.67 9.73L25.66 9.74001Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </li>
-              </ul>
-            </div>
+            <div class="text-center font-bold">美食千金米亞</div>
           </div>
         </div>
       </div>
     </main>
 
     <!-- 共用版尾 -->
-    <footer class="bg-white py-5 tracking-wide">
+    <footer class="mt-auto bg-white py-5 tracking-wide">
       <div
         class="container mx-auto flex flex-col flex-wrap items-center justify-between gap-3 px-3 py-5 text-sm md:flex-row lg:gap-5"
       >
@@ -636,7 +369,7 @@
         >
           <a class="mx-auto md:mx-0" href="#" target="_blank">
             <img
-              class="max-f-full"
+              class="max-f-full -mt-[1px]"
               width="120"
               src="../assets/img/footer-logo.svg"
               alt="logo"
@@ -673,7 +406,7 @@
               </li>
               <li class="border-e px-2 sm:border-0">
                 <a
-                  href="https://futureparenting.cwgv.com.tw/youth"
+                  href="https://futureparenting.cwgv.com.tw/junior"
                   title="未來少年"
                   target="_blank"
                   >未來少年</a
@@ -750,6 +483,7 @@
 
     <script src="../assets/js/tw-elements.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> -->
     <script src="../assets/js/main.js"></script>
   </body>
 </html>

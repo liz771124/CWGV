@@ -13,7 +13,6 @@ heartIcon.addEventListener("click", function (e) {
 offcanvasNote.addEventListener("shown.twe.offcanvas", (e) => {
   const backdrop = document.querySelector("div[data-twe-backdrop-show]");
   const noteBackdrop = document.querySelector("#note-backdrop");
-  console.log(noteBackdrop);
   backdrop.classList.add("pointer-events-none");
   noteBackdrop.classList.remove("hidden");
 });

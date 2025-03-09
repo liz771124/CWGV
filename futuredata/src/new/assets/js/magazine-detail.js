@@ -4,9 +4,9 @@ const offcanvasNote = document.getElementById("offcanvasNote");
 
 heartIcon.addEventListener("click", function (e) {
   if (e.target.src.includes("heart-red.svg")) {
-    e.target.src = "../../assets/img/icons/heart-gray.svg";
+    e.target.src = "../assets/img/icons/heart-gray.svg";
   } else {
-    e.target.src = "../../assets/img/icons/heart-red.svg";
+    e.target.src = "../assets/img/icons/heart-red.svg";
   }
 });
 

@@ -51,9 +51,10 @@
 body {
   color: var(--gray-900);
   font-size: inherit;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .article-content {

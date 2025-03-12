@@ -1,4 +1,5 @@
-const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+const isMobile = /iPhone|iPod|Android/i.test(navigator.userAgent);
+const isPad = /iPad/i.test(navigator.userAgent);
 document.addEventListener("DOMContentLoaded", () => {
   const menuIcon = document.getElementById("menuIcon");
   const closeMenu = document.getElementById("closeMenu");
@@ -118,7 +119,7 @@ if (yearContainer) {
   const yearItems = yearContainer.querySelectorAll(".year-item");
   const moreYearItem = document.getElementById("toggle-more");
   let isYearContainerExpanded = false;
-  let maxLength = isMobile ? 4 : 14;
+  let maxLength = isMobile ? 4 : isPad ? 8 : 14;
   if (dataYear && searchYear < thisYear - maxLength) {
     isYearContainerExpanded = true;
     moreYearItem.style.transform = "rotate(180deg)";

@@ -794,7 +794,7 @@ section {
 } */
 
 :root {
-  --primary-500: #EA5514;
+  --primary-500: #ea5514;
 }
 
 #PodcastPlayerApp audio {
@@ -1018,6 +1018,12 @@ section {
   transition: all 0.3s ease;
   transform: translateY(0);
   backdrop-filter: blur(5px);
+}
+
+@media (max-width: 1024px) {
+  .player--drawer {
+    padding-bottom: 3rem;
+  }
 }
 
 .player--drawer.is-hidden {

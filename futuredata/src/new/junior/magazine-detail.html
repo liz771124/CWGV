@@ -751,7 +751,7 @@
         <div class="md:px-auto container mx-auto px-8 md:min-h-[80svh] md:py-5">
           <iframe
             id="magIframe"
-            class="relative h-[500px] shadow-md md:h-[800px]"
+            class="relative h-[500px] shadow-md lg:h-[800px]"
             src="https://efuturedata.cwgv.com.tw/MY11307/index.html"
             width="100%"
             height="auto"
@@ -970,8 +970,8 @@
                 @drag-end="processSliderDragEnd"
                 @click="processSliderClick"
                 v-model="CONTROL_SEEK"
-                :height="8"
-                :dotSize="32"
+                :height="10"
+                :dotSize="16"
                 :duration="CONTROL_USER_DURATION"
                 :dragOnClick="true"
                 :tooltip="'none'"
@@ -981,8 +981,8 @@
             <div class="process--slider" v-if="!CONTROL_SEEK">
               <div class="label">00:00</div>
               <vue-slider
-                :height="8"
-                :dotSize="32"
+                :height="10"
+                :dotSize="16"
                 :tooltip="'none'"
               ></vue-slider>
               <div class="label">00:00</div>

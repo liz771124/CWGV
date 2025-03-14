@@ -119,7 +119,7 @@ if (yearContainer) {
   const yearItems = yearContainer.querySelectorAll(".year-item");
   const moreYearItem = document.getElementById("toggle-more");
   let isYearContainerExpanded = false;
-  let maxLength = isMobile ? 4 : isPad ? 8 : 14;
+  let maxLength = isMobile ? 4 : isPad ? 10 : 14;
   if (dataYear && searchYear < thisYear - maxLength) {
     isYearContainerExpanded = true;
     moreYearItem.style.transform = "rotate(180deg)";

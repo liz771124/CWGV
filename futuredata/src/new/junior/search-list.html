@@ -389,21 +389,23 @@
           </div>
         </div>
         <div class="text-gray2-800 flex items-center justify-between">
-          <div>關鍵字：<span class="font-extrabold">紅包</span></div>
-          <div class="flex items-center gap-3">
+          <div class="line-clamp-1">
+            關鍵字：<span class="font-extrabold"
+              >很長的關鍵字很長的關鍵字很長的關鍵字很長的關鍵字很長的關鍵字</span
+            >
+          </div>
+          <div class="flex shrink-0 items-center gap-3">
             <span
               >共<span class="text-primary-500 mx-1 font-extrabold">450</span
               >筆資料</span
             >
-            <span
-              id="change-list-order"
-              class="text-primary-500 new-list flex cursor-pointer items-center gap-1 font-bold"
-            >
+            <span class="flex items-center gap-2 font-bold">
               <svg
                 width="20"
                 height="20"
                 viewBox="0 0 24 24"
                 fill="none"
+                class="hidden md:block"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -413,7 +415,11 @@
                   fill="currentColor"
                 />
               </svg>
-              <span id="change-list-text">由新到舊</span>
+              <select class="border-gray2-300 rounded border py-1 pe-8 ps-3">
+                <option value="0">最相關</option>
+                <option value="1">由新到舊</option>
+                <option value="2">由舊到新</option>
+              </select>
             </span>
           </div>
         </div>

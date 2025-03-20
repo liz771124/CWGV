@@ -15,7 +15,7 @@
     <!-- 新加的 style -->
     <link rel="stylesheet" href="../assets/css/audio-player.css" />
   </head>
-  <body class="bg-gray2-50 relative">
+  <body class="bg-gray2-50 relative pb-[72px] md:pb-[100px] lg:pb-[64px]">
     <nav class="bg-primary-500 sticky top-0 z-20 py-2 text-white">
       <div class="container flex justify-between">
         <div
@@ -748,7 +748,7 @@
           </div>
         </div>
 
-        <div class="md:px-auto container mx-auto min-h-[80dvh] px-8 md:py-5">
+        <div class="md:px-auto container mx-auto px-8 md:min-h-[80dvh] md:py-5">
           <iframe
             id="magIframe"
             class="relative h-[500px] shadow-md md:h-[80dvh] xl:h-[800px]"
@@ -891,317 +891,301 @@
       </div>
     </footer>
 
-    <div class="sticky bottom-0">
-      <div id="PodcastPlayerApp">
-        <audio ref="audio" controls="controls">
-          <source type="audio/mpeg" />
-        </audio>
-        <div class="player--drawer" v-if="audio">
-          <div class="container relative">
-            <div class="player--controller">
-              <ul>
-                <li class="hidden md:block">
-                  <a
-                    class="item--control"
-                    alt="跳前10秒"
-                    @click="playlistPrevTenSec()"
-                  >
-                    <div class="icon">
-                      <div class="icon__prev__10sec"></div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="item--control"
-                    alt="跳上一章節"
-                    @click="playlistPrev()"
-                  >
-                    <div class="icon">
-                      <div class="icon__prev"></div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="item--control"
-                    alt="播放/暫停"
-                    @click="togglePlay()"
-                  >
-                    <div class="icon">
-                      <div class="icon__play" v-if="!CONTROL_PLAYING"></div>
-                      <div class="icon__pause" v-if="CONTROL_PLAYING"></div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="item--control"
-                    alt="跳下一章節"
-                    @click="playlistNext()"
-                  >
-                    <div class="icon">
-                      <div class="icon__next"></div>
-                    </div>
-                  </a>
-                </li>
-                <li class="hidden md:block">
-                  <a
-                    class="item--control"
-                    alt="跳下10秒"
-                    @click="playlistNextTenSec()"
-                  >
-                    <div class="icon">
-                      <div class="icon__next__10sec"></div>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="player--screen">
-              <div class="title" v-if="CONTROL_EPISODE">
-                <h3
-                  class="line-clamp-1 w-full px-2 text-xs font-extrabold text-white"
+    <div id="PodcastPlayerApp">
+      <audio ref="audio" controls="controls">
+        <source type="audio/mpeg" />
+      </audio>
+      <div class="player--drawer" v-if="audio">
+        <div class="container relative">
+          <div class="player--controller">
+            <ul>
+              <li class="hidden md:block">
+                <a
+                  class="item--control"
+                  alt="跳前10秒"
+                  @click="playlistPrevTenSec()"
                 >
-                  {{ CONTROL_EPISODE.title }}
-                </h3>
-              </div>
-              <div class="process--slider" v-if="CONTROL_SEEK">
-                <div class="label">{{ STATUS_SEEK }}</div>
-                <vue-slider
-                  ref="processbar"
-                  @drag-start="processSliderDragStart"
-                  @dragging="processSliderDragging"
-                  @drag-end="processSliderDragEnd"
-                  @click="processSliderClick"
-                  v-model="CONTROL_SEEK"
-                  :height="10"
-                  :dotSize="16"
-                  :duration="CONTROL_USER_DURATION"
-                  :dragOnClick="true"
-                  :tooltip="'none'"
-                ></vue-slider>
-                <div class="label">{{ STATUS_DURATION }}</div>
-              </div>
-              <div class="process--slider" v-if="!CONTROL_SEEK">
-                <div class="label">00:00</div>
-                <vue-slider
-                  :height="10"
-                  :dotSize="16"
-                  :tooltip="'none'"
-                ></vue-slider>
-                <div class="label">00:00</div>
-              </div>
-            </div>
-            <div class="player--controller">
-              <ul>
-                <li v-if="isTablet || isDesktop">
-                  <div
-                    class="item--control"
-                    alt="音量調整"
-                    @mouseup="changeVolume()"
-                    ref="buttonVolume"
-                  >
-                    <div class="icon">
-                      <div class="icon__volume">
-                        <span
-                          :class="{'is-active': CONTROL_VOLUME > .1}"
-                        ></span>
-                        <span
-                          :class="{'is-active': CONTROL_VOLUME > .3}"
-                        ></span>
-                        <span
-                          :class="{'is-active': CONTROL_VOLUME > .5}"
-                        ></span>
-                        <span
-                          :class="{'is-active': CONTROL_VOLUME > .75}"
-                        ></span>
-                      </div>
-                    </div>
+                  <div class="icon">
+                    <div class="icon__prev__10sec"></div>
                   </div>
-                </li>
-                <li>
-                  <a
-                    class="item--control"
-                    ref="buttonSpeed"
-                    alt="播放速度調整"
-                    @click="(CONTROL_SPEED_OPEN)?CONTROL_SPEED_OPEN=false:CONTROL_SPEED_OPEN=true"
-                  >
-                    <div class="icon">
-                      <div class="icon__more"></div>
-                    </div>
-                  </a>
-                  <div class="player--speed" v-if="CONTROL_SPEED_OPEN">
-                    <ul>
-                      <li :class="{'is-active': CONTROL_SPEED==.5}">
-                        <a @click="(CONTROL_SPEED = .5)">0.5x</a>
-                      </li>
-                      <li :class="{'is-active': CONTROL_SPEED==1}">
-                        <a @click="(CONTROL_SPEED = 1)">1x</a>
-                      </li>
-                      <li :class="{'is-active': CONTROL_SPEED==1.25}">
-                        <a @click="(CONTROL_SPEED = 1.25)">1.25x</a>
-                      </li>
-                      <li :class="{'is-active': CONTROL_SPEED==1.5}">
-                        <a @click="(CONTROL_SPEED = 1.5)">1.5x</a>
-                      </li>
-                      <li :class="{'is-active': CONTROL_SPEED==2}">
-                        <a @click="(CONTROL_SPEED = 2)">2x</a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="flex flex-col">
-                  <div
-                    :class="['absolute rounded-t-lg bottom-[53px] -end-[16px] md:end-0 backdrop-blur-sm bg-black/80 shadow-md w-screen md:max-w-[400px] h-[40svh] lg:h-[300px] transform duration-100 overflow-hidden',  AUDIO_LIST ?  'translate-y-0 opacity-100' : 'translate-y-[10%] opacity-0 hidden' ]"
-                  >
-                    <div
-                      class="relative flex items-center justify-between border-b border-[#535353] px-5 py-3 text-white"
-                    >
-                      <span class="font-semibold">播放清單</span>
-                      <div
-                        class="cursor-pointer"
-                        @click="AUDIO_LIST=!AUDIO_LIST"
-                      >
-                        <svg
-                          width="15"
-                          height="15"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 14 14"
-                        >
-                          <path
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="h-[calc(100%-50px)] grow overflow-auto">
-                      <div
-                        class="bodrer-[#f2f2f2]-b flex cursor-pointer px-2 py-3 hover:shadow-md"
-                        v-for="(chapter, index) in meta.data"
-                        :key="chapter.id"
-                      >
-                        <div
-                          class="flex w-full items-center gap-3 px-2"
-                          @click="playAudio(chapter.id, chapter.chapterUrl)"
-                        >
-                          <div
-                            class="bg-primary-400 h-5 w-2 shrink-0 rounded-full"
-                          ></div>
-                          <!-- 
-                          {{ CONTROL_EPISODE }} {{ chapter }} -->
-                          <span :class="`font-semibold line-clamp-2`">
-                            {{ chapter.title }}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="item--control cursor-pointer text-white/75 hover:scale-105"
-                    @click="AUDIO_LIST=!AUDIO_LIST"
-                  >
-                    <svg height="24" width="24" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M8 6L21 6.00078M8 12L21 12.0008M8 18L21 18.0007M3 6.5H4V5.5H3V6.5ZM3 12.5H4V11.5H3V12.5ZM3 18.5H4V17.5H3V18.5Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div
-          data-twe-modal-init
-          class="fixed left-0 top-0 z-[1050] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-          id="tweModal"
-          tabindex="-1"
-          aria-labelledby="tweModalLabel"
-          aria-modal="true"
-          role="dialog"
-        >
-          <div
-            data-twe-modal-dialog-ref
-            class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]"
-          >
-            <div
-              class="relative m-5 flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current outline-none"
-            >
-              <div
-                class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4"
-              >
-                <div class="flex items-center gap-2">
-                  <div
-                    class="bg-primary-300 flex h-[40px] w-[40px] items-center justify-center rounded-full text-2xl font-bold leading-normal text-white shadow-md"
-                    id="tweModalLabel"
-                  >
-                    {{ COUNTDOWN }}
-                  </div>
-                  倒數完成後將為您播放下一篇章
-                </div>
-                <button
-                  type="button"
-                  class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none"
-                  data-twe-modal-dismiss
-                  aria-label="Close"
+                </a>
+              </li>
+              <li>
+                <a
+                  class="item--control"
+                  alt="跳上一章節"
+                  @click="playlistPrev()"
                 >
-                  <span class="[&>svg]:h-6 [&>svg]:w-6">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </span>
-                </button>
-              </div>
-
-              <div class="relative p-4">
-                <p>想繼續閱讀雜誌嗎?</p>
-              </div>
-
-              <div
-                class="flex flex-shrink-0 flex-wrap items-center justify-stretch gap-3 rounded-b-md border-t-2 border-neutral-100 p-4"
-              >
-                <button
-                  type="button"
-                  class="bg-primary-500 hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 inline-block grow rounded px-6 pb-2 pt-2.5 font-medium leading-normal text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0"
-                  data-twe-modal-dismiss
-                  data-twe-ripple-init
-                  data-twe-ripple-color="light"
+                  <div class="icon">
+                    <div class="icon__prev"></div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="item--control" alt="播放/暫停" @click="togglePlay()">
+                  <div class="icon">
+                    <div class="icon__play" v-if="!CONTROL_PLAYING"></div>
+                    <div class="icon__pause" v-if="CONTROL_PLAYING"></div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="item--control"
+                  alt="跳下一章節"
                   @click="playlistNext()"
                 >
-                  繼續播放
-                </button>
-                <button
-                  type="button"
-                  class="hover:bg-gary-600 focus:bg-primary-600 active:bg-primary-800 inline-block grow rounded bg-gray-400 px-6 pb-2 pt-2.5 font-medium leading-normal text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0"
-                  data-twe-modal-dismiss
-                  data-twe-ripple-init
-                  data-twe-ripple-color="light"
-                  @click="() => pauseAudio()"
+                  <div class="icon">
+                    <div class="icon__next"></div>
+                  </div>
+                </a>
+              </li>
+              <li class="hidden md:block">
+                <a
+                  class="item--control"
+                  alt="跳下10秒"
+                  @click="playlistNextTenSec()"
                 >
-                  停在本頁
-                </button>
+                  <div class="icon">
+                    <div class="icon__next__10sec"></div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="player--screen">
+            <div class="title" v-if="CONTROL_EPISODE">
+              <h3
+                class="line-clamp-1 w-full px-2 text-xs font-extrabold text-white"
+              >
+                {{ CONTROL_EPISODE.title }}
+              </h3>
+            </div>
+            <div class="process--slider" v-if="CONTROL_SEEK">
+              <div class="label">{{ STATUS_SEEK }}</div>
+              <vue-slider
+                ref="processbar"
+                @drag-start="processSliderDragStart"
+                @dragging="processSliderDragging"
+                @drag-end="processSliderDragEnd"
+                @click="processSliderClick"
+                v-model="CONTROL_SEEK"
+                :height="10"
+                :dotSize="16"
+                :duration="CONTROL_USER_DURATION"
+                :dragOnClick="true"
+                :tooltip="'none'"
+              ></vue-slider>
+              <div class="label">{{ STATUS_DURATION }}</div>
+            </div>
+            <div class="process--slider" v-if="!CONTROL_SEEK">
+              <div class="label">00:00</div>
+              <vue-slider
+                :height="10"
+                :dotSize="16"
+                :tooltip="'none'"
+              ></vue-slider>
+              <div class="label">00:00</div>
+            </div>
+          </div>
+          <div class="player--controller">
+            <ul>
+              <li v-if="isTablet || isDesktop">
+                <div
+                  class="item--control"
+                  alt="音量調整"
+                  @mouseup="changeVolume()"
+                  ref="buttonVolume"
+                >
+                  <div class="icon">
+                    <div class="icon__volume">
+                      <span :class="{'is-active': CONTROL_VOLUME > .1}"></span>
+                      <span :class="{'is-active': CONTROL_VOLUME > .3}"></span>
+                      <span :class="{'is-active': CONTROL_VOLUME > .5}"></span>
+                      <span :class="{'is-active': CONTROL_VOLUME > .75}"></span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a
+                  class="item--control"
+                  ref="buttonSpeed"
+                  alt="播放速度調整"
+                  @click="(CONTROL_SPEED_OPEN)?CONTROL_SPEED_OPEN=false:CONTROL_SPEED_OPEN=true"
+                >
+                  <div class="icon">
+                    <div class="icon__more"></div>
+                  </div>
+                </a>
+                <div class="player--speed" v-if="CONTROL_SPEED_OPEN">
+                  <ul>
+                    <li :class="{'is-active': CONTROL_SPEED==.5}">
+                      <a @click="(CONTROL_SPEED = .5)">0.5x</a>
+                    </li>
+                    <li :class="{'is-active': CONTROL_SPEED==1}">
+                      <a @click="(CONTROL_SPEED = 1)">1x</a>
+                    </li>
+                    <li :class="{'is-active': CONTROL_SPEED==1.25}">
+                      <a @click="(CONTROL_SPEED = 1.25)">1.25x</a>
+                    </li>
+                    <li :class="{'is-active': CONTROL_SPEED==1.5}">
+                      <a @click="(CONTROL_SPEED = 1.5)">1.5x</a>
+                    </li>
+                    <li :class="{'is-active': CONTROL_SPEED==2}">
+                      <a @click="(CONTROL_SPEED = 2)">2x</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="flex flex-col">
+                <div
+                  :class="['absolute rounded-t-lg bottom-[53px] -end-[16px] md:end-0 backdrop-blur-sm bg-black/80 shadow-md w-screen md:max-w-[400px] h-[40svh] lg:h-[300px] transform duration-100 overflow-hidden',  AUDIO_LIST ?  'translate-y-0 opacity-100' : 'translate-y-[10%] opacity-0 hidden' ]"
+                >
+                  <div
+                    class="relative flex items-center justify-between border-b border-[#535353] px-5 py-3 text-white"
+                  >
+                    <span class="font-semibold">播放清單</span>
+                    <div class="cursor-pointer" @click="AUDIO_LIST=!AUDIO_LIST">
+                      <svg
+                        width="15"
+                        height="15"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 14 14"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="h-[calc(100%-50px)] grow overflow-auto">
+                    <div
+                      class="bodrer-[#f2f2f2]-b flex cursor-pointer px-2 py-3 hover:shadow-md"
+                      v-for="(chapter, index) in meta.data"
+                      :key="chapter.id"
+                    >
+                      <div
+                        class="flex w-full items-center gap-3 px-2"
+                        @click="playAudio(chapter.id, chapter.chapterUrl)"
+                      >
+                        <div
+                          class="bg-primary-400 h-5 w-2 shrink-0 rounded-full"
+                        ></div>
+                        <!-- 
+                          {{ CONTROL_EPISODE }} {{ chapter }} -->
+                        <span :class="`font-semibold line-clamp-2`">
+                          {{ chapter.title }}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="item--control cursor-pointer text-white/75 hover:scale-105"
+                  @click="AUDIO_LIST=!AUDIO_LIST"
+                >
+                  <svg height="24" width="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M8 6L21 6.00078M8 12L21 12.0008M8 18L21 18.0007M3 6.5H4V5.5H3V6.5ZM3 12.5H4V11.5H3V12.5ZM3 18.5H4V17.5H3V18.5Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        data-twe-modal-init
+        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+        id="tweModal"
+        tabindex="-1"
+        aria-labelledby="tweModalTitle"
+        aria-modal="true"
+        role="dialog"
+      >
+        <div
+          data-twe-modal-dialog-ref
+          class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]"
+        >
+          <div
+            class="shadow-4 dark:bg-surface-dark pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current outline-none"
+          >
+            <div
+              class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4 dark:border-white/10"
+            >
+              <div class="flex items-center gap-2">
+                <div
+                  class="bg-primary-300 flex h-[40px] w-[40px] items-center justify-center rounded-full text-2xl font-bold leading-normal text-white shadow-md"
+                >
+                  {{ COUNTDOWN }}
+                </div>
+                倒數完成後將為您播放下一篇章
               </div>
+              <button
+                type="button"
+                class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300"
+                data-twe-modal-dismiss
+                aria-label="Close"
+                @click="pauseAudio()"
+              >
+                <span class="[&>svg]:h-6 [&>svg]:w-6">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="relative p-4">
+              <p>想繼續閱讀雜誌嗎?</p>
+            </div>
+
+            <!-- Modal footer -->
+            <div
+              class="flex flex-shrink-0 flex-wrap items-center justify-end gap-3 rounded-b-md border-t-2 border-neutral-100 p-4 dark:border-white/10"
+            >
+              <button
+                type="button"
+                class="bg-primary-500 hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 inline-block grow cursor-pointer rounded px-6 pb-2 pt-2.5 font-medium leading-normal text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0"
+                data-twe-modal-dismiss
+                data-twe-ripple-init
+                data-twe-ripple-color="light"
+                @click="clearIntervalCountDown(), playlistNext()"
+              >
+                繼續播放
+              </button>
+              <button
+                type="button"
+                class="hover:bg-gary-600 focus:bg-primary-600 active:bg-primary-800 inline-block grow cursor-pointer rounded bg-gray-400 px-6 pb-2 pt-2.5 font-medium leading-normal text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0"
+                data-twe-modal-dismiss
+                data-twe-ripple-init
+                data-twe-ripple-color="light"
+                @click="pauseAudio()"
+              >
+                停在本頁
+              </button>
             </div>
           </div>
         </div>

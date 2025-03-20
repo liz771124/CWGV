@@ -24213,10 +24213,15 @@ var require_main = __commonJS({
             }
           }
         };
-        const pauseAudio = () => {
-          // audio.value.pause();
-          // console.log(audio.value.paused)
+        const clearIntervalCountDown = () => {
           clearInterval(COUNTDOWN_TIMER.value);
+          COUNTDOWN_TIMER.value = null;
+          COUNTDOWN.value = 5;
+        };
+        const pauseAudio = () => {
+          audio.value.pause();
+          // console.log(audio.value.paused);
+          clearIntervalCountDown();
         };
         onMounted(async () => {
           window.ResizeObserver = ResizeObserver;
@@ -24277,16 +24282,15 @@ var require_main = __commonJS({
             ) {
               modalInstance.show();
               if (COUNTDOWN_TIMER.value) {
-                clearInterval(COUNTDOWN_TIMER.value);
+                clearIntervalCountDown();
               }
               COUNTDOWN_TIMER.value = setInterval(() => {
                 COUNTDOWN.value--;
                 console.log(COUNTDOWN.value);
                 if (COUNTDOWN.value <= 0) {
                   playlistNext();
-                  clearInterval(COUNTDOWN_TIMER.value);
-                  // modalInstance.hide();
-                  COUNTDOWN.value = 5;
+                  clearIntervalCountDown();
+                  modalInstance.hide();
                 }
               }, 1000);
             }
@@ -24317,6 +24321,7 @@ var require_main = __commonJS({
           buttonVolume,
           buttonSpeed,
           pauseAudio,
+          clearIntervalCountDown,
           CONTROLLING,
           CONTROL_EPISODE,
           CONTROL_SEEK,

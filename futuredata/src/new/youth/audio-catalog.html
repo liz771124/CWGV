@@ -362,7 +362,7 @@
               <div class="flex w-full grow justify-between gap-2 md:gap-5">
                 <div class="flex flex-col gap-1 md:gap-2">
                   <div class="block text-sm md:hidden">
-                    <a href="#" class="text-primary-500"
+                    <a href="#" class="text-primary-500 line-clamp-1"
                       >未來少年2024年2月號(第158期)</a
                     >
                   </div>
@@ -432,11 +432,13 @@
                   <span
                     class="bg-primary-500 absolute -end-[5px] top-[5px] z-0 aspect-[4/6] w-full rounded-xl"
                   ></span>
-                  <img
-                    class="z-1 relative aspect-[4/6] rounded-xl object-cover"
-                    src="https://imgs.cwgv.com.tw/books_subject/93/1493/thumb/1493.png"
-                    alt=""
-                  />
+                  <div class="aspect-[4/6]">
+                    <img
+                      class="z-1 relative h-full w-full rounded-xl object-cover"
+                      src="https://imgs.cwgv.com.tw/books_subject/93/1493/thumb/1493.png"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
               <ul
@@ -444,7 +446,7 @@
               >
                 <li class="text-primary-500">
                   <svg
-                    class="icon-favorite favorite-off cursor-pointer"
+                    class="icon-favorite favorite-on cursor-pointer"
                     width="35"
                     height="31"
                     viewBox="0 0 35 31"

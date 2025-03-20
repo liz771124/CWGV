@@ -297,21 +297,21 @@
     <main class="py-8">
       <div class="container mx-auto px-5">
         <div class="flex gap-3 pb-3 text-sm">
-          <a href="#">未來少年</a>
+          <a href="#">未來兒童</a>
           <span>></span>
           <a href="#">閱讀紀錄</a>
         </div>
 
         <div class="my-5 flex items-center justify-between gap-3">
-          <div class="text-xl font-bold md:text-2xl">
-            未來親子學習平台 閱讀紀錄
+          <div class="line-clamp-1 text-xl font-bold md:text-2xl">
+            未來親子學習平台閱讀紀錄
           </div>
-          <div>
+          <div class="shrink-0">
             <button
               type="button"
               class="bg-gray2-700 hover:bg-gray2-800 focus:bg-gray2-800 active:bg-gray2-800 w-ful mx-auto flex items-center justify-center gap-3 rounded-full px-8 py-1 font-bold text-white"
             >
-              會員登出
+              登出
             </button>
           </div>
         </div>
@@ -455,7 +455,9 @@
             >
               答題數
             </div>
-            <div class="flex w-full grow items-center justify-center gap-3 p-5">
+            <div
+              class="flex w-full grow items-center justify-center p-5 lg:gap-3"
+            >
               <div class="flex w-full flex-1 grow flex-col items-center">
                 <h3
                   class="bg-primary-600 mb-3 rounded-full px-3 py-1 text-white"
@@ -516,7 +518,7 @@
             </div>
           </div>
         </div>
-        <div class="mb-5 grid grid-cols-2 gap-3 md:gap-5">
+        <div class="mb-5 grid gap-3 md:grid-cols-2 md:gap-5">
           <a
             href="#"
             class="bg-primary-500 relative flex h-[90px] items-center justify-end overflow-hidden rounded-2xl p-3 text-2xl font-bold text-white shadow-md sm:h-[90px] md:h-[200px] md:md:h-[200px] md:p-8 md:text-4xl"
@@ -525,9 +527,9 @@
               class="z-10 text-center font-semibold tracking-widest text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
               >我的收藏</span
             >
-            <div class="absolute bottom-0 left-0 h-full">
+            <div class="absolute bottom-0 left-0 h-full w-auto">
               <img
-                class="h-full w-full"
+                class="h-full w-auto"
                 src="../assets/img/youth-member-menu-01.png"
                 alt="我的收藏"
               />
@@ -541,9 +543,9 @@
               class="z-10 text-center font-semibold tracking-widest text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
               >瀏覽紀錄</span
             >
-            <div class="absolute bottom-0 left-0 h-full">
+            <div class="absolute bottom-0 left-0 h-full w-auto">
               <img
-                class="h-full w-full"
+                class="h-full w-auto"
                 src="../assets/img/youth-member-menu-02.png"
                 alt="瀏覽紀錄"
               />
@@ -557,9 +559,9 @@
               class="z-10 text-center font-semibold tracking-widest text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
               >訂閱服務</span
             >
-            <div class="absolute bottom-0 left-0 h-full">
+            <div class="absolute bottom-0 left-0 h-full w-auto">
               <img
-                class="h-full w-full"
+                class="h-full w-auto"
                 src="../assets/img/youth-member-menu-03.png"
                 alt="訂閱服務"
               />
@@ -573,81 +575,15 @@
               class="z-10 text-center font-semibold tracking-widest text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
               >逛逛書店</span
             >
-            <div class="absolute bottom-0 left-0 h-full">
+            <div class="absolute bottom-0 left-0 h-full w-auto">
               <img
-                class="h-full w-full"
+                class="h-full w-auto"
                 src="../assets/img/youth-member-menu-04.png"
                 alt="逛逛書店"
               />
             </div>
           </a>
         </div>
-        <!-- <div class="grid grid-cols-2 gap-3 md:gap-5 mb-5">
-          <a
-            href="#"
-            class="bg-primary-500 relative flex h-[90px] items-center justify-end overflow-hidden rounded-2xl p-3 text-2xl font-bold text-white shadow-md sm:h-[90px] md:h-[200px] md:md:h-[200px] md:p-8 md:text-4xl"
-          >
-            <span
-              class="z-10 text-center font-semibold tracking-widest text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
-              >我的收藏</span
-            >
-            <div class="absolute bottom-0 left-0 h-full">
-              <img
-                class="h-full w-full"
-                src="../assets/img/youth-member-menu-01.png"
-                alt="我的收藏"
-              />
-            </div>
-          </a>
-          <a
-            href="#"
-            class="bg-primary-500 relative flex h-[90px] items-center justify-end overflow-hidden rounded-2xl p-3 text-2xl font-bold text-white shadow-md sm:h-[90px] md:h-[200px] md:md:h-[200px] md:p-8 md:text-4xl"
-          >
-            <span
-              class="z-10 text-center font-semibold tracking-widest text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
-              >瀏覽紀錄</span
-            >
-            <div class="absolute bottom-0 left-0 h-full">
-              <img
-                class="h-full w-full"
-                src="../assets/img/youth-member-menu-02.png"
-                alt="瀏覽紀錄"
-              />
-            </div>
-          </a>
-          <a
-            href="#"
-            class="bg-primary-500 relative flex h-[90px] items-center justify-end overflow-hidden rounded-2xl p-3 text-2xl font-bold text-white shadow-md sm:h-[90px] md:h-[200px] md:md:h-[200px] md:p-8 md:text-4xl"
-          >
-            <span
-              class="z-10 text-center font-semibold tracking-widest text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
-              >訂閱服務</span
-            >
-            <div class="absolute bottom-0 left-0 h-full">
-              <img
-                class="h-full w-full"
-                src="../assets/img/youth-member-menu-03.png"
-                alt="訂閱服務"
-              />
-            </div>
-          </a>
-          <a
-            href="#"
-            class="bg-primary-500 relative flex h-[90px] items-center justify-end overflow-hidden rounded-2xl p-3 text-2xl font-bold text-white shadow-md sm:h-[90px] md:h-[200px] md:md:h-[200px] md:p-8 md:text-4xl"
-          >
-            <span
-              class="z-10 text-center font-semibold tracking-widest text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
-              >逛逛書店</span
-            >
-            <div class="absolute bottom-0 left-0 h-full">
-              <img
-                class="h-full w-full"
-                src="../assets/img/youth-member-menu-04.png"
-                alt="逛逛書店"
-              />
-            </div>
-          </a>
-        </div> -->
       </div>
     </main>
 
@@ -661,7 +597,7 @@
         >
           <a class="mx-auto md:mx-0" href="#" target="_blank">
             <img
-              class="max-f-full -mt-[1px]"
+              class="max-f-full"
               width="120"
               src="../assets/img/footer-logo.svg"
               alt="logo"

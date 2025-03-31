@@ -23,14 +23,13 @@
           <div class="flex items-center gap-3">
             <img
               id="menuIcon"
-              class="max-f-full h-[45px] w-[45px] cursor-pointer"
+              class="h-[45px] w-[45px] max-w-full cursor-pointer"
               src="../assets/img/navbar-menu-open.svg"
               alt=""
             />
             <a href="#">
               <img
-                class="max-f-full"
-                width="280"
+                class="h-[48px] max-w-full"
                 src="../assets/img/logo-youth.svg"
                 alt="logo"
               />
@@ -294,7 +293,7 @@
     <main class="py-8">
       <div class="container mx-auto px-5">
         <div class="flex gap-3 pb-3">
-          <a href="#">未來少年</a>
+          <a href="#">未來兒童</a>
           <span>></span>
           <a href="#">教學資源</a>
         </div>
@@ -332,65 +331,180 @@
         </div>
         <div class="grid gap-5 py-5">
           <div class="bg-gray2-100 rounded-lg p-5 shadow-md md:p-8">
-            <div class="flex gap-5">
-              <div class="flex max-w-[700px] flex-col gap-3">
-                <h2 class="text-3xl font-bold">
-                  <a href="#">333 紅包理財術</a>
-                </h2>
-                <div>
-                  <p>
-                    我們熟悉的「十進位」，個位數的數 字從 0 開始，1、2 一直到
-                    9，再進到「十 位數」，等到 99
-                    再進到「百位」。個位數後，愈大的位數，代表愈多 10 相乘。 以
-                    314 為例，可以拆成 3 個 10 × 10，加 上 1 個 10 ，再加上 4 個
-                    1。
-                  </p>
-                </div>
-                <div class="text-primary-500">
-                  <div
-                    class="text-gray2-600 hidden flex-wrap text-sm md:flex md:gap-5"
-                  >
-                    <div>
-                      <span>作者</span>
-                      |
-                      <a href="#" class="text-primary-500">陳小明</a>
+            <div class="flex flex-wrap justify-end gap-5 md:flex-nowrap">
+              <div class="flex w-full grow justify-between gap-2 md:gap-5">
+                <div class="flex flex-col gap-1 md:gap-2">
+                  <h2 class="text-xl font-bold md:text-2xl">
+                    <a class="line-clamp-2 leading-7 md:leading-8" href="#"
+                      >紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術</a
+                    >
+                  </h2>
+                  <div class="hidden md:flex">
+                    <span class="line-clamp-2">
+                      我們熟悉的「十進位」，個位數的數 字從 0 開始，1、2
+                      一直到9，再進到「十
+                      位數」，等到99再進到「百位」。個位數後，愈大的位數，代表愈多
+                      10 相乘。以 314 為例，可以拆成 3 個 10 × 10，加 上 1 個 10
+                      ，再加上 4個 1。
+                    </span>
+                  </div>
+                  <div class="mt-auto flex flex-col gap-2">
+                    <div
+                      class="text-gray2-600 mb-2 hidden flex-wrap text-sm md:flex md:gap-5"
+                    >
+                      <div>
+                        <span>作者</span>
+                        |
+                        <a href="#" class="text-primary-500">陳小明</a>
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap justify-start gap-2">
+                      <a
+                        href="#"
+                        class="text-primary-500 hover:bg-primary-600 block rounded-full bg-white px-3 py-1 text-sm font-bold hover:text-white"
+                        >＃自我成長</a
+                      >
+                      <a
+                        href="#"
+                        class="text-primary-500 hover:bg-primary-600 block rounded-full bg-white px-3 py-1 text-sm font-bold hover:text-white"
+                        >#二進位</a
+                      >
+                      <a
+                        href="#"
+                        class="text-primary-500 hover:bg-primary-600 block rounded-full bg-white px-3 py-1 text-sm font-bold hover:text-white"
+                        >＃社會</a
+                      >
+                      <a
+                        href="#"
+                        class="text-primary-500 hover:bg-primary-600 bg-gray2-200 block rounded-full px-3 py-1 text-sm font-bold hover:text-white"
+                        >＃自訂tag1</a
+                      >
                     </div>
                   </div>
                 </div>
-                <div class="flex flex-wrap justify-start gap-3">
-                  <a
-                    href="#"
-                    class="text-primary-500 hover:bg-primary-600 block rounded-full bg-white px-3 py-1 font-bold hover:text-white"
-                    >＃自我成長</a
-                  >
-                  <a
-                    href="#"
-                    class="text-primary-500 hover:bg-primary-600 block rounded-full bg-white px-3 py-1 font-bold hover:text-white"
-                    >#二進位</a
-                  >
-                  <a
-                    href="#"
-                    class="text-primary-500 hover:bg-primary-600 block rounded-full bg-white px-3 py-1 font-bold hover:text-white"
-                    >＃社會</a
-                  >
-                  <a
-                    href="#"
-                    class="text-primary-500 hover:bg-primary-600 bg-gray2-200 block rounded-full px-3 py-1 font-bold hover:text-white"
-                    >＃自訂tag1</a
-                  >
+                <div class="relative max-w-[120px] shrink-0 md:max-w-[210px]">
+                  <span
+                    class="bg-primary-500 absolute -end-[5px] top-[5px] z-0 aspect-[6/6] w-full rounded-xl"
+                  ></span>
+                  <div class="aspect-[6/6]">
+                    <img
+                      class="z-1 relative h-full w-full rounded-xl object-cover"
+                      src="https://design-library.jp/wp-content/uploads/1702791605_30eb0551-380x380.png"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
-              <div class="relative mx-3 ms-auto h-[250px] w-[250px] shrink-0">
-                <span
-                  class="bg-primary-500 absolute -bottom-3 -end-3 z-0 h-full w-full rounded-xl"
-                ></span>
-                <img
-                  class="z-1 aspect-6 relative h-full w-full rounded-xl object-cover"
-                  src="https://design-library.jp/wp-content/uploads/1702791605_30eb0551-380x380.png"
-                  alt=""
-                />
-              </div>
             </div>
+          </div>
+          <div class="my-5">
+            <ul class="flex items-center justify-center gap-3 text-xl">
+              <li>
+                <a class="hover:text-primary-600" href="#">
+                  <svg
+                    width="15"
+                    height="17"
+                    viewBox="0 0 17 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.91986 0.97998L1.83984 9.35999L8.91986 17.74"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M15.9999 0.97998L8.91992 9.35999L15.9999 17.74"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="me-3">
+                <a class="hover:text-primary-600" href="#">
+                  <svg
+                    width="8"
+                    height="17"
+                    viewBox="0 0 10 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.9201 0.939941L1.83008 9.31995L8.9201 17.6899"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="text-primary-500">
+                <a class="hover:text-primary-600" href="#">1</a>
+              </li>
+              <li>
+                <a class="hover:text-primary-600" href="#">2</a>
+              </li>
+              <li>
+                <a class="hover:text-primary-600" href="#">3</a>
+              </li>
+              <li>
+                <a class="hover:text-primary-600" href="#">4</a>
+              </li>
+              <li>
+                <a class="hover:text-primary-600" href="#">5</a>
+              </li>
+              <li class="ms-3">
+                <a class="hover:text-primary-600" href="#">
+                  <svg
+                    width="8"
+                    height="17"
+                    viewBox="0 0 10 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.08008 0.939941L8.17004 9.31995L1.08008 17.6899"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="hover:text-primary-600" href="#">
+                  <svg
+                    width="15"
+                    height="17"
+                    viewBox="0 0 17 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.08008 0.97998L15.16 9.35999L8.08008 17.74"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M1 0.97998L8.08002 9.35999L1 17.74"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -406,7 +520,7 @@
         >
           <a class="mx-auto md:mx-0" href="#" target="_blank">
             <img
-              class="max-f-full -mt-[1px]"
+              class="max-w-full"
               width="120"
               src="../assets/img/footer-logo.svg"
               alt="logo"

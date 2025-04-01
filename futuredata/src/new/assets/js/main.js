@@ -196,7 +196,6 @@ if (isMobile && navbar) {
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
     const scrollDistance = Math.abs(currentScrollY - lastScrollY);
-    console.log(scrollDistance, lastScrollY);
     if (scrollDistance > 5) {
       if (currentScrollY > lastScrollY && currentScrollY > 300) {
         navbar.classList.remove("nav-visible");

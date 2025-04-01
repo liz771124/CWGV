@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  const isMobile = /iPhone|iPod|Android/i.test(navigator.userAgent);
   const finalScore = document.querySelector(".final-score").innerText;
   const timeline = gsap.timeline({
     defaults: { duration: 0.8, ease: "power3.out" },

@@ -292,43 +292,57 @@
 
     <main class="py-8">
       <div class="container mx-auto px-5">
-        <div class="flex gap-3 pb-3">
+        <div class="flex gap-3 pb-3 text-sm">
           <a href="#">未來兒童</a>
           <span>></span>
           <a href="#">教學資源</a>
         </div>
-        <div class="my-4 flex items-center divide-x divide-gray-600">
-          <div class="shrink-0 pe-4">適用科目</div>
-          <div class="ps-4 font-semibold">
+        <div
+          class="my-4 flex justify-stretch divide-x divide-gray-600 leading-[normal] md:items-center"
+        >
+          <div class="ms:pe-4 shrink-0 pe-2 font-semibold">
+            <a
+              href="#"
+              class="hover:bg-primary-600 bg-primary-500 text-gray2-700 transtion block h-[36px] rounded-full px-4 py-2 text-center text-white hover:text-white md:block md:h-[40px]"
+              >全部</a
+            >
+          </div>
+          <div class="ms:ps-4 grow ps-2 font-semibold md:grow-0">
             <div class="flex flex-wrap gap-2">
               <a
                 href="#"
-                class="hover:bg-primary-600 bg-primary-500 rounded-full px-4 py-1 text-white hover:text-white"
-                >全部</a
+                class="hover:bg-primary-600 bg-primary-500 text-gray2-700 transtion flex h-[36px] items-center gap-2 rounded-full px-4 py-2 text-center text-white hover:text-white md:h-[40px]"
               >
+                數學
+              </a>
               <a
                 href="#"
-                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                >數學</a
+                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex h-[36px] items-center gap-2 rounded-full px-4 py-2 hover:text-white md:h-[40px]"
               >
+                語文
+              </a>
               <a
                 href="#"
-                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                >語文</a
+                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex h-[36px] items-center gap-2 rounded-full px-4 py-2 hover:text-white md:h-[40px]"
               >
+                地球科學
+              </a>
               <a
                 href="#"
-                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                >自然</a
+                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex h-[36px] items-center gap-2 rounded-full px-4 py-2 hover:text-white md:h-[40px]"
               >
+                自然
+              </a>
               <a
                 href="#"
-                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 rounded-full px-4 py-1 hover:text-white"
-                >英文</a
+                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex h-[36px] items-center gap-2 rounded-full px-4 py-2 hover:text-white md:h-[40px]"
               >
+                如果標籤很長
+              </a>
             </div>
           </div>
         </div>
+
         <div class="grid gap-5 py-5">
           <div class="bg-gray2-100 rounded-lg p-5 shadow-md md:p-8">
             <div class="flex flex-wrap justify-end gap-5 md:flex-nowrap">
@@ -350,7 +364,7 @@
                   </div>
                   <div class="mt-auto flex flex-col gap-2">
                     <div
-                      class="text-gray2-600 mb-2 hidden flex-wrap text-sm md:flex md:gap-5"
+                      class="text-gray2-600 flex-wrap text-sm md:flex md:gap-5"
                     >
                       <div>
                         <span>作者</span>
@@ -358,27 +372,14 @@
                         <a href="#" class="text-primary-500">陳小明</a>
                       </div>
                     </div>
-                    <div class="flex flex-wrap justify-start gap-2">
-                      <a
-                        href="#"
-                        class="text-primary-500 hover:bg-primary-600 block rounded-full bg-white px-3 py-1 text-sm font-bold hover:text-white"
-                        >＃自我成長</a
-                      >
-                      <a
-                        href="#"
-                        class="text-primary-500 hover:bg-primary-600 block rounded-full bg-white px-3 py-1 text-sm font-bold hover:text-white"
-                        >#二進位</a
-                      >
-                      <a
-                        href="#"
-                        class="text-primary-500 hover:bg-primary-600 block rounded-full bg-white px-3 py-1 text-sm font-bold hover:text-white"
-                        >＃社會</a
-                      >
-                      <a
-                        href="#"
-                        class="text-primary-500 hover:bg-primary-600 bg-gray2-200 block rounded-full px-3 py-1 text-sm font-bold hover:text-white"
-                        >＃自訂tag1</a
-                      >
+                    <div
+                      class="text-gray2-600 flex-wrap text-sm md:flex md:gap-5"
+                    >
+                      <div>
+                        <span>科目</span>
+                        |
+                        <a href="#" class="text-primary-500">地球科學</a>
+                      </div>
                     </div>
                   </div>
                 </div>

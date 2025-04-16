@@ -298,51 +298,54 @@
           <span>></span>
           <a href="#">漫畫專區</a>
         </div>
+
         <div
-          class="mb-5 mt-5 flex flex-wrap items-center overflow-hidden border-b border-gray-600"
+          class="my-4 flex justify-stretch leading-[normal] md:items-center md:divide-x md:divide-gray-600"
         >
-          <a
-            class="bg-primary-500 grow rounded-t-md py-2 text-center font-bold text-white md:grow-0 md:px-10 md:text-xl"
-            href="#"
-          >
-            彩色漫畫
-          </a>
-          <a
-            class="grow rounded-t-md py-2 text-center font-bold md:grow-0 md:px-10 md:text-xl"
-            href="#"
-          >
-            黑白漫畫
-          </a>
-        </div>
-        <div
-          class="my-4 flex justify-stretch divide-x divide-gray-600 leading-[normal] md:items-center"
-        >
-          <div class="ms:pe-4 shrink-0 pe-2 font-semibold">
+          <div class="hidden shrink-0 pe-2 font-semibold md:block md:pe-4">
             <a
               href="#"
-              class="hover:bg-primary-600 bg-primary-500 text-gray2-700 transtion block h-[36px] rounded-full px-4 py-2 text-center text-white hover:text-white md:block md:h-[40px]"
+              class="hover:bg-primary-600 bg-primary-500 text-gray2-700 transtion flex h-[36px] items-center justify-center rounded-full px-4 py-2 text-white hover:text-white md:h-[40px]"
               >全部</a
             >
           </div>
-          <div class="ms:ps-4 grow ps-2 font-semibold md:grow-0">
+          <div class="grow font-semibold md:grow-0 md:ps-4">
             <div class="flex flex-wrap gap-2">
+              <a
+                href="#"
+                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex h-[36px] items-center justify-center gap-2 rounded-full px-4 py-2 hover:text-white md:h-[40px]"
+              >
+                全部
+              </a>
               <a
                 href="#"
                 class="hover:bg-primary-600 bg-primary-500 text-gray2-700 transtion flex h-[36px] items-center justify-center gap-2 rounded-full px-4 py-2 text-white hover:text-white md:h-[40px]"
               >
-                單篇漫畫
+                單篇
               </a>
               <a
                 href="#"
                 class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex h-[36px] items-center justify-center gap-2 rounded-full px-4 py-2 hover:text-white md:h-[40px]"
               >
-                連載中
+                連載
               </a>
               <a
                 href="#"
                 class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex h-[36px] items-center justify-center gap-2 rounded-full px-4 py-2 hover:text-white md:h-[40px]"
               >
-                已完結
+                完結
+              </a>
+              <a
+                href="#"
+                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex h-[36px] items-center justify-center gap-2 rounded-full px-4 py-2 hover:text-white md:h-[40px]"
+              >
+                彩色
+              </a>
+              <a
+                href="#"
+                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex h-[36px] items-center justify-center gap-2 rounded-full px-4 py-2 hover:text-white md:h-[40px]"
+              >
+                黑白
               </a>
             </div>
           </div>
@@ -352,15 +355,16 @@
         >
           <div class="flex flex-col gap-2">
             <div class="relative aspect-[5/6.5] overflow-hidden">
+              <div
+                class="bg-accent-500 absolute -right-[35px] bottom-[15px] w-[130px] -rotate-45 transform py-1 text-center font-semibold text-white shadow-md"
+              >
+                單篇
+              </div>
               <img
                 class="h-full w-full object-cover"
-                src="https://imgs.cwgv.com.tw/books/MJ1/MJ11312/cover/MJ11312.png"
+                src="https://imgs.cwgv.com.tw/books/MJ1/MJ11404/cover/MJ11404.png"
                 alt=""
               />
-              <span
-                class="bg-accent-500 absolute bottom-3 start-3 rounded-lg px-2 text-sm text-white shadow-md"
-                >單篇漫畫</span
-              >
             </div>
             <div class="text-center font-bold">
               美食千金米亞美食千金米亞美食千金米亞美食千金米亞
@@ -368,16 +372,16 @@
           </div>
           <div class="flex flex-col gap-2">
             <div class="relative aspect-[5/6.5] overflow-hidden">
+              <div
+                class="bg-primary-500 absolute -right-[35px] bottom-[15px] w-[130px] -rotate-45 transform py-1 text-center font-semibold text-white shadow-md"
+              >
+                連載
+              </div>
               <img
                 class="h-full w-full object-cover"
-                src="https://imgs.cwgv.com.tw/books/MJ1/MJ11312/cover/MJ11312.png"
+                src="https://imgs.cwgv.com.tw/books/MJ1/MJ11402/cover/MJ11402.png"
                 alt=""
               />
-              <span
-                class="bg-primary-500 absolute bottom-3 start-3 rounded-lg px-2 text-sm text-white shadow-md"
-                >連載</span
-              >
-              >
             </div>
             <div class="text-center font-bold">
               美食千金米亞美食千金米亞美食千金米亞美食千金米亞美食千金米亞美食千金米亞
@@ -385,17 +389,52 @@
           </div>
           <div class="flex flex-col gap-2">
             <div class="relative aspect-[5/6.5] overflow-hidden">
+              <div
+                class="bg-gray2-800 absolute -right-[35px] bottom-[15px] w-[130px] -rotate-45 transform py-1 text-center font-semibold text-white shadow-md"
+              >
+                完結
+              </div>
               <img
                 class="h-full w-full object-cover"
                 src="https://imgs.cwgv.com.tw/books/MJ1/MJ11312/cover/MJ11312.png"
                 alt=""
               />
-              <span
-                class="bg-gray2-700 absolute bottom-3 start-3 rounded-lg px-2 text-sm text-white shadow-md"
-                >完結
-              </span>
             </div>
             <div class="text-center font-bold">美食千金米亞</div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="relative aspect-[5/6.5] overflow-hidden">
+              <div
+                class="bg-gray2-800 absolute -right-[35px] bottom-[15px] w-[130px] -rotate-45 transform py-1 text-center font-semibold text-white shadow-md"
+              >
+                完結
+              </div>
+              <img
+                class="h-full w-full object-cover"
+                src="https://imgs.cwgv.com.tw/books/MJ1/MJ11403/cover/MJ11403.png"
+                alt=""
+              />
+            </div>
+            <div class="text-center font-bold">
+              美食千金米亞美食千金米亞美食千金米亞美食千金米亞美食千金米亞美食千金米亞
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="relative aspect-[5/6.5] overflow-hidden">
+              <div
+                class="bg-gray2-800 absolute -right-[35px] bottom-[15px] w-[130px] -rotate-45 transform py-1 text-center font-semibold text-white shadow-md"
+              >
+                完結
+              </div>
+              <img
+                class="h-full w-full object-cover"
+                src="https://imgs.cwgv.com.tw/books/MJ1/MJ11403/cover/MJ11403.png"
+                alt=""
+              />
+            </div>
+            <div class="text-center font-bold">
+              美食千金米亞美食千金米亞美食千金米亞美食千金米亞美食千金米亞美食千金米亞
+            </div>
           </div>
         </div>
         <div class="my-5">

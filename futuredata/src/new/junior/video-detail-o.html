@@ -11,12 +11,22 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../assets/css/youth-main.css" />
+    <link rel="stylesheet" href="../assets/css/junior-main.css" />
+
+    <!-- 新加的 style -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/junior-main.css" />
   </head>
   <body class="bg-gray2-50 relative">
     <!-- 共用版頭 -->
-    <nav id="navbar" class="sticky top-0 z-50">
-      <div class="bg-gray-50/50 py-4 backdrop-blur-lg transition md:py-5">
+    <nav class="sticky top-0 z-50">
+      <div
+        id="navbar"
+        class="bg-gray-50/50 py-4 backdrop-blur-lg transition md:py-5"
+      >
         <div
           class="container mx-auto flex flex-wrap items-center justify-between gap-3 px-5"
         >
@@ -29,8 +39,9 @@
             />
             <a href="#">
               <img
-                class="h-[48px] max-w-full"
-                src="../assets/img/logo-youth.svg"
+                class="max-w-full"
+                width="280"
+                src="../assets/img/logo-junior.svg"
                 alt="logo"
               />
               <h1 class="sr-only">未來兒童知識庫</h1>
@@ -291,233 +302,274 @@
     </nav>
 
     <main class="py-8">
-      <div class="container mx-auto px-5">
-        <div class="flex gap-3 pb-3 text-sm">
-          <a href="#">未來少年</a>
+      <div class="container mx-auto pb-8 pt-3">
+        <div class="mb-3 flex gap-3 pb-3">
+          <a href="#">未來兒童</a>
           <span>></span>
-          <a href="#">教學資源</a>
+          <a href="#">未來小學堂</a>
+          <span>></span>
+          <a href="#">標題標題標題</a>
         </div>
-        <div
-          class="my-4 flex justify-stretch leading-[normal] md:items-center md:divide-x md:divide-gray-600"
-        >
-          <div class="hidden shrink-0 pe-2 font-semibold md:block md:pe-4">
-            <a
-              href="#"
-              class="hover:bg-primary-600 bg-primary-500 text-gray2-700 transtion flex h-[36px] items-center justify-center rounded-full px-4 py-2 text-white hover:text-white md:block md:h-[40px]"
-              >全部</a
-            >
-          </div>
-          <div class="grow font-semibold md:grow-0 md:ps-4">
-            <div class="flex flex-wrap gap-2">
-              <a
-                href="#"
-                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex h-[36px] items-center justify-center gap-2 rounded-full px-4 py-2 hover:text-white md:hidden md:h-[40px]"
-              >
-                全部
-              </a>
-              <a
-                href="#"
-                class="hover:bg-primary-600 bg-primary-500 text-gray2-700 transtion flex h-[36px] items-center gap-2 rounded-full px-4 py-2 text-center text-white hover:text-white md:h-[40px]"
-              >
-                數學
-              </a>
-              <a
-                href="#"
-                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex h-[36px] items-center gap-2 rounded-full px-4 py-2 hover:text-white md:h-[40px]"
-              >
-                語文
-              </a>
-              <a
-                href="#"
-                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex h-[36px] items-center gap-2 rounded-full px-4 py-2 hover:text-white md:h-[40px]"
-              >
-                地球科學
-              </a>
-              <a
-                href="#"
-                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex h-[36px] items-center gap-2 rounded-full px-4 py-2 hover:text-white md:h-[40px]"
-              >
-                自然
-              </a>
-              <a
-                href="#"
-                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex h-[36px] items-center gap-2 rounded-full px-4 py-2 hover:text-white md:h-[40px]"
-              >
-                如果標籤很長
-              </a>
-            </div>
-          </div>
-        </div>
+        <div class="mb-3 flex flex-wrap items-start gap-5 md:flex-nowrap">
+          <div class="md:w-2/3">
+            <iframe
+              class="aspect-[16/9] h-full w-full rounded-lg"
+              src="https://www.youtube.com/embed/wwg4kKdv7fc?si=YrGwVyH9W1dveh7F"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
 
-        <div class="grid gap-5 py-5">
-          <div class="bg-gray2-100 rounded-lg p-5 shadow-md md:p-8">
-            <div class="flex flex-wrap justify-end gap-5 md:flex-nowrap">
-              <div class="flex w-full grow justify-between gap-2 md:gap-5">
-                <div class="flex flex-col gap-1 md:gap-2">
-                  <h2 class="text-xl font-bold md:text-2xl">
-                    <a class="line-clamp-2 leading-7 md:leading-8" href="#"
-                      >紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術紅包理財術</a
-                    >
-                  </h2>
-                  <div class="hidden md:flex">
-                    <span class="line-clamp-2">
-                      我們熟悉的「十進位」，個位數的數 字從 0 開始，1、2
-                      一直到9，再進到「十
-                      位數」，等到99再進到「百位」。個位數後，愈大的位數，代表愈多
-                      10 相乘。以 314 為例，可以拆成 3 個 10 × 10，加 上 1 個 10
-                      ，再加上 4個 1。
-                    </span>
-                  </div>
-                  <div class="mt-auto flex flex-col gap-2">
-                    <div
-                      class="text-gray2-600 flex-wrap text-sm md:flex md:gap-5"
-                    >
-                      <div>
-                        <span>作者</span>
-                        |
-                        <a href="#" class="text-primary-500">陳小明</a>
-                      </div>
-                    </div>
-                    <div
-                      class="text-gray2-600 flex-wrap text-sm md:flex md:gap-5"
-                    >
-                      <div>
-                        <span>科目</span>
-                        |
-                        <a href="#" class="text-primary-500">地球科學</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="relative max-w-[120px] shrink-0 md:max-w-[210px]">
-                  <span
-                    class="bg-primary-500 absolute -end-[5px] top-[5px] z-0 aspect-[6/6] w-full rounded-xl"
-                  ></span>
-                  <div class="aspect-[6/6]">
-                    <img
-                      class="z-1 relative h-full w-full rounded-xl object-cover"
-                      src="https://design-library.jp/wp-content/uploads/1702791605_30eb0551-380x380.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
+            <h2 class="my-5 text-2xl font-semibold md:text-3xl">
+              【未來小學堂】超人的披風，為什麼是紅色的？
+            </h2>
+
+            <div class="article-content py-3">
+              <p>
+                編輯器要可以<strong>粗體</strong
+                ><span style="color: red">變色</span
+                ><span style="font-size: 25px">放大</span>
+                <span style="font-size: 10px">縮小</span>
+              </p>
+              <p><a href="#">我是連結區域</a></p>
+              <p>
+                本教案由林心茹老師（基隆市仁愛國民小學）、王立衍老師（基隆市仁愛國民小學）共同編寫。
+              </p>
+              <h2>一、教案像食譜，好看又要能照著做</h2>
+              <p>
+                教學演示即將到來！相信很多新手教師們想到要寫「教案」就很頭痛吧！其實教案就像是一篇食譜，不僅好看又要能讓人照著做，畢竟教案不是寫給自己看，是寫給其他人看的呀！我想無論是師培生、實習老師、還是老師們，寫好一份精彩、又好閱讀的教案不僅是我們的專業（挺胸）、也是我們的工作啊（留下辛酸淚），今天就讓小五跟大家分享五個教案撰寫小技巧吧！
+              </p>
+              <h1>標題</h1>
+              <h2>標題</h2>
+              <h3>標題</h3>
+              <h4>標題</h4>
+              <h5>標題</h5>
+              <h6>標題</h6>
+              <ul>
+                <li>圓點列點一列點一列點一列點一列點一列點一</li>
+                <li>圓點列點二列點二列點二列點二列點二列點二</li>
+              </ul>
+              <ol>
+                <li>數字列點一列點一列點一列點一列點一列點一</li>
+                <li>數字列點二列點二列點二列點二列點二列點二</li>
+              </ol>
+              <p>
+                <img
+                  src="https://greenfuture-ea.greenpeace.org/media/c8a4dae1-2b8b-4a05-aee3-754963cbcf78.jpeg"
+                  alt="教案像食譜"
+                />
+              </p>
+              <p style="font-weight: 400; text-align: center; font-size: 15px">
+                （圖說）教案要像食譜，要讓人能照著做。圖片來源：為你打包五個教檢重點
+              </p>
+              <div>
+                <iframe
+                  src="https://www.youtube.com/embed/HfbW8DL1Ld4?si=qtjNJwouQu-pgyAa&amp;controls=0"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
               </div>
+              <p>
+                教案撰寫最重要的就是讓人「好讀」！千萬不要標點符號格式亂七八糟、密密麻麻，一定會讓人看不下去的啊！<br /><br />
+              </p>
+              <h2>二、不一定要照常見結構順序寫</h2>
+              <p>
+                還記得我在念師培的時候，老師常常強調教案設計要有結構，常見的教案結構是：引起動機、發展活動、綜合活動、總結活動，因此我以前就傻傻的每一堂課都花個10分鐘在引起動機，結果開始講正課的時候，學生竟然開始打瞌睡！
+              </p>
+              <p>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUdm0B184RlHzr_4jjVADu7-AzMxeHqellUg&s"
+                  alt="教案不一定要照固定結構順序寫"
+                />
+              </p>
+              <p style="font-weight: 400; text-align: center">
+                教案要像食譜，要讓人能照著做。圖片來源：為你打包五個教檢重點
+              </p>
             </div>
           </div>
-          <div class="my-5">
-            <ul class="flex items-center justify-center gap-3 text-xl">
-              <li>
-                <a class="hover:text-primary-600" href="#">
-                  <svg
-                    width="15"
-                    height="17"
-                    viewBox="0 0 17 19"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.91986 0.97998L1.83984 9.35999L8.91986 17.74"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                    />
-                    <path
-                      d="M15.9999 0.97998L8.91992 9.35999L15.9999 17.74"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </a>
-              </li>
-              <li class="me-3">
-                <a class="hover:text-primary-600" href="#">
-                  <svg
-                    width="8"
-                    height="17"
-                    viewBox="0 0 10 19"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.9201 0.939941L1.83008 9.31995L8.9201 17.6899"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </a>
-              </li>
-              <li class="text-primary-500">
-                <a class="hover:text-primary-600" href="#">1</a>
-              </li>
-              <li>
-                <a class="hover:text-primary-600" href="#">2</a>
-              </li>
-              <li>
-                <a class="hover:text-primary-600" href="#">3</a>
-              </li>
-              <li>
-                <a class="hover:text-primary-600" href="#">4</a>
-              </li>
-              <li>
-                <a class="hover:text-primary-600" href="#">5</a>
-              </li>
-              <li class="ms-3">
-                <a class="hover:text-primary-600" href="#">
-                  <svg
-                    width="8"
-                    height="17"
-                    viewBox="0 0 10 19"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.08008 0.939941L8.17004 9.31995L1.08008 17.6899"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a class="hover:text-primary-600" href="#">
-                  <svg
-                    width="15"
-                    height="17"
-                    viewBox="0 0 17 19"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.08008 0.97998L15.16 9.35999L8.08008 17.74"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                    />
-                    <path
-                      d="M1 0.97998L8.08002 9.35999L1 17.74"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </a>
-              </li>
-            </ul>
+          <div class="md:w-1/3">
+            <div class="mb-6 flex w-full items-center gap-3">
+              <div class="bg-gray2-700 h-[1px] grow"></div>
+              <h2 class="font-display px-4 text-center text-2xl font-semibold">
+                推薦影片
+              </h2>
+              <div class="bg-gray2-700 h-[1px] grow"></div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 rounded md:grid-cols-1">
+              <a
+                href="#"
+                class="flex w-full grow flex-wrap gap-1 md:flex-nowrap md:gap-3"
+              >
+                <div class="aspect-[16/9] md:max-w-[130px] md:shrink-0">
+                  <img
+                    class="h-full w-full rounded-lg object-cover"
+                    src="https://imgs.cwgv.com.tw/videos/90/1590/pic/1590.png"
+                  />
+                </div>
+                <div>
+                  <h3 class="line-clamp-2 font-semibold">
+                    太陽的親戚太陽的親abcd efg eipwk
+                  </h3>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="flex w-full grow flex-wrap gap-1 md:flex-nowrap md:gap-3"
+              >
+                <div class="aspect-[16/9] md:max-w-[130px] md:shrink-0">
+                  <img
+                    class="h-full w-full rounded-lg object-cover"
+                    src="https://imgs.cwgv.com.tw/videos/90/1590/pic/1590.png"
+                  />
+                </div>
+                <div>
+                  <h3 class="line-clamp-2 font-semibold">太陽的親戚太陽</h3>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="flex w-full grow flex-wrap gap-1 md:flex-nowrap md:gap-3"
+              >
+                <div class="aspect-[16/9] md:max-w-[130px] md:shrink-0">
+                  <img
+                    class="h-full w-full rounded-lg object-cover"
+                    src="https://imgs.cwgv.com.tw/videos/90/1590/pic/1590.png"
+                  />
+                </div>
+                <div>
+                  <h3 class="line-clamp-2 font-semibold">
+                    太陽的親戚太陽的親戚太陽的親戚太陽的親戚太陽的親戚
+                  </h3>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="flex w-full grow flex-wrap gap-1 md:flex-nowrap md:gap-3"
+              >
+                <div class="aspect-[16/9] md:max-w-[130px] md:shrink-0">
+                  <img
+                    class="h-full w-full rounded-lg object-cover"
+                    src="https://imgs.cwgv.com.tw/videos/90/1590/pic/1590.png"
+                  />
+                </div>
+                <div>
+                  <h3 class="line-clamp-2 font-semibold">太陽的親戚</h3>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="flex w-full grow flex-wrap gap-1 md:flex-nowrap md:gap-3"
+              >
+                <div class="aspect-[16/9] md:max-w-[130px] md:shrink-0">
+                  <img
+                    class="h-full w-full rounded-lg object-cover"
+                    src="https://imgs.cwgv.com.tw/videos/90/1590/pic/1590.png"
+                  />
+                </div>
+                <div>
+                  <h3 class="line-clamp-2 font-semibold">
+                    太陽的親戚太陽的親戚太陽的親戚太陽的親戚太陽的親戚戚太陽的親戚戚太陽的親戚戚太陽的親戚
+                  </h3>
+                </div>
+              </a>
+            </div>
           </div>
+          <!-- <div
+            class="flex w-full grow flex-col items-center gap-3 md:sticky md:top-[100px]"
+          >
+            <div class="mb-3 flex w-full items-center gap-3">
+              <div class="bg-gray2-700 h-[1px] grow"></div>
+              <h2 class="font-display px-8 text-center text-2xl font-semibold">
+                相關閱讀
+              </h2>
+              <div class="bg-gray2-700 h-[1px] grow"></div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <a class="w-[120px]" rel="noopener noreferrer" href="#">
+                <div
+                  class="flex max-w-full grow overflow-hidden rounded bg-gray-50"
+                >
+                  <img
+                    class="aspect-[6/4] h-full w-full object-contain"
+                    src="https://imgs.cwgv.com.tw/videos/90/1590/pic/1590.png"
+                  />
+                </div>
+              </a>
+              <a href="#" class="line-clamp-2 font-semibold">
+                【未來小學堂】人類的演化是怎麼樣呢？一起探索現在的我們是怎麼變成呢？
+              </a>
+            </div>
+            <div class="flex items-center gap-3">
+              <a class="w-[120px]" rel="noopener noreferrer" href="#">
+                <div
+                  class="flex max-w-full grow overflow-hidden rounded bg-gray-50"
+                >
+                  <img
+                    class="aspect-[6/4] h-full w-full object-contain"
+                    src="https://imgs.cwgv.com.tw/videos/03/1603/pic/1603.png"
+                  />
+                </div>
+              </a>
+              <a href="#" class="mt-3 line-clamp-2 font-semibold">
+                【未來小學堂】人類的演化是怎麼樣呢？一起探索現在的我們是怎麼變成呢？
+              </a>
+            </div>
+            <div class="flex items-center gap-3">
+              <a class="w-[120px]" rel="noopener noreferrer" href="#">
+                <div
+                  class="flex max-w-full grow overflow-hidden rounded bg-gray-50"
+                >
+                  <img
+                    class="aspect-[6/4] h-full w-full object-contain"
+                    src="https://imgs.cwgv.com.tw/videos/90/1590/pic/1590.png"
+                  />
+                </div>
+              </a>
+              <a href="#" class="line-clamp-2 font-semibold">
+                一起探索《未來兒童知識庫》：操作說明詳解
+              </a>
+            </div>
+            <div class="flex items-center gap-3">
+              <a class="w-[120px]" rel="noopener noreferrer" href="#">
+                <div
+                  class="flex max-w-full grow overflow-hidden rounded bg-gray-50"
+                >
+                  <img
+                    class="aspect-[6/4] h-full w-full object-contain"
+                    src="https://imgs.cwgv.com.tw/videos/90/1590/pic/1590.png"
+                  />
+                </div>
+              </a>
+              <a href="#" class="line-clamp-2 font-semibold">
+                葉惠貞老師推薦《未來兒童》《未來少年》
+              </a>
+            </div>
+            <div class="flex items-center gap-3">
+              <a class="w-[120px]" rel="noopener noreferrer" href="#">
+                <div
+                  class="flex max-w-full grow overflow-hidden rounded bg-gray-50"
+                >
+                  <img
+                    class="aspect-[6/4] h-full w-full object-contain"
+                    src="https://imgs.cwgv.com.tw/videos/03/1603/pic/1603.png"
+                  />
+                </div>
+              </a>
+              <a href="#" class="mt-3 line-clamp-2 font-semibold">
+                【圖書館老師曾品方】推薦未來兒童未來少年知識庫三大優點♥
+              </a>
+            </div>
+          </div> -->
         </div>
       </div>
     </main>
 
-    <!-- 共用版尾 -->
     <footer class="mt-auto bg-white py-5 tracking-wide">
       <div
         class="container mx-auto flex flex-col flex-wrap items-center justify-between gap-3 px-3 py-5 text-sm md:flex-row lg:gap-5"
@@ -639,9 +691,18 @@
       </div>
     </footer>
 
-    <script src="../assets/js/tw-elements.umd.min.js"></script>
+    <!-- 共用版尾 -->
+    <!-- <div hx-get="../components/footer.html" hx-trigger="load" preload></div> -->
+
+    <!-- 這段是拿來生成版頭尾用 不需要在渲然時使用請忽略 -->
+    <script src="https://unpkg.com/htmx.org"></script>
+
+    <!-- 新加的 js -->
+    <!-- <script src="../assets/js/tw-elements.umd.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/lesson-detail.js"></script>
   </body>
 </html>

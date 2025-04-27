@@ -11,22 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../assets/css/junior-main.css" />
-
-    <!-- 新加的 style -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="../assets/css/junior-main.css" />
+    <link rel="stylesheet" href="../assets/css/youth-main.css" />
   </head>
   <body class="bg-gray2-50 relative">
     <!-- 共用版頭 -->
-    <nav class="sticky top-0 z-50">
-      <div
-        id="navbar"
-        class="bg-gray-50/50 py-4 backdrop-blur-lg transition md:py-5"
-      >
+    <nav id="navbar" class="sticky top-0 z-50">
+      <div class="bg-gray-50/50 py-4 backdrop-blur-lg transition md:py-5">
         <div
           class="container mx-auto flex flex-wrap items-center justify-between gap-3 px-5"
         >
@@ -41,7 +31,7 @@
               <img
                 class="max-w-full"
                 width="280"
-                src="../assets/img/logo-junior.svg"
+                src="../assets/img/logo-youth.svg"
                 alt="logo"
               />
               <h1 class="sr-only">未來兒童知識庫</h1>
@@ -302,146 +292,263 @@
     </nav>
 
     <main class="py-8">
-      <div class="container mx-auto pb-8 pt-3">
-        <div class="mb-3 flex gap-3 pb-3">
-          <a href="#">未來兒童</a>
+      <div class="container mx-auto px-5">
+        <div class="flex gap-3 pb-3 text-sm">
+          <a href="#">未來少年</a>
           <span>></span>
-          <a href="#">未來小學堂</a>
-          <span>></span>
-          <a href="#">標題標題標題</a>
+          <a href="#">漫畫專區</a>
         </div>
-        <div class="mb-3 flex flex-wrap items-start gap-5 md:flex-nowrap">
-          <div class="overflow-hidden rounded-lg bg-white shadow-md md:w-2/3">
-            <div class="p-5">
-              <iframe
-                class="aspect-[16/9] h-full w-full rounded-lg"
-                src="https://www.youtube.com/embed/wwg4kKdv7fc?si=YrGwVyH9W1dveh7F"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
 
-              <h2 class="my-5 text-2xl font-semibold md:text-3xl">
-                【未來小學堂】超人的披風，為什麼是紅色的？
-              </h2>
-
-              <div class="article-content border-t py-3">
-                <p>
-                  小考表現好，大考失常？<br />
-                  可能是孩子對大範圍知識的統整能力弱。另外或許孩子平日對自己要求太高，小考已經把潛能發揮極限，當大考一來，壓力更大無法負擔而表現失常。<br />
-                  <br />
-                  小考表現好，大考更出色？<br />
-                  哇，恭喜你！你的孩子是個很會調節考試節奏的人，平常把小考當練習，或是真的很會念書，對於知識與考試技巧拿捏得宜！<br />
-                  <br />
-                  親子專家楊俐容老師教你四大絕招：<br />
-                  1. 同理負面情緒 <br />
-                  2. 分析情緒線索<br />
-                  3. 陪伴走過失落<br />
-                  4. 回應成功經驗<br />
-                  讓每次的考試帶領孩子認識自己，養成解決問題的大能力！
-                </p>
+        <div
+          class="my-4 flex justify-stretch leading-[normal] md:items-center md:divide-x md:divide-gray-600"
+        >
+          <div class="hidden shrink-0 pe-2 font-semibold md:block md:pe-4">
+            <a
+              href="#"
+              class="hover:bg-primary-600 bg-primary-500 text-gray2-700 transtion flex h-[36px] items-center justify-center rounded-full px-4 py-2 text-white hover:text-white md:h-[40px]"
+              >全部</a
+            >
+          </div>
+          <div class="grow font-semibold md:grow-0 md:ps-4">
+            <div class="flex flex-wrap gap-2">
+              <a
+                href="#"
+                class="hover:bg-primary-600 bg-primary-500 text-gray2-700 transtion flex h-[36px] items-center justify-center rounded-full px-4 py-2 text-white hover:text-white md:hidden md:h-[40px]"
+                >全部</a
+              >
+              <a
+                href="#"
+                class="hover:bg-primary-600 bg-primary-500 text-gray2-700 transtion flex h-[36px] items-center justify-center gap-2 rounded-full px-4 py-2 text-white hover:text-white md:h-[40px]"
+              >
+                單篇
+              </a>
+              <a
+                href="#"
+                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex h-[36px] items-center justify-center gap-2 rounded-full px-4 py-2 hover:text-white md:h-[40px]"
+              >
+                連載
+              </a>
+              <a
+                href="#"
+                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex h-[36px] items-center justify-center gap-2 rounded-full px-4 py-2 hover:text-white md:h-[40px]"
+              >
+                完結
+              </a>
+              <a
+                href="#"
+                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex h-[36px] items-center justify-center gap-2 rounded-full px-4 py-2 hover:text-white md:h-[40px]"
+              >
+                彩色
+              </a>
+              <a
+                href="#"
+                class="hover:bg-primary-600 bg-gray2-200 text-gray2-700 transtion flex h-[36px] items-center justify-center gap-2 rounded-full px-4 py-2 hover:text-white md:h-[40px]"
+              >
+                黑白
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-2 gap-5 py-5 md:grid-cols-3 md:gap-10 lg:grid-cols-4"
+        >
+          <div class="flex flex-col gap-2">
+            <div class="relative aspect-[5/6.5] overflow-hidden">
+              <div
+                class="bg-accent-500 absolute -right-[35px] bottom-[15px] w-[130px] -rotate-45 transform py-1 text-center font-semibold text-white shadow-md"
+              >
+                單篇
               </div>
+              <img
+                class="h-full w-full object-cover"
+                src="https://imgs.cwgv.com.tw/books/MJ1/MJ11404/cover/MJ11404.png"
+                alt=""
+              />
             </div>
-            <div class="bg-primary-500 h-5 w-full"></div>
-          </div>
-          <div class="md:w-1/3">
-            <div class="mb-4 flex w-full items-center gap-3">
-              <div class="bg-gray2-700 h-[1px] grow"></div>
-              <h2 class="font-display px-4 text-center text-2xl font-semibold">
-                推薦影片
-              </h2>
-              <div class="bg-gray2-700 h-[1px] grow"></div>
-            </div>
-
-            <div class="grid grid-cols-1 gap-4 rounded">
-              <a
-                href="#"
-                class="flex w-full grow flex-col gap-2 text-xl md:flex-row md:flex-nowrap md:gap-3 md:text-lg"
-              >
-                <div class="aspect-[16/9] md:max-w-[130px] md:shrink-0">
-                  <img
-                    class="h-full w-full rounded-lg object-cover"
-                    src="https://imgs.cwgv.com.tw/videos/90/1590/pic/1590.png"
-                  />
-                </div>
-                <div>
-                  <h3 class="line-clamp-2 font-semibold">
-                    太陽的親戚太陽的親戚太陽戚
-                  </h3>
-                </div>
-              </a>
-              <a
-                href="#"
-                class="flex w-full grow flex-col gap-2 text-xl md:flex-row md:flex-nowrap md:gap-3 md:text-lg"
-              >
-                <div class="aspect-[16/9] md:max-w-[130px] md:shrink-0">
-                  <img
-                    class="h-full w-full rounded-lg object-cover"
-                    src="https://imgs.cwgv.com.tw/videos/90/1590/pic/1590.png"
-                  />
-                </div>
-                <div>
-                  <h3 class="line-clamp-2 font-semibold">
-                    太陽的親戚太陽的親戚太陽戚太陽戚太陽戚太陽戚太陽戚太陽戚太陽戚太陽戚太陽戚太陽戚太陽
-                  </h3>
-                </div>
-              </a>
-              <a
-                href="#"
-                class="flex w-full grow flex-col gap-2 text-xl md:flex-row md:flex-nowrap md:gap-3 md:text-lg"
-              >
-                <div class="aspect-[16/9] md:max-w-[130px] md:shrink-0">
-                  <img
-                    class="h-full w-full rounded-lg object-cover"
-                    src="https://imgs.cwgv.com.tw/videos/90/1590/pic/1590.png"
-                  />
-                </div>
-                <div>
-                  <h3 class="line-clamp-2 font-semibold">
-                    太陽的親戚太陽的戚太陽戚太陽戚太陽
-                  </h3>
-                </div>
-              </a>
-              <a
-                href="#"
-                class="flex w-full grow flex-col gap-2 text-xl md:flex-row md:flex-nowrap md:gap-3 md:text-lg"
-              >
-                <div class="aspect-[16/9] md:max-w-[130px] md:shrink-0">
-                  <img
-                    class="h-full w-full rounded-lg object-cover"
-                    src="https://imgs.cwgv.com.tw/videos/90/1590/pic/1590.png"
-                  />
-                </div>
-                <div>
-                  <h3 class="line-clamp-2 font-semibold">
-                    太陽的親戚太陽的親 戚太陽戚太陽戚太陽
-                  </h3>
-                </div>
-              </a>
-              <a
-                href="#"
-                class="flex w-full grow flex-col gap-2 text-xl md:flex-row md:flex-nowrap md:gap-3 md:text-lg"
-              >
-                <div class="aspect-[16/9] md:max-w-[130px] md:shrink-0">
-                  <img
-                    class="h-full w-full rounded-lg object-cover"
-                    src="https://imgs.cwgv.com.tw/videos/90/1590/pic/1590.png"
-                  />
-                </div>
-                <div>
-                  <h3 class="line-clamp-2 font-semibold">
-                    太陽的親戚太陽的親abcd efg eipwk 戚太陽
-                  </h3>
-                </div>
-              </a>
+            <div class="text-center font-bold">
+              美食千金米亞美食千金米亞美食千金米亞美食千金米亞
             </div>
           </div>
+          <div class="flex flex-col gap-2">
+            <div class="relative aspect-[5/6.5] overflow-hidden">
+              <div
+                class="bg-primary-500 absolute -right-[35px] bottom-[15px] w-[130px] -rotate-45 transform py-1 text-center font-semibold text-white shadow-md"
+              >
+                連載
+              </div>
+              <img
+                class="h-full w-full object-cover"
+                src="https://imgs.cwgv.com.tw/books/MJ1/MJ11402/cover/MJ11402.png"
+                alt=""
+              />
+            </div>
+            <div class="text-center font-bold">
+              美食千金米亞美食千金米亞美食千金米亞美食千金米亞美食千金米亞美食千金米亞
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="relative aspect-[5/6.5] overflow-hidden">
+              <div
+                class="bg-gray2-800 absolute -right-[35px] bottom-[15px] w-[130px] -rotate-45 transform py-1 text-center font-semibold text-white shadow-md"
+              >
+                完結
+              </div>
+              <img
+                class="h-full w-full object-cover"
+                src="https://imgs.cwgv.com.tw/books/MJ1/MJ11312/cover/MJ11312.png"
+                alt=""
+              />
+            </div>
+            <div class="text-center font-bold">美食千金米亞</div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="relative aspect-[5/6.5] overflow-hidden">
+              <div
+                class="bg-gray2-800 absolute -right-[35px] bottom-[15px] w-[130px] -rotate-45 transform py-1 text-center font-semibold text-white shadow-md"
+              >
+                完結
+              </div>
+              <img
+                class="h-full w-full object-cover"
+                src="https://imgs.cwgv.com.tw/books/MJ1/MJ11403/cover/MJ11403.png"
+                alt=""
+              />
+            </div>
+            <div class="text-center font-bold">
+              美食千金米亞美食千金米亞美食千金米亞美食千金米亞美食千金米亞美食千金米亞
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="relative aspect-[5/6.5] overflow-hidden">
+              <div
+                class="bg-gray2-800 absolute -right-[35px] bottom-[15px] w-[130px] -rotate-45 transform py-1 text-center font-semibold text-white shadow-md"
+              >
+                完結
+              </div>
+              <img
+                class="h-full w-full object-cover"
+                src="https://imgs.cwgv.com.tw/books/MJ1/MJ11403/cover/MJ11403.png"
+                alt=""
+              />
+            </div>
+            <div class="text-center font-bold">
+              美食千金米亞美食千金米亞美食千金米亞美食千金米亞美食千金米亞美食千金米亞
+            </div>
+          </div>
+        </div>
+        <div class="my-5">
+          <ul class="flex items-center justify-center gap-3 text-xl">
+            <li>
+              <a class="hover:text-primary-600" href="#">
+                <svg
+                  width="15"
+                  height="17"
+                  viewBox="0 0 17 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.91986 0.97998L1.83984 9.35999L8.91986 17.74"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M15.9999 0.97998L8.91992 9.35999L15.9999 17.74"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="me-3">
+              <a class="hover:text-primary-600" href="#">
+                <svg
+                  width="8"
+                  height="17"
+                  viewBox="0 0 10 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.9201 0.939941L1.83008 9.31995L8.9201 17.6899"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="text-primary-500">
+              <a class="hover:text-primary-600" href="#">1</a>
+            </li>
+            <li>
+              <a class="hover:text-primary-600" href="#">2</a>
+            </li>
+            <li>
+              <a class="hover:text-primary-600" href="#">3</a>
+            </li>
+            <li>
+              <a class="hover:text-primary-600" href="#">4</a>
+            </li>
+            <li>
+              <a class="hover:text-primary-600" href="#">5</a>
+            </li>
+            <li class="ms-3">
+              <a class="hover:text-primary-600" href="#">
+                <svg
+                  width="8"
+                  height="17"
+                  viewBox="0 0 10 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.08008 0.939941L8.17004 9.31995L1.08008 17.6899"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-primary-600" href="#">
+                <svg
+                  width="15"
+                  height="17"
+                  viewBox="0 0 17 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.08008 0.97998L15.16 9.35999L8.08008 17.74"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M1 0.97998L8.08002 9.35999L1 17.74"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </main>
 
+    <!-- 共用版尾 -->
     <footer class="mt-auto bg-white py-5 tracking-wide">
       <div
         class="container mx-auto flex flex-col flex-wrap items-center justify-between gap-3 px-3 py-5 text-sm md:flex-row lg:gap-5"
@@ -451,7 +558,7 @@
         >
           <a class="mx-auto md:mx-0" href="#" target="_blank">
             <img
-              class="max-w-full"
+              class="-mt-[1px] max-w-full"
               width="120"
               src="../assets/img/footer-logo.svg"
               alt="logo"
@@ -563,15 +670,9 @@
       </div>
     </footer>
 
-    <!-- 這段是拿來生成版頭尾用 不需要在渲然時使用請忽略 -->
-    <script src="https://unpkg.com/htmx.org"></script>
-
-    <!-- 新加的 js -->
-    <!-- <script src="../assets/js/tw-elements.umd.min.js"></script> -->
+    <script src="../assets/js/tw-elements.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/lesson-detail.js"></script>
   </body>
 </html>

@@ -51,8 +51,8 @@
     <link rel="stylesheet" href="https://futuredata.cwgv.com.tw/public/assets/css/style.css">
     <link rel="stylesheet" href="https://futuredata.cwgv.com.tw/public/assets/css/style_rs.css">
    
-        <link rel="stylesheet" href="https://futuredata.cwgv.com.tw/public/assets/css/youth-main.css" />
-        <link rel="stylesheet" href="https://futuredata.cwgv.com.tw/public/assets/css/origin-main.css" /> 
+    <link rel="stylesheet" href="../assets/css/youth-main.css" />
+    <link rel="stylesheet" href="https://futuredata.cwgv.com.tw/public/assets/css/origin-main.css" /> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         @media print {
@@ -363,6 +363,8 @@
     });
 
 
+
+
 </script>
     <footer>
     <div class="footerDownBox">
@@ -396,7 +398,12 @@
             </ul>    
         </div>
     </div>
-</footer>    <div id="ad_footer"><font color="#fffff">現在加入未來親子會員，即享知識庫30天免費試用！<a href=" https://futureparenting.cwgv.com.tw/member/login " target="_blank">【馬上加入】</a> ｜ <a href="https://parenting.cwgv.com.tw/topic/MYMJ/2025data/index.html" target="_blank">【深入了解】</a> </font></div>
+</footer>
+
+    <div class="sticky bottom-0 w-full bg-[#B40004] text-white px-3 py-2 z-20 text-center">
+        現在加入未來親子會員，即享知識庫30天免費試用！
+        <a class="hover:text-white" href=" https://futureparenting.cwgv.com.tw/member/login " target="_blank">【馬上加入】</a> ｜ <a class="hover:text-white" href="https://parenting.cwgv.com.tw/topic/MYMJ/2025data/index.html" target="_blank">【深入了解】</a>
+    </div>
     
     <div id="myMusic" class="modal fade musicModal " role="dialog">
         <div class="modal-dialog modal-dialog-centered">
@@ -415,16 +422,32 @@
         </div>
     </div>
 
-    <div id="googleAdModal" class="modal fade myModal" role="dialog">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                  123
-                  <div id='div-gpt-ad-1749449148141-0'>
-                    <script>
-                      googletag.cmd.push(function() { googletag.display('div-gpt-ad-1749449148141-0'); });
-                    </script>
-                  </div>
+    <div id="googleAdModal" class="modal fade" role="dialog">
+        <div class="w-full h-svh flex justify-center items-center">
+            <div class="modal-dialog">
+                <button type="button" class="bg-gray-600 text-white rounded-full absolute -top-3 -right-3 z-10 flex justify-center items-center w-[30px] h-[30px]" data-dismiss="modal" aria-label="Close">
+                &times;
+                </button>
+                <div class="modal-content">
+                    <div class="modal-body">
+                    <div id='div-gpt-ad-1749449148141-0'>
+                        <script>
+                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1749449148141-0'); });
+                        </script>
+                    </div>
+                        <!-- 以下是測試站模擬圖 上正式請刪除 -->
+                        <img
+                            class="hidden md:!block"
+                            src="../assets/img/googleAD-02.png"
+                            alt="桌機版廣告"
+                        />
+                        <img
+                            class="block md:hidden"
+                            src="../assets/img/googleAD-01.png"
+                            alt="手機版廣告"
+                        />
+                        <!-- 以上是測試站模擬圖 上正式請刪除 -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -532,9 +555,49 @@
             });
         }
  
+        // 設置 cookie 函數
+        function setCookie(name, value, hours) {
+            const date = new Date();
+            date.setTime(date.getTime() + (hours * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
 
+        // 獲取 cookie 函數
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
 
-        $("#googleAdModal").modal("show");
+        // 檢查並設置 googleAdDisplay 邏輯
+        function checkAdDisplay() {
+            const adDisplay = getCookie('googleAdDisplay');
+            if (adDisplay === 'false') {
+                // 如果 cookie 存在且為 false，表示 24 小時內不顯示廣告
+                return false;
+            } else {
+                // 如果 cookie 不存在或已過期（即 true），顯示廣告
+                $("#googleAdModal").modal("show");
+                return true;
+            }
+        }
+
+        // 按鈕點擊事件，設置 cookie 為 false，持續 24 小時
+        $('#googleAdModal').on('hide.bs.modal', function () {
+            setCookie('googleAdDisplay', 'false', 24);
+        })
+
+        // 頁面加載時檢查是否需要顯示廣告
+        document.addEventListener('DOMContentLoaded', function() {
+            checkAdDisplay();
+        });
+
     </script>
     <script>
      totalTime = 0;

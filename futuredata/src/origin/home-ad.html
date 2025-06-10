@@ -62,17 +62,6 @@
           .headerCookie{display:none;}
           .adHead{display:none;}
         }
-        #ad_footer {
-            position: fixed;
-            bottom: 0px;
-            width: 100%;
-            height: 35px;
-            color: #ffffff;
-            background-color: #B40004;
-            z-index: 1;
-            text-align: center;
-            line-height: 35px;
-        }
     </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -83,15 +72,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-    <script>
-    window.googletag = window.googletag || {cmd: []};
-    googletag.cmd.push(function() {
-        googletag.defineSlot('/173568189/futuredata_popup_850x600_320x480', [[320, 480], [850, 600]], 'div-gpt-ad-1748938835688-0').addService(googletag.pubads());
-        googletag.pubads().enableSingleRequest();
-        googletag.pubads().collapseEmptyDivs();
-        googletag.enableServices();
-    });
-    </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NS2VPJY2Z"></script>
@@ -115,25 +95,22 @@
         
 
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+
+    <!-- Google 廣告載入 start-->
     <script>
-      window.googletag = window.googletag || {cmd: []};
-      googletag.cmd.push(function() {
-        googletag.defineOutOfPageSlot('/173568189/futuredata_popup_850x600_320x480', 'div-gpt-ad-1749449148141-0').addService(googletag.pubads());
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function() {
+        googletag.defineSlot('/173568189/futuredata_popup_850x600_320x480', [[320, 480], [850, 600]], 'div-gpt-ad-1748938835688-0').addService(googletag.pubads());
         googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
         googletag.enableServices();
-      });
+    });
     </script>
+    <!-- Google 廣告載入 end-->
 
 </head>
 
 <body class="bglogin  gkids">
-        <!-- /173568189/futuredata_popup_850x600_320x480 -->
-<!-- <div id="div-gpt-ad-1748938835688-0" style="min-width: 320px; min-height: 480px;">
-  <script>
-    googletag.cmd.push(function() {
-      googletag.display("div-gpt-ad-1748938835688-0");
-    });
-  </script> -->
 </div>
         
     <div class="mainCtn loginCtn">
@@ -422,6 +399,7 @@
         </div>
     </div>
 
+    <!-- Google 燈箱載入 start-->
     <div id="googleAdModal" class="modal fade" role="dialog">
         <div class="w-full h-svh flex justify-center items-center pointer-events-none">
             <div class="modal-dialog">
@@ -430,11 +408,11 @@
                 </button>
                 <div class="modal-content">
                     <div class="modal-body">
-                    <div id='div-gpt-ad-1749449148141-0'>
-                        <script>
-                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1749449148141-0'); });
-                        </script>
-                    </div>
+                        <div id='div-gpt-ad-1749449148141-0'>
+                            <script>
+                            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1749449148141-0'); });
+                            </script>
+                        </div>
                         <!-- 以下是測試站模擬圖 上正式請刪除 -->
                         <img
                             class="hidden md:!block"
@@ -452,6 +430,7 @@
             </div>
         </div>
     </div>
+    <!-- Google 燈箱載入 end-->
 
     <div id="myModalB" class="modal fade  myModal" role="dialog">
         <div class="modal-dialog modal-dialog-centered">
@@ -555,7 +534,7 @@
             });
         }
  
-        // 設置 cookie 函數
+        // 設置 google 廣告 24 小時判斷 start
         function setCookie(name, value, hours) {
             const date = new Date();
             date.setTime(date.getTime() + (hours * 60 * 60 * 1000));
@@ -563,7 +542,6 @@
             document.cookie = name + "=" + value + ";" + expires + ";path=/";
         }
 
-        // 獲取 cookie 函數
         function getCookie(name) {
             const nameEQ = name + "=";
             const ca = document.cookie.split(';');
@@ -575,28 +553,22 @@
             return null;
         }
 
-        // 檢查並設置 googleAdDisplay 邏輯
         function checkAdDisplay() {
             const adDisplay = getCookie('googleAdDisplay');
             if (adDisplay === 'false') {
-                // 如果 cookie 存在且為 false，表示 24 小時內不顯示廣告
                 return false;
             } else {
-                // 如果 cookie 不存在或已過期（即 true），顯示廣告
                 $("#googleAdModal").modal("show");
                 return true;
             }
         }
 
-        // 按鈕點擊事件，設置 cookie 為 false，持續 24 小時
         $('#googleAdModal').on('hide.bs.modal', function () {
             setCookie('googleAdDisplay', 'false', 24);
         })
 
-        // 頁面加載時檢查是否需要顯示廣告
-        document.addEventListener('DOMContentLoaded', function() {
-            checkAdDisplay();
-        });
+        checkAdDisplay();
+        // 設置 google 廣告 24 小時判斷 end
 
     </script>
     <script>

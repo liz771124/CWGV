@@ -94,17 +94,16 @@
     </script>
         
 
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
-
+        
     <!-- Google 廣告載入 start-->
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
     <script>
-    window.googletag = window.googletag || {cmd: []};
-    googletag.cmd.push(function() {
-        googletag.defineSlot('/173568189/futuredata_popup_850x600_320x480', [[320, 480], [850, 600]], 'div-gpt-ad-1748938835688-0').addService(googletag.pubads());
-        googletag.pubads().enableSingleRequest();
-        googletag.pubads().collapseEmptyDivs();
-        googletag.enableServices();
-    });
+        window.googletag = window.googletag || {cmd: []};
+        googletag.cmd.push(function() {
+            googletag.defineOutOfPageSlot('/173568189/futuredata_popup_850x600_320x480', 'div-gpt-ad-1749449148141-0').addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
     </script>
     <!-- Google 廣告載入 end-->
 
@@ -410,21 +409,9 @@
                     <div class="modal-body">
                         <div id='div-gpt-ad-1749449148141-0'>
                             <script>
-                            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1749449148141-0'); });
+                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1749449148141-0'); });
                             </script>
                         </div>
-                        <!-- 以下是測試站模擬圖 上正式請刪除 -->
-                        <img
-                            class="hidden md:!block"
-                            src="../assets/img/googleAD-02.png"
-                            alt="桌機版廣告"
-                        />
-                        <img
-                            class="block md:hidden"
-                            src="../assets/img/googleAD-01.png"
-                            alt="手機版廣告"
-                        />
-                        <!-- 以上是測試站模擬圖 上正式請刪除 -->
                     </div>
                 </div>
             </div>
@@ -567,8 +554,7 @@
             setCookie('googleAdDisplay', 'false', 24);
         })
 
-        // checkAdDisplay();
-        $("#googleAdModal").modal("show");
+        checkAdDisplay();
         // 設置 google 廣告 24 小時判斷 end
 
     </script>

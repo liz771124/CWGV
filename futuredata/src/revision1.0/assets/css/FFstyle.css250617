@@ -1,0 +1,718 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.bannerBox .largeBanner {
+    width: 100%;
+}
+
+.largeBanner .item {
+    position: relative;
+}
+
+.largeBanner .item>a>img {
+    object-fit: cover;
+    height: 610px;
+}
+
+.largeBanner .item>a>img.banner-sm {
+    display: none;
+}
+
+.largeBanner .item .coverText {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 755px;
+    height: 190px;
+    background: url(../img/bookBg.svg)no-repeat center top;
+    background-size: cover;
+    padding-top: 70px;
+}
+
+.largeBanner .item .coverText .FFLogo {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+
+.largeBanner .item .coverText .FFLogo:before {
+    content: "";
+    width: 280px;
+    height: 5px;
+    background: #ea5413;
+    position: absolute;
+    left: -100px;
+    bottom: -10px;
+}
+
+.largeBanner .item .coverText .FFLogo img {
+    width: 180px;
+}
+
+.largeBanner .item .coverText .bannerTag {
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+}
+
+.largeBanner .item .coverText .bannerTag .date {
+    color: #fff;
+    font-size: 2em;
+    max-width: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    line-height: 1;
+    word-break: break-word;
+    position: relative;
+    z-index: 0;
+    font-family: 'Roboto', 'Noto Sans', 'Noto Sans TC', sans-serif !important;
+}
+
+.largeBanner .item .coverText .bannerTag .date:before {
+    content: "";
+    width: 40px;
+    height: 74px;
+    background: url(../img/banner_txtTAG.png)no-repeat center top;
+    background-size: 100%;
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.largeBanner .item .coverText .bannerTag span {
+    font-size: 1em;
+    max-width: 16px;
+    line-height: 1.1;
+    text-align: center;
+    margin: 5px 8px;
+    color: #ea5413;
+}
+
+.largeBanner .item .coverText .coverTextTitle {
+    color: #fff;
+    padding: 15px 50px;
+    text-align: center;
+}
+
+.largeBanner .item .coverText .coverTextTitle h3 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.largeBanner .item .coverText .coverTextTitle p {
+    font-size: 1.1em;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.largeBanner .bannerCarousel.owl-theme .owl-nav .owl-next {
+    color: #555;
+    right: -50px;
+}
+
+.largeBanner .bannerCarousel.owl-theme .owl-nav .owl-prev {
+    color: #555;
+    left: -50px;
+}
+
+.sortRowList {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.sortRowList .row {
+    width: 100%;
+    margin: 6px -3px 0;
+    flex: 1 1 auto;
+}
+
+.sortRowList .sortBlock {
+    width: 12.5%;
+    flex: 0 0 12.5%;
+    padding: 0 3px;
+    float: left;
+    min-height: 1px;
+}
+
+.sortRowList .sortBlock .sortItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 20px;
+    background: #f5f7fc;
+    border: 3px solid transparent;
+    transition: all .3s ease-in-out;
+}
+
+.sortRowList .sortBlock:hover .sortItem {
+    border-color: #907DB8;
+}
+
+.sortRowList .sortBlock .sortItem img {
+    width: 50px;
+}
+
+.sortRowList .sortBlock .sortItem p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 1.1em;
+    color: #333;
+    font-weight: 400;
+}
+
+.indexTitleB.indexTitleBB h2 {
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 10px;
+    font-size: 2.2em;
+}
+
+.indexTitleB.indexTitleBB h2:before {
+    content: "";
+    width: 130px;
+    height: 3px;
+    background: #b797ff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.indexTitleB.indexTitleBB h2:after {
+    content: "";
+    position: absolute;
+    left: 130px;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3px 3px 0 0;
+    border-color: #b697ff transparent transparent transparent;
+}
+
+.articleBoxFF .tab-content {
+    margin-top: 40px;
+}
+
+.articleBoxFF .familyRightB {
+    margin-top: 0;
+}
+
+.articleBoxFF .familyRightB .adBoxA {
+    display: none;
+}
+
+.articleBoxFF .rightArticleAd {
+    float: right;
+    width: 300px;
+}
+
+.articleBoxFF .rightArticleAd .indexTitleB {
+    text-align: left;
+}
+
+.articleBoxFF .rightArticleAd .videoAdItem {
+    border: 3px solid #907DB8;
+    margin-top: 40px;
+}
+
+.articleBoxFF .viewList li a span {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #907DB8;
+    color: #fff;
+    top: 0;
+    text-align: center;
+    font-size: 1em;
+}
+
+.articleBoxFF .tabList.tabListFamily li .tabArticle {
+    border: 1px solid #ddd;
+    height: 100%;
+}
+
+.articleBoxFF .tabList.tabListFamily li a {
+    border: none;
+    height: auto;
+}
+
+.articleBoxFF .tabList.tabListFamily li:hover a h3 {
+    text-decoration: underline;
+}
+
+.articleBoxFF .tabList.tabListFamily li:hover a .imgBox:before,
+.articleBoxFF .tabList.tabListFamily li:hover a .imgBox:after {
+    opacity: 1;
+}
+
+.articleBoxFF .tabList.tabListFamily .hashTag {
+    margin: -10px 20px 20px;
+    padding-left: 25px;
+}
+
+.articleBoxFF .tabList.tabListFamily .hashTag li {
+    width: auto;
+}
+
+.articleBoxFF .tabList.tabListFamily .hashTag li a {
+    border: none;
+    font-size: .9em;
+}
+
+.articleBoxFF .tabList.tabListFamily .hashTag:after {
+    font: 1.2em 'icomoon' !important;
+}
+
+.articleBoxFF .videoAdItem a {
+    display: block;
+}
+
+.articleBoxFF .videoAdItem .imgBox {
+    position: relative;
+}
+
+.articleBoxFF .videoAdItem .imgBox img {
+    height: 180px;
+}
+
+.articleBoxFF .videoAdItem .imgBox .videoIcon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    background: #EA5413;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.family .articleBoxFF .videoAdItem .imgBox .videoIcon {
+    background: #907DB8;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #f80000;
+    border-radius: 10px;
+    width: 60px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.articleBoxFF .videoAdItem .info {
+    padding: 20px;
+    position: relative;
+    text-align: left;
+}
+
+.articleBoxFF .videoAdItem .info h3 {
+    font-size: 1.2em;
+    color: #000;
+    line-height: 1.4;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
+.articleBoxFF .tabBoxUlF {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 3px solid #907DB8;
+    margin: 0;
+    position: relative;
+}
+
+.articleBoxFF .tabBoxUlF:before {
+    content: "";
+    width: 130px;
+    height: 3px;
+    background: #b797ff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.articleBoxFF .tabBoxUlF:after {
+    content: "";
+    position: absolute;
+    left: 130px;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3px 3px 0 0;
+    border-color: #b697ff transparent transparent transparent;
+}
+
+.articleBoxFF .tabBoxUlF h2 {
+    font-size: 2.2em;
+    flex: 0 0 auto;
+    padding-bottom: 10px;
+}
+
+.articleBoxFF .tabBoxUlF h2 span {
+    color: #907DB8;
+    padding-right: 5px;
+    font-weight: 600;
+}
+
+.articleBoxFF .dynamic-tabs-container .dynamic-tabs {
+    padding: 0;
+}
+
+.articleBoxFF .FFtab {
+    max-width: calc(100% - 350px);
+    width: auto;
+}
+
+.articleBoxFF .FFtab.swiper-container {
+    overflow: hidden;
+    margin: 0;
+}
+
+.articleBoxFF .FFtab .nav-tabs {
+    border: none;
+    padding: 15px 0;
+}
+
+.articleBoxFF .FFtab li {
+    border-right: 1px solid #ccc;
+    padding: 0 20px;
+    line-height: 1;
+    text-align: center;
+}
+
+.articleBoxFF .FFtab li>a {
+    background: none;
+    color: #777;
+    padding: 0;
+    position: relative;
+    font-weight: 400;
+    line-height: 1;
+    border: none !important;
+    margin: 0;
+    word-break: keep-all;
+}
+
+.articleBoxFF .FFtab li.active>a {
+    font-weight: 600;
+    color: #907DB8;
+}
+
+.articleBoxFF .FFtab li.active>a,
+.articleBoxFF .FFtab li.active>a:hover,
+.articleBoxFF .FFtab li.active>a:focus,
+.articleBoxFF .FFtab li>a:hover {
+    background: none;
+}
+
+
+/* .articleBoxFF .FFtab li>a:before{content: "";opacity: 0;width: 100%;height: 3px;background: #907DB8;position: absolute;left: 0;bottom: -15px;transition: all .3s ease-in-out;}
+.articleBoxFF .FFtab li.active>a:before,.articleBoxFF .FFtab li>a:hover:before{opacity: 1;} */
+
+@media screen and (min-width:991px) {
+    .articleBoxFF .FFtab li {
+        width: auto !important;
+    }
+    .articleBoxFF .FFtab .nav-tabs {
+        transform: none !important;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .largeBanner .item>a>img {
+        height: 450px;
+    }
+    .sortRowList .sortBlock .sortItem {
+        padding: 20px 10px 10px;
+    }
+    .sortRowList .sortBlock .sortItem img {
+        width: 40px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .sortRowList {
+        flex-wrap: wrap;
+    }
+    .sortRowList .row {
+        margin-top: 0;
+    }
+    .sortRowList .sortBlock {
+        width: 25%;
+        flex: 0 0 25%;
+        margin-top: 6px;
+    }
+    .largeBanner .item .coverText {
+        width: 500px;
+        height: 160px;
+        padding-top: 50px;
+    }
+    .largeBanner .item .coverText .FFLogo {
+        left: 10px;
+    }
+    .largeBanner .item .coverText .FFLogo:before {
+        width: 120px;
+        left: -10px;
+    }
+    .largeBanner .item .coverText .FFLogo img {
+        width: 110px;
+    }
+    .largeBanner .item .coverText .bannerTag .date {
+        font-size: 1.2em;
+        max-width: 22px;
+    }
+    .largeBanner .item .coverText .bannerTag .date:before {
+        width: 28px;
+        height: 49px;
+        top: 2px;
+    }
+    .largeBanner .item .coverText .bannerTag span {
+        font-size: .8em;
+        margin: 6px 8px 0px;
+    }
+    .largeBanner .item .coverText .coverTextTitle h3 {
+        font-size: 1.6em;
+    }
+    .largeBanner .item .coverText .coverTextTitle p {
+        font-size: 1em;
+    }
+    .articleBoxFF .dynamic-tabs-container .dynamic-tabs {
+        padding-right: 63px;
+    }
+    .articleBoxFF .dynamic-tabs-container .tabs-dropdown {
+        top: -15px;
+    }
+    .articleBoxFF .rightArticleAd {
+        float: none;
+        margin: 40px auto 0;
+        width: 100%;
+    }
+    .articleBoxFF .FFtab {
+        width: 370px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .bannerBoxF>.container {
+        padding: 0;
+    }
+    .articleBoxFF>.container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .articleBoxFF .tab-content {
+        margin-top: 20px;
+    }
+    .largeBanner .item .coverText {
+        width: 375px;
+        height: 150px;
+    }
+    .largeBanner .item>a>img {
+        height: auto;
+        object-fit: fill;
+    }
+    .largeBanner .item>a>img.banner-sm {
+        display: block;
+    }
+    .largeBanner .item>a>img.banner-lg {
+        display: none;
+    }
+    .largeBanner .item .coverText .FFLogo img {
+        width: 100px;
+    }
+    .largeBanner .item .coverText .FFLogo {
+        top: 25px;
+    }
+    .largeBanner .item .coverText .FFLogo:before {
+        height: 3px;
+        bottom: -6px;
+        width: 110px;
+    }
+    .largeBanner .item .coverText .bannerTag .date {
+        font-size: 1em;
+    }
+    .largeBanner .item .coverText .bannerTag span {
+        margin: 10px 5px 0px;
+    }
+    .largeBanner .item .coverText .bannerTag .date:before {
+        top: 7px;
+        width: 21px;
+        height: 38px;
+    }
+    .largeBanner .item .coverText .coverTextTitle h3 {
+        font-size: 1.3em;
+    }
+    .largeBanner .item .coverText .coverTextTitle p {
+        font-size: .85em;
+    }
+    .articleBoxFF .tabBoxUlF {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .articleBoxFF .dynamic-tabs-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .articleBoxFF .FFtab {
+        width: 100%;
+        max-width: none;
+    }
+    .articleBoxFF .FFtab li {
+        padding: 0;
+        border: none;
+        text-align: left;
+    }
+    .articleBoxFF .FFtab li>a {
+        display: inline-block;
+    }
+    .articleBoxFF .FFtab .nav-tabs {
+        justify-content: flex-start;
+    }
+    .sortRowList {
+        margin: 0;
+        padding: 0 2px;
+        width: auto;
+    }
+    .sortRowList .row {
+        margin: 0 -2px;
+    }
+    .sortRowList .sortBlock {
+        margin-top: 2px;
+        padding: 0 1px;
+    }
+    .sortRowList .sortBlock .sortItem {
+        padding: 8px 5px;
+    }
+    .sortRowList .sortBlock .sortItem img {
+        width: 30px;
+    }
+    .sortRowList .sortBlock .sortItem p {
+        font-size: .9em;
+        margin-top: 5px;
+    }
+    .articleBoxFF .tabList.tabListFamily li {
+        width: 100%;
+    }
+    .articleBoxFF .tabList.tabListFamily li .tabArticle {
+        border: none;
+    }
+    .articleBoxFF .tabList.tabListFamily li .tabArticle .top {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+    .articleBoxFF .tabList.tabListFamily li .top a:nth-child(1) {
+        width: 100px;
+    }
+    .articleBoxFF .tabList.tabListFamily li .top a:nth-child(2) {
+        width: calc(100% - 100px);
+    }
+    .articleBoxFF .tabList.tabListFamily li a .imgholder {
+        width: 100px;
+    }
+    .articleBoxFF .tabList.tabListFamily li a .imgBox img {
+        height: 65px;
+    }
+    .articleBoxFF .tabList.tabListFamily li a .info {
+        padding: 0 7px 10px 0;
+    }
+    .articleBoxFF .tabList.tabListFamily li a .info h3 {
+        font-weight: 500;
+        font-size: 1.2em;
+    }
+    .articleBoxFF .tabList.tabListFamily li:hover a .imgBox:before,
+    .articleBoxFF .tabList.tabListFamily li:hover a .imgBox:after {
+        opacity: 0;
+    }
+    .articleBoxFF .tabList.tabListFamily .hashTag {
+        margin: 0;
+    }
+    .articleBoxFF .tabList.tabListFamily .hashTag li {
+        width: auto;
+        padding: 0 20px 0 0;
+    }
+    .articleBoxFF .dynamic-tabs-container .tabs-dropdown {
+        border: none;
+    }
+    .articleBoxFF>.adBoxA {
+        display: none;
+    }
+    .articleBoxFF .familyRightB .adBoxA {
+        display: block;
+    }
+    .indexTitleB.indexTitleBB h2 {
+        font-size: 1.5em;
+    }
+    .articleBoxFF .tabBoxUlF h2 {
+        font-size: 1.5em;
+    }
+    .articleBoxFF .viewList {
+        margin-bottom: 0;
+    }
+    .articleBoxFF .viewList li:last-child a {
+        margin-bottom: 0;
+    }
+    .family.mainmenu .new-impBtn .impBtn li a {
+        font-size: 1.35rem;
+        height: 30px;
+    }
+    .family.mainmenu .new-impBtn .impBtn.owl-carousel .owl-item img {
+        display: none;
+    }
+    .indexTitleB.indexTitleBB h2:before {
+        width: 90px;
+    }
+    .indexTitleB.indexTitleBB h2:after {
+        left: 90px;
+    }
+    .articleBoxFF .tabBoxUlF:before {
+        display: none;
+    }
+    .articleBoxFF .tabBoxUlF:after {
+        display: none;
+        ;
+    }
+    .articleBoxFF .tabBoxUlF {
+        border: none;
+    }
+    .articleBoxFF .FFtab li>a:before {
+        content: "";
+        opacity: 0;
+        width: 100%;
+        height: 3px;
+        background: #907DB8;
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        transition: all .3s ease-in-out;
+    }
+    .articleBoxFF .FFtab li.active>a:before,
+    .articleBoxFF .FFtab li>a:hover:before {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .largeBanner .item .coverText {
+        width: 320px;
+    }
+    .largeBanner .item .coverText .bannerTag .date:before {
+        top: 10px
+    }
+}

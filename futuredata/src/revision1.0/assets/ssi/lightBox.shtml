@@ -1,0 +1,246 @@
+<!-- 小版搜尋 -->
+<div class="modal  ModalSearch" id="ModalSearch">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal"><i class="icon-cancel"></i></button>
+                <form>
+                    <div class="input-group inputWidth">
+                        <input type="text" class="form-control" placeholder="全站快速搜尋">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="icon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <ul class="tagList">
+                    <li><a href="">108課綱</a></li>
+                    <li><a href="">童書</a></li>
+                    <li><a href="">過動</a></li>
+                    <li><a href="">升小一</a></li>
+                    <li><a href="">108課綱108課綱</a></li>
+                    <li><a href="">童書</a></li>
+                    <li><a href="">過動</a></li>
+                    <li><a href="">升小一</a></li>
+                    <li><a href="">108課綱</a></li>
+                    <li><a href="">童書</a></li>
+                    <li><a href="">過動</a></li>
+                    <li><a href="">升小一</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 訂閱電子報 -->
+<div class="modal ModalNews fade" id="myModalNews">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><i class="icon-cancel"></i></button>
+                <h4 class="modal-title">訂閱電子報</h4>
+            </div>
+            <div class="modal-body">
+                <div class="leftNews">
+                    <div class="infoBox">
+                        <h4>訂閱電子報</h4>
+                        <h5>NEWSLETTER</h5>
+                        <form>
+                            <div class="input-group ">
+                                <input type="text" class="form-control" placeholder="Email">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">
+                                        <i class="icon-long-arrow-pointing-to-the-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 畫面閒置 -->
+<div class="modal ModalNotbusy fade" id="myModalNotbusy">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><i class="icon-cancel"></i></button>
+                <h4 class="modal-title">本畫面已閒置超過10鐘囉! 看看其他熱門文章吧</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="hotList">
+                    <!--<li class="gkids"><a href="" title=""><span>未來親子學習平台</span>發長定一著和來，美都電立職質突種從石有的時公作。</a></li>-->
+                    <li class="top"><a href="" title=""><span>TOP 1</span>媽女政家它慢存空馬品然異確國話斯起化一清見的衣地人子</a></li>
+                    <li class="top"><a href="" title=""><span>TOP 2</span>神來質樂善的進民想西基稱他什館於來旅長神日。</a></li>
+                    <li class="top"><a href="" title=""><span>TOP 3</span>子著親人怎一口魚時下論春步根令白天女美香各日。</a></li>
+
+                    <!--<li class="family"><a href="" title=""><span>未來Family</span>新長他，中相式影列民研生要。</a></li>-->
+                </ul>
+                <div class="rightAdBox">
+                    <a href="">
+                        <img src="https://blog.ssa.gov/wp-content/uploads/2015/05/BabyNames-300x250.jpg" alt="">
+                    </a>
+                    <div class="videoItem">
+                        <div class="itemB">
+                            <a href="" title="">
+                                <div class="infoBox">
+                                    <div class="imgBox imgholder itemthumb">
+                                        <img src="https://dummyimage.com/400x225/555/fff" alt="">
+                                        <div class="videoIcon">
+                                            <i class="icon-play-button"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="modalFooter">
+                    <p>熱門商品</p>
+                    <li>
+                        <div class="productItem">
+                            <a href="" title="">
+                                <div class="imgBox imgholder itemthumb">
+                                    <img src="http://www.fmp.com.tw/content/images/thumbs/0002419.jpeg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>上導過思們些除人大近是政而</h3>
+                                    <h4>$999<span>$1099</span></h4>
+                                </div>
+                            </a>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="productItem">
+                            <a href="" title="">
+                                <div class="imgBox imgholder itemthumb">
+                                    <img src="https://bookzone.cwgv.com.tw/public/upload/books/MJ1/MJ10410/cover/thumb/MJ10410.png"
+                                        alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>病上過少議一全情上</h3>
+                                    <h4>$999<span>$1099</span></h4>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="productItem">
+                            <a href="" title="">
+                                <div class="imgBox imgholder itemthumb">
+                                    <img src="https://www.bookzone.com.tw/book/bkimages/book/P_BKS068X.gif" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>得著文動前收度以度勢要也風古作可星球</h3>
+                                    <h4>$999<span>$1099</span></h4>
+                                </div>
+                            </a>
+
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- <div class="modal-footer">
+                <div class="videoItem">
+                    <div class="itemB">
+                        <a href="" title="">
+                            <div class="infoBox">
+                                <div class="imgBox imgholder itemthumb">
+                                    <img src="https://dummyimage.com/400x225/555/fff" alt="">
+                                    <div class="videoIcon">
+                                        <i class="icon-play-button"></i>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <h3>
+                                        1【開學大作戰-作業篇】<br>神老師：作業，只要確認孩子有沒有完成就好，不要給孩子正確的答案
+                                    </h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <ul class="modalFooter">
+                    <li>
+                        <div class="productItem">
+                            <a href="" title="">
+                                <div class="imgBox imgholder itemthumb">
+                                    <img src="http://www.fmp.com.tw/content/images/thumbs/0002419.jpeg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>上導過思們些除人大近是政而</h3>
+                                    <h4>$999<span>$1099</span></h4>
+                                </div>
+                            </a>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="productItem">
+                            <a href="" title="">
+                                <div class="imgBox imgholder itemthumb">
+                                    <img src="https://bookzone.cwgv.com.tw/public/upload/books/MJ1/MJ10410/cover/thumb/MJ10410.png"
+                                        alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>病上過少議一全情上</h3>
+                                    <h4>$999<span>$1099</span></h4>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="productItem">
+                            <a href="" title="">
+                                <div class="imgBox imgholder itemthumb">
+                                    <img src="https://www.bookzone.com.tw/book/bkimages/book/P_BKS068X.gif" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>得著文動前收度以度勢要也風古作可星球</h3>
+                                    <h4>$999<span>$1099</span></h4>
+                                </div>
+                            </a>
+
+                        </div>
+                    </li>-->
+
+
+            <!--<li>
+                        <div class="fb-page" data-href="https://www.facebook.com/globalfuturefamily/"
+                            data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+                            data-show-facepile="false">
+                            <blockquote cite="https://www.facebook.com/globalfuturefamily/"
+                                class="fb-xfbml-parse-ignore"><a
+                                    href="https://www.facebook.com/globalfuturefamily/">未來Family</a></blockquote>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fb-page" data-href="https://www.facebook.com/globalkidsmonthly/"
+                            data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+                            data-show-facepile="false">
+                            <blockquote cite="https://www.facebook.com/globalkidsmonthly/"
+                                class="fb-xfbml-parse-ignore"><a
+                                    href="https://www.facebook.com/globalfuturefamily/">未來少年‧未來兒童</a></blockquote>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fb-page" data-href="https://www.facebook.com/gkids.fans/" data-small-header="false"
+                            data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+                            <blockquote cite="https://www.facebook.com/globalfuturefamily/"
+                                class="fb-xfbml-parse-ignore"><a
+                                    href="https://www.facebook.com/gkids.fans/">從小天下看大未來</a></blockquote>
+                        </div>
+                    </li>
+                </ul>
+            </div>-->
+        </div>
+    </div>
+</div>

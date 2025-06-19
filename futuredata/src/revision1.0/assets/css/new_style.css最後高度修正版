@@ -1,0 +1,1141 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.owl-dots {
+    display: block !important;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.authorList li a h4 {
+    color: #777;
+    line-height: 1.5;
+}
+
+.authorList li a h3 {
+    font-size: 1.2em;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #000;
+    margin: 17px 0 5px 0;
+}
+
+.owl-dot {
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    border-radius: 50%;
+    background: #ccc;
+    display: inline-block;
+}
+
+.owl-dot.active {
+    background: #000;
+}
+
+.footerDownBox h5 {
+    font-size: .9em;
+    color: #fabdab;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.fixedHeader .new-impBtn .impBtn li a {
+    padding: 5px 5px 5px 5px;
+    height: 50px;
+    width: 100%;
+    display: inline-table;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    flex-direction: row-reverse;
+}
+
+.new-impBtn .owl-theme .owl-nav [class*=owl-] {
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 0;
+    border: 1px solid #ddd;
+    font-size: 2rem;
+    color: #777;
+    display: flex;
+    align-items: center;
+    margin-top: -15px;
+    padding: 0;
+}
+
+.new-impBtn .impBtn li a {
+    padding: 5px 5px 5px 5px;
+    height: 50px;
+    width: 100%;
+    display: inline-table;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 991px) {
+    .footerBox .footerLeft img {
+        max-width: 160px!important;
+        padding: 90px 0 0 0px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav-scroller-btn[aria-disabled="false"] {
+        display: none;
+    }
+}
+
+.icon-back {
+    display: none;
+}
+
+.navbar-nav.nav>li>a {
+    padding: 15px 5px!important;
+}
+
+.footerDownBox h5 a {
+    font-size: .9em;
+    color: #fabdab;
+    line-height: 1.5;
+    text-decoration: underline;
+}
+
+.sortRowList .sortBlock .sortItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 20px;
+    background: #fdf3ee;
+    border: 3px solid transparent;
+    transition: all .3s ease-in-out;
+}
+
+.bigLogo img {
+    -o-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    transition: all .2s linear;
+    width: 170px;
+    height: auto;
+}
+
+.ChannelBtn li:nth-child(5) a {
+    color: #999999;
+}
+
+.fixedHeader .bigLogo img {
+    width: 170px;
+    height: auto;
+}
+
+.largeBanner .item>a>img {
+    object-fit: cover;
+    height: 420px;
+}
+
+.sortRowList .sortBlock .sortItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px 10px;
+    background: #fdf3ee;
+    transition: all .3s ease-in-out;
+}
+
+.sortRowList .sortBlock:hover .sortItem {
+    border-color: #fdf3ee;
+}
+
+.articleBoxFF .viewList li a span {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #ea5413;
+    color: #fff;
+    top: 0;
+    text-align: center;
+    font-size: 1em;
+}
+
+.family .viewTitle span {
+    color: #ea5413;
+}
+
+.indexTitleB.indexTitleBB h4 {
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 10px;
+    font-size: 1.6em;
+}
+
+.tabList li a .info h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.2em;
+    color: #000;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.indexTitleB.indexTitleBB h4:after {
+    border-color: #999999;
+    content: "";
+    height: 2.5px;
+    background: #999999;
+    position: absolute;
+    top: 100%;
+}
+
+.indexTitleB.indexTitleBB h4:before {
+    content: "";
+    width: 130px;
+    height: 3px;
+    background: #ea5413!important;
+    position: absolute;
+    top: 100%;
+}
+
+.indexTitleB.indexTitleBB h2:before {
+    content: "";
+    width: 130px;
+    height: 3px;
+    background: #ea5413!important;
+    position: absolute;
+    top: 100%;
+}
+
+.family .tabList li a .imgBox:after,
+.family .articleItem .imgBox:after,
+.family .maybeLikeItem .imgBox:after,
+.family .bigArticle .imgBox:after,
+.family .bigTopic a .imgBox:after,
+.family .topicItem a .imgBox:after {
+    border-color: #ea5413 transparent transparent transparent;
+}
+
+.indexTitleB.indexTitleBB h2:after {
+    border-color: #ea5413;
+    content: "";
+    height: 2.5px;
+    background: #ea5413;
+    position: absolute;
+    top: 100%;
+}
+
+.indexTitleB {
+    border-bottom: 3px solid #999999;
+    margin: 0;
+}
+
+.articleBoxFF .FFtab li.active>a {
+    font-weight: 600;
+    color: #ea5413;
+}
+
+.family .hashTag:after {
+    color: #ea5413;
+}
+
+.family .hashTag li a {
+    color: #ea5413;
+}
+
+.family .solid-menus .navbar .dropdown:hover>.titleMenu,
+.family .solid-menus .navbar .dropdown.open-mega>.titleMenu {
+    background-color: #ea5413;
+}
+
+.family .indexTitleB {
+    border-bottom: 3px solid #999999;
+    margin: 15px 0 0 0;
+}
+
+.articleBoxFF .rightArticleAd .videoAdItem {
+    margin-top: 30px;
+}
+
+.ChannelBtn li:nth-child(5) a::after {
+    background: #666666;
+}
+
+.play-initial {
+    background-color: #ea5413;
+}
+
+.launch-client {
+    color: #ea5413;
+}
+
+.viewList li a {
+    border-bottom: 1px solid #ddd;
+    padding: 0 0 10px 35px;
+    overflow: hidden;
+}
+
+.articleBoxFF .tabBoxUlF {
+    display: flex;
+    height: 55px;
+    border-bottom: 0;
+    justify-content: space-between;
+    /*align-items: flex-end;*/
+    background-image: url(../img/bar_orange.png);
+    background-color: #f8f8fa;
+    background-repeat: no-repeat;
+    margin: 40px 0 0px 0;
+    position: relative;
+}
+
+.footerBox .footerLeft img {
+    max-width: 250px;
+    padding: 90px 0 0 35px;
+}
+
+.indexTitle h2 {
+    font-size: 2.2em;
+    color: #000;
+    margin: 10px 0 3px 0;
+    padding: 0 85px 0 0;
+}
+
+.articleBoxFF .tabBoxUlF:before {
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.articleBoxFF .tabBoxUlF h2 {
+    font-size: 1.85em;
+    flex: 0 0 auto;
+    padding: 5px 5px 10px 10px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.articleBoxFF .tabBoxUlF h3 {
+    font-size: 2em;
+    flex: 0 0 auto;
+    padding: 5px 5px 10px 10px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.articleBoxFF .tabBoxUlF:after {
+    content: "";
+    position: absolute;
+    left: 130px;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border: 0;
+}
+
+.indexTitleB.indexTitleBB h2 {
+    margin: 40px 0 0 0;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 10px;
+    font-size: 1.6em;
+}
+
+.indexTitleB.indexTitleBB h3 {
+    display: flex;
+    border-bottom: 0;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-image: url(../img/bar_orange.png);
+    background-color: #f8f8fa;
+    background-repeat: no-repeat;
+    margin: 0;
+    position: relative;
+}
+
+.mb40 {
+    margin-bottom: 30px!important;
+}
+
+.paddingBox,
+.paddingBoxD {
+    padding: 10px 0;
+}
+
+.familyRight a h3 {
+    margin: 15px 0;
+    font-size: 1.2em;
+    color: #000;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.familyRight a p {
+    margin: 15px 0;
+    font-size: 1em;
+    color: #777;
+    line-height: 1.6;
+}
+
+.authorList .item {
+    height: 100%;
+}
+
+.authorList .item a,
+.magazineItem .item a,
+.newBook .item a {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+}
+
+.tabListBtn[title="Next"] {
+    right: 10px;
+    z-index: 999;
+}
+
+.tabListBtn[title="Previous"] {
+    left: 10px;
+    z-index: 999;
+}
+
+.authorList .item .imgBox img,
+.magazineBox .item .imgBox img {
+    height: auto;
+}
+
+.authorList .item a .info,
+.magazineItem .item a .info,
+.newBook .item a .info {
+    border-left: 8px solid #EA5413;
+    padding: 10px 0 0 15px;
+    position: relative;
+    max-height: 84px;
+    height: 100%;
+}
+
+.authorList .item a.child .info h4,
+.magazineItem .item a.child .info h4 {
+    color: #00A7DF;
+}
+
+.authorList .item a .info h3,
+.magazineItem .item a .info h3,
+.newBook .item a .info h3 {
+    font-size: 1.2em;
+    color: #000;
+    line-height: 1.4;
+    font-weight: 500;
+    text-align: left;
+}
+
+.authorList .item a .info,
+.magazineItem .item a .info,
+.newBook .item a .info {
+    border-left: 8px solid #EA5413;
+    padding: 0px 0 0 15px;
+    position: relative;
+    max-height: 84px;
+    height: 100%;
+}
+
+.child {
+    color: #00A7DF!important;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.young {
+    color: #90C31F!important;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.publishing {
+    color: #E60012!important;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.indexTitle span {
+    top: 15px;
+    padding-right: 10px;
+}
+
+.authorList {
+    padding: 15px 0px 0 0px;
+}
+
+.authorList .item a.child .info h4,
+.magazineItem .item a.child .info h4 {
+    color: #00A7DF;
+}
+
+.authorList .item a .info h4,
+.magazineItem .item a .info h4 {
+    margin: 0px 0 10px 0;
+    font-size: .9em;
+    font-weight: 500;
+    text-align: left;
+}
+
+.sortRowList {
+    left: -15px;
+    width: 100%;
+    position: relative;
+}
+
+.sortRowList .row {
+    width: 100%;
+    margin: 5px 0;
+    flex: none;
+}
+
+.articleBoxFF .FFtab .nav-tabs {
+    border: none;
+    padding: 15px 10px 20px 0;
+}
+
+.twoLogo.fixedHeader .bigLogo {
+    padding: 45px 0 0 15px;
+}
+
+
+/*線上課程*/
+
+.course_itemtitle {
+    font-size: 2.2rem;
+    margin: 15px 0;
+    line-height: 1.3;
+    font-weight: 600;
+    -webkit-line-clamp: 2;
+}
+
+.course_itemtext {
+    font-size: 1.7rem;
+    font-weight: normal;
+    line-height: 1.7;
+    color: #333333;
+}
+
+.course_item .info .top .detail {
+    padding: 20px 20px 0 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 200px;
+}
+
+.course_item .info ul.course_a li.teacher {
+    padding: 15px 20px 0 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 2.2rem;
+    font-weight: normal;
+}
+
+.course_item .info ul.course_a li.time {
+    color: #999;
+    text-indent: -17px;
+    word-break: keep-all;
+    margin-top: 5px;
+}
+
+.course_item .info ul.course_a li.time i {
+    margin: 0 5px 0 0;
+}
+
+.course_item .info .bottom ul.course_b li.price {
+    font-size: 2.2rem;
+    color: #888;
+}
+
+.twoLogo .bigLogo {
+    padding: 50px 0 0 15px;
+    height: 125px;
+}
+
+.course_item .info .bottom ul.course_b li.price span {
+    margin: 0 5px 0 0;
+    font-size: 1.5rem;
+}
+
+.course_item .info .bottom ul.course_b li.discount b {
+    font-size: 2.2rem;
+    color: #ea5413;
+}
+
+.course_item .info .bottom ul.course_b li.discount span {
+    margin: 0 5px 0 0;
+    font-size: 1.5rem;
+}
+
+.course_item .info .bottom ul.course_c li.date span {
+    margin: 0 5px 0 0;
+}
+
+.course_item .info .bottom ul.course_c {
+    background: #f6ecb3;
+    font-size: 0.95rem;
+}
+
+.course_theree .course_item .img_box img {
+    height: 280px;
+}
+
+.course_item .img_box img {
+    object-fit: cover;
+    object-position: center center;
+}
+
+.course_item .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.course_item a {
+    display: block;
+    height: 100%;
+    color: #000;
+}
+
+.course_list .course_item:nth-child(-n+12) {
+    display: block;
+}
+
+.course_theree .course_item {
+    width: calc(33.33% - 40px);
+    margin: 20px 20px;
+}
+
+.course_item {
+    width: calc(33.33% - 40px);
+    margin: 20px 20px;
+    border: 1px solid #ddd;
+}
+
+.course_item .info .bottom ul {
+    list-style: none;
+    padding: 5px 5px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+.authorList li {
+    font-size: 1.5rem;
+}
+
+.largeBanner .bannerCarousel.owl-theme .owl-nav .owl-next {
+    color: #fff;
+    right: 0px;
+}
+
+.largeBanner .bannerCarousel.owl-theme .owl-nav .owl-prev {
+    color: #fff;
+    left: 0px;
+}
+
+.twoLogo .shareBtnBox {
+    left: 200px;
+}
+
+.footerDownBox {
+    background: #EA5413;
+    padding: 25px 0 5px 0;
+    text-align: center;
+}
+
+.searchBox {
+    width: 315px;
+}
+
+.mobile_block {
+    display: none;
+}
+
+.articleBoxFF .FFtab li:last-child {
+    border: 0;
+}
+
+.articleBoxFF .FFtab li {
+    border-right: 1px solid #ccc;
+    padding: 0 15px;
+    line-height: 1;
+    text-align: center;
+}
+
+.nav-scroller {
+    width: calc(100% - 315px);
+    float: left;
+}
+
+.authorList .slick-dots li {
+    background: rgba(234, 85, 20, .5);
+}
+
+.authorList .slick-dots li.slick-active {
+    background: rgba(234, 85, 20, 1);
+}
+
+.pc_none {
+    display: none;
+}
+
+.twoLogo.fixedHeader .ChannelBtn {
+    top: -101px;
+}
+
+.ChannelBtn {
+    top: -123px!important;
+}
+
+.headerCookie {
+    display: block;
+    background-color: #FFFFE0;
+    margin-bottom: 0px;
+}
+
+@media screen and (max-width: 480px) {
+    .fixedHeader .solid-menus .navbar-toggle.navbar-toggle-left {
+        top: 30px;
+    }
+    .family.mainmenu .new-impBtn .impBtn.owl-carousel .owl-item img {
+        display: block;
+    }
+    .family.mainmenu .new-impBtn .impBtn li a {
+        font-size: 1.1rem;
+        height: 50px!important;
+        display: table!important;
+        text-align: center!important;
+    }
+    .articleBoxFF .FFtab li {
+        border-right: 1px solid #ccc;
+        padding: 5px 10px 0 10px;
+        line-height: 1;
+        display: inline-table;
+        text-align: center;
+    }
+    .articleBoxFF .FFtab li>a:before {
+        background: #ea5413;
+    }
+    .articleBoxFF .tabBoxUlF {
+        margin: 40px 0 50px 0;
+    }
+    .mobile_none {
+        display: none;
+    }
+    .mobile_block {
+        display: none;
+    }
+    .pc_none {
+        display: block;
+    }
+    .pt-50 {
+        padding-top: 0px!important;
+    }
+    .mt {
+        margin: 0 auto;
+        display: table;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .indexTitle span {
+        position: absolute;
+        right: 0;
+        top: 18px;
+        z-index: 2;
+        font-size: .9em;
+        color: #777;
+    }
+    .nav-link {
+        font-size: 1.4rem;
+    }
+    .articleBoxFF .FFtab li>a {
+        font-size: 1.4rem;
+    }
+    .pt-50 {
+        padding-top: 50px !important;
+    }
+    .course_item {
+        width: calc(33.33% - 40px);
+        margin: 20px 33px;
+        border: 1px solid #ddd;
+    }
+}
+
+.headerCookie {
+    display: block;
+    background-color: #FFFFE0;
+}
+
+@media screen and (max-width: 640px) {
+    .authorList {
+        padding: 20px 0 0 0;
+        width: calc(100% + 20px)!important;
+        margin: 0 0 0 -10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .twoLogo .navbar .bigLogo {
+        display: block;
+        text-align: center;
+        padding: 15px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .fixedHeader .navbar .bigLogo img {
+        width: 120px;
+    }
+    .twoLogo.fixedHeader .navbar .bigLogo {
+        padding: 11px 0 6px 0;
+    }
+    .navbar-nav .dropdown .menuIcon {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 17px;
+    }
+    .articleBoxFF .FFtab li>a:before {
+        content: "";
+        opacity: 0;
+        width: 100%;
+        height: 3px;
+        background: #ea5413;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: all .3s ease-in-out;
+    }
+    .swiper-wrapper {
+        width: 44%!important;
+    }
+    .articleBoxFF .tab-content {
+        margin-top: 50px;
+    }
+    .articleBoxFF .FFtab .nav-tabs {
+        border: none;
+        padding: 5px 0 0 0;
+        margin-top: 10px;
+    }
+    .articleBoxFF .tabBoxUlF h2 {
+        font-size: 1.6em;
+        flex: 0 0 auto;
+        padding: 5px 5px 10px 10px;
+        color: #ffffff;
+        font-weight: 400;
+    }
+    .articleBoxFF .tabBoxUlF h3 {
+        font-size: 1.6em;
+        flex: 0 0 auto;
+        padding: 12px 5px 10px 10px;
+        color: #ffffff;
+        font-weight: 400;
+    }
+    .articleBoxFF .tabBoxUlF {
+        display: flex;
+        height: 55px;
+        border-bottom: 0;
+        justify-content: space-between;
+        /* align-items: flex-end; */
+        background-image: url(../img/bar_orange_m.png);
+        background-color: #f8f8fa;
+        background-repeat: no-repeat;
+        margin: 40px 0 0px 0;
+        position: relative;
+    }
+    .pt-50 {
+        padding-top: 50px;
+    }
+    .footerBox .footerLeft img {
+        max-width: 150px;
+        margin: 0 auto;
+        display: block;
+        padding: 0!important;
+    }
+    .authorList .slick-list.draggable {
+        padding: 0 0px 0 0 !important;
+    }
+    .mobile_block {
+        display: block;
+    }
+    .nav-scroller {
+        width: calc(100% - 0px);
+        float: left;
+    }
+    .mobile_row {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .ChannelBtn li:nth-child(5) a {
+        color: #ffffff;
+    }
+    .twoLogo .shareBtnBox {
+        left: 0;
+    }
+    .sortRowList {
+        left: 0;
+    }
+    .sortRowList .row {
+        width: 100%;
+        margin: 0;
+        flex: none;
+    }
+    .mobile_none {
+        display: none;
+    }
+    .largeBanner .item>a>img {
+        object-fit: cover;
+        height: auto;
+    }
+}
+
+.icon {
+    font-family: 'IcoMoon' !important;
+}
+
+@media screen and (max-width: 820px) {
+    .articleBoxFF .tabBoxUlF h2 {
+        font-size: 1.5em;
+    }
+    .footerBox .footerLeft img {
+        max-width: 160px;
+        padding: 90px 0 0 0px;
+    }
+    .nav-link {
+        font-size: 1.2rem!important;
+    }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1025px) {
+    .authorList li .imgBox img {
+        height: 245px!important;
+    }
+    .twoLogo .ChannelBtn {
+        top: -168px!important;
+    }
+    .swiper-wrapper {
+        width: 20%;
+    }
+    .largeBanner .item>a>img {
+        object-fit: cover;
+        height: auto;
+    }
+    .indexTitleB.indexTitleBB h2 {
+        margin-top: 0;
+    }
+    .paddingBox,
+    .paddingBoxD {
+        padding: 40px 0!important;
+    }
+    .articleBoxFF .tabBoxUlF {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .fixedHeader .impBtn li {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .footerBox .footerLeft img {
+        max-width: 175px!important;
+        padding: 90px 0 0 15px!important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1123px) {
+    .twoLogo .ChannelBtn {
+        top: -200px !important;
+    }
+    .twoLogo.fixedHeader .ChannelBtn {
+        top: -200px!important;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .articleBoxFF .FFtab li {
+        width: auto !important;
+        padding: 0 5px !important;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .twoLogo.fixedHeader .shareBtnBox {
+        left: 200px;
+    }
+    .fixedHeader.twoLogo .shareBtnBox {
+        top: -155px;
+    }
+    .twoLogo .bigLogo {
+        height: 108px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1190px) {
+    .nav-scroller {
+        width: calc(100% - 170px);
+        float: left;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1190px) {
+    .ul.nav-scroller-content {
+        width: 100%;
+    }
+    .twoLogo .ChannelBtn {
+        top: -200px!important;
+    }
+    .articleBoxFF .FFtab {
+        max-width: calc(100% - 250px);
+        width: auto;
+    }
+}
+
+.authorList li .imgBox img {
+    height: 225px;
+}
+
+@media screen and (max-width: 480px) {
+    .articleBoxFF .FFtab {
+        max-width: calc(100% - 20px)!important;
+        width: auto;
+        font-size: 1.05rem;
+    }
+    .fixedHeader .navbar .bigLogo img {
+        width: 150px;
+    }
+    .twoLogo .bigLogo {
+        height: 75px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .navbar-nav>li {
+        float: left;
+        padding: 0 1px;
+        display: inline-table;
+    }
+    .navbar-nav>li {
+        font-size: 1.3rem;
+        float: left;
+        display: inline-table;
+    }
+    .searchBox {
+        width: 120px!important;
+        font-size: 1.3rem!important;
+    }
+    .dpn {
+        display: none;
+    }
+    .indexTitleB.indexTitleBB h2 {
+        margin-top: 0;
+    }
+    .pc_none {
+        display: block;
+    }
+    .mobile_none {
+        display: none;
+    }
+    .mb25 {
+        margin-bottom: 50px!important;
+    }
+    .ml20 {
+        padding-right: 4%;
+    }
+    .mobile_block {
+        display: block;
+    }
+    .W50 {
+        width: 50%!important;
+        float: left;
+    }
+    .ChannelBtn {
+        top: -172px !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .twoLogo .ChannelBtn {
+        top: -172px;
+    }
+}
+
+.articleBoxFF .FFtab li>a {
+    letter-spacing: 1px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    .articleBoxFF .FFtab li a {
+        font-size: .85em !important;
+        padding: 0 3px !important;
+    }
+    .articleBoxFF .FFtab {
+        max-width: calc(100% - 260px);
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .searchBox {
+        width: 180px;
+    }
+    .twoLogo .ChannelBtn {
+        top: -172px;
+    }
+    .sortRowList .sortBlock .sortItem p {
+        font-size: .8em;
+        color: #333;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .swiper-wrapper {
+        width: 100%;
+    }
+    .nav-link {
+        font-size: 1rem;
+    }
+    .articleBoxFF .FFtab {
+        max-width: calc(100% - 50px);
+        width: auto;
+    }
+    .footerBox .footerLeft img {
+        max-width: 200px;
+        padding: 90px 0 0 5px;
+    }
+    .bigLogo img {
+        -o-transition: all .2s linear;
+        -webkit-transition: all .2s linear;
+        -moz-transition: all .2s linear;
+        transition: all .2s linear;
+        width: 150px;
+        height: auto;
+    }
+    .sortRowList .sortBlock .sortItem p {
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-size: .8em!important;
+        color: #333;
+        font-weight: 400;
+    }
+    .footerBox .footerLeft img {
+        max-width: 200px;
+        padding: 90px 0 0 0px;
+    }
+}

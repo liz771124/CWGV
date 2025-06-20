@@ -563,7 +563,7 @@
   color: #888;
 }
 
-.twoLogo .bigLogo {
+.bigLogo {
   padding: 50px 0 0 15px;
   height: 125px;
 }
@@ -800,9 +800,9 @@
     text-align: center;
     padding: 15px 0 0 0;
   }
-}
-
-@media screen and (max-width: 767px) {
+  .ChannelBtn li:nth-child(5) a {
+    background: #ea5413;
+  }
   .fixedHeader .navbar .bigLogo img {
     width: 120px;
   }

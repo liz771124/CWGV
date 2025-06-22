@@ -276,10 +276,6 @@
   overflow: hidden;
 }
 
-.viewList li:not(:last-of-type) a {
-  border-bottom: 1px solid #ddd;
-}
-
 .articleBoxFF .tabBoxUlF {
   display: flex;
   height: 55px;
@@ -368,7 +364,7 @@
 }
 
 .familyRight a h3 {
-  margin: 15px 0 0px;
+  margin: 15px 0;
   font-size: 1.2em;
   color: #000;
   font-weight: 500;
@@ -376,7 +372,7 @@
 }
 
 .familyRight a p {
-  margin: 4px 0;
+  margin: 15px 0;
   font-size: 1em;
   color: #777;
   line-height: 1.6;
@@ -510,23 +506,14 @@
   margin: 15px 0;
   line-height: 1.3;
   font-weight: 600;
-  /* -webkit-line-clamp: 2; */
-  display: -webkit-box;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  min-height: 58px;
 }
 
 .course_itemtext {
   font-size: 1.7rem;
   font-weight: normal;
-  /* line-height: 1.7; */
+  line-height: 1.7;
   color: #333333;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .course_item .info .top .detail {
@@ -563,7 +550,7 @@
   color: #888;
 }
 
-.bigLogo {
+.twoLogo .bigLogo {
   padding: 50px 0 0 15px;
   height: 125px;
 }
@@ -800,9 +787,9 @@
     text-align: center;
     padding: 15px 0 0 0;
   }
-  .ChannelBtn li:nth-child(5) a {
-    background: #ea5413;
-  }
+}
+
+@media screen and (max-width: 767px) {
   .fixedHeader .navbar .bigLogo img {
     width: 120px;
   }
@@ -1149,4 +1136,54 @@
 
 .fixedHeader .new-impBtn .impBtn li a img {
   width: auto !important;
+}
+
+/** **/
+.viewList li:not(:last-of-type) a {
+  border-bottom: 1px solid #ddd !important;
+}
+@media screen and (max-width: 767px) {
+  .ChannelBtn li:nth-child(5) a {
+    background: #ff9a19;
+  }
+}
+.podcast-container {
+  padding: 2rem;
+  background-color: #f2f2f2;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  gap: 0.8rem;
+  height: 450px;
+}
+
+.podcast-img {
+  width: 180px;
+  border-radius: 20px;
+}
+
+.podcast-container h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.podcast-description {
+  color: #999999;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.podcast-button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ea5413;
+  color: #fff;
+  border: 0;
+  max-width: 150px;
+  margin-top: auto;
 }

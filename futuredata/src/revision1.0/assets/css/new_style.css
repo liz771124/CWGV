@@ -1107,8 +1107,8 @@
     font-size: 1rem;
   }
   .articleBoxFF .FFtab {
-    /* max-width: calc(100% - 50px); */
-    /* width: auto; */
+    max-width: calc(100% - 50px);
+    width: auto;
   }
   .footerBox .footerLeft img {
     max-width: 200px;

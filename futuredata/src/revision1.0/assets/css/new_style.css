@@ -1144,9 +1144,14 @@
 }
 @media screen and (max-width: 767px) {
   .ChannelBtn li:nth-child(5) a {
-    background: #ff9a19;
+    background: #ff9a19 !important;
   }
 }
+
+.rightAdItem.videoAdItem.mt {
+  display: initial;
+}
+
 .podcast-container {
   padding: 2rem;
   background-color: #f2f2f2;

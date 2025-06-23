@@ -430,7 +430,7 @@ h6 {
 }
 
 .threeLogo.fixedHeader .bigLogo {
-  padding: 35px 0 0 15px;
+  padding: 65px 0 0 15px;
 }
 
 .smLogo {
@@ -1588,7 +1588,7 @@ li.dropdown .dropdown-menu {
 }
 
 .threeLogo.fixedHeader .ChannelBtn {
-  top: -91px;
+  top: -120px;
 }
 
 .store.fixedHeader .ChannelBtn {

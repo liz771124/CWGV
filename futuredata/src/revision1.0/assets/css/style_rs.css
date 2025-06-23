@@ -123,7 +123,7 @@
     z-index: 20;
   }
   .nav-scroller {
-    width: calc(100% - 240px);
+    width: calc(100% - 200px);
     float: left;
   }
   .nav-scroller:before {

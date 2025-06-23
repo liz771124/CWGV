@@ -798,6 +798,7 @@ h6 {
 .new-impBtn .impBtn li {
   margin: 0;
   padding: 0 3px;
+  width: 100%;
 }
 
 .new-impBtn .impBtn li a {

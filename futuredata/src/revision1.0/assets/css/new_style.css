@@ -1008,7 +1008,7 @@
 
 @media screen and (max-width: 480px) {
   .articleBoxFF .FFtab {
-    max-width: calc(100% - 20px) !important;
+    max-width: 100% !important;
     width: auto;
     font-size: 1.05rem;
   }
@@ -1109,6 +1109,7 @@
   .articleBoxFF .FFtab {
     max-width: calc(100% - 50px);
     width: auto;
+    /* overflow: auto; */
   }
   .footerBox .footerLeft img {
     max-width: 200px;

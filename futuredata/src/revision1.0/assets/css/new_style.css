@@ -718,6 +718,7 @@
     line-height: 1;
     display: inline-table;
     text-align: center;
+    /* width: 100%; */
   }
   .articleBoxFF .FFtab li > a:before {
     background: #ea5413;
@@ -823,6 +824,7 @@
     border: none;
     padding: 5px 0 0 0;
     margin-top: 10px;
+    width: 100% !important;
   }
   .articleBoxFF .tabBoxUlF h2 {
     font-size: 1.6em;
@@ -1002,7 +1004,6 @@
 
 .authorList li .imgBox img {
   height: 225px;
-  object-fit: contain;
 }
 
 @media screen and (max-width: 480px) {
@@ -1106,8 +1107,8 @@
     font-size: 1rem;
   }
   .articleBoxFF .FFtab {
-    max-width: calc(100% - 50px);
-    width: auto;
+    /* max-width: calc(100% - 50px); */
+    /* width: auto; */
   }
   .footerBox .footerLeft img {
     max-width: 200px;
@@ -1172,6 +1173,7 @@
   font-size: 2rem;
   margin-bottom: 1rem;
   margin-top: 2rem;
+  color: #262626;
 }
 
 .podcast-description {
@@ -1180,6 +1182,13 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+.podcast-description-slogan {
+  color: #343434;
+  font-size: 15px;
+  margin-top: 1rem;
+  line-height: 1.8;
 }
 
 .podcast-button {
@@ -1191,4 +1200,8 @@
   border: 0;
   max-width: 150px;
   margin-top: auto;
+}
+
+.authorBook .item a img {
+  object-fit: contain;
 }

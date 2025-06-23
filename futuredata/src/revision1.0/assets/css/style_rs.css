@@ -1852,6 +1852,7 @@
   }
   .new-impBtn .impBtn li {
     padding: 0;
+    display: initial;
   }
   .new-impBtn .impBtn li a,
   .fixedHeader .new-impBtn .impBtn li a {

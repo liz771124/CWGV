@@ -1035,3 +1035,21 @@ footer {
 .fixedHeader .footerBox .bigLogo img {
   width: 100%;
 }
+
+.line-login-btn {
+  background-color: #07b53b;
+  color: #fff;
+  width: 280px;
+  height: 40px;
+  cursor: pointer;
+  margin: 8px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.line-login-btn svg {
+  width: 20px;
+}

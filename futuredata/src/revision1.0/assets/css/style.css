@@ -998,7 +998,7 @@ h6 {
 /*nav表頭*/
 
 .navbar-nav.nav > .swiper-slide > a {
-  padding: 15px 20px;
+  /* padding: 15px 20px; */
 }
 
 .publishing .navbar-nav > li.swiper-slide:nth-child(3) {

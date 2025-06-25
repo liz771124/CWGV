@@ -1145,14 +1145,12 @@
   border-bottom: 1px solid #ddd !important;
 }
 
-.videoBox .videoLeft,
-.familyLeft {
-  overflow: hidden;
-}
-
 @media screen and (max-width: 767px) {
   .ChannelBtn li:nth-child(5) a {
     background: #ff9a19 !important;
+  }
+  .familyLeft {
+    overflow: hidden;
   }
 }
 

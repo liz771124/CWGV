@@ -131,7 +131,6 @@
 .loginbox .btnorange {
   width: 100%;
   /* margin: 10px 0; */
-  border-radius: 0;
   padding: 10px 12px;
   font-size: 15px;
 }
@@ -803,8 +802,8 @@ select.select-arrow::-ms-expand {
   text-decoration: none;
   border: 0px solid #dddddd;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
 }
 
 .social-login_link img {
@@ -1040,17 +1039,31 @@ footer {
 .line-login-btn {
   background-color: #07b53b;
   color: #fff;
-  width: 280px;
+  width: 266px;
   height: 40px;
   cursor: pointer;
-  margin: 8px;
-  border-radius: 10px;
+
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 0 10px;
+}
+
+.in-login {
+  margin: 18px 8px 8px;
+}
+
+.in-forget {
+  margin: -8px 0px 8px 10px;
 }
 
 .line-login-btn svg {
-  width: 20px;
+  width: 25px;
+}
+
+.line-login-btn span {
+  flex-grow: 1;
+  padding: 5px;
+  margin-left: 43px;
 }

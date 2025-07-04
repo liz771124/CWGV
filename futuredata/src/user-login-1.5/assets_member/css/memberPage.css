@@ -861,6 +861,12 @@ footer {
   text-align: center;
 }
 
+.footerDownBox .container {
+  width: auto;
+  max-width: 940px;
+  padding: 0 10px;
+}
+
 .footerDownBox h2 a {
   color: #fafafa;
   margin: 0 0 10px 0;

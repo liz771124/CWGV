@@ -1056,7 +1056,8 @@ footer {
   padding: 0 10px;
 }
 
-.in-login {
+.in-login,
+.in-register {
   margin: 18px 8px 8px;
 }
 

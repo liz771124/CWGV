@@ -188,7 +188,7 @@
         <div class="login-content-container">
           <div class="email-way-wrapper">
             <div class="inner">
-              <h5 class="select-way-wrapper">
+              <h5 class="select-way-wrapper" style="display: none">
                 <div class="select-way active" rel="Email">
                   遠見‧天下文化事業群帳號
                 </div>
@@ -200,6 +200,7 @@
                 method="post"
                 action=""
                 novalidate="novalidate"
+                style="display: none"
               >
                 <input type="hidden" name="login_type" value="Email" />
                 <input type="hidden" name="rdurl" id="rdurl" value="" />
@@ -240,7 +241,7 @@
                   <img
                     id="siimage"
                     style="border: 1px solid #000; margin-right: 15px"
-                    src="https://member.cwgv.com.tw/login/securimage_jpg?1750269734049"
+                    src="https://member.cwgv.com.tw/login/securimage_jpg?1751825407336"
                     alt="CAPTCHA Image"
                     align="left"
                   />
@@ -325,6 +326,7 @@
                 method="post"
                 action=""
                 novalidate="novalidate"
+                style="display: block"
               >
                 <h5>忘記密碼</h5>
                 <p>
@@ -408,7 +410,7 @@
               </p>
               <div class="button-wrapper">
                 <a
-                  href="https://www.facebook.com/dialog/oauth?client_id=827432718910059&amp;scope=email,public_profile&amp;auth_type=rerequest&amp;redirect_uri=https://member.cwgv.com.tw/login/fblogin&amp;state=40062b529ec9109eae8ba588dfe45e20"
+                  href="https://www.facebook.com/dialog/oauth?client_id=827432718910059&amp;scope=email,public_profile&amp;auth_type=rerequest&amp;redirect_uri=https://member.cwgv.com.tw/login/fblogin&amp;state=95625e96ee90e5bffb09a5df58ebd6ea"
                   class="facebook-login-btn login-button"
                 >
                 </a>
@@ -420,8 +422,9 @@
                 </div>
 
                 <a
-                  href="https://access.line.me/oauth2/v2.1/authorize?response_type=code&amp;client_id=1633042404&amp;redirect_uri=https://member.cwgv.com.tw/login/line&amp;state=5797780&amp;scope=openid%20email%20profile"
+                  href="https://access.line.me/oauth2/v2.1/authorize?response_type=code&amp;client_id=1633042404&amp;redirect_uri=https://member.cwgv.com.tw/login/line&amp;state=5865599&amp;scope=openid%20email%20profile"
                 ></a>
+
                 <div id="line-login-btn" class="line-login-btn in-forget">
                   <svg
                     fill="currentColor"
@@ -441,6 +444,9 @@
                   </svg>
                   <span>使用 Line 帳號登入</span>
                 </div>
+                <!--
+					   <div id="yahoo-login-btn" class="yahoo-login-btn login-button"></div>					
+					   -->
               </div>
               <p>
                 使用其他平台登入即代表您同意<br /><a

@@ -160,12 +160,12 @@
             <div class="bordered form-container">
                 <div class="row">
                     <div class="col-12 col-md-12 mb-10 form-group01">
-                        <label class="hide">姓名</label>
+                        <label class="label-text">姓名</label>
                         <input id="name" type="text" class="form-control" placeholder="姓名" value="Ping" name="name"/>
                                             </div>
 
                     <div class="col-12 col-md-12 mb-20 form-group02">
-                        <label class="label-text">E-mail帳號</label>
+                        <label class="label-text">E-mail</label>
                         <input id="email" type="email" class="form-control" value="123@gmail.com" placeholder="E-mail" disabled>
                     </div>
                     <div class="col-12 col-md-12 mb-10 form-group01">
@@ -266,12 +266,12 @@
                     </div>
 
                     <div class="col-12 col-md-6 mb-20 form-group01">
-                    <label class="label-text label-s">手機<span class="orange">(必填)</span></label>
+                    <label class="label-text label-s">手機</label>
                     <input id="phone" type="tel" class="form-control" name='phone' maxlength="11" pattern="[0-9]+" placeholder="請輸入手機 0912345678" value="0987654321" required>
                     </div>
                     <div class="col-12 col-md-6 mb-20">
                         <label class="label-text label-s"><span class="orange">&nbsp</span></label>
-                        <label class="hide">性別</label>
+                        <label class="label-text label-s">性別</label>
                         <div class="group-rc-input">
                             <div class="form-check">
                                 <label class="custom-check">男
@@ -322,7 +322,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6 mb-10 form-group01">
-                        <label class="label-text label-s">小孩數<span class="orange">(必填)</span></label>
+                        <label class="label-text label-s">小孩數</label>
                         <select class="form-control mt-0 select-arrow" id="child_count" title="小孩數" name="child_count" required>
                                                                     <option value="">請選擇</option>
                                     <option value="0" name="n">0</option>
@@ -362,7 +362,7 @@
                                 for (var i = 0; i < child_count; i++) {
                         child_Html = child_Html + childmonth(i);
                     }
-                child_Html = child_Html + "<p class=\"orange\">※小朋友生日當月將發放200元禮券。由於生日將影響會員權益，填寫完畢後無法修正，敬請見諒！※小朋友生日如發現非屬實,未來親子將保留取消禮券發送之權利。</p>";
+                child_Html = child_Html + "<p class=\"orange\">※小朋友生日當月將發放200元禮券。由於生日將影響會員權益，填寫完畢後無法修正，敬請見諒！<br/><br/>※小朋友生日如發現非屬實,未來親子將保留取消禮券發送之權利。</p>";
                 $("#childs-boxs").html(child_Html);
             });
             } else {
@@ -372,7 +372,7 @@
                     for (var i = 0; i < child_count; i++) {
                         child_Html = child_Html + childmonth(i);
                     }
-                    child_Html = child_Html + "<p class=\"orange\">※小朋友生日當月將發放200元禮券。由於生日將影響會員權益，填寫完畢後無法修正，敬請見諒！※小朋友生日如發現非屬實,未來親子將保留取消禮券發送之權利。</p>";
+                    child_Html = child_Html + "<p class=\"orange\">※小朋友生日當月將發放200元禮券。由於生日將影響會員權益，填寫完畢後無法修正，敬請見諒！<br/><br/>※小朋友生日如發現非屬實,未來親子將保留取消禮券發送之權利。</p>";
                     $(".child-box").html(child_Html);
                 });
             }

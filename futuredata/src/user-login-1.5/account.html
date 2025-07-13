@@ -96,11 +96,7 @@
     ></script>
 
     <!-- My Style -->
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://member.cwgv.com.tw/public/css/style.css"
-    />
+    <link type="text/css" rel="stylesheet" href="./public/css/style.css" />
 
     <script>
       fromModal = "";
@@ -140,7 +136,7 @@
     </script>
   </head>
 
-  <body rel="newsletter">
+  <body class="account-page" rel="account">
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -228,6 +224,14 @@
         </div>
       </div>
     </div>
+    <script
+      type="text/javascript"
+      src="https://member.cwgv.com.tw/public/js/yahoo-dom-event.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://member.cwgv.com.tw/public/js/popupmanager.js"
+    ></script>
     <div class="main-content">
       <div class="center-content member-content-wrapper">
         <div class="member-sidebar">
@@ -289,9 +293,9 @@
         </div>
         <div class="member-content">
           <div class="page-title">
-            <div class="location">電子報訂閱 / 取消</div>
+            <div class="location">帳號連結管理</div>
             <div class="sub-info">
-              請勾選訂閱的電子報；取消時，請清除方框內的勾選
+              您可以連結或解除 LINE、Google、Facebook 帳號。
             </div>
             <div class="member-head-right">
               <a href="https://shop.cwgv.com.tw/store" class="orange"
@@ -304,175 +308,263 @@
               >
             </div>
           </div>
+
           <div class="memebr-content-wrapper">
-            <form
-              class="flat-wrap"
-              id="newsletter-form"
-              method="post"
-              action=""
-            >
-              <input type="hidden" value="Y" name="send" />
-              <table class="cwgv-table rwd table">
-                <thead>
-                  <tr>
-                    <th width="30">訂閱</th>
-                    <th>名稱</th>
-                    <th width="80">發送時間</th>
-                    <th width="80">訂戶限定</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="select-all-row">
-                    <td>
-                      <input
-                        name="edm"
-                        type="checkbox"
-                        value="yes"
-                        class="checkall"
-                      />
-                    </td>
-                    <td>全選 / 全部取消</td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <input
-                        type="checkbox"
-                        name="newsletter[]"
-                        class="each-check"
-                        value="family-weekly"
-                      />
-                    </td>
-                    <td>
-                      <div class="epaper-title">未來Family週刊</div>
-                      主題式週報，提供親子教育新知，以及具體有效的教養方法，陪伴父母解決日常生活中碰到的育兒困境。
-                    </td>
-                    <td>每週三發報</td>
-                    <td></td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <input
-                        type="checkbox"
-                        name="newsletter[]"
-                        class="each-check"
-                        value="family-podcast"
-                      />
-                    </td>
-                    <td>
-                      <div class="epaper-title">未來Family Podcast</div>
-                      教育教養，家庭生活，未來Family，總是陪著你。每週四固定更新，邀請各領域專家，幫助父母卸下教養過程的迷思與煩憂。
-                    </td>
-                    <td>每週日發報</td>
-                    <td></td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <input
-                        type="checkbox"
-                        name="newsletter[]"
-                        class="each-check"
-                        value="family-book"
-                      />
-                    </td>
-                    <td>
-                      <div class="epaper-title">小天下．未來出版書</div>
-                      李黨總編輯每月為您精選適齡好書，回應每個成長的提問，陪伴孩子在閱讀中成長。
-                    </td>
-                    <td>每月發報</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input
-                        type="checkbox"
-                        name="newsletter[]"
-                        class="each-check"
-                        value="youth-newsletter"
-                      />
-                    </td>
-                    <td>
-                      <div class="epaper-title">未來少年訂戶電子報</div>
-                      每月準時送達《未來少年》最新內容！掌握新知趨勢，訓練素養思辨，拓展國際視野！一同探索數位知識庫，精彩知識不漏接。
-                    </td>
-                    <td>每月發報</td>
-                    <td>訂戶限定</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input
-                        type="checkbox"
-                        name="newsletter[]"
-                        class="each-check"
-                        value="junior-newsletter"
-                      />
-                    </td>
-                    <td>
-                      <div class="epaper-title">未來兒童訂戶電子報</div>
-                      每月準時送達《未來兒童》最新內容！精選重要主題，培養語感和素養的秘密基地，一同探索數位知識庫，精彩知識不漏接。
-                    </td>
-                    <td>每月發報</td>
-                    <td>訂戶限定</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <table class="cwgv-table rwd table">
-                <tr>
-                  <td></td>
-                  <td class="strong">優惠/活動訊息</td>
-                  <td>
-                    <label class="checkbox">
-                      <input type="checkbox" value="Y" name="wantedm" />
-                      不定期透過 Email 發送，通知最新活動及優惠資訊
-                    </label>
-                    <div>
-                      註1：新增或取消訂閱，將在變更後3個工作天內生效。<br />
-                      註2：不包含訂閱電子報的設定。
-                    </div>
-                  </td>
-                </tr>
-              </table>
-              <hr />
-              <div class="action-btn-wrap">
-                <button type="submit" class="fillorange bigger">
-                  確定修改電子報
-                </button>
+            <h4>LINE 帳號設定</h4>
+            <p>
+              帳號狀態：
+              <span class="Dorange"> 尚未連結 </span>
+            </p>
+            <div class="account-setting-wrap line-style">
+              <div
+                id="line-bind-btn"
+                class="connect-btn"
+                rel="google"
+                onclick="linelogin();"
+              >
+                <i class="fa fa-link"></i> 連結我的 LINE 帳號
               </div>
-            </form>
+            </div>
+            <hr />
+            <h4>Google 帳號設定</h4>
+            <p>
+              帳號狀態：
+              <span class="Dorange"> 尚未連結 </span>
+            </p>
+            <div class="account-setting-wrap google-style">
+              <div
+                id="google-bind-btn"
+                class="connect-btn"
+                rel="line"
+                onclick="linelogin();"
+              >
+                <i class="fa fa-link"></i> 連結我的 LINE 帳號
+              </div>
+            </div>
+            <hr />
+            <h4>Facebook 帳號設定</h4>
+            <p>
+              帳號狀態：
+              <span class="Dorange"> 尚未連結 </span>
+            </p>
+            <div class="account-setting-wrap facebook-style">
+              <div id="fb-bind-btn" class="connect-btn" rel="facebook">
+                <i class="fa fa-link"></i> 連結我的 Faceook 帳號
+              </div>
+            </div>
+
+            <!--
+				<h4>Yahoo 帳號設定</h4>
+				<p>帳號狀態：
+					<span class="Dorange">
+						尚未連結					</span>
+				</p>
+				<div class="account-setting-wrap yahoo-style">
+					<div id="yahoo-bind-btn" class="connect-btn" rel="yahoo"><i class="fa fa-link"></i> 連結我的 Yahoo 帳號</div>				</div>
+				-->
           </div>
         </div>
       </div>
     </div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js"
+    ></script>
     <script>
-      $(".checkall").on("change", function () {
-        var checked = $(this).is(":checked");
-        if (checked) {
-          $(".each-check").each(function () {
-            var checkedEach = $(this).is(":checked");
-            if (checkedEach) {
-            } else {
-              $(this).prop("checked", !checkedEach);
-            }
-          });
-        } else {
-          $(".each-check").each(function () {
-            var checkedEach = $(this).is(":checked");
-            if (checkedEach) {
-              $(this).prop("checked", !checkedEach);
+      //FB
+      function loginFB() {
+        FB.login(
+          function (response) {
+            if (response.status === "connected") {
+              getFBdata();
+            } else if (response.status === "not_authorized") {
             } else {
             }
-          });
-        }
-      });
+          },
+          { scope: "public_profile,email,user_birthday" },
+        );
+      }
 
-      if ("" == "30_2017_money") {
-        //由活動來的直接確認
-        $("#newsletter-form").submit();
+      window.fbAsyncInit = function () {
+        FB.init({
+          appId: "827432718910059",
+          cookie: true, // enable cookies to allow the server to access
+          // the session
+          channelUrl: "//member.cwgv.com.tw/index.html",
+          status: true,
+          xfbml: true, // parse social plugins on this page
+          version: "v3.0", // use version 2.1
+        });
+      };
+      // Load the SDK asynchronously
+      //(function(d, s, id) {
+      //	var js, fjs = d.getElementsByTagName(s)[0];
+      //	if (d.getElementById(id)) return;
+      //	js = d.createElement(s); js.id = id;
+      //	js.src = "//connect.facebook.net/zh_TW/sdk.js";
+      //	fjs.parentNode.insertBefore(js, fjs);
+      //}(document, 'script', 'facebook-jssdk'));
+
+      $("#fb-bind-btn").on("click", function () {
+        //loginFB();
+        social_link("fb");
+      });
+      function googlelogin() {
+        social_link("google");
+      }
+      function linelogin() {
+        social_link("line");
+      }
+
+      function social_link(link) {
+        if (link == "fb") {
+          var social_link0 =
+            "https://www.facebook.com/v3.0/dialog/oauth?client_id=827432718910059&scope=email&redirect_uri=https://member.cwgv.com.tw/account/fblogin";
+        } else if (link == "google") {
+          var social_link0 = "https://member.cwgv.com.tw/account/googlelogin";
+        } else if (link == "line") {
+          var social_link0 = "";
+        }
+
+        var popup = window.open(social_link0, "popup", "fullscreen");
+        //if (popup.outerWidth < screen.availWidth || popup.outerHeight < screen.availHeight)
+        //{
+        sleep(1000);
+        popup.moveTo(0, 0);
+        popup.resizeTo(screen.availWidth, screen.availHeight);
+        //}
+      }
+
+      function getFBdata() {
+        FB.api("/me", function (response) {
+          if (response != null) {
+            $.ajax({
+              url: base_url + "account/bindup",
+              type: "POST",
+              cache: false,
+              dataType: "json",
+              data: {
+                type: "facebook",
+                fb_id: response.id,
+              },
+              success: function (data_a) {
+                if (data_a.status) {
+                  alert("設定成功");
+                  location.href = "account";
+                } else {
+                  errAlert(data_a.errcode);
+                }
+              },
+            });
+          }
+        });
+      }
+
+      //google
+      //google
+      var gImmediate = true; // 因為G+會自動trigger登入, 所以設定一個點擊狀態
+
+      (function () {
+        // 停止google登入
+        var po = document.createElement("script");
+        po.type = "text/javascript";
+        po.async = true;
+        po.src =
+          "https://apis.google.com/js/client:plusone.js?onload=renderGoogleLogin";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(po, s);
+      })();
+      //function renderGoogleLogin() {
+      //	gapi.signin.render('google-bind-btn', {
+      //		'callback': 'afterGoogleBind',
+      //		'clientid': '194325807151-rr2bpov2rb6hn054h1f0a2a9dmdko2dv.apps.googleusercontent.com',
+      //		'clientidsecret': 'mzMz-EaUrjKKSVHeEZ9qw2Nr',
+      //		'cookiepolicy': 'https://member.cwgv.com.tw',
+      //		'scope': 'https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile'
+      //	});
+      //}
+
+      function afterGoogleBind(authResult) {
+        if (gImmediate) {
+          gImmediate = false;
+          return;
+        }
+
+        if (authResult["access_token"]) {
+          $.ajax({
+            url:
+              "https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=" +
+              authResult["access_token"],
+            type: "GET",
+            cache: false,
+            success: function (data) {
+              $.ajax({
+                url: base_url + "account/bindup",
+                type: "POST",
+                cache: false,
+                dataType: "json",
+                data: {
+                  type: "google+",
+                  google_id: data.id,
+                },
+                success: function (data_a) {
+                  if (data_a.status) {
+                    alert("設定成功");
+                    location.href = "account";
+                  } else {
+                    errAlert(data_a.errcode);
+                  }
+                },
+              });
+            },
+          });
+        } else if (authResult["error"]) {
+        }
+      }
+
+      //yahoo
+      $("#yahoo-bind-btn").click(function () {
+        $.ajax({
+          url: "https://member.cwgv.com.tw/common/yahoo?action=geturl",
+          type: "get",
+          dataType: "json",
+          success: function (result) {
+            PopupManager.open(result.auth_url, 600, 435);
+          },
+        });
+      });
+      function afterConfirm() {
+        $.ajax({
+          url: "https://member.cwgv.com.tw/common/yahoo?action=getDATA",
+          type: "get",
+          dataType: "json",
+          success: function (data) {
+            if (data.status) {
+              $.ajax({
+                url: base_url + "account/bindup",
+                type: "POST",
+                cache: false,
+                dataType: "json",
+                data: {
+                  type: "yahoo",
+                  yahoo_id: data.guid,
+                },
+                success: function (data_a) {
+                  if (data_a.status) {
+                    alert("設定成功");
+                    location.href = "account";
+                  } else {
+                    errAlert(data_a.errcode);
+                  }
+                },
+              });
+            } else {
+              //console.log(data_a);
+            }
+          },
+        });
       }
     </script>
     <footer>

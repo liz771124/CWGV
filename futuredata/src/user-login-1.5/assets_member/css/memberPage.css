@@ -611,8 +611,7 @@ select.select-arrow {
 }
 .label-s {
   font-weight: 400;
-  font-size: 12px;
-  color: #ccc;
+  color: #333;
 }
 .child-box {
   padding-top: 22px;

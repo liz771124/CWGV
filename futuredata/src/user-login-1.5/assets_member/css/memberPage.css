@@ -1041,34 +1041,67 @@ footer {
   width: 100%;
 }
 
-.line-login-btn {
-  background-color: #07b53b;
+.login-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-btn {
   color: #fff;
-  width: 266px;
+  width: 260px;
   height: 40px;
   cursor: pointer;
-
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
+  transition: 0.3s background-color;
 }
 
-.in-login,
-.in-register {
-  margin: 18px 8px 8px;
+.login-btn svg {
+  width: 25px;
 }
 
-.in-forget {
-  margin: -8px 0px 8px 10px;
+.login-btn span {
+  flex-grow: 1;
+  padding: 5px;
+  margin-left: 43px;
+}
+
+.line-login-btn {
+  background-color: #07b53b;
+}
+
+.facebook-login-btn {
+  background-color: #0866ff;
+}
+
+.google-login-btn {
+  background-color: #ea4335;
+}
+
+.line-login-btn:hover {
+  color: #fff;
+  background-color: #00912c;
+}
+
+.facebook-login-btn:hover {
+  color: #fff;
+  background-color: #003d9f;
+}
+
+.google-login-btn:hover {
+  color: #fff;
+  background-color: #d51200;
 }
 
 .line-login-btn svg {
   width: 25px;
 }
 
-.line-login-btn span {
+.facebook-login-btn span {
   flex-grow: 1;
   padding: 5px;
   margin-left: 43px;

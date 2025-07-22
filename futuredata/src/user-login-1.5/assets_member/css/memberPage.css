@@ -1106,3 +1106,11 @@ footer {
   padding: 5px;
   margin-left: 43px;
 }
+
+.login-checkbox {
+  position: relative;
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}

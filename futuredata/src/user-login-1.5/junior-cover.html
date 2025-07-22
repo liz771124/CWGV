@@ -60,6 +60,7 @@
     <link rel="stylesheet" href="https://futureparenting.cwgv.com.tw/public/assets/css/style_rs.css">
     <!-- 若有新增修改樣式請寫在new.css -->
     <link rel="stylesheet" href="https://futureparenting.cwgv.com.tw/public/assets/css/new.css" />
+    <link rel="stylesheet" href="./public/assets/css/new-style.css" />
         <style>
         @media print {
           a[href]:after {
@@ -81,45 +82,6 @@
         }
     </style>
 
-    <style>
-      #loginModal .modal-dialog {
-        width: 470px;
-      }
-      #loginModal .modal-body {
-        font-size: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-        align-items: center;
-        color: #4e4e4e;
-      }
-      #loginModal .modal-body h3{
-        font-size: 2rem;
-        font-weight: bold;
-        color: #333333;
-      }
-      #loginModal .modal-title {
-        color: #333333;
-        font-size: 1.8rem;
-        font-weight: bold;
-      }
-      #loginModal .modal-footer {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-      }
-      #loginModal .modal-footer .btn {
-        flex-grow: 1;
-        font-weight: bold;
-      }
-      #loginModal .modal-footer .btn-primary {
-        background: #00A7DF;
-        border-color: #008cba;
-      }
-      #loginModal .modal-footer .btn-default {
-        border-color: #c3c3c3;
-      }
-    </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://futureparenting.cwgv.com.tw/public/assets/js/html5shiv.min.js"></script>
@@ -1127,7 +1089,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
+    <div class="modal fade loginModalJunior" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
       <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -5040,7 +5002,6 @@ function CookieCheck() {
 
         const openLoginModal = ()=> {
           $("#loginModal").modal("show");
-          // https://futureparenting.cwgv.com.tw/junior/cover/recordIma01/MJ11407/QA/2507/junior
         }
 
     </script>

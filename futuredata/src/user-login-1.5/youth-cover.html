@@ -60,6 +60,7 @@
     <link rel="stylesheet" href="https://futureparenting.cwgv.com.tw/public/assets/css/style_rs.css">
     <!-- 若有新增修改樣式請寫在new.css -->
     <link rel="stylesheet" href="https://futureparenting.cwgv.com.tw/public/assets/css/new.css" />
+    <link rel="stylesheet" href="./public/assets/css/new-style.css" />
         <style>
         @media print {
           a[href]:after {
@@ -1083,6 +1084,26 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade loginModalYouth" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">請先登入會員</h4>
+          </div>
+          <div class="modal-body">
+            <h3>即可免費收聽最新期數雜誌音檔！</h3>
+            <div>還沒有會員嗎？</div>
+          </div>
+          <div class="modal-footer">
+            <a href="https://member.cwgv.com.tw/register" class="btn btn-default" data-dismiss="modal">立即註冊</a>
+            <a href="https://futureparenting.cwgv.com.tw/member/login" class="btn btn-primary">登入會員</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
 </section>
 <script>
 
@@ -1171,7 +1192,7 @@ function CookieCheck() {
                                                     class="icon-right-arrow"></i></span></a>
                                     </div>
                                     <ul class="subList">
-                                                                            <li><a href="https://futureparenting.cwgv.com.tw/junior/cover/recordIma01/MY11407/QA/2507/youth" target="_blank" title="">學習單<i class="icon-downloadBB"></i></a></li>
+                                                                            <li><a onclick="openLoginModal()" href="javascript:void(0)">學習單<i class="icon-downloadBB"></i></a></li>
                                         
                                         <!-- 舊版?php if(!empty($val_2['fileA'])){?>
                                             <li><a href="https://futureparenting.cwgv.com.tw/junior/cover/recordIma01/MY11407/A/2507/youth" title="" target="_blank">學習解答<i class="icon-blank-file"></i></a></li>
@@ -5133,6 +5154,10 @@ function CookieCheck() {
     document.cookie = 'CookieOK=OK'+';expires='+expires.toGMTString()+"; domain=futureparenting.cwgv.com.tw; path=/";
 
     document.getElementById("cookieOK").style.display = "none";
+}
+
+const openLoginModal = ()=> {
+    $("#loginModal").modal("show");
 }
 </script>
 

@@ -1,0 +1,44 @@
+#loginModal .modal-dialog {
+  width: 470px;
+}
+#loginModal .modal-body {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+  color: #4e4e4e;
+}
+#loginModal .modal-body h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333333;
+}
+#loginModal .modal-title {
+  color: #333333;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+#loginModal .modal-footer {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+#loginModal .modal-footer .btn {
+  flex-grow: 1;
+  font-weight: bold;
+}
+#loginModal.loginModalJunior .modal-footer .btn-primary {
+  background: #00a7df;
+  border-color: #008cba;
+}
+#loginModal.loginModalJunior .modal-footer .btn-default {
+  border-color: #c3c3c3;
+}
+#loginModal.loginModalYouth .modal-footer .btn-primary {
+  background: #90c31f;
+  border-color: #83b31b;
+}
+#loginModal.loginModalYouth .modal-footer .btn-default {
+  border-color: #c3c3c3;
+}

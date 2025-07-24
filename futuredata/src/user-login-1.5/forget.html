@@ -175,7 +175,7 @@
 
     <div class="main-content">
       <div class="center-content login-content-wrapper">
-        <h3 class="f-left login-title">登入您的 未來親子 帳號</h3>
+        <h3 class="f-left login-title">重設您的 未來親子 帳號</h3>
         <p class="f-right goto-register">
           還沒有帳號？
           <a
@@ -188,157 +188,29 @@
         <div class="login-content-container">
           <div class="email-way-wrapper">
             <div class="inner">
-              <h5 class="select-way-wrapper">
-                <div class="select-way active" rel="Email">
-                  遠見‧天下文化事業群帳號
-                </div>
-                <!--<div class="select-way" id="club-select1" rel="Card1"><a href="https://rs.cwgv.com.tw/Login/index" target=_blank>讀書俱樂部會員</a></div>-->
-              </h5>
               <form
-                class="flat-wrap login-content-area"
-                id="login-form"
+                class="flat-wrap forgot-content-area"
+                id="forgot-form"
                 method="post"
                 action=""
                 novalidate="novalidate"
               >
-                <input type="hidden" name="login_type" value="Email" />
-                <input type="hidden" name="rdurl" id="rdurl" value="" />
-
-                <div class="control-group">
-                  <label class="control-label" for="inputAccount"
-                    >請輸入帳號<span id="account-descript"
-                      >（電子郵件）</span
-                    ></label
-                  >
-                  <div class="controls">
-                    <input
-                      type="text"
-                      name="member_account"
-                      id="inputAccount"
-                      class="onlyemail required"
-                      placeholder="請輸入帳號"
-                      value=""
-                    />
-                  </div>
-                </div>
-                <div class="control-group">
-                  <label class="control-label" for="inputPassword"
-                    >請輸入密碼<span id="pwd-descript"></span
-                  ></label>
-                  <div class="controls">
-                    <input
-                      type="password"
-                      name="member_pwd"
-                      id="inputPassword"
-                      class="required"
-                      value=""
-                      placeholder="請輸入密碼"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <img
-                    id="siimage"
-                    style="border: 1px solid #000; margin-right: 15px"
-                    src="https://member.cwgv.com.tw/login/securimage_jpg?1750269556638"
-                    alt="CAPTCHA Image"
-                    align="left"
-                  />
-                  <div>
-                    <a
-                      tabindex="-1"
-                      style="border-style: none"
-                      href="#"
-                      title="更新驗證碼"
-                      class="blue getsecurimage"
-                      >更新驗證碼</a
-                    ><br />
-                    <input
-                      type="text"
-                      name="ct_captcha"
-                      style="width: 90px"
-                      id="ct_captcha"
-                      placeholder="請輸入驗證碼"
-                      size="12"
-                      autocomplete="off"
-                      class="required"
-                      maxlength="4"
-                      onkeyup="this.value=this.value.toUpperCase();"
-                    /><br />
-                  </div>
-                </div>
-
-                <button type="submit" class="fillorange f-left">登入</button>
-                <div class="forgot forgot-pwd-btn Dorange f-left cwgv">
-                  <a class="orange" href="forget.html">忘記密碼？</a>
-                </div>
-                <div
-                  class="forgot forgot-pwd-btn Dorange f-left club"
-                  style="display: none"
-                >
-                  <a
-                    class="orange"
-                    href="http://www.bookzone.com.tw/member/RSmember/pwd.asp"
-                    target="_blank"
-                    >忘記密碼？</a
-                  >
-                </div>
-                <div class="clear-both"></div>
-                <br />
-                <div class="black cwgv">
-                  還沒有帳號？
-                  <a
-                    href="https://member.cwgv.com.tw/register"
-                    target="_parent"
-                    class="orange"
-                  >
-                    前往註冊</a
-                  >
-                </div>
-                <div class="black cwgv" style="margin-top: 5px">
-                  沒有收到驗證信？
-                  <a href="verify.html" class="orange"> 重新寄送驗證信</a>
-                </div>
-                <div class="black cwgv" style="margin-top: 5px">
-                  <a
-                    href="searchid"
-                    class="orange"
-                    title="訂戶編號 / 訂閱到期日查詢"
-                  >
-                    訂戶編號 / 訂閱到期日查詢</a
-                  >
-                </div>
-                <div class="black club" style="display: none">
-                  還不是會員？
-                  <a
-                    href="http://www.bookzone.com.tw/member/RSmember/index.asp?Ix=E2"
-                    target="_blank"
-                    class="orange"
-                  >
-                    前往 加入讀書俱樂部會員</a
-                  >
-                </div>
-              </form>
-              <form
-                class="flat-wrap resend-content-area hide"
-                id="resend-form"
-                method="post"
-                action=""
-                novalidate="novalidate"
-              >
-                <h5>重新寄送驗證信</h5>
+                <h5>忘記密碼</h5>
                 <p>
-                  我們將發送信箱驗證信至您的電子信箱，點擊信中網址即可完成加入會員。
+                  我們將發送密碼重設信至您的電子信箱，點擊信中網址即可重設密碼。
                 </p>
+                <div class="red">
+                  提醒您，請於60分鐘內重設密碼，超過60分鐘請再次申請重設密碼信。
+                </div>
                 <div class="control-group">
-                  <label class="control-label" for="resendAccount"
+                  <label class="control-label" for="forgotAccount"
                     >請輸入帳號（電子郵件）</label
                   >
                   <div class="controls">
                     <input
                       type="email"
                       name="member_account"
-                      id="resendAccount"
+                      id="forgotAccount"
                       class="required"
                       placeholder="請輸入帳號"
                       value=""
@@ -346,22 +218,12 @@
                   </div>
                 </div>
                 <button type="submit" class="fillorange f-left">
-                  寄送信箱驗證信
+                  寄送密碼重設信
                 </button>
                 <div class="clearfix"></div>
                 <br />
-                <div class="backtologin orange">前往登入</div>
+                <a href="login.html" class="orange">前往登入</a>
               </form>
-              <div class="forgot-hint hide">
-                密碼驗證信已發送至你的信箱。
-                <br />
-                <div class="backtologin orange">前往登入</div>
-              </div>
-              <div class="resend-hint hide">
-                信箱驗證信已發送至你的信箱。
-                <br />
-                <div class="backtologin orange">前往登入</div>
-              </div>
             </div>
           </div>
           <div class="way-center">

@@ -455,6 +455,129 @@
         </div>
       </div>
     </div>
+    <div class="member-content">
+          <div class="page-title">
+            <div class="location">電子報訂閱 / 取消</div>
+            <div class="sub-info">
+              請勾選訂閱的電子報；取消時，請清除方框內的勾選
+            </div>
+            <div class="member-head-right">
+              <a href="https://shop.cwgv.com.tw/store" class="orange">結帳
+                <img src="https://member.cwgv.com.tw/public/images/icon-cart.png"></a>
+              <a href="http://member.cwgv.com.tw/logout" class="orange">我要登出</a>
+            </div>
+          </div>
+          <div class="memebr-content-wrapper">
+            <form class="flat-wrap" id="newsletter-form" method="post" action="">
+              <input type="hidden" value="Y" name="send">
+              <table class="cwgv-table rwd table">
+                <thead>
+                  <tr>
+                    <th width="30">訂閱</th>
+                    <th>名稱</th>
+                    <th width="80">發送時間</th>
+                    <th width="80">訂戶限定</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="select-all-row">
+                    <td>
+                      <input name="edm" type="checkbox" value="yes" class="checkall">
+                    </td>
+                    <td>全選 / 全部取消</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="newsletter[]" class="each-check" value="family-weekly">
+                    </td>
+                    <td>
+                      <div class="epaper-title">未來Family週刊</div>
+                      主題式週報，提供親子教育新知，以及具體有效的教養方法，陪伴父母解決日常生活中碰到的育兒困境。
+                    </td>
+                    <td>每週三發報</td>
+                    <td></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="newsletter[]" class="each-check" value="family-podcast">
+                    </td>
+                    <td>
+                      <div class="epaper-title">未來Family Podcast</div>
+                      教育教養，家庭生活，未來Family，總是陪著你。每週四固定更新，邀請各領域專家，幫助父母卸下教養過程的迷思與煩憂。
+                    </td>
+                    <td>每週日發報</td>
+                    <td></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="newsletter[]" class="each-check" value="family-book">
+                    </td>
+                    <td>
+                      <div class="epaper-title">小天下．未來出版書訊</div>
+                      李黨總編輯每月為您精選適齡好書，回應每個成長的提問，陪伴孩子在閱讀中成長。
+                    </td>
+                    <td>每月發報</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="newsletter[]" class="each-check" value="youth-newsletter">
+                    </td>
+                    <td>
+                      <div class="epaper-title">未來少年訂戶電子報</div>
+                      每月準時送達《未來少年》最新內容！掌握新知趨勢，訓練素養思辨，拓展國際視野！一同探索數位知識庫，精彩知識不漏接。
+                    </td>
+                    <td>每月發報</td>
+                    <td>訂戶限定</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="newsletter[]" class="each-check" value="junior-newsletter">
+                    </td>
+                    <td>
+                      <div class="epaper-title">未來兒童訂戶電子報</div>
+                      每月準時送達《未來兒童》最新內容！精選重要主題，培養語感和素養的秘密基地，一同探索數位知識庫，精彩知識不漏接。
+                    </td>
+                    <td>每月發報</td>
+                    <td>訂戶限定</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="cwgv-table rwd table">
+                <tbody><tr>
+                  <td style="width: 30px">說明</td>
+                  <td>
+                    <ol>
+                      <li>
+                        新增或取消訂閱，將在變更後3個工作天內生效。不包含訂閱電子報的設定。
+                      </li>
+                      <li>
+                        如欲取消最新活動及優惠通知，您可於週一至週五
+                        09:00～12:30；13:30～17:00 聯絡讀者服務部
+                        <br>
+                        電話
+                        <a href="tel:+886-2-26620012">(02)2662-0012</a>，或寄信至
+                        <a href="mailto:service@cwgv.com.tw">service@cwgv.com.tw</a>，我們將於3個工作天內協助您處理取消訂閱。
+                      </li>
+                    </ol>
+                  </td>
+                </tr>
+              </tbody></table>
+              <hr>
+              <div class="action-btn-wrap">
+                <button type="submit" class="fillorange bigger">
+                  確定修改電子報
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
     <script>
       $(".checkall").on("change", function () {
         var checked = $(this).is(":checked");

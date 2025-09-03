@@ -319,6 +319,42 @@
                   >
                 </div>
               </form>
+                            <form
+                class="flat-wrap forgot-content-area hide"
+                id="forgot-form"
+                method="post"
+                action=""
+                novalidate="novalidate"
+              >
+                <h5>忘記密碼</h5>
+                <p>
+                  我們將發送密碼重設信至您的電子信箱，點擊信中網址即可重設密碼。
+                </p>
+                <div class="red">
+                  提醒您，請於60分鐘內重設密碼，超過60分鐘請再次申請重設密碼信。
+                </div>
+                <div class="control-group">
+                  <label class="control-label" for="forgotAccount"
+                    >請輸入帳號（電子郵件）</label
+                  >
+                  <div class="controls">
+                    <input
+                      type="email"
+                      name="member_account"
+                      id="forgotAccount"
+                      class="required"
+                      placeholder="請輸入帳號"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <button type="submit" class="fillorange f-left">
+                  寄送密碼重設信
+                </button>
+                <div class="clearfix"></div>
+                <br />
+                <div class="backtologin orange">前往登入</div>
+              </form>
               <form
                 class="flat-wrap resend-content-area hide"
                 id="resend-form"

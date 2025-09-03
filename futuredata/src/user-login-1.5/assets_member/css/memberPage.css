@@ -272,9 +272,6 @@
 .contentContainer img {
   width: 100%;
 }
-.contentContainer a:hover .imgholder img {
-  /*transform: scale(1.3, 1.3);-ms-transform: scale(1.3, 1.3);-moz-transform: scale(1.3, 1.3);-webkit-transform: scale(1.3, 1.3);-o-transform: scale(1.3, 1.3);*/
-}
 .noticeItem {
   overflow: hidden;
   margin-bottom: 20px;
@@ -1043,6 +1040,20 @@ footer {
   width: 100%;
 }
 
+.Dorange {
+  color: #de5728;
+}
+a.fillorange,
+button.fillorange {
+  border: none;
+  background-color: #de5728;
+  color: #ffffff;
+  padding: 3px 12px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
 .login-btn-wrapper {
   display: flex;
   flex-direction: column;
@@ -1291,8 +1302,4 @@ footer {
 a.underline-link {
   text-decoration: underline;
   margin: 0px 3px;
-}
-
-.Dorange {
-  color: #de5728;
 }

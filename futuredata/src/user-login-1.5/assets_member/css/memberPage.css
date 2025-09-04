@@ -815,7 +815,7 @@ select.select-arrow::-ms-expand {
   padding: 10px 10px 10px 35px;
   border-radius: 5px;
   margin: 5px 0;
-  background-image: url("../../img/mail.svg");
+  background-image: url("../../assets/img/mail.svg");
   background-repeat: no-repeat;
 }
 
@@ -825,7 +825,7 @@ select.select-arrow::-ms-expand {
   padding: 10px 10px 10px 40px;
   border-radius: 5px;
   margin: 5px 0;
-  background-image: url("../../img/lock.svg");
+  background-image: url("../../assets/img/lock.svg");
   background-repeat: no-repeat;
 }
 

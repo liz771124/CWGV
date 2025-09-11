@@ -165,8 +165,3 @@ option:hover,
   outline: none !important;
   box-shadow: none !important;
 }
-
-.overList {
-  max-height: 250px;
-  overflow: auto;
-}

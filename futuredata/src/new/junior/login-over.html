@@ -201,8 +201,8 @@
               <div
                 class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4 dark:border-white/10"
               >
-                <div class="flex items-center gap-2">
-                  您好，您已超過瀏覽器上限，請先登出其中一個以便繼續使用。
+                <div class="flex items-center gap-2 text-lg font-semibold">
+                  請先登出閒置中的瀏覽器
                 </div>
                 <button
                   type="button"
@@ -231,7 +231,7 @@
 
               <!-- Modal body -->
               <div class="relative p-4">
-                <p>想繼續閱讀雜誌嗎?</p>
+                <p>您好，您已超過瀏覽器上限，請先登出其中一個以便繼續使用。</p>
               </div>
 
               <!-- Modal footer -->
@@ -240,7 +240,7 @@
               >
                 <button
                   type="button"
-                  class="bg-primary-500 hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 inline-block grow cursor-pointer rounded px-6 pb-2 pt-2.5 font-medium leading-normal text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0"
+                  class="bg-accent-500 hover:bg-accent-600 focus:ring-accent-300 inline-block grow cursor-pointer rounded-full px-6 py-3 font-medium leading-normal text-white transition duration-150 ease-in-out focus:outline-none focus:ring-0"
                   data-twe-modal-dismiss
                   data-twe-ripple-init
                   data-twe-ripple-color="light"
@@ -374,5 +374,13 @@
 
     <script src="../assets/js/tw-elements.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+      const { Modal, initTWE } = twe;
+      initTWE({ Modal });
+      const modalElement = document.getElementById("tweModal");
+      const modalInstance = new Modal(modalElement);
+
+      modalInstance.show();
+    </script>
   </body>
 </html>

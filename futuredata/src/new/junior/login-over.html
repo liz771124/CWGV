@@ -185,9 +185,9 @@
         <div
           data-twe-modal-init
           class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-          id="tweModal"
+          id="loginOverModal"
           tabindex="-1"
-          aria-labelledby="tweModalTitle"
+          aria-labelledby="loginOverModalTitle"
           aria-modal="true"
           role="dialog"
         >
@@ -371,15 +371,15 @@
         </div>
       </footer>
     </div>
-
     <script src="../assets/js/tw-elements.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
     <script>
+      // 燈箱展開：需判別瀏覽器是否到達上限
       const { Modal, initTWE } = twe;
       initTWE({ Modal });
-      const modalElement = document.getElementById("tweModal");
+      const modalElement = document.getElementById("loginOverModal");
       const modalInstance = new Modal(modalElement);
-
       modalInstance.show();
     </script>
   </body>

@@ -270,7 +270,7 @@
 
                 <button type="submit" class="fillorange f-left">登入</button>
                 <div class="forgot forgot-pwd-btn Dorange f-left cwgv">
-                  <a class="orange" href="forget.html">忘記密碼？</a>
+                  <a class="orange forgot-pwd-link">忘記密碼？</a>
                 </div>
                 <div
                   class="forgot forgot-pwd-btn Dorange f-left club"
@@ -297,7 +297,7 @@
                 </div>
                 <div class="black cwgv" style="margin-top: 5px">
                   沒有收到驗證信？
-                  <a href="verify.html" class="orange"> 重新寄送驗證信</a>
+                  <a class="orange resend-mail-btn"> 重新寄送驗證信</a>
                 </div>
                 <div class="black cwgv" style="margin-top: 5px">
                   <a
@@ -318,6 +318,42 @@
                     前往 加入讀書俱樂部會員</a
                   >
                 </div>
+              </form>
+              <form
+                class="flat-wrap forgot-content-area hide"
+                id="forgot-form"
+                method="post"
+                action=""
+                novalidate="novalidate"
+              >
+                <h5>忘記密碼</h5>
+                <p>
+                  我們將發送密碼重設信至您的電子信箱，點擊信中網址即可重設密碼。
+                </p>
+                <div class="red">
+                  提醒您，請於60分鐘內重設密碼，超過60分鐘請再次申請重設密碼信。
+                </div>
+                <div class="control-group">
+                  <label class="control-label" for="forgotAccount"
+                    >請輸入帳號（電子郵件）</label
+                  >
+                  <div class="controls">
+                    <input
+                      type="email"
+                      name="member_account"
+                      id="forgotAccount"
+                      class="required"
+                      placeholder="請輸入帳號"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <button type="submit" class="fillorange f-left">
+                  寄送密碼重設信
+                </button>
+                <div class="clearfix"></div>
+                <br />
+                <div class="backtologin orange">前往登入</div>
               </form>
               <form
                 class="flat-wrap resend-content-area hide"
